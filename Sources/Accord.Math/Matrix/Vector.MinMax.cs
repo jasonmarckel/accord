@@ -46,9 +46,7 @@ namespace Accord.Math
         ///   Gets the maximum element in a vector.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ArgMax<T>(this T[] values)
             where T : IComparable<T>
         {
@@ -70,9 +68,7 @@ namespace Accord.Math
         ///   Gets the maximum element in a vector.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ArgMax<T>(this T[] values, out T max)
             where T : IComparable<T>
         {
@@ -94,9 +90,7 @@ namespace Accord.Math
         ///   Gets the minimum element in a vector.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ArgMin<T>(this T[] values)
             where T : IComparable<T>
         {
@@ -118,9 +112,7 @@ namespace Accord.Math
         ///   Gets the minimum element in a vector.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ArgMin<T>(this T[] values, out T min)
             where T : IComparable<T>
         {

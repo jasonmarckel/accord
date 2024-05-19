@@ -27,7 +27,7 @@ namespace Accord.Neuro.Learning
     using Accord.Math;
     using Accord.Math.Decompositions;
     using MachineLearning;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -755,19 +755,6 @@ namespace Accord.Neuro.Learning
         {
             double sumOfSquaredErrors = 0;
 
-#if NET35
-            for (int i = 0; i < input.Length; i++)
-            {
-                // Compute network answer
-                double[] y = network.Compute(input[i]);
-
-                for (int j = 0; j < y.Length; j++)
-                {
-                    double e = (y[j] - output[i][j]);
-                    sumOfSquaredErrors += e * e;
-                }
-            }
-#else
             Object lockSum = new Object();
 
             Parallel.For(0, input.Length,
@@ -796,7 +783,6 @@ namespace Accord.Neuro.Learning
                     lock (lockSum) sumOfSquaredErrors += partialSum;
                 }
             );
-#endif
 
             return sumOfSquaredErrors / 2.0;
         }

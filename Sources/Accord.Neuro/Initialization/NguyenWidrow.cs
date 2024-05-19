@@ -23,8 +23,8 @@
 namespace Accord.Neuro
 {
     using System;
-    using AForge;
     using Accord.Statistics.Distributions.Univariate;
+    using Range = Accord.Range;
 
     /// <summary>
     ///  Nguyen-Widrow weight initialization.

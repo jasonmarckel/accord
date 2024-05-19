@@ -26,7 +26,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Math;
     using Accord.Statistics.Distributions.Fitting;
     using System.ComponentModel;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Continuous Uniform Distribution.

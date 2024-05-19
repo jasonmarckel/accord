@@ -729,17 +729,6 @@ namespace Accord.Math
             return inverse(a, y);
         }
 
-        /// <summary>
-        ///   Inverse of the <see cref="UpperIncomplete">complemented 
-        ///   incomplete Gamma integral (UpperIncomplete, Q)</see>.
-        /// </summary>
-        /// 
-        //[Obsolete("Please use InverseUpperIncomplete instead.")]
-        public static double Inverse(double a, double y)
-        {
-            return inverse(a, y);
-        }
-
         private static double inverse(double a, double y)
         {
             // bound the solution

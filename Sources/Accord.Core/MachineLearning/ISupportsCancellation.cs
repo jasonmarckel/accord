@@ -22,7 +22,6 @@
 
 namespace Accord.MachineLearning // TODO: Move those classes to the root Accord namespace
 {
-    using Accord.Compat;
     using System.Threading;
 
     /// <summary>

@@ -100,24 +100,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ILinearSupportVectorMachineLearning
     {
         /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearNewtonMethod(KernelSupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearNewtonMethod(SupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
         ///   Initializes a new instance of the <see cref="LinearNewtonMethod"/> class.
         /// </summary>
         /// 
@@ -238,25 +220,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         /// </summary>
         /// 
         protected BaseLinearNewtonMethod()
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete]
-        protected BaseLinearNewtonMethod(ISupportVectorMachine<double[]> model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        protected BaseLinearNewtonMethod(TModel model, double[][] input, int[] output)
-            : base(model, input, output)
         {
         }
     }
@@ -451,24 +414,5 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             Model.Threshold = bias;
         }
 
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete]
-        protected BaseLinearNewtonMethod(ISupportVectorMachine<TInput> model, TInput[] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        protected BaseLinearNewtonMethod(TModel model, TInput[] input, int[] output)
-            : base(model, input, output)
-        {
-        }
     }
 }

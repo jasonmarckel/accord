@@ -32,7 +32,7 @@ namespace Accord.Statistics.Analysis
     using System.Threading;
     using Accord.Statistics.Models.Regression.Linear;
     using Accord.Math.Distances;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Linear Discriminant Analysis (LDA).
@@ -89,7 +89,6 @@ namespace Accord.Statistics.Analysis
     [Serializable]
 #pragma warning disable 612, 618
     public class LinearDiscriminantAnalysis : BaseDiscriminantAnalysis,
-        IDiscriminantAnalysis, IProjectionAnalysis,
         ISupervisedLearning<LinearDiscriminantAnalysis.Pipeline, double[], int>
 #pragma warning restore 612, 618
     {
@@ -104,36 +103,6 @@ namespace Accord.Statistics.Analysis
         public Pipeline Classifier { get; private set; }
 
 #pragma warning disable 612, 618
-        /// <summary>
-        ///   Constructs a new Linear Discriminant Analysis object.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The source data to perform analysis. The matrix should contain
-        /// variables as columns and observations of each variable as rows.</param>
-        /// <param name="outputs">The labels for each observation row in the input matrix.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' parameters to the Learn method instead.")]
-        public LinearDiscriminantAnalysis(double[,] inputs, int[] outputs)
-        {
-            init(inputs, outputs);
-            Threshold = 0;
-        }
-
-        /// <summary>
-        ///   Constructs a new Linear Discriminant Analysis object.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The source data to perform analysis. The matrix should contain
-        /// variables as columns and observations of each variable as rows.</param>
-        /// <param name="outputs">The labels for each observation row in the input matrix.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' parameters to the Learn method instead.")]
-        public LinearDiscriminantAnalysis(double[][] inputs, int[] outputs)
-        {
-            init(inputs.ToMatrix(), outputs);
-            Threshold = 0;
-        }
-#pragma warning disable 612, 618
 
         /// <summary>
         ///   Constructs a new Linear Discriminant Analysis object.
@@ -142,18 +111,6 @@ namespace Accord.Statistics.Analysis
         public LinearDiscriminantAnalysis()
         {
             Threshold = 0;
-        }
-
-        /// <summary>
-        ///   Computes the Multi-Class Linear Discriminant Analysis algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn method instead.")]
-        public virtual void Compute()
-        {
-            Learn(Source.ToJagged(), Classifications);
-
-            this.Result = this.Source.DotWithTransposed(DiscriminantVectors).ToMatrix();
         }
 
         /// <summary>
@@ -172,10 +129,6 @@ namespace Accord.Statistics.Analysis
                         result[i][j] += input[i][k] * DiscriminantVectors[j][k];
             return result;
         }
-
-
-
-
 
         /// <summary>
         /// Learns a model that can map the given inputs to the given outputs.
@@ -296,41 +249,6 @@ namespace Accord.Statistics.Analysis
                     NumberOfClasses = NumberOfClasses
                 },
             };
-        }
-
-        /// <summary>Transform
-        ///   Classifies a new instance into one of the available classes.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classifier.Decide() instead.")]
-        public override int Classify(double[] input)
-        {
-            return Classes[Classifier.Decide(input)].Number;
-        }
-
-        /// <summary>
-        ///   Classifies a new instance into one of the available classes.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classifier.Decide() or Classifier.Scores() instead.")]
-        public override int Classify(double[] input, out double[] responses)
-        {
-            int decision;
-            responses = Classifier.Scores(input, out decision);
-            return Classes[decision].Number;
-        }
-
-        /// <summary>
-        ///   Classifies new instances into one of the available classes.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classifier.Decide() instead.")]
-        public override int[] Classify(double[][] inputs)
-        {
-            int[] result = Classifier.Decide(inputs);
-            for (int i = 0; i < result.Length; i++)
-                result[i] = Classes[result[i]].Number;
-            return result;
         }
 
         /// <summary>
@@ -477,29 +395,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return analysis.classScatter[index]; }
         }
-
-#pragma warning disable 612, 618
-        /// <summary>
-        ///   Gets the indices of the rows in the original data which belong to this class.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public int[] Indices
-        {
-            get { return Matrix.Find(analysis.Classifications, y => y == classNumber); }
-        }
-
-        /// <summary>
-        ///   Gets the subset of the original data spawned by this class.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Subset
-        {
-
-            get { return analysis.Source.Submatrix(Indices); }
-        }
-#pragma warning restore 612, 618
 
         /// <summary>
         ///   Gets the number of observations inside this class.

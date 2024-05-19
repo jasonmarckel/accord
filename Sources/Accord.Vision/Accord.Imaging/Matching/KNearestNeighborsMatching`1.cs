@@ -95,21 +95,6 @@ namespace Accord.Imaging
             this.Distance = distance;
         }
 
-#if NET35
-        /// <summary>
-        ///   Matches two sets of feature points.
-        /// </summary>
-        /// 
-        public IntPoint[][] Match<TFeaturePoint>(IEnumerable<TFeaturePoint> points1, IEnumerable<TFeaturePoint> points2)
-            where TFeaturePoint : IFeaturePoint<T>
-        {
-            // This overload exists to maintain compatibility with .NET 3.5 and
-            // is redundant when generics covariance/contravariance is available
-            //
-            return match(points1.Cast<IFeaturePoint<T>>().ToArray(), 
-                         points2.Cast<IFeaturePoint<T>>().ToArray());
-        }
-#else
         /// <summary>
         ///   Matches two sets of feature points.
         /// </summary>
@@ -127,7 +112,6 @@ namespace Accord.Imaging
         {
             return match(points1, points2);
         }
-#endif
 
         /// <summary>
         ///   Matches two sets of feature points.

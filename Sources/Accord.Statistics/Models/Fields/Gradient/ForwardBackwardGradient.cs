@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using Accord.Statistics.Models.Fields.Features;
     using Accord.Statistics.Models.Fields.Functions;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
     using System.Threading;
 

@@ -26,7 +26,7 @@ namespace Accord.Math.Optimization
     using Accord.Math;
     using Accord.MachineLearning;
     using Accord.Statistics.Models;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -93,21 +93,6 @@ namespace Accord.Math.Optimization
         ///   The number of parameters.
         /// </value>
         /// 
-        [Obsolete("Please use NumberOfParameters instead.")]
-        public int NumberOfVariables
-        {
-            get { return NumberOfParameters; }
-            set { NumberOfParameters = value; }
-        }
-
-        /// <summary>
-        ///   Gets the number of variables (free parameters) in the optimization problem.
-        /// </summary>
-        /// 
-        /// <value>
-        ///   The number of parameters.
-        /// </value>
-        /// 
         public int NumberOfParameters
         {
             get { return numberOfParameters; }
@@ -158,17 +143,6 @@ namespace Accord.Math.Optimization
         {
             get { return convergence.Tolerance; }
             set { convergence.Tolerance = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return convergence.MaxIterations; }
-            set { convergence.MaxIterations = value; }
         }
 
         /// <summary>

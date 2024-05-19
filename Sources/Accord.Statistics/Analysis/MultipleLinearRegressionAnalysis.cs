@@ -30,7 +30,7 @@ namespace Accord.Statistics.Analysis
     using Accord.Statistics.Models.Regression.Linear;
     using Accord.Statistics.Testing;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -94,7 +94,7 @@ namespace Accord.Statistics.Analysis
     /// 
     [Serializable]
     public class MultipleLinearRegressionAnalysis : TransformBase<double[], double>,
-        IRegressionAnalysis, IAnova,
+        IAnova,
         ISupervisedLearning<MultipleLinearRegression, double[], double>
     {
         [NonSerialized]
@@ -110,19 +110,13 @@ namespace Accord.Statistics.Analysis
             set { token = value; }
         }
 
-
         internal MultipleLinearRegression regression;
 
         private string[] inputNames;
         private string outputName;
 
         [Obsolete]
-        private double[][] inputData;
-        [Obsolete]
-        private double[] outputData;
-        [Obsolete]
         private double[] results;
-
 
         private double[][] informationMatrix;
 
@@ -157,43 +151,6 @@ namespace Accord.Statistics.Analysis
 
         private AnovaSourceCollection anovaTable;
         private LinearRegressionCoefficientCollection coefficientCollection;
-
-
-        /// <summary>
-        ///   Source data used in the analysis.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source { get; private set; }
-
-        /// <summary>
-        ///   Source data used in the analysis.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Array { get { return inputData; } }
-
-        /// <summary>
-        ///   Gets the dependent variable value
-        ///   for each of the source input points.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[] Outputs
-        {
-            get { return outputData; }
-        }
-
-        /// <summary>
-        ///   Gets the resulting values obtained
-        ///   by the linear regression model.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[] Results
-        {
-            get { return results; }
-        }
 
         /// <summary>
         ///   Gets or sets the learning algorithm used to learn the <see cref="MultipleLinearRegression"/>.
@@ -352,27 +309,6 @@ namespace Accord.Statistics.Analysis
             OrdinaryLeastSquares = new OrdinaryLeastSquares() { UseIntercept = intercept };
         }
 
-        /// <summary>
-        ///   Constructs a Multiple Linear Regression Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data for the analysis.</param>
-        /// <param name="outputs">The output data for the analysis.</param>
-        /// <param name="intercept">True to use an intercept term, false otherwise. Default is false.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' parameters to the Learn method instead.")]
-        public MultipleLinearRegressionAnalysis(double[][] inputs, double[] outputs, bool intercept = false)
-            : this(intercept)
-        {
-            // Initial argument checking
-            init(inputs, outputs);
-
-            // Store data sets
-            this.Source = inputs.ToMatrix();
-            this.inputData = inputs;
-            this.outputData = outputs;
-        }
-
         private void init(double[][] inputs, double[] outputs)
         {
             if (inputs == null)
@@ -422,32 +358,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Constructs a Multiple Linear Regression Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data for the analysis.</param>
-        /// <param name="outputs">The output data for the analysis.</param>
-        /// <param name="intercept">True to use an intercept term, false otherwise. Default is false.</param>
-        /// <param name="inputNames">The names of the input variables.</param>
-        /// <param name="outputName">The name of the output variable.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' parameters to the Learn method instead.")]
-        public MultipleLinearRegressionAnalysis(double[][] inputs, double[] outputs,
-            String[] inputNames, String outputName, bool intercept = false)
-            : this(inputs, outputs, intercept)
-        {
-            if (inputNames.Length != this.inputNames.Length)
-            {
-                throw new ArgumentException("The input names vector should have the same length"
-                  + " as the number of variables in the analysis. In this analysis, there are "
-                  + this.inputNames.Length + " variables expected.");
-            }
-
-            this.inputNames = inputNames;
-            this.outputName = outputName;
-        }
-
-        /// <summary>
         /// Learns a model that can map the given inputs to the given outputs.
         /// </summary>
         /// <param name="x">The model inputs.</param>
@@ -464,16 +374,6 @@ namespace Accord.Statistics.Analysis
             init(x, y);
             compute(x, y);
             return regression;
-        }
-
-        /// <summary>
-        ///   Computes the Multiple Linear Regression Analysis.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn method instead.")]
-        public void Compute()
-        {
-            compute(Source.ToJagged(), Outputs);
         }
 
         private void compute(double[][] x, double[] y)

@@ -43,7 +43,7 @@ namespace Accord.Statistics.Distributions.Multivariate
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Statistics.Distributions.Sampling;
     using Accord.Math.Random;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Abstract class for multivariate discrete probability distributions.

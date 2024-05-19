@@ -26,7 +26,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     using Accord.Math.Optimization;
     using Accord.MachineLearning;
     using Accord.Math;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -46,9 +46,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     /// </example>
     /// 
 #pragma warning disable 612, 618
-    public class NonlinearLeastSquares :
-        ISupervisedLearning<NonlinearRegression, double[], double>,
-        IRegressionFitting
+    public class NonlinearLeastSquares : ISupervisedLearning<NonlinearRegression, double[], double>
 #pragma warning restore 612, 618
     {
         [NonSerialized]
@@ -185,35 +183,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
             this.solver.Gradient = new LeastSquaresGradientFunction(regression.Gradient);
         }
 
-
-
-        /// <summary>
-        ///   Runs the fitting algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input training data.</param>
-        /// <param name="outputs">The output associated with each of the outputs.</param>
-        /// 
-        /// <returns>
-        ///   The sum of squared errors after the learning.
-        /// </returns>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public double Run(double[][] inputs, double[] outputs)
-        {
-            var c = this.solver as IConvergenceLearning;
-
-            if (c != null)
-            {
-                c.MaxIterations = 1;
-                c.Tolerance = 0;
-            } 
-
-            Learn(inputs, outputs);
-            return solver.Value;
-        }
-
-
         /// <summary>
         /// Gets or sets a cancellation token that can be used to
         /// stop the learning algorithm while it is running.
@@ -258,7 +227,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
             if (this.solver == null)
                 this.solver = new LevenbergMarquardt(numberOfParameters);
 
-            this.solver.NumberOfVariables = numberOfParameters;
+            this.solver.NumberOfParameters = numberOfParameters;
             this.solver.Solution = regression.Coefficients;
             this.solver.Function = new LeastSquaresFunction(regression.Function);
             this.solver.Gradient = new LeastSquaresGradientFunction(regression.Gradient);

@@ -28,7 +28,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using System;
     using System.Linq;
     using System.Text;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Mixture of univariate probability distributions.
@@ -448,7 +448,7 @@ namespace Accord.Statistics.Distributions.Univariate
 
 #pragma warning disable 612, 618
                 if (options != null)
-                    options.Iterations = em.Convergence.CurrentIteration;
+                    options.MaxIterations = em.Convergence.CurrentIteration;
 #pragma warning restore 612, 618
             }
             else
@@ -467,7 +467,7 @@ namespace Accord.Statistics.Distributions.Univariate
 
 #pragma warning disable 612, 618
                 if (options != null)
-                    options.Iterations = em.Convergence.CurrentIteration;
+                    options.MaxIterations = em.Convergence.CurrentIteration;
 #pragma warning restore 612, 618
             }
 

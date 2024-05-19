@@ -35,7 +35,7 @@ namespace Accord.MachineLearning.DecisionTrees
     using Learning;
     using Statistics.Filters;
     using Accord.Diagnostics;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Decision tree (for both discrete and continuous classification problems).
@@ -483,7 +483,6 @@ namespace Accord.MachineLearning.DecisionTrees
             return DecisionSet.FromDecisionTree(this);
         }
 
-#if !NET35 && !NETSTANDARD1_4
         /// <summary>
         ///   Creates an <see cref="Expression">Expression Tree</see> representation
         ///   of this decision tree, which can in turn be compiled into code.
@@ -495,53 +494,6 @@ namespace Accord.MachineLearning.DecisionTrees
         {
             return new DecisionTreeExpressionCreator(this).Create();
         }
-
-#if !NETSTANDARD2_0
-        /// <summary>
-        ///   Creates a .NET assembly (.dll) containing a static class of
-        ///   the given name implementing the decision tree. The class will
-        ///   contain a single static Compute method implementing the tree.
-        /// </summary>
-        /// 
-        /// <param name="assemblyName">The name of the assembly to generate.</param>
-        /// <param name="className">The name of the generated static class.</param>
-        /// 
-        public void ToAssembly(string assemblyName, string className)
-        {
-            ToAssembly(assemblyName, "Accord.MachineLearning.DecisionTrees.Custom", className);
-        }
-
-        /// <summary>
-        ///   Creates a .NET assembly (.dll) containing a static class of
-        ///   the given name implementing the decision tree. The class will
-        ///   contain a single static Compute method implementing the tree.
-        /// </summary>
-        /// 
-        /// <param name="assemblyName">The name of the assembly to generate.</param>
-        /// <param name="moduleName">The namespace which should contain the class.</param>
-        /// <param name="className">The name of the generated static class.</param>
-        /// 
-        public void ToAssembly(string assemblyName, string moduleName, string className)
-        {
-            AssemblyBuilder da = AppDomain.CurrentDomain.DefineDynamicAssembly(
-                new AssemblyName(assemblyName), AssemblyBuilderAccess.Save);
-
-            ModuleBuilder dm = da.DefineDynamicModule(moduleName, assemblyName);
-            TypeBuilder dt = dm.DefineType(className);
-            MethodBuilder method = dt.DefineMethod("Compute",
-                MethodAttributes.Public | MethodAttributes.Static);
-
-            // Compile the tree into a method
-            ToExpression().CompileToMethod(method);
-
-            dt.CreateType();
-            da.Save(assemblyName);
-        }
-#endif
-#endif
-
-
-
 
         /// <summary>
         ///   Generates a C# class implementing the decision tree.
@@ -603,106 +555,6 @@ namespace Accord.MachineLearning.DecisionTrees
 
             return maxHeight;
         }
-
-
-        #region Obsolete
-#if !NETSTANDARD1_4
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Accord.IO.Serializer.Save{T}(T, string)"/> (or use it as an extension method).
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save(path) instead (or use it as an extension method).")]
-        public void Save(string path)
-        {
-            Accord.IO.Serializer.Save(this, path);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Accord.IO.Serializer.Save{T}(T, Stream, IO.SerializerCompression)"/> (or use it as an extension method).
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save(stream) instead (or use it as an extension method).")]
-        public void Save(Stream stream)
-        {
-            Accord.IO.Serializer.Save(this, stream);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Accord.IO.Serializer.Load{T}(Stream, IO.SerializerCompression)"/>.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<DecisionTree>(stream) instead.")]
-        public static DecisionTree Load(Stream stream)
-        {
-            return Accord.IO.Serializer.Load<DecisionTree>(stream);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Accord.IO.Serializer.Load{T}(string)"/>.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<DecisionTree>(path) instead.")]
-        public static DecisionTree Load(string path)
-        {
-            return Accord.IO.Serializer.Load<DecisionTree>(path);
-        }
-#endif
-
-        /// <summary>
-        ///   Deprecated. Please use the NumberOfOutputs property instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfOutputs instead.")]
-        public int OutputClasses { get { return NumberOfOutputs; } }
-
-        /// <summary>
-        ///   Deprecated. Please use the NumberOfInputs property.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int InputCount { get { return NumberOfInputs; } }
-
-        /// <summary>
-        ///   Deprecated. Please use the Decide() method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(int[] input)
-        {
-            return Decide(input);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use the Decide() method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(double[] input)
-        {
-            return Decide(input);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use the Decide() method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int[] Compute(int[][] input)
-        {
-            return Decide(input);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use the Decide() method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(double[] input, DecisionNode subtree)
-        {
-            return Decide(input, subtree);
-        }
-        #endregion
-
 
         private class TreeTraversal : IEnumerable<DecisionNode>
         {

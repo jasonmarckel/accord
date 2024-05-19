@@ -22,11 +22,8 @@
 
 namespace Accord.Imaging
 {
-    using Accord.MachineLearning;
     using System;
-    using System.Collections.Generic;
     using System.Drawing;
-    using System.Drawing.Imaging;
 
     /// <summary>
     ///   Common interface for feature detectors (e.g. <see cref="SpeededUpRobustFeaturesDetector"/>,
@@ -40,48 +37,10 @@ namespace Accord.Imaging
     /// <seealso cref="Haralick"/>
     /// <seealso cref="LocalBinaryPattern"/>
     /// 
-    public interface IImageFeatureExtractor<
-#if !NET35
-        out 
-#endif
-        TFeature> :
+    public interface IImageFeatureExtractor<out TFeature> :
         IFeatureExtractor<TFeature, Bitmap>,
         IFeatureExtractor<TFeature, UnmanagedImage>, ICloneable, IDisposable
     {
-    }
-
-    /// <summary>
-    ///   Obsolete. See <see cref="IImageFeatureExtractor{TFeature}"/> instead.
-    /// </summary>
-    /// 
-    [Obsolete("This class will be removed.")]
-    public interface IFeatureDetector<
-#if !NET35
-        out 
-#endif
-        TPoint>
-    {
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="ICovariantTransform{TInput, TOutput}.Transform(TInput)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(image) method instead.")]
-        IEnumerable<TPoint> ProcessImage(Bitmap image);
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="ICovariantTransform{TInput, TOutput}.Transform(TInput)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(image) method instead.")]
-        IEnumerable<TPoint> ProcessImage(BitmapData imageData);
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="ICovariantTransform{TInput, TOutput}.Transform(TInput)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(image) method instead.")]
-        IEnumerable<TPoint> ProcessImage(UnmanagedImage image);
-
     }
 
 }

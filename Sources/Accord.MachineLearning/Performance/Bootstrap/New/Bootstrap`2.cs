@@ -28,7 +28,7 @@ namespace Accord.MachineLearning.Performance
     using Accord.MachineLearning.Performance;
     using Accord.Statistics.Analysis;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>

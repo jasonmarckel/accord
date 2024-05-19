@@ -33,7 +33,6 @@ namespace Accord
     using System.Runtime.InteropServices;
     using System.Runtime.Serialization;
     using System.Runtime.Serialization.Formatters.Binary;
-    using Accord.Compat;
     using Accord.IO;
     using System.Data;
     using Accord.Collections;
@@ -48,7 +47,6 @@ namespace Accord
     /// 
     public static class ExtensionMethods
     {
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Creates and adds multiple <see cref="System.Data.DataColumn"/>
         ///   objects with the given names at once.
@@ -102,7 +100,6 @@ namespace Accord
             foreach (var pair in columns)
                 collection.Add(pair.Key, pair.Value);
         }
-#endif
 
         /// <summary>
         ///   Gets a the value of a <see cref="DescriptionAttribute"/>
@@ -116,11 +113,7 @@ namespace Accord
         /// 
         public static string GetDescription<T>(this T source)
         {
-#if NETSTANDARD1_4
-            FieldInfo fi = source.GetType().GetRuntimeField(source.ToString());
-#else
             FieldInfo fi = source.GetType().GetField(source.ToString());
-#endif
 
             DescriptionAttribute[] attributes =
                 (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
@@ -289,43 +282,10 @@ namespace Accord
         {
             // http://stackoverflow.com/a/17457085/262032
 
-#if NETSTANDARD1_4 || NETSTANDARD2_0
             var type = typeof(StreamReader).GetTypeInfo();
             char[] charBuffer = (char[])type.GetDeclaredField("_charBuffer").GetValue(reader);
             int charPos = (int)type.GetDeclaredField("_charPos").GetValue(reader);
             int byteLen = (int)type.GetDeclaredField("_byteLen").GetValue(reader);
-#else
-            var type = typeof(StreamReader);
-
-            char[] charBuffer;
-            int charPos;
-            int byteLen;
-
-            if (SystemTools.IsRunningOnMono() && type.GetField("decoded_buffer") != null)
-            {
-                // Mono's StreamReader source code is at: https://searchcode.com/codesearch/view/26576619/
-
-                // The current buffer of decoded characters
-                charBuffer = (char[])GetField(reader, "decoded_buffer");
-
-                // The current position in the buffer of decoded characters
-                charPos = (int)GetField(reader, "decoded_count");
-
-                // The number of encoded bytes that are in the current buffer
-                byteLen = (int)GetField(reader, "buffer_size");
-            }
-            else
-            {
-                // The current buffer of decoded characters
-                charBuffer = (char[])GetField(reader, "charBuffer");
-
-                // The current position in the buffer of decoded characters
-                charPos = (int)GetField(reader, "charPos");
-
-                // The number of encoded bytes that are in the current buffer
-                byteLen = (int)GetField(reader, "byteLen");
-            }
-#endif
 
             // The number of bytes that the already-read characters need when encoded.
             int numReadBytes = reader.CurrentEncoding.GetByteCount(charBuffer, 0, charPos);
@@ -333,31 +293,12 @@ namespace Accord
             return reader.BaseStream.Position - byteLen + numReadBytes;
         }
 
-#if !NETSTANDARD1_4
-
         private static object GetField(StreamReader reader, string name)
         {
             return typeof(StreamReader).InvokeMember(name,
                 BindingFlags.DeclaredOnly | BindingFlags.NonPublic | BindingFlags.Instance |
                 BindingFlags.GetField, null, reader, null, CultureInfo.InvariantCulture);
         }
-
-        /// <summary>
-        ///   Deserializes the specified stream into an object graph, but locates
-        ///   types by searching all loaded assemblies and ignoring their versions.
-        /// </summary>
-        /// 
-        /// <param name="formatter">The binary formatter.</param>
-        /// <param name="stream">The stream from which to deserialize the object graph.</param>
-        /// 
-        /// <returns>The top (root) of the object graph.</returns>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<T>() instead.")]
-        public static T DeserializeAnyVersion<T>(this BinaryFormatter formatter, Stream stream)
-        {
-            return Serializer.Load<T>(stream);
-        }
-#endif
 
         /// <summary>
         ///   Converts an object into another type, irrespective of whether
@@ -395,20 +336,12 @@ namespace Accord
             if (type.IsInstanceOfType(value))
                 return value;
 
-#if NETSTANDARD
-            if (type.GetTypeInfo().IsEnum)
-#else
             if (type.IsEnum)
-#endif
                 return Enum.ToObject(type, (int)System.Convert.ChangeType(value, typeof(int)));
 
             Type inputType = value.GetType();
 
-#if NETSTANDARD
-            if (type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
-#else
             if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
-#endif
             {
                 MethodInfo setter = type.GetMethod("op_Implicit", new[] { inputType });
                 return setter.Invoke(null, new object[] { value });
@@ -461,18 +394,8 @@ namespace Accord
         /// 
         public static bool HasDefaultConstructor(this Type t)
         {
-#if NETSTANDARD1_4
-            var info = t.GetTypeInfo();
-            if (info.IsValueType)
-                return true;
-
-            ConstructorInfo ctors = info.DeclaredConstructors.Where(x => x.GetParameters().Length == 0).FirstOrDefault();
-            return ctors != null;
-#else
             return t.IsValueType || t.GetConstructor(Type.EmptyTypes) != null;
-#endif
         }
-
 
         /// <summary>
         ///   Replaces the format item in a specified string with the string
@@ -491,8 +414,6 @@ namespace Accord
         {
             return String.Format(str, args);
         }
-
-#if !NETSTANDARD1_4
 
         /// <summary>
         ///   Checks whether two dictionaries have the same contents.
@@ -562,8 +483,6 @@ namespace Accord
                 return true;
             }
         }
-#endif
-
 
         /// <summary>
         ///   Determines whether <c>a > b</c>.
@@ -605,7 +524,6 @@ namespace Accord
             return a.CompareTo(b) <= 0;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Gets the default value for a type. This method should serve as
         ///   a programmatic equivalent to <c>default(T)</c>.
@@ -615,17 +533,11 @@ namespace Accord
         /// 
         public static object GetDefaultValue(this Type type)
         {
-#if NETSTANDARD2_0
-            if (type.GetTypeInfo().IsValueType)
-#else
             if (type.IsValueType)
-#endif
                 return Activator.CreateInstance(type);
             return null;
         }
-#endif
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Retrieves the memory address of a generic value type.
         /// </summary>
@@ -633,15 +545,15 @@ namespace Accord
         /// <typeparam name="T">The type of the object whose address needs to be retrieved.</typeparam>
         /// <param name="t">The object those address needs to be retrieved.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static System.IntPtr AddressOf<T>(this T t)
         {
             unsafe
             {
                 System.TypedReference reference = __makeref(t);
+#pragma warning disable CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
                 return *(System.IntPtr*)(&reference);
+#pragma warning restore CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
             }
         }
 
@@ -652,27 +564,26 @@ namespace Accord
         /// <typeparam name="T">The type of the object whose address needs to be retrieved.</typeparam>
         /// <param name="t">The object those address needs to be retrieved.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         static System.IntPtr AddressOfRef<T>(ref T t)
         {
             unsafe
             {
                 System.TypedReference reference = __makeref(t);
+#pragma warning disable CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
                 System.TypedReference* pRef = &reference;
+#pragma warning restore CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
                 return (System.IntPtr)pRef; //(&pRef)
             }
         }
-#endif
 
-        // TODO: Move this method to a more appropriate location
-        internal static WebClient NewWebClient()
-        {
-            var webClient = new WebClient();
-            webClient.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) (Accord.NET Framework)");
-            return webClient;
-        }
+        //// TODO: Move this method to a more appropriate location
+        //internal static WebClient NewWebClient()
+        //{
+        //    var webClient = new WebClient();
+        //    webClient.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) (Accord.NET Framework)");
+        //    return webClient;
+        //}
 
         /// <summary>
         ///   Attempts to download a file from the web multiple times before giving up.
@@ -700,11 +611,7 @@ namespace Accord
                 catch (WebException)
                 {
                     int milliseconds = numberOfAttempts * 2000;
-#if NETSTANDARD1_4
-                    Task.Delay(milliseconds).Wait();
-#else
                     Thread.Sleep(milliseconds);
-#endif
                     if (numberOfAttempts == maxAttempts)
                         throw;
                 }

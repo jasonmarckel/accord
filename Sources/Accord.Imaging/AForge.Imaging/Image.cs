@@ -135,124 +135,124 @@ namespace Accord.Imaging
             image.Palette = cp;
         }
 
-        /// <summary>
-        /// Clone image.
-        /// </summary>
-        /// 
-        /// <param name="source">Source image.</param>
-        /// <param name="format">Pixel format of result image.</param>
-        /// 
-        /// <returns>Returns clone of the source image with specified pixel format.</returns>
-        ///
-        /// <remarks>The original <see cref="System.Drawing.Bitmap.Clone(System.Drawing.Rectangle, System.Drawing.Imaging.PixelFormat)">Bitmap.Clone()</see>
-        /// does not produce the desired result - it does not create a clone with specified pixel format.
-        /// More of it, the original method does not create an actual clone - it does not create a copy
-        /// of the image. That is why this method was implemented to provide the functionality.</remarks> 
-        ///
-        public static Bitmap Clone(this Bitmap source, PixelFormat format)
-        {
-            // copy image if pixel format is the same
-            if (source.PixelFormat == format)
-                return Clone(source);
+        ///// <summary>
+        ///// Clone image.
+        ///// </summary>
+        ///// 
+        ///// <param name="source">Source image.</param>
+        ///// <param name="format">Pixel format of result image.</param>
+        ///// 
+        ///// <returns>Returns clone of the source image with specified pixel format.</returns>
+        /////
+        ///// <remarks>The original Bitmap.Clone()
+        ///// does not produce the desired result - it does not create a clone with specified pixel format.
+        ///// More of it, the original method does not create an actual clone - it does not create a copy
+        ///// of the image. That is why this method was implemented to provide the functionality.</remarks> 
+        /////
+        //public static Bitmap Clone(this Bitmap source, PixelFormat format)
+        //{
+        //    // copy image if pixel format is the same
+        //    if (source.PixelFormat == format)
+        //        return Clone(source);
 
-            int width = source.Width;
-            int height = source.Height;
+        //    int width = source.Width;
+        //    int height = source.Height;
 
-            // create new image with desired pixel format
-            Bitmap destination = new Bitmap(width, height, format);
+        //    // create new image with desired pixel format
+        //    Bitmap destination = new Bitmap(width, height, format);
 
-            return Copy(source, destination);
-        }
+        //    return Copy(source, destination);
+        //}
 
-        /// <summary>
-        /// Copy image.
-        /// </summary>
-        /// 
-        /// <param name="source">Source image.</param>
-        /// <param name="destination">Destination image. If set to null, a new image will be created.</param>
-        /// 
-        /// <returns>Returns clone of the source image with specified pixel format.</returns>
-        ///
-        public static Bitmap Copy(this Bitmap source, Bitmap destination)
-        {
-            int width = source.Width;
-            int height = source.Height;
+        ///// <summary>
+        ///// Copy image.
+        ///// </summary>
+        ///// 
+        ///// <param name="source">Source image.</param>
+        ///// <param name="destination">Destination image. If set to null, a new image will be created.</param>
+        ///// 
+        ///// <returns>Returns clone of the source image with specified pixel format.</returns>
+        /////
+        ////public static Bitmap Copy(this Bitmap source, Bitmap destination)
+        //{
+        //    int width = source.Width;
+        //    int height = source.Height;
 
-            if (destination == null)
-                destination = new Bitmap(width, height, source.PixelFormat);
+        //    if (destination == null)
+        //        destination = new Bitmap(width, height, source.PixelFormat);
 
-            // draw source image on the new one using Graphics
-            using (Graphics g = Graphics.FromImage(destination))
-                g.DrawImage(source, 0, 0, width, height);
+        //    // draw source image on the new one using Graphics
+        //    using (Graphics g = Graphics.FromImage(destination))
+        //        g.DrawImage(source, 0, 0, width, height);
 
-            return destination;
-        }
+        //    return destination;
+        //}
 
-        /// <summary>
-        /// Clone image.
-        /// </summary>
-        /// 
-        /// <param name="bytes">Source image as an array of bytes.</param>
-        /// 
-        /// <returns>Returns clone of the source image with specified pixel format.</returns>
-        ///
-        /// <remarks>The original <see cref="System.Drawing.Bitmap.Clone(System.Drawing.Rectangle, System.Drawing.Imaging.PixelFormat)">Bitmap.Clone()</see>
-        /// does not produce the desired result - it does not create a clone with specified pixel format.
-        /// More of it, the original method does not create an actual clone - it does not create a copy
-        /// of the image. That is why this method was implemented to provide the functionality.</remarks> 
-        ///
-        public static Bitmap Clone(this byte[] bytes)
-        {
-            return (Bitmap)Bitmap.FromStream(new MemoryStream(bytes));
-        }
+        ///// <summary>
+        ///// Clone image.
+        ///// </summary>
+        ///// 
+        ///// <param name="bytes">Source image as an array of bytes.</param>
+        ///// 
+        ///// <returns>Returns clone of the source image with specified pixel format.</returns>
+        /////
+        ///// <remarks>The original <see cref="System.Drawing.Bitmap.Clone(System.Drawing.Rectangle, System.Drawing.Imaging.PixelFormat)">Bitmap.Clone()</see>
+        ///// does not produce the desired result - it does not create a clone with specified pixel format.
+        ///// More of it, the original method does not create an actual clone - it does not create a copy
+        ///// of the image. That is why this method was implemented to provide the functionality.</remarks> 
+        /////
+        //public static Bitmap Clone(this byte[] bytes)
+        //{
+        //    return (Bitmap)Bitmap.FromStream(new MemoryStream(bytes));
+        //}
 
-        /// <summary>
-        /// Clone image.
-        /// </summary>
-        /// 
-        /// <param name="source">Source image.</param>
-        /// 
-        /// <returns>Return clone of the source image.</returns>
-        /// 
-        /// <remarks>The original <see cref="System.Drawing.Bitmap.Clone(System.Drawing.Rectangle, System.Drawing.Imaging.PixelFormat)">Bitmap.Clone()</see>
-        /// does not produce the desired result - it does not create an actual clone (it does not create a copy
-        /// of the image). That is why this method was implemented to provide the functionality.</remarks> 
-        /// 
-        public static Bitmap Clone(this Bitmap source)
-        {
-            // lock source bitmap data
-            BitmapData sourceData = source.LockBits(ImageLockMode.ReadOnly);
-            Bitmap destination;
+        ///// <summary>
+        ///// Clone image.
+        ///// </summary>
+        ///// 
+        ///// <param name="source">Source image.</param>
+        ///// 
+        ///// <returns>Return clone of the source image.</returns>
+        ///// 
+        ///// <remarks>The original <see cref="System.Drawing.Bitmap.Clone(System.Drawing.Rectangle, System.Drawing.Imaging.PixelFormat)">Bitmap.Clone()</see>
+        ///// does not produce the desired result - it does not create an actual clone (it does not create a copy
+        ///// of the image). That is why this method was implemented to provide the functionality.</remarks> 
+        ///// 
+        //public static Bitmap Clone(this Bitmap source)
+        //{
+        //    // lock source bitmap data
+        //    BitmapData sourceData = source.LockBits(ImageLockMode.ReadOnly);
+        //    Bitmap destination;
 
-            try
-            {
-                // create new image
-                destination = Clone(sourceData);
-            }
-            finally
-            {
-                // unlock source image
-                source.UnlockBits(sourceData);
-            }
+        //    try
+        //    {
+        //        // create new image
+        //        destination = Clone(sourceData);
+        //    }
+        //    finally
+        //    {
+        //        // unlock source image
+        //        source.UnlockBits(sourceData);
+        //    }
 
-            if (
-                (source.PixelFormat == PixelFormat.Format1bppIndexed) ||
-                (source.PixelFormat == PixelFormat.Format4bppIndexed) ||
-                (source.PixelFormat == PixelFormat.Format8bppIndexed) ||
-                (source.PixelFormat == PixelFormat.Indexed))
-            {
-                ColorPalette srcPalette = source.Palette;
-                ColorPalette dstPalette = destination.Palette;
+        //    if (
+        //        (source.PixelFormat == PixelFormat.Format1bppIndexed) ||
+        //        (source.PixelFormat == PixelFormat.Format4bppIndexed) ||
+        //        (source.PixelFormat == PixelFormat.Format8bppIndexed) ||
+        //        (source.PixelFormat == PixelFormat.Indexed))
+        //    {
+        //        ColorPalette srcPalette = source.Palette;
+        //        ColorPalette dstPalette = destination.Palette;
 
-                // copy pallete
-                for (int i = 0; i < dstPalette.Entries.Length; i++)
-                    dstPalette.Entries[i] = srcPalette.Entries[i];
+        //        // copy pallete
+        //        for (int i = 0; i < dstPalette.Entries.Length; i++)
+        //            dstPalette.Entries[i] = srcPalette.Entries[i];
 
-                destination.Palette = dstPalette;
-            }
+        //        destination.Palette = dstPalette;
+        //    }
 
-            return destination;
-        }
+        //    return destination;
+        //}
 
         /// <summary>
         ///   Converts a 8-bpp color image into a 8-bpp grayscale image, setting its color 
@@ -347,51 +347,6 @@ namespace Accord.Imaging
         }
 
         /// <summary>
-        /// Format an image.
-        /// </summary>
-        /// 
-        /// <param name="image">Source image to format.</param>
-        /// 
-        /// <remarks><para>Formats the image to one of the formats, which are supported
-        /// by the <b>AForge.Imaging</b> library. The image is left untouched in the
-        /// case if it is already of
-        /// <see cref="System.Drawing.Imaging.PixelFormat">Format24bppRgb</see> or
-        /// <see cref="System.Drawing.Imaging.PixelFormat">Format32bppRgb</see> or
-        /// <see cref="System.Drawing.Imaging.PixelFormat">Format32bppArgb</see> or
-        /// <see cref="System.Drawing.Imaging.PixelFormat">Format48bppRgb</see> or
-        /// <see cref="System.Drawing.Imaging.PixelFormat">Format64bppArgb</see>
-        /// format or it is <see cref="IsGrayscale">grayscale</see>, otherwise the image
-        /// is converted to <see cref="System.Drawing.Imaging.PixelFormat">Format24bppRgb</see>
-        /// format.</para>
-        /// 
-        /// <para><note>The method is deprecated and <see cref="Clone(Bitmap, PixelFormat)"/> method should
-        /// be used instead with specifying desired pixel format.</note></para>
-        /// </remarks>
-        ///
-        [Obsolete("Use Clone(Bitmap, PixelFormat) method instead and specify desired pixel format")]
-        public static void FormatImage(ref Bitmap image)
-        {
-            if (
-                (image.PixelFormat != PixelFormat.Format24bppRgb) &&
-                (image.PixelFormat != PixelFormat.Format32bppRgb) &&
-                (image.PixelFormat != PixelFormat.Format32bppArgb) &&
-                (image.PixelFormat != PixelFormat.Format48bppRgb) &&
-                (image.PixelFormat != PixelFormat.Format64bppArgb) &&
-                (image.PixelFormat != PixelFormat.Format16bppGrayScale) &&
-                (IsGrayscale(image) == false)
-                )
-            {
-                Bitmap tmp = image;
-
-                // convert to 24 bits per pixel
-                image = Clone(tmp, PixelFormat.Format24bppRgb);
-
-                // delete old image
-                tmp.Dispose();
-            }
-        }
-
-        /// <summary>
         /// Load bitmap from file.
         /// </summary>
         /// 
@@ -399,7 +354,7 @@ namespace Accord.Imaging
         /// 
         /// <returns>Returns loaded bitmap.</returns>
         /// 
-        /// <remarks><para>The method is provided as an alternative of <see cref="System.Drawing.Image.FromFile(string)"/>
+        /// <remarks><para>The method is provided as an alternative of System.Drawing.Image.FromFile(string)
         /// method to solve the issues of locked file. The standard .NET's method locks the source file until
         /// image's object is disposed, so the file can not be deleted or overwritten. This method workarounds the issue and
         /// does not lock the source file.</para>
@@ -537,49 +492,45 @@ namespace Accord.Imaging
             return destination;
         }
 
-        /// <summary>
-        /// Load bitmap from URL.
-        /// </summary>
-        /// 
-        /// <param name="url">URL to load bitmap from.</param>
-        /// 
-        /// <returns>Returns loaded bitmap.</returns>
-        /// 
-        public static Bitmap FromUrl(string url)
-        {
-            return FromUrl(url, String.Empty);
-        }
+        ///// <summary>
+        ///// Load bitmap from URL.
+        ///// </summary>
+        ///// 
+        ///// <param name="url">URL to load bitmap from.</param>
+        ///// 
+        ///// <returns>Returns loaded bitmap.</returns>
+        ///// 
+        //public static Bitmap FromUrl(string url)
+        //{
+        //    return FromUrl(url, String.Empty);
+        //}
 
-        /// <summary>
-        /// Load bitmap from URL.
-        /// </summary>
-        /// 
-        /// <param name="url">URL to load bitmap from.</param>
-        /// <param name="localPath">The local directory where the file should be stored.</param>
-        /// 
-        /// <returns>Returns loaded bitmap.</returns>
-        /// 
-        public static Bitmap FromUrl(string url, string localPath)
-        {
-            string name = System.IO.Path.GetFileName(url);
-            string downloadedFileName = System.IO.Path.Combine(localPath, name);
+        ///// <summary>
+        ///// Load bitmap from URL.
+        ///// </summary>
+        ///// 
+        ///// <param name="url">URL to load bitmap from.</param>
+        ///// <param name="localPath">The local directory where the file should be stored.</param>
+        ///// 
+        ///// <returns>Returns loaded bitmap.</returns>
+        ///// 
+        //public static Bitmap FromUrl(string url, string localPath)
+        //{
+        //    string name = System.IO.Path.GetFileName(url);
+        //    string downloadedFileName = System.IO.Path.Combine(localPath, name);
 
-            if (!File.Exists(downloadedFileName))
-            {
-#if NET35
-                if (localPath == null || String.IsNullOrEmpty(localPath.Trim()))
-#else
-                if (!String.IsNullOrWhiteSpace(localPath))
-#endif
-                    Directory.CreateDirectory(localPath);
+        //    if (!File.Exists(downloadedFileName))
+        //    {
+        //        if (!String.IsNullOrWhiteSpace(localPath))
+        //            Directory.CreateDirectory(localPath);
 
-                Console.WriteLine("Downloading {0}", url);
-                using (var client = ExtensionMethods.NewWebClient())
-                    client.DownloadFileWithRetry(url, downloadedFileName);
-            }
+        //        Console.WriteLine("Downloading {0}", url);
+        //        using (var client = ExtensionMethods.NewWebClient())
+        //            client.DownloadFileWithRetry(url, downloadedFileName);
+        //    }
 
-            return FromFile(downloadedFileName);
-        }
+        //    return FromFile(downloadedFileName);
+        //}
 
         /// <summary>
         /// Convert bitmap with 8 bits per plane to a bitmap with 16 bits per plane.

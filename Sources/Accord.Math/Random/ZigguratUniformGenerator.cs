@@ -27,7 +27,7 @@ namespace Accord.Math.Random
     using System.Linq;
     using System.Runtime.CompilerServices;
     using System.Text;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -141,9 +141,7 @@ namespace Accord.Math.Random
         ///   A random vector of observations drawn from this distribution.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Generate()
         {
             return u.Generate() * Length + Min;

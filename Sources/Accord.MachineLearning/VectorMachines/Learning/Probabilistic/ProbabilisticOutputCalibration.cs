@@ -97,15 +97,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         }
 
         /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public ProbabilisticOutputCalibration(ISupportVectorMachine<double[]> model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
         ///   Initializes a new instance of Platt's Probabilistic Output Calibration algorithm.
         /// </summary>
         /// 
@@ -248,9 +239,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     public class ProbabilisticOutputCalibration<TKernel, TInput>
         : ProbabilisticOutputCalibrationBase<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         ///   Initializes a new instance of Platt's Probabilistic Output Calibration algorithm.
@@ -281,9 +270,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupportVectorMachineLearning<TInput>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         private double[] distances;
@@ -538,58 +525,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             this.output = output;
         }
 
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Learn() instead.")]
-        public double Run()
-        {
-            Learn(input, output, null);
-            return logLikelihood(input, output);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Learn() instead.")]
-        public double Run(bool computeError)
-        {
-            Learn(input, output, null);
-            if (computeError)
-                return logLikelihood(input, output);
-            return 0;
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Accord.Math.Optimization.BinaryCrossEntropyLoss or any other losses of your choice from the Accord.Math.Optimization namespace.")]
-        public double LogLikelihood(TInput[] inputs, int[] outputs)
-        {
-            return logLikelihood(inputs, outputs);
-        }
-
-        private double logLikelihood(TInput[] inputs, int[] outputs)
-        {
-            // Compute the log-likelihood of the model
-            double logLikelihood = 0.0;
-
-            // Compute the new log-likelihood function
-            for (int i = 0; i < inputs.Length; i++)
-            {
-                double y = Model.Score(inputs[i]);
-                double t = outputs[i] == 1 ? 1 : 0;
-
-                if (y >= 0)
-                    logLikelihood += (t) * y + Special.Log1p(Math.Exp(-y));
-                else
-                    logLikelihood += (t - 1) * y + Special.Log1p(Math.Exp(y));
-            }
-
-            return logLikelihood;
-        }
-
-
+        //[Obsolete("LogLikelihood. Please use Accord.Math.Optimization.BinaryCrossEntropyLoss or any other losses of your choice from the Accord.Math.Optimization namespace.")]
 
         ISupportVectorMachine<TInput> ISupervisedLearning<ISupportVectorMachine<TInput>, TInput, int>.Learn(TInput[] x, int[] y, double[] weights)
         {

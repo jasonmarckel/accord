@@ -24,7 +24,7 @@ namespace Accord.Audition
 {
     using Accord.MachineLearning;
     using System;
-    using Accord.Compat;
+    
     using Accord.Audio;
 
     /// <summary>

@@ -570,10 +570,8 @@ namespace Accord.Imaging
         /// 
         public static void CopyResolutionFrom(this Bitmap dst, Bitmap src)
         {
-#if !MONO
             if ((src.HorizontalResolution > 0) && (src.VerticalResolution > 0))
                 dst.SetResolution(src.HorizontalResolution, src.VerticalResolution);
-#endif
         }
 
         #region Sum

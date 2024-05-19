@@ -12,7 +12,7 @@ namespace Accord.Imaging
     using System.Drawing;
     using System.Drawing.Imaging;
     using Accord.Math;
-    using Accord.Compat;
+
     using System.Numerics;
 
     /// <summary>

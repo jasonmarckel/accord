@@ -36,25 +36,20 @@ namespace Accord.IO
     using System;
     using System.Collections;
     using System.Collections.Generic;
-#if !NETSTANDARD1_4
     using System.Data.Common;
     using System.Data;
-#endif
     using Debug = System.Diagnostics.Debug;
     using System.Globalization;
     using System.IO;
     using Accord.IO.Resources;
     using System.Net;
-    using Accord.Compat;
 
     /// <summary>
     ///   Represents a reader that provides fast, non-cached, forward-only access to CSV data.  
     /// </summary>
     /// 
     public partial class CsvReader :
-#if !NETSTANDARD1_4
         IDataReader,
-#endif
         IEnumerable<string[]>, IDisposable
     {
         /// <summary>
@@ -212,10 +207,6 @@ namespace Accord.IO
 
         private void init(TextReader reader, bool hasHeaders, char delimiter = DefaultDelimiter, int bufferSize = DefaultBufferSize)
         {
-#if DEBUG && !NETSTANDARD1_4
-            _allocStack = new System.Diagnostics.StackTrace();
-#endif
-
             if (reader == null)
                 throw new ArgumentNullException("reader");
 
@@ -255,22 +246,6 @@ namespace Accord.IO
         }
 
         /// <summary>
-        ///   Creates a new CsvReader to read from a Web URL.
-        /// </summary>
-        /// 
-        /// <param name="url">The url pointing to the .csv file.</param>
-        /// <param name="hasHeaders"><see langword="true"/> if field names are located on the first non commented line, otherwise, <see langword="false"/>.</param>
-        /// 
-        public static CsvReader FromUrl(string url, bool hasHeaders)
-        {
-            WebClient client = ExtensionMethods.NewWebClient();
-            Console.WriteLine("Downloading {0}", url);
-            byte[] bytes = client.DownloadData(url);
-            MemoryStream stream = new MemoryStream(bytes);
-            return new CsvReader(stream, hasHeaders);
-        }
-
-        /// <summary>
         ///   Creates a new CsvReader to read from a string.
         /// </summary>
         /// 
@@ -302,9 +277,6 @@ namespace Accord.IO
             if (handler != null)
                 handler(this, e);
         }
-
-
-
 
         /// <summary>
         ///   Gets the comment character indicating that 
@@ -408,8 +380,6 @@ namespace Accord.IO
         /// 
         public string DefaultHeaderName { get; set; }
 
-
-
         /// <summary>
         ///   Gets the maximum number of fields to retrieve for each record.
         /// </summary>
@@ -488,8 +458,6 @@ namespace Accord.IO
             get { return _parseErrorFlag; }
         }
 
-
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Reads the entire stream into a DataTable.
         /// </summary>
@@ -504,7 +472,6 @@ namespace Accord.IO
             return table;
         }
 
-
         /// <summary>
         ///   Reads the entire stream into a DataTable.
         /// </summary>
@@ -515,7 +482,6 @@ namespace Accord.IO
         {
             return new DataView(ToTable()).ToTable(false, columnNames);
         }
-#endif
 
         /// <summary>
         ///   Reads the entire stream into a list of records.
@@ -572,7 +538,6 @@ namespace Accord.IO
 
             return record;
         }
-
 
         /// <summary>
         ///   Reads the entire stream into a multi-dimensional matrix.
@@ -769,8 +734,6 @@ namespace Accord.IO
             get { return ReadField(field, false, false); }
         }
 
-
-
         /// <summary>
         /// Gets the field index for the provided header.
         /// </summary>
@@ -790,9 +753,6 @@ namespace Accord.IO
             else
                 return -1;
         }
-
-
-
 
         /// <summary>
         ///   Copies the field array of the current record to a one-dimensional array, starting at the beginning of the target array.
@@ -852,8 +812,6 @@ namespace Accord.IO
             }
         }
 
-
-
         /// <summary>
         ///   Gets the current raw CSV data.
         /// </summary>
@@ -869,7 +827,6 @@ namespace Accord.IO
 
             return string.Empty;
         }
-
 
         /// <summary>
         /// Ensures that the reader is initialized.
@@ -900,8 +857,6 @@ namespace Accord.IO
 
             return (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.SpaceSeparator);
         }
-
-
 
         /// <summary>
         ///   Moves to the specified record index.
@@ -948,7 +903,6 @@ namespace Accord.IO
         {
             return ReadNextRecord(false, false);
         }
-
 
         /// <summary>
         ///   Parses a new line delimiter.
@@ -1049,7 +1003,6 @@ namespace Accord.IO
 
             return false;
         }
-
 
         /// <summary>
         /// Fills the buffer with data from the reader.
@@ -1742,7 +1695,6 @@ namespace Accord.IO
             }
         }
 
-
         /// <summary>
         /// Skips whitespace characters.
         /// </summary>
@@ -1771,7 +1723,6 @@ namespace Accord.IO
 
             return true;
         }
-
 
         /// <summary>
         /// Skips ahead to the next NewLine character.
@@ -1849,7 +1800,6 @@ namespace Accord.IO
             }
         }
 
-
         /// <summary>
         /// Handles a missing field error.
         /// </summary>
@@ -1894,7 +1844,6 @@ namespace Accord.IO
             }
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         /// Validates the state of the data reader.
         /// </summary>
@@ -1913,7 +1862,6 @@ namespace Accord.IO
             if ((validations & DataReaderValidations.IsNotClosed) != 0 && _isDisposed)
                 throw new InvalidOperationException(ExceptionMessage.ReaderClosed);
         }
-#endif
 
         /// <summary>
         /// Copy the value of the specified field to an array.
@@ -1965,9 +1913,6 @@ namespace Accord.IO
             return length;
         }
 
-
-
-
         /// <summary>
         /// Returns an <see cref="T:RecordEnumerator"/>  that can iterate through CSV records.
         /// </summary>
@@ -1990,15 +1935,12 @@ namespace Accord.IO
             return GetEnumerator();
         }
 
-
-#if DEBUG && !NETSTANDARD1_4
+#if DEBUG
         /// <summary>
         /// Contains the stack when the object was allocated.
         /// </summary>
         private System.Diagnostics.StackTrace _allocStack;
 #endif
-
-
 
         /// <summary>
         /// Contains the disposed status flag.
@@ -2021,9 +1963,7 @@ namespace Accord.IO
         /// <value>
         /// 	<see langword="true"/> if the instance has been disposed of; otherwise, <see langword="false"/>.
         /// </value>
-#if !NETSTANDARD1_4
         [System.ComponentModel.Browsable(false)]
-#endif
         public bool IsDisposed
         {
             get { return _isDisposed; }
@@ -2064,11 +2004,9 @@ namespace Accord.IO
         /// </remarks>
         public void Dispose()
         {
-            if (!_isDisposed)
-            {
-                Dispose(true);
-                GC.SuppressFinalize(this);
-            }
+            //if (_isDisposed) { return; }            
+            Dispose(true);
+            GC.SuppressFinalize(this);            
         }
 
         /// <summary>
@@ -2140,7 +2078,6 @@ namespace Accord.IO
             }
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         /// Releases unmanaged resources and performs other cleanup operations before the instance is reclaimed by garbage collection.
         /// </summary>
@@ -2149,11 +2086,8 @@ namespace Accord.IO
 #if DEBUG
             Debug.WriteLine("FinalizableObject was not disposed" + _allocStack.ToString());
 #endif
-
             Dispose(false);
         }
-#endif
-
 
     }
 }

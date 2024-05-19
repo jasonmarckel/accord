@@ -25,7 +25,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using System;
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Bernoulli probability distribution.

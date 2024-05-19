@@ -30,7 +30,7 @@ namespace Accord.Statistics.Analysis
     using System;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using Accord.Compat;
+
     using System.Threading;
     using Accord.Statistics.Filters;
 
@@ -79,7 +79,6 @@ namespace Accord.Statistics.Analysis
     /// 
     [Serializable]
     public class MultinomialLogisticRegressionAnalysis : TransformBase<double[], int>,
-        IMultivariateRegressionAnalysis,
         ISupervisedLearning<MultinomialLogisticRegression, double[], double[]>,
         ISupervisedLearning<MultinomialLogisticRegression, double[], int>
     {
@@ -132,52 +131,6 @@ namespace Accord.Statistics.Analysis
 
         private int iterations = 50;
         private double tolerance = 1e-5;
-
-
-#pragma warning disable 612, 618
-        /// <summary>
-        ///   Source data used in the analysis.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Array { get { return inputData; } }
-
-        /// <summary>
-        ///   Source data used in the analysis.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source { get { return inputData.ToMatrix(); } }
-
-        /// <summary>
-        ///   Gets the dependent variable value
-        ///   for each of the source input points.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Output { get { return outputData.ToMatrix(); } }
-
-        /// <summary>
-        ///   Gets the dependent variable value
-        ///   for each of the source input points.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Outputs
-        {
-            get { return outputData; }
-        }
-
-        /// <summary>
-        ///   Gets the resulting values obtained by the regression model.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Results
-        {
-            get { return results; }
-        }
-#pragma warning restore 612, 618
 
         /// <summary>
         ///   Gets or sets the maximum number of iterations to be
@@ -275,17 +228,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Obsolete. Please use <see cref="InputNames"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use InputNames instead.")]
-        public String[] Inputs
-        {
-            get { return InputNames; }
-            set { InputNames = value; }
-        }
-
-        /// <summary>
         ///   Gets or sets the name of the input variables for the model.
         /// </summary>
         /// 
@@ -324,88 +266,7 @@ namespace Accord.Statistics.Analysis
             get { return coefficientCollection; }
         }
 
-        /// <summary>
-        ///   Constructs a Multinomial Logistic Regression Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data for the analysis.</param>
-        /// <param name="outputs">The output data for the analysis.</param>
-        /// 
-        [Obsolete("Please pass the inputs and outputs to the Learn() method.")]
-        public MultinomialLogisticRegressionAnalysis(double[][] inputs, int[] outputs)
-        {
-            // Initial argument checking
-            if (inputs == null)
-                throw new ArgumentNullException("inputs");
-
-            if (outputs == null)
-                throw new ArgumentNullException("outputs");
-
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("The number of rows in the input array must match the number of given outputs.");
-
-            init(inputs, Jagged.OneHot(outputs));
-        }
-
-        /// <summary>
-        ///   Constructs a Multinomial Logistic Regression Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data for the analysis.</param>
-        /// <param name="outputs">The output data for the analysis.</param>
-        /// 
-        [Obsolete("Please pass the inputs and outputs to the Learn() method.")]
-        public MultinomialLogisticRegressionAnalysis(double[][] inputs, double[][] outputs)
-        {
-            // Initial argument checking
-            if (inputs == null)
-                throw new ArgumentNullException("inputs");
-
-            if (outputs == null)
-                throw new ArgumentNullException("outputs");
-
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("The number of rows in the input array must match the number of given outputs.");
-
-            init(inputs, outputs);
-        }
-
-        /// <summary>
-        ///   Constructs a Multiple Linear Regression Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data for the analysis.</param>
-        /// <param name="outputs">The output data for the analysis.</param>
-        /// <param name="inputNames">The names of the input variables.</param>
-        /// <param name="outputNames">The names of the output variables.</param>
-        /// 
 #pragma warning disable 612, 618
-        [Obsolete("Please pass the inputs and outputs to the Learn() method.")]
-        public MultinomialLogisticRegressionAnalysis(double[][] inputs, int[] outputs,
-            String[] inputNames, String[] outputNames)
-            : this(inputs, outputs)
-#pragma warning restore 612, 618
-        {
-            names(inputNames, outputNames);
-        }
-
-        /// <summary>
-        ///   Constructs a Multiple Linear Regression Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data for the analysis.</param>
-        /// <param name="outputs">The output data for the analysis.</param>
-        /// <param name="inputNames">The names of the input variables.</param>
-        /// <param name="outputNames">The names of the output variables.</param>
-        /// 
-#pragma warning disable 612, 618
-        [Obsolete("Please pass the inputs and outputs to the Learn() method.")]
-        public MultinomialLogisticRegressionAnalysis(double[][] inputs, double[][] outputs,
-            String[] inputNames, String[] outputNames)
-            : this(inputs, outputs)
-        {
-            names(inputNames, outputNames);
-        }
 
         /// <summary>
         ///   Constructs a Multiple Linear Regression Analysis.
@@ -565,40 +426,11 @@ namespace Accord.Statistics.Analysis
             return Learn(x, Jagged.OneHot(y), weights);
         }
 
-        /// <summary>
-        ///   Computes the Multinomial Logistic Regression Analysis.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn method instead.")]
-        public bool Compute()
-        {
-#pragma warning disable 612, 618
-            double delta;
-            int iteration = 0;
-
-            var learning = new LowerBoundNewtonRaphson(regression);
-
-            do // learning iterations until convergence
-            {
-                delta = learning.Run(inputData, outputData);
-                iteration++;
-
-            } while (delta > tolerance && iteration < iterations);
-
-            // Check if the full model has converged
-            bool converged = iteration < iterations;
-
-            computeInformation(inputData, outputData);
-
-            return converged;
-#pragma warning restore 612, 618
-        }
-
         private void computeInformation(double[][] inputData, double[][] outputData)
         {
             // Store model information
 #pragma warning disable 612, 618
-            results = regression.Compute(inputData);
+            results = regression.Probabilities(inputData);
 #pragma warning restore 612, 618
 
             this.deviance = regression.GetDeviance(inputData, outputData);
@@ -616,14 +448,6 @@ namespace Accord.Statistics.Analysis
                 this.oddsRatios[i] = regression.GetOddsRatio(i);
             }
         }
-
-#pragma warning disable 612, 618
-        [Obsolete("Please use the Learn method instead.")]
-        void IAnalysis.Compute()
-        {
-            Compute();
-        }
-#pragma warning restore 612, 618
 
         /// <summary>
         /// Applies the transformation to an input, producing an associated output.

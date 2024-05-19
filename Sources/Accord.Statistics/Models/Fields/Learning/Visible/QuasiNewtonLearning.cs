@@ -30,7 +30,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using Accord.Statistics.Models.Fields.Functions;
     using System;
     using System.Linq;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -40,7 +40,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     /// 
     public class QuasiNewtonLearning<T> : ParallelLearningBase,
         ISupervisedLearning<ConditionalRandomField<T>, T[], int[]>,
-        IConditionalRandomFieldLearning<T>, IConvergenceLearning
+        IConvergenceLearning
     {
 
         private BoundedBroydenFletcherGoldfarbShanno lbfgs;
@@ -65,7 +65,7 @@ namespace Accord.Statistics.Models.Fields.Learning
         /// <value>The tolerance.</value>
         public double Tolerance { get; set; }
 
-        int IConvergenceLearning.Iterations
+        int IConvergenceLearning.MaxIterations
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
@@ -137,20 +137,6 @@ namespace Accord.Statistics.Models.Fields.Learning
                 lbfgs.UpperBounds[i] = 1e10;
                 lbfgs.LowerBounds[i] = -1e100;
             }
-        }
-
-        /// <summary>
-        ///   Runs the learning algorithm with the specified input
-        ///   training observations and corresponding output labels.
-        /// </summary>
-        /// 
-        /// <param name="observations">The training observations.</param>
-        /// <param name="labels">The observation's labels.</param>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(T[][] observations, int[][] labels)
-        {
-            return run(observations, labels);
         }
 
         private double run(T[][] observations, int[][] labels)

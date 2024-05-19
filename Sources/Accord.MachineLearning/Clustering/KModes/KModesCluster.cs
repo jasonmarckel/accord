@@ -27,7 +27,7 @@ namespace Accord.MachineLearning
     using System;
     using System.Collections;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   k-Modes cluster collection.
@@ -52,14 +52,6 @@ namespace Accord.MachineLearning
         {
         }
 
-
-        /// <summary>
-        ///   Gets the dimensionality of the data space.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Dimension { get { return NumberOfInputs; } }
-
         /// <summary>
         ///   Initializes a new instance of the <see cref="KModesClusterCollection{T}"/> class.
         /// </summary>
@@ -71,11 +63,6 @@ namespace Accord.MachineLearning
         {
             this.collection = new KModesCluster.ClusterCollection(this, k, distance);
         }
-
-
-
-
-
 
         // Using composition over inheritance to achieve the closest as possible effect to a Mixin
         // in C# - unfortunately needs a lot a boilerplate code to rewrire the interface methods to

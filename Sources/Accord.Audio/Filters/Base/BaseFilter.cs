@@ -24,7 +24,7 @@ namespace Accord.Audio.Filters
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Base signal processing filter

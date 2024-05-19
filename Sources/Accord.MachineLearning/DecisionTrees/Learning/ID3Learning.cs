@@ -31,7 +31,7 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
     using System.Collections.Generic;
     using Statistics.Filters;
     using System.Collections;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -165,28 +165,6 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
             return Model;
         }
 
-        /// <summary>
-        ///   Runs the learning algorithm, creating a decision
-        ///   tree modeling the given inputs and outputs.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The inputs.</param>
-        /// <param name="outputs">The corresponding outputs.</param>
-        /// 
-        /// <returns>The error of the generated tree.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(int[][] inputs, int[] outputs)
-        {
-            run(inputs, outputs);
-
-            // Return the classification error
-            return new ZeroOneLoss(outputs)
-            {
-                Mean = true
-            }.Loss(Model.Decide(inputs));
-        }
-
         private void run(int[][] inputs, int[] outputs)
         {
             // Initial argument check
@@ -204,27 +182,6 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
 
             // Recursively split the tree nodes
             split(Model.Root, inputs, outputs, 0);
-        }
-
-
-
-        /// <summary>
-        ///   Computes the prediction error for the tree
-        ///   over a given set of input and outputs.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input points.</param>
-        /// <param name="outputs">The corresponding output labels.</param>
-        /// 
-        /// <returns>The percentage error of the prediction.</returns>
-        /// 
-        [Obsolete("Please use the ZeroOneLoss class instead.")]
-        public double ComputeError(int[][] inputs, int[] outputs)
-        {
-            return new ZeroOneLoss(outputs)
-            {
-                Mean = true
-            }.Loss(Model.Decide(inputs));
         }
 
         private void split(DecisionNode root, int[][] input, int[] output, int height)

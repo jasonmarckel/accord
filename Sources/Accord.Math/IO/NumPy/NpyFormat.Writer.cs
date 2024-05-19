@@ -30,7 +30,7 @@ namespace Accord.IO
     using System.Runtime.InteropServices;
     using System.Text;
     using System.IO.Compression;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     public static partial class NpyFormat
@@ -78,11 +78,7 @@ namespace Accord.IO
         /// 
         public static ulong Save(Array array, Stream stream)
         {
-            using (var writer = new BinaryWriter(stream
-#if !NET35 && !NET40
-                , System.Text.Encoding.ASCII, leaveOpen: true
-#endif
-                ))
+            using (var writer = new BinaryWriter(stream, System.Text.Encoding.ASCII, leaveOpen: true))
             {
                 Type type;
                 int maxLength;
@@ -117,11 +113,7 @@ namespace Accord.IO
             Buffer.BlockCopy(matrix, 0, buffer, 0, buffer.Length);
             reader.Write(buffer, 0, buffer.Length);
 
-#if NETSTANDARD1_4
-            return (ulong)buffer.Length;
-#else
             return (ulong)buffer.LongLength;
-#endif
         }
 
         private static ulong writeValueJagged(BinaryWriter reader, Array matrix, int bytes, int[] shape)
@@ -136,11 +128,7 @@ namespace Accord.IO
                 Array.Clear(buffer, arr.Length, buffer.Length - buffer.Length);
                 Buffer.BlockCopy(arr, 0, buffer, 0, buffer.Length);
                 reader.Write(buffer, 0, buffer.Length);
-#if NETSTANDARD1_4
-                writtenBytes += (ulong)buffer.Length;
-#else
                 writtenBytes += (ulong)buffer.LongLength;
-#endif
             }
 
             return writtenBytes;
@@ -177,11 +165,7 @@ namespace Accord.IO
                             reader.Write(empty, 0, bytes);
                         }
 
-#if NETSTANDARD1_4
-                        writtenBytes += (ulong)buffer.Length;
-#else
                         writtenBytes += (ulong)buffer.LongLength;
-#endif
                     }
                 }
             }

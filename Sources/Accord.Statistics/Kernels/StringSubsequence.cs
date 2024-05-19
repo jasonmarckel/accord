@@ -23,7 +23,7 @@
 namespace Accord.Statistics.Kernels
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   String Subsequence Kernel (SSK).

@@ -38,7 +38,7 @@ namespace Accord.MachineLearning.DecisionTrees
     using AForge;
     using Accord.Statistics;
     using Accord.MachineLearning.DecisionTrees.Learning;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using Accord.Collections;
     using Accord.Math.Optimization.Losses;
@@ -67,17 +67,6 @@ namespace Accord.MachineLearning.DecisionTrees
     {
         private RandomForest forest;
         private IList<DecisionVariable> attributes;
-
-        /// <summary>
-        ///   Gets or sets the number of trees in the random forest.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfTrees instead.")]
-        public int Trees
-        {
-            get { return NumberOfTrees; }
-            set { NumberOfTrees = value; }
-        }
 
         /// <summary>
         ///   Gets or sets the number of trees in the random forest.
@@ -234,21 +223,6 @@ namespace Accord.MachineLearning.DecisionTrees
         private RandomForest CreateTree(int[] y)
         {
             return new RandomForest(NumberOfTrees, this.attributes, y.Max() + 1);
-        }
-
-
-        /// <summary>
-        ///   Runs the learning algorithm with the given data.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input points.</param>
-        /// <param name="output">The class label for each point.</param>
-        /// 
-        [Obsolete("Please use the Learn(x, y) method instead.")]
-        public double Run(double[][] inputs, int[] output)
-        {
-            run(inputs, output);
-            return new ZeroOneLoss(output).Loss(this.forest.Decide(inputs));
         }
 
         private void run(double[][] inputs, int[] output)

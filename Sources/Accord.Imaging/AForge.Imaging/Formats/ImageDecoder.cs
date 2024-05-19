@@ -34,7 +34,7 @@ namespace Accord.Imaging.Formats
     using System.Drawing.Imaging;
     using System.Globalization;
     using System.IO;
-    using Accord.Compat;
+
     using System.Linq;
     using System.Threading;
 
@@ -61,24 +61,11 @@ namespace Accord.Imaging.Formats
     /// <code source="Unit Tests\Accord.Tests.Imaging\Formats\PNMCodecTest.cs" region="doc_load" />
     /// </example>
     /// 
-    /// <seealso cref="PNMCodec"/>
-    /// <seealso cref="FITSCodec"/>
-    /// 
     public static class ImageDecoder
     {
         private static Dictionary<string, Type> decoderTypes = new Dictionary<string, Type>();
         private static ThreadLocal<Dictionary<string, IImageDecoder>> decoders = 
             new ThreadLocal<Dictionary<string, IImageDecoder>>(() => new Dictionary<string, IImageDecoder>());
-
-        /// <summary>
-        ///   Obsolete. Please mark your decoder class with the <see cref="FormatDecoderAttribute"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please mark your decoder class with the FormatDecoderAttribute instead.")]
-        public static void RegisterDecoder(string fileExtension, IImageDecoder decoder)
-        {
-            decoderTypes.Add(fileExtension.ToUpperInvariant(), decoder.GetType());
-        }
 
         /// <summary>
         /// Decode first frame for the specified file.
@@ -92,7 +79,7 @@ namespace Accord.Imaging.Formats
         /// <remarks><para>The method uses table of registered image decoders to find the one,
         /// which should be used for the specified file. If there is not appropriate decoder
         /// found, the method uses default .NET's image decoding routine (see
-        /// <see cref="System.Drawing.Image.FromFile(string)"/>).</para></remarks>
+        /// System.Drawing.Image.FromFile(string)).</para></remarks>
         /// 
         public static Bitmap DecodeFromFile(string fileName)
         {
@@ -114,7 +101,7 @@ namespace Accord.Imaging.Formats
         /// <remarks><para>The method uses table of registered image decoders to find the one,
         /// which should be used for the specified file. If there is not appropriate decoder
         /// found, the method uses default .NET's image decoding routine (see
-        /// <see cref="System.Drawing.Image.FromFile(string)"/>).</para></remarks>
+        /// System.Drawing.Image.FromFile(string)).</para></remarks>
         /// 
         public static Bitmap DecodeFromFile(string fileName, out ImageInfo imageInfo)
         {

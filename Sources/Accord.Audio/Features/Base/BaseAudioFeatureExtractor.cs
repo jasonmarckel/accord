@@ -22,7 +22,7 @@
 
 namespace Accord.Audio
 {
-    using Accord.Compat;
+    
     using Accord.MachineLearning;
     using System;
     using System.Collections.Generic;

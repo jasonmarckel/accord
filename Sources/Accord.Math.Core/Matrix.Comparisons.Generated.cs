@@ -38,9 +38,7 @@ namespace Accord.Math
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -103,9 +101,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -176,9 +172,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -244,9 +238,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -312,9 +304,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -389,9 +379,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -454,9 +442,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -526,9 +512,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -613,9 +597,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -625,9 +607,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -637,9 +617,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -649,9 +627,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Int16[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -714,9 +690,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Int16[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -787,9 +761,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Int16[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -855,9 +827,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int16[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -923,9 +893,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int16[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -1000,9 +968,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Int16 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -1065,9 +1031,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Int16 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -1137,9 +1101,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int16 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -1224,9 +1186,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Int16[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -1236,9 +1196,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Int16[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -1248,9 +1206,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Int16[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -1260,9 +1216,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Single[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -1337,9 +1291,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -1422,9 +1374,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -1502,9 +1452,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -1582,9 +1530,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -1671,9 +1617,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -1748,9 +1692,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -1832,9 +1774,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -1931,9 +1871,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Single[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -1943,9 +1881,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -1955,9 +1891,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -1967,9 +1901,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -2044,9 +1976,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -2129,9 +2059,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -2209,9 +2137,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -2289,9 +2215,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -2378,9 +2302,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -2455,9 +2377,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -2539,9 +2459,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -2638,9 +2556,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -2650,9 +2566,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -2662,9 +2576,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -2674,9 +2586,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -2739,9 +2649,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -2812,9 +2720,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -2880,9 +2786,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -2948,9 +2852,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -3025,9 +2927,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -3090,9 +2990,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -3162,9 +3060,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -3249,9 +3145,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -3261,9 +3155,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -3273,9 +3165,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -3285,9 +3175,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -3350,9 +3238,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -3423,9 +3309,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -3491,9 +3375,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -3559,9 +3441,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -3636,9 +3516,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -3701,9 +3579,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -3773,9 +3649,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -3860,9 +3734,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -3872,9 +3744,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -3884,9 +3754,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -3896,9 +3764,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Byte[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -3961,9 +3827,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Byte[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -4034,9 +3898,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, Byte[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4102,9 +3964,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Byte[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4170,9 +4030,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Byte[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4247,9 +4105,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, Byte b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -4312,9 +4168,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, Byte b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -4384,9 +4238,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, Byte b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4471,9 +4323,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, Byte[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -4483,9 +4333,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, Byte[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -4495,9 +4343,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, Byte[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -4507,9 +4353,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, sbyte[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -4572,9 +4416,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, sbyte[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -4645,9 +4487,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[,] a, sbyte[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4713,9 +4553,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, sbyte[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4781,9 +4619,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, sbyte[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -4858,9 +4694,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32[] a, sbyte b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int32,bool>(a);
@@ -4923,9 +4757,7 @@ bool[] r = VectorCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32[,] a, sbyte b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int32,bool>(a);
@@ -4995,9 +4827,7 @@ bool[,] r = MatrixCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32[][] a, sbyte b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int32,bool>(a);
@@ -5082,9 +4912,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int32 a, sbyte[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -5094,9 +4922,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int32 a, sbyte[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -5106,9 +4932,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int32 a, sbyte[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -5118,9 +4942,7 @@ bool[][] r = JaggedCreateAs<Int32,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -5183,9 +5005,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -5256,9 +5076,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -5324,9 +5142,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -5392,9 +5208,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -5469,9 +5283,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -5534,9 +5346,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -5606,9 +5416,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -5693,9 +5501,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -5705,9 +5511,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -5717,9 +5521,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -5729,9 +5531,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Int16[] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -5794,9 +5594,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -5867,9 +5665,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -5935,9 +5731,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -6003,9 +5797,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -6080,9 +5872,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -6145,9 +5935,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -6217,9 +6005,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -6304,9 +6090,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Int16[] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -6316,9 +6100,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -6328,9 +6110,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -6340,9 +6120,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Single[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -6417,9 +6195,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -6502,9 +6278,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -6582,9 +6356,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -6662,9 +6434,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -6751,9 +6521,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -6828,9 +6596,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -6912,9 +6678,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -7011,9 +6775,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Single[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -7023,9 +6785,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -7035,9 +6795,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -7047,9 +6805,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -7124,9 +6880,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -7209,9 +6963,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -7289,9 +7041,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -7369,9 +7119,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -7458,9 +7206,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -7535,9 +7281,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -7619,9 +7363,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -7718,9 +7460,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -7730,9 +7470,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -7742,9 +7480,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -7754,9 +7490,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -7819,9 +7553,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -7892,9 +7624,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -7960,9 +7690,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8028,9 +7756,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8105,9 +7831,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -8170,9 +7894,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -8242,9 +7964,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8329,9 +8049,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -8341,9 +8059,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -8353,9 +8069,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -8365,9 +8079,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -8430,9 +8142,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -8503,9 +8213,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8571,9 +8279,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8639,9 +8345,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8716,9 +8420,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -8781,9 +8483,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -8853,9 +8553,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -8940,9 +8638,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -8952,9 +8648,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -8964,9 +8658,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -8976,9 +8668,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Byte[] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -9041,9 +8731,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Byte[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -9114,9 +8802,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, Byte[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9182,9 +8868,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Byte[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9250,9 +8934,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Byte[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9327,9 +9009,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, Byte b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -9392,9 +9072,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, Byte b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -9464,9 +9142,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, Byte b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9551,9 +9227,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, Byte[] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -9563,9 +9237,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, Byte[,] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -9575,9 +9247,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, Byte[][] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -9587,9 +9257,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, sbyte[] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -9652,9 +9320,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, sbyte[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -9725,9 +9391,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[,] a, sbyte[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9793,9 +9457,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, sbyte[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9861,9 +9523,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, sbyte[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -9938,9 +9598,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16[] a, sbyte b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int16,bool>(a);
@@ -10003,9 +9661,7 @@ bool[] r = VectorCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16[,] a, sbyte b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int16,bool>(a);
@@ -10075,9 +9731,7 @@ bool[,] r = MatrixCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16[][] a, sbyte b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int16,bool>(a);
@@ -10162,9 +9816,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int16 a, sbyte[] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -10174,9 +9826,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int16 a, sbyte[,] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -10186,9 +9836,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int16 a, sbyte[][] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -10198,9 +9846,7 @@ bool[][] r = JaggedCreateAs<Int16,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Int32[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -10275,9 +9921,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Int32[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -10360,9 +10004,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Int32[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -10440,9 +10082,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int32[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -10520,9 +10160,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int32[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -10609,9 +10247,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Int32 b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -10686,9 +10322,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Int32 b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -10770,9 +10404,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int32 b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -10869,9 +10501,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Int32[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -10881,9 +10511,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Int32[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -10893,9 +10521,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Int32[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -10905,9 +10531,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Int16[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -10982,9 +10606,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Int16[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -11067,9 +10689,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Int16[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -11147,9 +10767,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int16[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -11227,9 +10845,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int16[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -11316,9 +10932,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Int16 b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -11393,9 +11007,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Int16 b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -11477,9 +11089,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int16 b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -11576,9 +11186,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Int16[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -11588,9 +11196,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Int16[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -11600,9 +11206,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Int16[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -11612,9 +11216,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Single[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -11701,9 +11303,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -11798,9 +11398,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -11890,9 +11488,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -11982,9 +11578,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -12083,9 +11677,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -12172,9 +11764,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -12268,9 +11858,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -12379,9 +11967,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Single[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -12391,9 +11977,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -12403,9 +11987,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -12415,9 +11997,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -12504,9 +12084,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -12601,9 +12179,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -12693,9 +12269,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -12785,9 +12359,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -12886,9 +12458,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -12975,9 +12545,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -13071,9 +12639,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -13182,9 +12748,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -13194,9 +12758,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -13206,9 +12768,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -13218,9 +12778,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Int64[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -13295,9 +12853,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Int64[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -13380,9 +12936,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Int64[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -13460,9 +13014,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int64[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -13540,9 +13092,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int64[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -13629,9 +13179,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Int64 b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -13706,9 +13254,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Int64 b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -13790,9 +13336,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Int64 b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -13889,9 +13433,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Int64[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -13901,9 +13443,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Int64[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -13913,9 +13453,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Int64[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -13925,9 +13463,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -13998,9 +13534,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -14079,9 +13613,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -14155,9 +13687,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -14231,9 +13761,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -14316,9 +13844,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -14389,9 +13915,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -14469,9 +13993,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -14564,9 +14086,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -14576,9 +14096,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -14588,9 +14106,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -14600,9 +14116,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Byte[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -14677,9 +14191,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Byte[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -14762,9 +14274,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, Byte[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -14842,9 +14352,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Byte[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -14922,9 +14430,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Byte[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -15011,9 +14517,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, Byte b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -15088,9 +14592,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, Byte b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -15172,9 +14674,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, Byte b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -15271,9 +14771,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, Byte[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -15283,9 +14781,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, Byte[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -15295,9 +14791,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, Byte[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -15307,9 +14801,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, sbyte[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -15384,9 +14876,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, sbyte[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -15469,9 +14959,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[,] a, sbyte[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -15549,9 +15037,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, sbyte[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -15629,9 +15115,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, sbyte[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -15718,9 +15202,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single[] a, sbyte b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Single,bool>(a);
@@ -15795,9 +15277,7 @@ bool[] r = VectorCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single[,] a, sbyte b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Single,bool>(a);
@@ -15879,9 +15359,7 @@ bool[,] r = MatrixCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single[][] a, sbyte b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Single,bool>(a);
@@ -15978,9 +15456,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Single a, sbyte[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -15990,9 +15466,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Single a, sbyte[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -16002,9 +15476,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Single a, sbyte[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -16014,9 +15486,7 @@ bool[][] r = JaggedCreateAs<Single,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Int32[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -16091,9 +15561,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Int32[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -16176,9 +15644,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Int32[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -16256,9 +15722,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int32[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -16336,9 +15800,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int32[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -16425,9 +15887,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Int32 b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -16502,9 +15962,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Int32 b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -16586,9 +16044,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int32 b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -16685,9 +16141,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Int32[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -16697,9 +16151,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Int32[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -16709,9 +16161,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Int32[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -16721,9 +16171,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Int16[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -16798,9 +16246,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Int16[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -16883,9 +16329,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Int16[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -16963,9 +16407,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int16[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -17043,9 +16485,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int16[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -17132,9 +16572,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Int16 b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -17209,9 +16647,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Int16 b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -17293,9 +16729,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int16 b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -17392,9 +16826,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Int16[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -17404,9 +16836,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Int16[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -17416,9 +16846,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Int16[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -17428,9 +16856,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Single[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -17517,9 +16943,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Single[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -17614,9 +17038,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Single[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -17706,9 +17128,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Single[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -17798,9 +17218,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Single[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -17899,9 +17317,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Single b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -17988,9 +17404,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Single b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -18084,9 +17498,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Single b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -18195,9 +17607,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Single[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -18207,9 +17617,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Single[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -18219,9 +17627,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Single[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -18231,9 +17637,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -18320,9 +17724,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -18417,9 +17819,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -18509,9 +17909,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -18601,9 +17999,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -18702,9 +18098,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -18791,9 +18185,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -18887,9 +18279,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -18998,9 +18388,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -19010,9 +18398,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -19022,9 +18408,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -19034,9 +18418,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Int64[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -19111,9 +18493,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Int64[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -19196,9 +18576,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Int64[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -19276,9 +18654,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int64[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -19356,9 +18732,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int64[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -19445,9 +18819,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Int64 b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -19522,9 +18894,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Int64 b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -19606,9 +18976,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Int64 b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -19705,9 +19073,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Int64[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -19717,9 +19083,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Int64[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -19729,9 +19093,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Int64[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -19741,9 +19103,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -19814,9 +19174,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -19895,9 +19253,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -19971,9 +19327,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -20047,9 +19401,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -20132,9 +19484,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -20205,9 +19555,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -20285,9 +19633,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -20380,9 +19726,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -20392,9 +19736,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -20404,9 +19746,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -20416,9 +19756,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Byte[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -20493,9 +19831,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Byte[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -20578,9 +19914,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, Byte[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -20658,9 +19992,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Byte[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -20738,9 +20070,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Byte[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -20827,9 +20157,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, Byte b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -20904,9 +20232,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, Byte b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -20988,9 +20314,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, Byte b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -21087,9 +20411,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, Byte[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -21099,9 +20421,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, Byte[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -21111,9 +20431,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, Byte[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -21123,9 +20441,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, sbyte[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -21200,9 +20516,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, sbyte[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -21285,9 +20599,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[,] a, sbyte[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -21365,9 +20677,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, sbyte[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -21445,9 +20755,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, sbyte[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -21534,9 +20842,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double[] a, sbyte b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Double,bool>(a);
@@ -21611,9 +20917,7 @@ bool[] r = VectorCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double[,] a, sbyte b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Double,bool>(a);
@@ -21695,9 +20999,7 @@ bool[,] r = MatrixCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double[][] a, sbyte b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Double,bool>(a);
@@ -21794,9 +21096,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Double a, sbyte[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -21806,9 +21106,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Double a, sbyte[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -21818,9 +21116,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Double a, sbyte[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -21830,9 +21126,7 @@ bool[][] r = JaggedCreateAs<Double,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Int32[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -21895,9 +21189,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Int32[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -21968,9 +21260,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Int32[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22036,9 +21326,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int32[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22104,9 +21392,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int32[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22181,9 +21467,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Int32 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -22246,9 +21530,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Int32 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -22318,9 +21600,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int32 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22405,9 +21685,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Int32[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -22417,9 +21695,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Int32[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -22429,9 +21705,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Int32[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -22441,9 +21715,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Int16[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -22506,9 +21778,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Int16[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -22579,9 +21849,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Int16[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22647,9 +21915,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int16[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22715,9 +21981,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int16[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -22792,9 +22056,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Int16 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -22857,9 +22119,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Int16 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -22929,9 +22189,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int16 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -23016,9 +22274,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Int16[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -23028,9 +22284,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Int16[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -23040,9 +22294,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Int16[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -23052,9 +22304,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Single[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -23129,9 +22379,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -23214,9 +22462,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -23294,9 +22540,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -23374,9 +22618,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -23463,9 +22705,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -23540,9 +22780,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -23624,9 +22862,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -23723,9 +22959,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Single[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -23735,9 +22969,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -23747,9 +22979,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -23759,9 +22989,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -23836,9 +23064,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -23921,9 +23147,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24001,9 +23225,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24081,9 +23303,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24170,9 +23390,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -24247,9 +23465,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -24331,9 +23547,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24430,9 +23644,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -24442,9 +23654,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -24454,9 +23664,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -24466,9 +23674,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -24531,9 +23737,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -24604,9 +23808,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24672,9 +23874,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24740,9 +23940,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -24817,9 +24015,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -24882,9 +24078,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -24954,9 +24148,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25041,9 +24233,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -25053,9 +24243,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -25065,9 +24253,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -25077,9 +24263,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -25142,9 +24326,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -25215,9 +24397,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25283,9 +24463,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25351,9 +24529,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25428,9 +24604,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -25493,9 +24667,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -25565,9 +24737,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25652,9 +24822,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -25664,9 +24832,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -25676,9 +24842,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -25688,9 +24852,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Byte[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -25753,9 +24915,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Byte[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -25826,9 +24986,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, Byte[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25894,9 +25052,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Byte[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -25962,9 +25118,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Byte[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -26039,9 +25193,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, Byte b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -26104,9 +25256,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, Byte b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -26176,9 +25326,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, Byte b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -26263,9 +25411,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, Byte[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -26275,9 +25421,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, Byte[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -26287,9 +25431,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, Byte[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -26299,9 +25441,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, sbyte[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -26364,9 +25504,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, sbyte[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -26437,9 +25575,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[,] a, sbyte[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -26505,9 +25641,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, sbyte[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -26573,9 +25707,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, sbyte[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -26650,9 +25782,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64[] a, sbyte b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Int64,bool>(a);
@@ -26715,9 +25845,7 @@ bool[] r = VectorCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64[,] a, sbyte b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Int64,bool>(a);
@@ -26787,9 +25915,7 @@ bool[,] r = MatrixCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64[][] a, sbyte b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Int64,bool>(a);
@@ -26874,9 +26000,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Int64 a, sbyte[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -26886,9 +26010,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Int64 a, sbyte[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -26898,9 +26020,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Int64 a, sbyte[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -26910,9 +26030,7 @@ bool[][] r = JaggedCreateAs<Int64,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Int32[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -26975,9 +26093,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Int32[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -27048,9 +26164,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Int32[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27116,9 +26230,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int32[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27184,9 +26296,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int32[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27261,9 +26371,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Int32 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -27326,9 +26434,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Int32 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -27398,9 +26504,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int32 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27485,9 +26589,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Int32[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -27497,9 +26599,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Int32[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -27509,9 +26609,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Int32[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -27521,9 +26619,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Int16[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -27586,9 +26682,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Int16[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -27659,9 +26753,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Int16[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27727,9 +26819,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int16[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27795,9 +26885,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int16[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -27872,9 +26960,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Int16 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -27937,9 +27023,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Int16 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -28009,9 +27093,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int16 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -28096,9 +27178,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Int16[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -28108,9 +27188,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Int16[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -28120,9 +27198,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Int16[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -28132,9 +27208,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Single[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -28205,9 +27279,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Single[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -28286,9 +27358,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Single[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -28362,9 +27432,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Single[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -28438,9 +27506,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Single[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -28523,9 +27589,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Single b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -28596,9 +27660,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Single b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -28676,9 +27738,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Single b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -28771,9 +27831,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Single[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -28783,9 +27841,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Single[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -28795,9 +27851,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Single[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -28807,9 +27861,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Double[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -28880,9 +27932,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Double[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -28961,9 +28011,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Double[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29037,9 +28085,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Double[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29113,9 +28159,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Double[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29198,9 +28242,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Double b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -29271,9 +28313,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Double b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -29351,9 +28391,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Double b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29446,9 +28484,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Double[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -29458,9 +28494,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Double[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -29470,9 +28504,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Double[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -29482,9 +28514,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Int64[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -29547,9 +28577,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Int64[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -29620,9 +28648,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Int64[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29688,9 +28714,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int64[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29756,9 +28780,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int64[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -29833,9 +28855,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Int64 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -29898,9 +28918,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Int64 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -29970,9 +28988,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Int64 b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30057,9 +29073,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Int64[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -30069,9 +29083,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Int64[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -30081,9 +29093,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Int64[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -30093,9 +29103,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -30158,9 +29166,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -30231,9 +29237,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30299,9 +29303,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30367,9 +29369,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30444,9 +29444,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -30509,9 +29507,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -30581,9 +29577,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30668,9 +29662,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -30680,9 +29672,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -30692,9 +29682,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -30704,9 +29692,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Byte[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -30769,9 +29755,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Byte[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -30842,9 +29826,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, Byte[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30910,9 +29892,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Byte[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -30978,9 +29958,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Byte[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -31055,9 +30033,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, Byte b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -31120,9 +30096,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, Byte b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -31192,9 +30166,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, Byte b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -31279,9 +30251,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, Byte[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -31291,9 +30261,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, Byte[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -31303,9 +30271,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, Byte[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -31315,9 +30281,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, sbyte[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -31380,9 +30344,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, sbyte[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -31453,9 +30415,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[,] a, sbyte[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -31521,9 +30481,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, sbyte[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -31589,9 +30547,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, sbyte[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -31666,9 +30622,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal[] a, sbyte b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Decimal,bool>(a);
@@ -31731,9 +30685,7 @@ bool[] r = VectorCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal[,] a, sbyte b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Decimal,bool>(a);
@@ -31803,9 +30755,7 @@ bool[,] r = MatrixCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal[][] a, sbyte b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Decimal,bool>(a);
@@ -31890,9 +30840,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Decimal a, sbyte[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -31902,9 +30850,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Decimal a, sbyte[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -31914,9 +30860,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Decimal a, sbyte[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -31926,9 +30870,7 @@ bool[][] r = JaggedCreateAs<Decimal,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -31991,9 +30933,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -32064,9 +31004,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32132,9 +31070,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32200,9 +31136,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32277,9 +31211,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -32342,9 +31274,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -32414,9 +31344,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32501,9 +31429,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -32513,9 +31439,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -32525,9 +31449,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -32537,9 +31459,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Int16[] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -32602,9 +31522,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -32675,9 +31593,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32743,9 +31659,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32811,9 +31725,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -32888,9 +31800,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -32953,9 +31863,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -33025,9 +31933,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -33112,9 +32018,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Int16[] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -33124,9 +32028,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -33136,9 +32038,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -33148,9 +32048,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Single[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -33225,9 +32123,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -33310,9 +32206,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -33390,9 +32284,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -33470,9 +32362,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -33559,9 +32449,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -33636,9 +32524,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -33720,9 +32606,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -33819,9 +32703,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Single[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -33831,9 +32713,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -33843,9 +32723,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -33855,9 +32733,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -33932,9 +32808,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -34017,9 +32891,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34097,9 +32969,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34177,9 +33047,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34266,9 +33134,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -34343,9 +33209,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -34427,9 +33291,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34526,9 +33388,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -34538,9 +33398,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -34550,9 +33408,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -34562,9 +33418,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -34627,9 +33481,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -34700,9 +33552,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34768,9 +33618,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34836,9 +33684,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -34913,9 +33759,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -34978,9 +33822,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -35050,9 +33892,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -35137,9 +33977,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -35149,9 +33987,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -35161,9 +33997,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -35173,9 +34007,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -35238,9 +34070,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -35311,9 +34141,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -35379,9 +34207,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -35447,9 +34273,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -35524,9 +34348,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -35589,9 +34411,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -35661,9 +34481,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -35748,9 +34566,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -35760,9 +34576,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -35772,9 +34586,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -35784,9 +34596,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Byte[] b, Byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -35849,9 +34659,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Byte[,] b, Byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -35922,9 +34730,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, Byte[][] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -35990,9 +34796,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Byte[,] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36058,9 +34862,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Byte[][] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36135,9 +34937,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, Byte b, Byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -36200,9 +35000,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, Byte b, Byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -36272,9 +35070,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, Byte b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36359,9 +35155,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, Byte[] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -36371,9 +35165,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, Byte[,] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -36383,9 +35175,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, Byte[][] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -36395,9 +35185,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, sbyte[] b, Byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -36460,9 +35248,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, sbyte[,] b, Byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -36533,9 +35319,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[,] a, sbyte[][] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36601,9 +35385,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, sbyte[,] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36669,9 +35451,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, sbyte[][] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36746,9 +35526,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte[] a, sbyte b, Byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<Byte,bool>(a);
@@ -36811,9 +35589,7 @@ bool[] r = VectorCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte[,] a, sbyte b, Byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<Byte,bool>(a);
@@ -36883,9 +35659,7 @@ bool[,] r = MatrixCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte[][] a, sbyte b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<Byte,bool>(a);
@@ -36970,9 +35744,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(Byte a, sbyte[] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -36982,9 +35754,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(Byte a, sbyte[,] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -36994,9 +35764,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(Byte a, sbyte[][] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -37006,9 +35774,7 @@ bool[][] r = JaggedCreateAs<Byte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -37071,9 +35837,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -37144,9 +35908,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37212,9 +35974,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37280,9 +36040,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37357,9 +36115,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -37422,9 +36178,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -37494,9 +36248,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int32 b, Int32 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37581,9 +36333,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Int32[] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -37593,9 +36343,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Int32[,] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -37605,9 +36353,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Int32[][] b, Int32 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -37617,9 +36363,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Int16[] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -37682,9 +36426,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -37755,9 +36497,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37823,9 +36563,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37891,9 +36629,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -37968,9 +36704,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -38033,9 +36767,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -38105,9 +36837,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int16 b, Int16 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -38192,9 +36922,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Int16[] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -38204,9 +36932,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Int16[,] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -38216,9 +36942,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Int16[][] b, Int16 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -38228,9 +36952,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Single[] b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -38305,9 +37027,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -38390,9 +37110,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -38470,9 +37188,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -38550,9 +37266,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -38639,9 +37353,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -38716,9 +37428,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -38800,9 +37510,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Single b, Single atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -38899,9 +37607,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Single[] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -38911,9 +37617,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Single[,] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -38923,9 +37627,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Single[][] b, Single atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -38935,9 +37637,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Double[] b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -39012,9 +37712,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -39097,9 +37795,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39177,9 +37873,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39257,9 +37951,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39346,9 +38038,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -39423,9 +38113,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -39507,9 +38195,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Double b, Double atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39606,9 +38292,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Double[] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -39618,9 +38302,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Double[,] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -39630,9 +38312,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Double[][] b, Double atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -39642,9 +38322,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -39707,9 +38385,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -39780,9 +38456,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39848,9 +38522,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39916,9 +38588,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -39993,9 +38663,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -40058,9 +38726,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -40130,9 +38796,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Int64 b, Int64 atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -40217,9 +38881,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Int64[] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -40229,9 +38891,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Int64[,] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -40241,9 +38901,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Int64[][] b, Int64 atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -40253,9 +38911,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -40318,9 +38974,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -40391,9 +39045,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -40459,9 +39111,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -40527,9 +39177,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -40604,9 +39252,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -40669,9 +39315,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -40741,9 +39385,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Decimal b, Decimal atol = 0, Decimal rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -40828,9 +39470,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Decimal[] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -40840,9 +39480,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Decimal[,] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -40852,9 +39490,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Decimal[][] b, Decimal atol = 0, Decimal rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -40864,9 +39500,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Byte[] b, Byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -40929,9 +39563,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Byte[,] b, Byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -41002,9 +39634,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, Byte[][] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41070,9 +39700,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Byte[,] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41138,9 +39766,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Byte[][] b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41215,9 +39841,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, Byte b, Byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -41280,9 +39904,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, Byte b, Byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -41352,9 +39974,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, Byte b, Byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41439,9 +40059,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, Byte[] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -41451,9 +40069,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, Byte[,] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -41463,9 +40079,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, Byte[][] b, Byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -41475,9 +40089,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, sbyte[] b, byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -41540,9 +40152,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, sbyte[,] b, byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -41613,9 +40223,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[,] a, sbyte[][] b, byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41681,9 +40289,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, sbyte[,] b, byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41749,9 +40355,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, sbyte[][] b, byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -41826,9 +40430,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte[] a, sbyte b, byte atol = 0, Double rtol = 0)
         {
 bool[] r = VectorCreateAs<sbyte,bool>(a);
@@ -41891,9 +40493,7 @@ bool[] r = VectorCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte[,] a, sbyte b, byte atol = 0, Double rtol = 0)
         {
 bool[,] r = MatrixCreateAs<sbyte,bool>(a);
@@ -41963,9 +40563,7 @@ bool[,] r = MatrixCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte[][] a, sbyte b, byte atol = 0, Double rtol = 0)
         {
 bool[][] r = JaggedCreateAs<sbyte,bool>(a);
@@ -42050,9 +40648,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(sbyte a, sbyte[] b, byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -42062,9 +40658,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(sbyte a, sbyte[,] b, byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -42074,9 +40668,7 @@ bool[][] r = JaggedCreateAs<sbyte,bool>(a);
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(sbyte a, sbyte[][] b, byte atol = 0, Double rtol = 0)
         {
             return Equals(b, a, rtol, atol);

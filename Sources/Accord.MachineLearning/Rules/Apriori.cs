@@ -25,7 +25,7 @@ namespace Accord.MachineLearning.Rules
     using Accord.Math;
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
 

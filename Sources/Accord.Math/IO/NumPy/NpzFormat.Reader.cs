@@ -20,7 +20,6 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-#if !NET35 && !NET40
 namespace Accord.IO
 {
     using Accord.Math;
@@ -56,9 +55,7 @@ namespace Accord.IO
         /// 
         public static void Load<T>(byte[] bytes, out T value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             using (var dict = Load<T>(bytes))
@@ -80,9 +77,7 @@ namespace Accord.IO
         /// 
         public static void Load<T>(string path, out T value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             using (var dict = Load<T>(path))
@@ -104,9 +99,7 @@ namespace Accord.IO
         /// 
         public static void Load<T>(Stream stream, out T value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             using (var dict = Load<T>(stream))
@@ -128,9 +121,7 @@ namespace Accord.IO
         /// 
         public static NpzDictionary<T> Load<T>(byte[] bytes)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             return Load<T>(new MemoryStream(bytes));
@@ -150,9 +141,7 @@ namespace Accord.IO
         /// 
         public static NpzDictionary<T> Load<T>(string path, out NpzDictionary<T> value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             return value = Load<T>(new FileStream(path, FileMode.Open));
@@ -172,9 +161,7 @@ namespace Accord.IO
         /// 
         public static NpzDictionary<T> Load<T>(Stream stream, out NpzDictionary<T> value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             return value = Load<T>(stream);
@@ -193,9 +180,7 @@ namespace Accord.IO
         /// 
         public static NpzDictionary<T> Load<T>(string path)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             return Load<T>(new FileStream(path, FileMode.Open));
@@ -213,9 +198,7 @@ namespace Accord.IO
         /// 
         public static NpzDictionary<T> Load<T>(Stream stream)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
         {
             return new NpzDictionary<T>(stream);
@@ -309,4 +292,3 @@ namespace Accord.IO
 
     }
 }
-#endif

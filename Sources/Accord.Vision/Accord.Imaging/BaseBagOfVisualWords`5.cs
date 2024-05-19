@@ -25,18 +25,7 @@ namespace Accord.Imaging
     using Accord.MachineLearning;
     using Accord.Math;
     using System;
-    using System.Collections.Generic;
     using System.Drawing;
-    using System.IO;
-    using System.Threading;
-    using System.Linq;
-    using Accord.Compat;
-    using System.Threading.Tasks;
-    using System.Collections.Concurrent;
-    using Accord.Statistics;
-    using Accord.Statistics.Distributions.Univariate;
-    using System.Diagnostics;
-    using Accord.Statistics.Distributions.Fitting;
     using System.Drawing.Imaging;
 
     /// <summary>
@@ -73,166 +62,6 @@ namespace Accord.Imaging
         protected BaseBagOfVisualWords()
         {
         }
-
-        #region Obsolete
-
-        /// <summary>
-        ///   Computes the Bag of Words model.
-        /// </summary>
-        /// 
-        /// <param name="images">The set of images to initialize the model.</param>
-        /// 
-        /// <returns>The list of feature points detected in all images.</returns>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public List<TFeature>[] Compute(Bitmap[] images)
-        {
-            var descriptors = new ConcurrentBag<TPoint>();
-            var imagePoints = new List<TFeature>[images.Length];
-
-            // For all images
-            Parallel.For(0, images.Length, ParallelOptions,
-                () => (TExtractor)Detector.Clone(),
-                (i, state, detector) =>
-                {
-                    // Compute the feature points
-                    IEnumerable<TFeature> points = detector.Transform(images[i]);
-                    foreach (IFeatureDescriptor<TPoint> point in points)
-                        descriptors.Add(point.Descriptor);
-
-                    imagePoints[i] = (List<TFeature>)points;
-                    return detector;
-                },
-                (detector) => detector.Dispose());
-
-            Learn(descriptors.ToArray());
-
-            return imagePoints;
-        }
-
-        /// <summary>
-        ///   Computes the Bag of Words model.
-        /// </summary>
-        /// 
-        /// <param name="features">The extracted image features to initialize the model.</param>
-        /// 
-        /// <returns>The list of feature points detected in all images.</returns>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public void Compute(TPoint[] features)
-        {
-            Learn(features);
-        }
-
-        /// <summary>
-        ///   Computes the Bag of Words model.
-        /// </summary>
-        /// 
-        /// <param name="images">The set of images to initialize the model.</param>
-        /// <param name="threshold">Convergence rate for the k-means algorithm. Default is 1e-5.</param>
-        /// 
-        /// <returns>The list of feature points detected in all images.</returns>
-        /// 
-        [Obsolete("Please configure the tolerance of the clustering algorithm directly in the "
-            + "algorithm itself by accessing it through the Clustering property of this class.")]
-        public List<TFeature>[] Compute(Bitmap[] images, double threshold)
-        {
-            // Hack to maintain backwards compatibility
-            var prop = Clustering.GetType().GetProperty("Tolerance");
-            if (prop != null && prop.CanWrite)
-                prop.SetValue(Clustering, threshold, null);
-
-            return Compute(images);
-        }
-
-        /// <summary>
-        ///   Gets the codeword representation of a given image.
-        /// </summary>
-        /// 
-        /// <param name="value">The image to be processed.</param>
-        /// 
-        /// <returns>A double vector with the same length as words
-        /// in the code book.</returns>
-        /// 
-        [Obsolete("Please use the Transform() method instead.")]
-        public double[] GetFeatureVector(string value)
-        {
-            return Transform(value);
-        }
-
-        /// <summary>
-        ///   Gets the codeword representation of a given image.
-        /// </summary>
-        /// 
-        /// <param name="value">The image to be processed.</param>
-        /// 
-        /// <returns>A double vector with the same length as words
-        /// in the code book.</returns>
-        /// 
-        [Obsolete("Please use the Transform() method instead.")]
-        public double[] GetFeatureVector(Bitmap value)
-        {
-            return Transform(value);
-        }
-
-        /// <summary>
-        ///   Gets the codeword representation of a given image.
-        /// </summary>
-        /// 
-        /// <param name="value">The image to be processed.</param>
-        /// 
-        /// <returns>A double vector with the same length as words
-        /// in the code book.</returns>
-        /// 
-        [Obsolete("Please use the Transform() method instead.")]
-        public double[] GetFeatureVector(UnmanagedImage value)
-        {
-            return Transform(value);
-        }
-
-        /// <summary>
-        ///   Gets the codeword representation of a given image.
-        /// </summary>
-        /// 
-        /// <param name="points">The interest points of the image.</param>
-        /// 
-        /// <returns>A double vector with the same length as words
-        /// in the code book.</returns>
-        /// 
-        [Obsolete("Please use the Transform() method instead.")]
-        public double[] GetFeatureVector(List<TFeature> points)
-        {
-            return Transform(points);
-        }
-
-        /// <summary>
-        ///   Saves the bag of words to a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream to which the bow is to be serialized.</param>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save() instead (or use it as an extension method).")]
-        public virtual void Save(Stream stream)
-        {
-            Accord.IO.Serializer.Save(this, stream);
-        }
-
-        /// <summary>
-        ///   Saves the bag of words to a file.
-        /// </summary>
-        /// 
-        /// <param name="path">The path to the file to which the bow is to be serialized.</param>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save() instead (or use it as an extension method).")]
-
-        public void Save(string path)
-        {
-            Accord.IO.Serializer.Save(this, path);
-        }
-
-        #endregion
-
-
 
         #region Transform
 
@@ -444,8 +273,6 @@ namespace Accord.Imaging
         }
 
         #endregion
-
-
 
         #region Learn
         /// <summary>

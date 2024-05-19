@@ -27,7 +27,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Distributions.Fitting;
     using System.Collections.Generic;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>

@@ -32,7 +32,7 @@ namespace Accord.Statistics.Models.Markov
     using Accord.Statistics.Models.Markov.Learning;
     using Accord.Statistics.Models.Markov.Topology;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using Accord.Math.Optimization;
 
     /// <summary>
@@ -115,8 +115,8 @@ namespace Accord.Statistics.Models.Markov
     /// <para>
     ///   For a more thorough explanation on some fundamentals on how Hidden Markov Models work,
     ///   please see the <see cref="HiddenMarkovModel"/> documentation page. To learn a Markov
-    ///   model, you can find a list of both <see cref="ISupervisedLearning">supervised</see> and
-    ///   <see cref="IUnsupervisedLearning">unsupervised</see> learning algorithms in the
+    ///   model, you can find a list of both supervised and
+    ///   unsupervised learning algorithms in the
     ///   <see cref="Accord.Statistics.Models.Markov.Learning"/> namespace.</para>
     ///   
     /// <para>
@@ -172,7 +172,7 @@ namespace Accord.Statistics.Models.Markov
     /// <code source="Unit Tests\Accord.Tests.Statistics\Models\Markov\HiddenMarkovModel`2Test.cs" region="doc_predict"/>
     /// </example>
     /// 
-    /// <seealso cref="BaumWelchLearning{T}">Baum-Welch, one of the most famous learning algorithms for Hidden Markov Models.</seealso>
+    /// <seealso cref="BaumWelchLearning{T,TObservation}">Baum-Welch, one of the most famous learning algorithms for Hidden Markov Models.</seealso>
     /// <seealso cref="HiddenMarkovModel">Discrete-density Hidden Markov Model</seealso>
     /// <seealso cref="Accord.Statistics.Models.Markov.Learning"/>
     /// 

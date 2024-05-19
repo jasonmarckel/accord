@@ -29,7 +29,6 @@
 
 namespace Accord.Video
 {
-    using Accord.Compat;
     using System;
     using System.Diagnostics;
     using System.Drawing;

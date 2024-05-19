@@ -25,7 +25,7 @@ namespace Accord.MachineLearning.Performance
     using System;
     using System.Collections.Generic;
     using System.Reflection;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Grid search procedure for automatic parameter tuning.
@@ -104,11 +104,7 @@ namespace Accord.MachineLearning.Performance
         protected override int[] GetLengths()
         {
             List<int> lengths = new List<int>();
-#if NETSTANDARD1_4
-            var properties = ParameterRanges.GetType().GetTypeInfo().DeclaredProperties;
-#else
             var properties = ParameterRanges.GetType().GetProperties();
-#endif
             foreach (PropertyInfo property in properties)
             {
                 Type expected = typeof(GridSearchRange<object>).GetGenericTypeDefinition();
@@ -138,11 +134,8 @@ namespace Accord.MachineLearning.Performance
         protected override TRange GetParameters(int[] indices)
         {
             var ranges = new List<IGridSearchRange>();
-#if NETSTANDARD1_4
-            var properties = ParameterRanges.GetType().GetTypeInfo().DeclaredProperties;
-#else
             var properties = ParameterRanges.GetType().GetProperties();
-#endif
+
             foreach (PropertyInfo property in properties)
             {
                 var p = (IGridSearchRange)property.GetValue(ParameterRanges);
@@ -154,7 +147,6 @@ namespace Accord.MachineLearning.Performance
 
             return (TRange)Activator.CreateInstance(ParameterRanges.GetType(), ranges.ToArray());
         }
-
 
     }
 }

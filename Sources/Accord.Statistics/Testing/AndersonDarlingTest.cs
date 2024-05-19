@@ -27,7 +27,7 @@ namespace Accord.Statistics.Testing
     using Accord.Statistics.Distributions.Univariate;
     using Accord.Statistics.Distributions;
     using System.Diagnostics;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   One-sample Anderson-Darling (AD) test.

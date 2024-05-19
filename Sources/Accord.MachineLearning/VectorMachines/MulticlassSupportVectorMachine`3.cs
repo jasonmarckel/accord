@@ -30,7 +30,7 @@ namespace Accord.MachineLearning.VectorMachines
     using System;
     using System.Collections.Generic;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
     using System.Runtime.CompilerServices;
@@ -73,23 +73,20 @@ namespace Accord.MachineLearning.VectorMachines
     /// <para>
     ///   The following example shows how to learn a non-linear, multi-class support 
     ///   vector machine using the <see cref="Gaussian"/> kernel and the 
-    ///   <see cref="SequentialMinimalOptimization"/> algorithm. </para>
+    ///   <see cref="SequentialMinimalOptimization{TKernel}"/> algorithm. </para>
     /// <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\MulticlassSupportVectorLearningTest.cs" region="doc_learn_gaussian" />
     ///   
     /// <para>
     ///   Support vector machines can have their weights calibrated in order to produce 
     ///   probability estimates (instead of simple class separation distances). The
     ///   following example shows how to use <see cref="ProbabilisticOutputCalibration"/>
-    ///   within <see cref="MulticlassSupportVectorLearning"/> to generate a probabilistic
+    ///   within MulticlassSupportVectorLearning to generate a probabilistic
     ///   SVM:</para>
     /// <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\MulticlassSupportVectorLearningTest.cs" region="doc_learn_calibration" />
     /// </example>
     /// 
-    /// <seealso cref="Learning.MulticlassSupportVectorLearning"/>
-    /// 
     /// <seealso cref="SupportVectorMachine"/>
-    /// <seealso cref="KernelSupportVectorMachine"/>
-    /// <seealso cref="Learning.SequentialMinimalOptimization"/>
+    /// <seealso cref="Learning.SequentialMinimalOptimization{TKernel}"/>
     ///
     [Serializable]
     public class MulticlassSupportVectorMachine<TModel, TKernel, TInput> :
@@ -450,19 +447,13 @@ namespace Accord.MachineLearning.VectorMachines
             return result;
         }
 
-
-
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByVoting(TInput input, Cache cache)
         {
             return DistanceByVoting(input, new double[NumberOfOutputs], cache).ArgMax();
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByElimination(TInput input, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -479,9 +470,7 @@ namespace Accord.MachineLearning.VectorMachines
             return i;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByElimination(TInput input, Decision[] path, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -506,9 +495,7 @@ namespace Accord.MachineLearning.VectorMachines
             return i;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByElimination(TInput input, double[] result, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -543,9 +530,7 @@ namespace Accord.MachineLearning.VectorMachines
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByElimination(TInput input, double[] result, Decision[] path, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -583,9 +568,7 @@ namespace Accord.MachineLearning.VectorMachines
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByVoting(TInput input, double[] result, Cache cache)
         {
             Parallel.For(0, Indices.Length, ParallelOptions, k =>
@@ -600,10 +583,6 @@ namespace Accord.MachineLearning.VectorMachines
 
             return result;
         }
-
-
-
-
 
         /// <summary>
         ///   Resets the cache and machine statistics

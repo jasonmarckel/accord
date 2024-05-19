@@ -1,4 +1,5 @@
-﻿// Accord Math Library
+﻿
+// Accord Math Library
 // The Accord.NET Framework
 // http://accord-framework.net
 //

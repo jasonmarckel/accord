@@ -31,21 +31,14 @@ namespace Accord.IO
     using System.Linq;
     using System.Runtime.InteropServices;
     using System.Text;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
-#if !NET35 && !NET40
     /// <summary>
     ///   Provides static methods to save and load files saved in NumPy's .npy format. 
     /// </summary>
     /// 
     /// <seealso cref="NpzFormat"/>
-#else
-    /// <summary>
-    ///   Provides static methods to save and load files saved in NumPy's .npy format. 
-    /// </summary>
-    /// 
-#endif
     public static partial class NpyFormat
     {
         /// <summary>
@@ -59,13 +52,9 @@ namespace Accord.IO
         /// 
         public static T Load<T>(byte[] bytes)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable
-#if !NET35
             , IStructuralComparable, IStructuralEquatable
-#endif
         {
             if (typeof(T).IsJagged())
                 return LoadJagged(bytes).To<T>();
@@ -85,13 +74,9 @@ namespace Accord.IO
         /// 
         public static T Load<T>(byte[] bytes, out T value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
-IList, ICollection, IEnumerable
-#if !NET35
+            IList, ICollection, IEnumerable
             , IStructuralComparable, IStructuralEquatable
-#endif
         {
             return value = Load<T>(bytes);
         }
@@ -109,13 +94,9 @@ IList, ICollection, IEnumerable
         /// 
         public static T Load<T>(string path, out T value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable
-#if !NET35
             , IStructuralComparable, IStructuralEquatable
-#endif
         {
             return value = Load<T>(path);
         }
@@ -133,13 +114,9 @@ IList, ICollection, IEnumerable
         /// 
         public static T Load<T>(Stream stream, out T value)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable
-#if !NET35
             , IStructuralComparable, IStructuralEquatable
-#endif
         {
             return value = Load<T>(stream);
         }
@@ -154,13 +131,9 @@ IList, ICollection, IEnumerable
         /// 
         public static T Load<T>(string path)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable
-#if !NET35
             , IStructuralComparable, IStructuralEquatable
-#endif
         {
             using (var stream = new FileStream(path, FileMode.Open))
                 return Load<T>(stream);
@@ -177,13 +150,9 @@ IList, ICollection, IEnumerable
         /// 
         public static T Load<T>(Stream stream)
             where T : class,
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList, ICollection, IEnumerable
-#if !NET35
             , IStructuralComparable, IStructuralEquatable
-#endif
         {
             if (typeof(T).IsJagged())
                 return LoadJagged(stream).To<T>();
@@ -261,11 +230,7 @@ IList, ICollection, IEnumerable
         /// 
         public static Array LoadMatrix(Stream stream)
         {
-            using (var reader = new BinaryReader(stream, System.Text.Encoding.ASCII
-#if !NET35 && !NET40
-            , leaveOpen: true
-#endif
-            ))
+            using (var reader = new BinaryReader(stream, System.Text.Encoding.ASCII, leaveOpen: true))
             {
                 int bytes;
                 Type type;
@@ -292,11 +257,7 @@ IList, ICollection, IEnumerable
         /// 
         public static Array LoadJagged(Stream stream, bool trim = true)
         {
-            using (var reader = new BinaryReader(stream, System.Text.Encoding.ASCII
-#if !NET35 && !NET40
-            , leaveOpen: true
-#endif
-            ))
+            using (var reader = new BinaryReader(stream, System.Text.Encoding.ASCII, leaveOpen: true))
             {
                 int bytes;
                 Type type;
@@ -402,11 +363,8 @@ IList, ICollection, IEnumerable
                             }
                         }
 
-#if NETSTANDARD1_4
-                        String s = new String((char*)b);
-#else
                         String s = new String((sbyte*)b);
-#endif
+
                         matrix.SetValue(value: s, deep: true, indices: p);
                     }
                 }

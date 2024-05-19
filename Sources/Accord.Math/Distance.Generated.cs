@@ -35,7 +35,7 @@ namespace Accord.Math
     using Accord;
     using Accord.Math.Distances;
     using Accord.Math.Decompositions;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Static class Distance. Defines a set of methods defining distance measures.
@@ -57,9 +57,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Yule"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Yule(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -80,9 +78,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Yule"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Yule(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -106,9 +102,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Jaccard"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Jaccard(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -132,9 +126,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Hellinger"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Hellinger(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -158,9 +150,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Euclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Euclidean(double x, double y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -181,9 +171,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Euclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Euclidean(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -206,9 +194,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Euclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Euclidean(double vector1x, double vector1y, double vector2x, double vector2y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -229,9 +215,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Euclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Euclidean(Tuple<double, double> x, Tuple<double, double> y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -252,9 +236,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Euclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Euclidean(Sparse<double> x, Sparse<double> y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -279,9 +261,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareMahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareMahalanobis(double[] x, double[] y, CholeskyDecomposition chol)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -303,9 +283,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareMahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareMahalanobis(double[] x, double[] y, SingularValueDecomposition svd)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -327,9 +305,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareMahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareMahalanobis(double[] x, double[] y, double[,] precision)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -350,9 +326,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareMahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareMahalanobis(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -376,9 +350,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.RusselRao"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double RusselRao(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -399,9 +371,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.RusselRao"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double RusselRao(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -425,9 +395,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Chebyshev"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Chebyshev(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -451,9 +419,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Dice"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Dice(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -474,9 +440,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Dice"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Dice(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -500,9 +464,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SokalMichener"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SokalMichener(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -523,9 +485,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SokalMichener"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SokalMichener(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -550,9 +510,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.WeightedEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double WeightedEuclidean(double[] x, double[] y, int dimensions)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -574,9 +532,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.WeightedEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double WeightedEuclidean(double[] x, double[] y, double[] weights)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -597,9 +553,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.WeightedEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double WeightedEuclidean(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -623,9 +577,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Angular"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Angular(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -649,9 +601,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareEuclidean(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -672,9 +622,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareEuclidean(double x, double y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -695,9 +643,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareEuclidean(Sparse<double> x, Sparse<double> y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -720,9 +666,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SquareEuclidean(double x1, double y1, double x2, double y2)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -746,9 +690,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Hamming"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Hamming(byte[] x, byte[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -769,9 +711,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Hamming"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Hamming(string x, string y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -792,9 +732,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Hamming"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Hamming(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -815,9 +753,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Hamming"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Hamming(BitArray x, BitArray y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -841,9 +777,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.ArgMax"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double ArgMax(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -868,9 +802,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Modular"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Modular(double x, double y, int modulo)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -892,9 +824,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Modular"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Modular(int x, int y, int modulo)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -915,9 +845,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Modular"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Modular(double x, double y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -938,9 +866,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Modular"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Modular(int x, int y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -964,9 +890,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Cosine"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Cosine(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -991,9 +915,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Mahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Mahalanobis(double[] x, double[] y, CholeskyDecomposition chol)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1015,9 +937,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Mahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Mahalanobis(double[] x, double[] y, SingularValueDecomposition svd)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1039,9 +959,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Mahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Mahalanobis(double[] x, double[] y, double[,] precision)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1062,9 +980,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Mahalanobis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Mahalanobis(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1088,9 +1004,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.BrayCurtis"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double BrayCurtis(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1115,9 +1029,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Minkowski"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Minkowski(int[] x, int[] y, double p)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1139,9 +1051,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Minkowski"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Minkowski(double[] x, double[] y, double p)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1162,9 +1072,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Minkowski"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Minkowski(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1185,9 +1093,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Minkowski"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Minkowski(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1211,9 +1117,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Levenshtein"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Levenshtein(string x, string y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1237,9 +1141,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SokalSneath"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SokalSneath(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1260,9 +1162,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.SokalSneath"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double SokalSneath(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1286,9 +1186,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Matching"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Matching(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1309,9 +1207,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Matching"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Matching(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1335,9 +1231,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Canberra"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Canberra(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1361,9 +1255,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.RogersTanimoto"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double RogersTanimoto(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1384,9 +1276,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.RogersTanimoto"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double RogersTanimoto(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1410,9 +1300,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Manhattan"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Manhattan(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1433,9 +1321,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Manhattan"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Manhattan(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1459,9 +1345,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Kulczynski"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Kulczynski(int[] x, int[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1482,9 +1366,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.Kulczynski"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Kulczynski(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1509,9 +1391,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.WeightedSquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double WeightedSquareEuclidean(double[] x, double[] y, int dimensions)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1533,9 +1413,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.WeightedSquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double WeightedSquareEuclidean(double[] x, double[] y, double[] weights)
         {
             // Note: this is an auto-generated method stub that forwards the call
@@ -1556,9 +1434,7 @@ namespace Accord.Math
         ///   For examples, please see <see cref="Accord.Math.Distances.WeightedSquareEuclidean"/> documentation page.
         /// </example>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double WeightedSquareEuclidean(double[] x, double[] y)
         {
             // Note: this is an auto-generated method stub that forwards the call

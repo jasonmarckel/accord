@@ -110,17 +110,6 @@ namespace Accord.Math
         }
 
         /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
-        }
-
-        /// <summary>
         ///   Initializes a new instance of the <see cref="RelativeConvergence"/> class.
         /// </summary>
         /// 

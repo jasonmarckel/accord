@@ -26,7 +26,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Math.Comparers;
     using Accord.Statistics.Distributions.Fitting;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Outcome status for survival methods. A sample can 

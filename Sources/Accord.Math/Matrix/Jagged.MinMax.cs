@@ -26,7 +26,7 @@ namespace Accord.Math
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Accord.Compat;
+
 
     public static partial class Matrix
     {
@@ -505,19 +505,6 @@ namespace Accord.Math
 
             return ranges;
         }
-
-
-        /// <summary>
-        ///   Deprecated.
-        /// </summary>
-        ///
-        [Obsolete("Please use GetRange instead.")]
-
-        public static DoubleRange[] Range(this double[][] value, int dimension)
-        {
-            return GetRange(value, dimension);
-        }
-
 
     }
 }

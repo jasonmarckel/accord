@@ -15,6 +15,7 @@ namespace Accord.Imaging
     using AForge.Math;
     using Accord;
     using Accord.Math;
+    using Range = Range;
 
     /// <summary>
     /// Gather statistics about image in HSL color space.

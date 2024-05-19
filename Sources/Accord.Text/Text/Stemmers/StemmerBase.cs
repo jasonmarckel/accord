@@ -217,11 +217,7 @@ namespace Accord.MachineLearning.Text.Stemmers
 
         private void setBufferContents(string value)
         {
-#if NET35
-            current.Length = 0;
-#else
             current.Clear();
-#endif
             current.Insert(0, value);
 
             cursor = 0;
@@ -618,11 +614,7 @@ namespace Accord.MachineLearning.Text.Stemmers
         {
             if (bra < 0 || bra > ket || ket > limit || limit > current.Length)
             {
-#if !NETSTANDARD1_4
                 System.Diagnostics.Trace.WriteLine("faulty slice operation");
-#else
-                Console.WriteLine("faulty slice operation");
-#endif
             }
         }
 

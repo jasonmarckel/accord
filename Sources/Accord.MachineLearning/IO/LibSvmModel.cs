@@ -33,7 +33,7 @@ namespace Accord.IO
     using Accord.MachineLearning;
     using Accord.Statistics.Kernels;
     using System.Diagnostics;
-    using Accord.Compat;
+    
     using Accord.Math;
 
     /// <summary>
@@ -168,7 +168,7 @@ namespace Accord.IO
     /// </example>
     /// 
     /// <seealso cref="SupportVectorMachine"/>
-    /// <seealso cref="SequentialMinimalOptimization"/>
+    /// <seealso cref="SequentialMinimalOptimization{TKernel}"/>
     /// 
     [Serializable]
     public class LibSvmModel
@@ -195,17 +195,6 @@ namespace Accord.IO
         public int NumberOfClasses { get; set; }
 
         /// <summary>
-        ///   Obsolete. Please use NumberOfClasses instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfClasses instead.")]
-        public int Classes
-        {
-            get { return NumberOfClasses; }
-            set { NumberOfClasses = value; }
-        }
-
-        /// <summary>
         ///   Gets or sets whether an initial double value should
         ///   be appended in the beginning of every feature vector.
         ///   If set to a negative number, this functionality is
@@ -220,17 +209,6 @@ namespace Accord.IO
         /// </summary>
         /// 
         public int NumberOfInputs { get; set; }
-
-        /// <summary>
-        ///   Obsolete. Please use NumberOfInputs instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Dimension
-        {
-            get { return NumberOfInputs; }
-            set { NumberOfInputs = value; }
-        }
 
         /// <summary>
         ///   Gets or sets the class label for each class

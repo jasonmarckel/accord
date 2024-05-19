@@ -31,7 +31,7 @@ namespace Accord.MachineLearning.VectorMachines
     using System.Collections.Generic;
     using System.Runtime.Serialization;
     using System.Threading;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -91,9 +91,7 @@ namespace Accord.MachineLearning.VectorMachines
     public class MultilabelSupportVectorMachine<TKernel, TInput> :
         MultilabelSupportVectorMachine<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilabelSupportVectorMachine{TModel, TKernel, TInput}"/> class.

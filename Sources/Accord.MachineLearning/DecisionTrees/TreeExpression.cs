@@ -20,7 +20,6 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-#if !NET35 && !NETSTANDARD1_4
 namespace Accord.MachineLearning.DecisionTrees
 {
     using System;
@@ -154,4 +153,3 @@ namespace Accord.MachineLearning.DecisionTrees
 
     }
 }
-#endif

@@ -31,7 +31,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     using Accord.Math.Optimization.Losses;
     using Accord.Statistics.Analysis;
     using Accord.Statistics.Testing;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Multiple Linear Regression.
@@ -43,7 +43,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     ///   variable, denoted y_i, is a linear combination of the parameters (but need not
     ///   be linear in the independent x_i variables). As the linear regression has a
     ///   closed form solution, the regression coefficients can be computed by calling
-    ///   the <see cref="Regress(double[][], double[])"/> method only once.</para>
+    ///   the Regress(double[][], double[]) method only once.</para>
     /// </remarks>
     /// 
     /// <example>
@@ -78,61 +78,12 @@ namespace Accord.Statistics.Models.Regression.Linear
     [Serializable]
 #pragma warning disable 612, 618
     public class MultipleLinearRegression : TransformBase<double[], double>,
-        ILinearRegression, IFormattable, ICloneable
+        IFormattable, ICloneable
 #pragma warning restore 612, 618
     {
         private double[] coefficients;
 
-        [Obsolete]
-        private bool addIntercept;
         private double intercept;
-
-
-        /// <summary>
-        ///   Creates a new Multiple Linear Regression.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of inputs for the regression.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set NumberOfInputs instead.")]
-        public MultipleLinearRegression(int inputs)
-            : this(inputs, 0)
-        {
-        }
-
-        /// <summary>
-        ///   Creates a new Multiple Linear Regression.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of inputs for the regression.</param>
-        /// <param name="intercept">True to use an intercept term, false otherwise. Default is false.</param>
-        /// 
-        [Obsolete("Please do not pass a boolean value as the intercept value.")]
-        public MultipleLinearRegression(int inputs, bool intercept)
-            : this()
-        {
-            if (intercept)
-                inputs++;
-            this.coefficients = new double[inputs];
-#pragma warning disable 612, 618
-            this.addIntercept = intercept;
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
-        ///   Creates a new Multiple Linear Regression.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of inputs for the regression.</param>
-        /// <param name="intercept">True to use an intercept term, false otherwise. Default is false.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set NumberOfInputs instead.")]
-        public MultipleLinearRegression(int inputs, double intercept = 0)
-            : this()
-        {
-            this.coefficients = new double[inputs];
-            this.intercept = intercept;
-        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MultipleLinearRegression"/> class.
@@ -140,18 +91,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         public MultipleLinearRegression()
         {
             NumberOfOutputs = 1;
-        }
-
-
-        /// <summary>
-        ///   Gets the coefficients used by the regression model. If the model
-        ///   contains an intercept term, it will be in the end of the vector.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Weights instead.")]
-        public double[] Coefficients
-        {
-            get { return coefficients; }
         }
 
         /// <summary>
@@ -191,30 +130,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         public int NumberOfParameters { get { return NumberOfInputs + 1; } }
 
         /// <summary>
-        ///   Gets the number of inputs for the regression model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Inputs
-        {
-#pragma warning disable 612, 618
-            get { return coefficients.Length - (addIntercept ? 1 : 0); }
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
-        ///   Gets whether this model has an additional intercept term.
-        /// </summary>
-        /// 
-        [Obsolete("Please check the Intercept value instead.")]
-        public bool HasIntercept
-        {
-#pragma warning disable 612, 618
-            get { return addIntercept; }
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
         ///   Gets or sets the intercept value for the regression.
         /// </summary>
         /// 
@@ -222,162 +137,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         {
             get { return intercept; }
             set { intercept = value; }
-        }
-
-        /// <summary>
-        ///   Performs the regression using the input vectors and output
-        ///   data, returning the sum of squared errors of the fit.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vectors to be used in the regression.</param>
-        /// <param name="outputs">The output values for each input vector.</param>
-        /// <param name="robust">
-        ///    Set to <c>true</c> to force the use of the <see cref="SingularValueDecomposition"/>.
-        ///    This will avoid any rank exceptions, but might be more computing intensive.</param>
-        ///    
-        /// <returns>The Sum-Of-Squares error of the regression.</returns>
-        /// 
-        [Obsolete("Please use the OrdinaryLeastSquares class instead.")]
-        public virtual double Regress(double[][] inputs, double[] outputs, bool robust)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            double[,] design;
-#pragma warning disable 612, 618
-            return regress(inputs, outputs, out design, robust);
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
-        ///   Performs the regression using the input vectors and output
-        ///   data, returning the sum of squared errors of the fit.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vectors to be used in the regression.</param>
-        /// <param name="outputs">The output values for each input vector.</param>
-        /// <returns>The Sum-Of-Squares error of the regression.</returns>
-        /// 
-        [Obsolete("Please use the OrdinaryLeastSquares class instead.")]
-        public virtual double Regress(double[][] inputs, double[] outputs)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            double[,] design;
-#pragma warning disable 612, 618
-            return regress(inputs, outputs, out design, true);
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
-        ///   Performs the regression using the input vectors and output
-        ///   data, returning the sum of squared errors of the fit.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vectors to be used in the regression.</param>
-        /// <param name="outputs">The output values for each input vector.</param>
-        /// <param name="informationMatrix">Gets the Fisher's information matrix.</param>
-        /// <param name="robust">
-        ///    Set to <c>true</c> to force the use of the <see cref="SingularValueDecomposition"/>.
-        ///    This will avoid any rank exceptions, but might be more computing intensive.</param>
-        /// 
-        /// <returns>The Sum-Of-Squares error of the regression.</returns>
-        /// 
-        [Obsolete("Please use the OrdinaryLeastSquares class instead.")]
-        public double Regress(double[][] inputs, double[] outputs,
-            out double[,] informationMatrix, bool robust = true)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            double[,] design;
-
-#pragma warning disable 612, 618
-            double error = regress(inputs, outputs, out design, robust);
-#pragma warning restore 612, 618
-
-            double[,] cov = design.TransposeAndDot(design);
-            informationMatrix = new SingularValueDecomposition(cov,
-                computeLeftSingularVectors: true,
-                computeRightSingularVectors: true,
-                autoTranspose: true, inPlace: true).Inverse();
-
-            return error;
-        }
-
-        [Obsolete]
-        private double regress(double[][] inputs, double[] outputs, out double[,] designMatrix, bool robust)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            int rows = inputs.Length;    // number of instance points
-            int cols = inputs[0].Length; // dimension of each point
-            NumberOfInputs = cols;
-
-            ISolverMatrixDecomposition<double> solver;
-
-
-            // Create the problem's design matrix. If we
-            //  have to add an intercept term, add a new
-            //  extra column at the end and fill with 1s.
-
-            if (!addIntercept)
-            {
-                // Just copy values over
-                designMatrix = new double[rows, cols];
-                for (int i = 0; i < inputs.Length; i++)
-                    for (int j = 0; j < inputs[i].Length; j++)
-                        designMatrix[i, j] = inputs[i][j];
-            }
-            else
-            {
-                // Add an intercept term
-                designMatrix = new double[rows, cols + 1];
-                for (int i = 0; i < inputs.Length; i++)
-                {
-                    for (int j = 0; j < inputs[i].Length; j++)
-                        designMatrix[i, j] = inputs[i][j];
-                    designMatrix[i, cols] = 1;
-                }
-            }
-
-            // Check if we have an overdetermined or underdetermined
-            //  system to select an appropriate matrix solver method.
-
-            if (robust || cols >= rows)
-            {
-                // We have more variables than equations, an
-                // underdetermined system. Solve using a SVD:
-                solver = new SingularValueDecomposition(designMatrix,
-                    computeLeftSingularVectors: true,
-                    computeRightSingularVectors: true,
-                    autoTranspose: true);
-            }
-            else
-            {
-                // We have more equations than variables, an
-                // overdetermined system. Solve using the QR:
-                solver = new QrDecomposition(designMatrix);
-            }
-
-
-            // Solve V*C = B to find C (the coefficients)
-            coefficients = solver.Solve(outputs);
-            if (addIntercept)
-                intercept = coefficients[coefficients.Length - 1];
-
-            // Calculate Sum-Of-Squares error
-            double error = 0.0;
-            double e;
-            for (int i = 0; i < outputs.Length; i++)
-            {
-                e = outputs[i] - Compute(inputs[i]);
-                error += e * e;
-            }
-
-            return error;
         }
 
         /// <summary>
@@ -540,35 +299,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         }
 
         /// <summary>
-        ///   Computes the Multiple Linear Regression for an input vector.
-        /// </summary>
-        /// 
-        /// <param name="input">The input vector.</param>
-        /// 
-        /// <returns>The calculated output.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double Compute(double[] input)
-        {
-            return Transform(input);
-        }
-
-        /// <summary>
-        ///   Computes the Multiple Linear Regression for input vectors.
-        /// </summary>
-        /// 
-        /// <param name="input">The input vector data.</param>
-        /// 
-        /// <returns>The calculated outputs.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double[] Compute(double[][] input)
-        {
-            return Transform(input);
-        }
-
-
-        /// <summary>
         ///   Returns a System.String representing the regression.
         /// </summary>
         /// 
@@ -590,32 +320,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         {
             return new OrdinaryLeastSquares().Learn(x, y);
         }
-
-        /// <summary>
-        ///  Creates a new linear regression from the regression coefficients.
-        /// </summary>
-        /// 
-        /// <param name="coefficients">The linear coefficients.</param>
-        /// <param name="intercept">Whether to include an intercept (bias) term.</param>
-        /// 
-        /// <returns>A linear regression with the given coefficients.</returns>
-        /// 
-        [Obsolete("Please use the parameterless constructor and set Weights and Intercept directly.")]
-        public static MultipleLinearRegression FromCoefficients(double[] coefficients, bool intercept)
-        {
-            var regression = new MultipleLinearRegression(coefficients.Length, intercept);
-            regression.coefficients = coefficients;
-            return regression;
-        }
-
-#pragma warning disable 612, 618
-        [Obsolete("Please use Transform instead.")]
-        double[] ILinearRegression.Compute(double[] inputs)
-        {
-            return new double[] { this.Compute(inputs) };
-        }
-#pragma warning restore 612, 618
-
 
         /// <summary>
         ///   Returns a <see cref="System.String"/> that represents this instance.

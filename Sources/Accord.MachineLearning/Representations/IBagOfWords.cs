@@ -44,17 +44,6 @@ namespace Accord.MachineLearning
         /// 
         int NumberOfWords { get; }
 
-        /// <summary>
-        ///   Gets the codeword representation of a given value.
-        /// </summary>
-        /// 
-        /// <param name="value">The value to be processed.</param>
-        /// 
-        /// <returns>A double vector with the same length as words
-        /// in the code book.</returns>
-        /// 
-        [Obsolete("Please use the Transform(value) method instead.")]
-        double[] GetFeatureVector(T value);
     }
   
 }

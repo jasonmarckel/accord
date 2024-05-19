@@ -24,7 +24,7 @@ namespace Accord.Math.Optimization.Losses
 {
     using Accord.Statistics;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Binary cross-entropy loss for multi-label problems, also

@@ -34,7 +34,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using System.Diagnostics;
     using System.Collections;
     using Math.Optimization.Losses;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
     using System.Runtime.CompilerServices;
@@ -134,9 +134,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             SupportVectorMachine<TKernel, TInput>, TKernel, TInput, HingeLoss>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
@@ -186,9 +184,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             SupportVectorMachine<TKernel, TInput>, TKernel, TInput, TLoss>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
         where TLoss : struct, IDifferentiableLoss<bool, double, double>
     {
         /// <summary>
@@ -238,9 +234,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
         where TLoss : struct, IDifferentiableLoss<bool, double, double>
     {
 
@@ -315,17 +309,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         {
             get { return convergence.MaxIterations; }
             set { convergence.MaxIterations = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
         }
 
         /// <summary>
@@ -404,9 +387,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ///   Renormalize the weights.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         void renorm()
         {
             if (wDivisor != 1.0 || aDivisor != 1.0 || wFraction != 0)
@@ -427,9 +408,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ///   Compute the norm of the weights.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         double wnorm()
         {
             double norm = w.Dot(w) / wDivisor / wDivisor;
@@ -442,9 +421,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ///   Compute the norm of the averaged weights.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         double anorm()
         {
             renorm(); // this is simpler!
@@ -453,7 +430,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
                 norm += aBias * aBias;
             return norm;
         }
-
 
         /// <summary>
         ///   Perform one iteration of the SGD algorithm with specified gains
@@ -504,9 +480,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             }
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double score(TInput x)
         {
             double s = Kernel.Function(a, x);

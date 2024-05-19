@@ -1,18 +1,26 @@
 ﻿<#@ template debug="false" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ output extension=".txt"#>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
 <#@ import namespace="Microsoft.VisualStudio.TextTemplating"#>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ include file="T4Toolbox.tt"#>
 <#
-    new MatrixOperationTemplate() .RenderToFile("Matrix.MultiplyAndAdd.Generated.cs");
+    string templateDirectory = Path.GetDirectoryName(this.Host.TemplateFile);
+    new MatrixOperationTemplate().RenderToFile(templateDirectory, "Matrix.MultiplyAndAdd.Generated.cs");
 #>
 <#+
-public class MatrixOperationTemplate : Template
+public class MatrixOperationTemplate : TextTransformation
 {
 
     public MatrixOperationTemplate() 
     { 
+    }
+
+    public void RenderToFile(string templateDirectory, string fileName)
+    {      
+      string outputFilePath = Path.Combine(templateDirectory, fileName);
+      File.WriteAllText(outputFilePath, this.TransformText());
     }
 
     public override string TransformText()
@@ -88,9 +96,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] MultiplyAndAdd(this <#=a#>[][] a, <#=b#> b, <#=c#>[][] c, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=c#>, <#=r#>>(a: a, b: b, c: c, result: result);
@@ -111,9 +117,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] MultiplyAndAdd(this <#=a#>[,] a, <#=b#> b, <#=c#>[,] c, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=c#>, <#=r#>>(a: a, b: b, c: c, result: result);

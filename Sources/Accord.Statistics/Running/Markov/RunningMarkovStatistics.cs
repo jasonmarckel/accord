@@ -27,7 +27,7 @@ namespace Accord.Statistics.Running
     using System.Collections.Generic;
     using Accord.Statistics.Models.Markov;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Hidden Markov Model filter.

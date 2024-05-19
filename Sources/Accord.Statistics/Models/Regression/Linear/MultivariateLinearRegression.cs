@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     using Accord.Statistics.Models.Regression.Fitting;
     using Accord.Math.Optimization.Losses;
     using Accord.Statistics.Testing;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Multivariate Linear Regression.
@@ -46,68 +46,13 @@ namespace Accord.Statistics.Models.Regression.Linear
     /// 
     [Serializable]
 #pragma warning disable 612, 618
-    public class MultivariateLinearRegression : MultipleTransformBase<double[], double>, ILinearRegression
+    public class MultivariateLinearRegression : MultipleTransformBase<double[], double>
 #pragma warning restore 612, 618
     {
         private double[][] weights;
 
         private double[,] coefficients; // obsolete
         private double[] intercepts;
-        private bool insertConstant;  // obsolete
-
-
-        /// <summary>
-        ///   Creates a new Multivariate Linear Regression.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of inputs for the regression.</param>
-        /// <param name="outputs">The number of outputs for the regression.</param>
-        /// 
-        [Obsolete("Please use the parameterless constructor instead.")]
-        public MultivariateLinearRegression(int inputs, int outputs)
-            : this(inputs, outputs, false)
-        {
-        }
-
-        /// <summary>
-        ///   Creates a new Multivariate Linear Regression.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of inputs for the regression.</param>
-        /// <param name="outputs">The number of outputs for the regression.</param>
-        /// <param name="intercept">True to use an intercept term, false otherwise. Default is false.</param>
-        /// 
-        [Obsolete("Please use the parameterless constructor instead.")]
-        public MultivariateLinearRegression(int inputs, int outputs, bool intercept)
-        {
-            this.coefficients = new double[inputs, outputs];
-            this.intercepts = new double[outputs];
-            this.insertConstant = intercept;
-        }
-
-        /// <summary>
-        ///   Creates a new Multivariate Linear Regression.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the parameterless constructor instead.")]
-        public MultivariateLinearRegression(double[,] coefficients, double[] intercepts, bool insertConstant)
-        {
-            this.coefficients = coefficients;
-            this.intercepts = intercepts;
-            this.insertConstant = insertConstant;
-        }
-
-        /// <summary>
-        ///   Creates a new Multivariate Linear Regression.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the parameterless constructor instead.")]
-        public MultivariateLinearRegression(double[][] coefficients, double[] intercepts, bool insertConstant)
-        {
-            this.coefficients = coefficients.ToMatrix();
-            this.intercepts = intercepts;
-            this.insertConstant = insertConstant;
-        }
 
         /// <summary>
         ///   Initializes a new instance of the <see cref="MultivariateLinearRegression"/> class.
@@ -115,17 +60,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         /// 
         public MultivariateLinearRegression()
         {
-        }
-
-        /// <summary>
-        ///   Gets the coefficient matrix used by the regression model. Each
-        ///   column corresponds to the coefficient vector for each of the outputs.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Weights instead.")]
-        public double[,] Coefficients
-        {
-            get { return coefficients; }
         }
 
         /// <summary>
@@ -162,123 +96,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         public int NumberOfParameters
         {
             get { return NumberOfInputs * NumberOfOutputs + NumberOfOutputs; }
-        }
-
-        /// <summary>
-        ///   Gets the number of inputs in the model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Inputs
-        {
-            get { return coefficients.GetLength(0); }
-        }
-
-        /// <summary>
-        ///   Gets the number of outputs in the model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfOutputs instead.")]
-        public int Outputs
-        {
-            get { return coefficients.GetLength(1); }
-        }
-
-        /// <summary>
-        ///   Performs the regression using the input vectors and output
-        ///   vectors, returning the sum of squared errors of the fit.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vectors to be used in the regression.</param>
-        /// <param name="outputs">The output values for each input vector.</param>
-        /// <returns>The Sum-Of-Squares error of the regression.</returns>
-        /// 
-        [Obsolete("Please use the LeastSquares class instead.")]
-        public virtual double Regress(double[][] inputs, double[][] outputs)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            int cols = inputs[0].Length;      // inputs
-            int rows = inputs.Length;         // points
-
-            if (insertConstant) cols++;
-
-            for (int c = 0; c < coefficients.GetLength(1); c++)
-            {
-                double[] B = new double[cols];
-                double[,] V = new double[cols, cols];
-
-
-                // Compute V and B matrices
-                for (int i = 0; i < cols; i++)
-                {
-                    // Least Squares Matrix
-                    for (int j = 0; j < cols; j++)
-                    {
-                        for (int k = 0; k < rows; k++)
-                        {
-                            if (insertConstant)
-                            {
-                                double a = (i == cols - 1) ? 1 : inputs[k][i];
-                                double b = (j == cols - 1) ? 1 : inputs[k][j];
-
-                                V[i, j] += a * b;
-                            }
-                            else
-                            {
-                                V[i, j] += inputs[k][i] * inputs[k][j];
-                            }
-                        }
-                    }
-
-                    // Function to minimize
-                    for (int k = 0; k < rows; k++)
-                    {
-                        if (insertConstant && (i == cols - 1))
-                        {
-                            B[i] += outputs[k][c];
-                        }
-                        else
-                        {
-                            B[i] += inputs[k][i] * outputs[k][c];
-                        }
-                    }
-                }
-
-
-                // Solve V*C = B to find C (the coefficients)
-                double[] coef = new SingularValueDecomposition(V).Solve(B);
-
-                if (insertConstant)
-                {
-                    intercepts[c] = coef[coef.Length - 1];
-                    for (int i = 0; i < cols - 1; i++)
-                        coefficients[i, c] = coef[i];
-                }
-                else
-                {
-                    for (int i = 0; i < cols; i++)
-                        coefficients[i, c] = coef[i];
-                }
-            }
-
-            Weights = coefficients.ToJagged();
-
-            // Calculate Sum-Of-Squares error
-            double error = 0.0, e;
-            for (int i = 0; i < outputs.Length; i++)
-            {
-                double[] y = Transform(inputs[i]);
-
-                for (int c = 0; c < y.Length; c++)
-                {
-                    e = outputs[i][c] - y[c];
-                    error += e * e;
-                }
-            }
-
-            return error;
         }
 
         /// <summary>
@@ -349,46 +166,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         }
 
         /// <summary>
-        ///   Computes the Multiple Linear Regression output for a given input.
-        /// </summary>
-        /// 
-        /// <param name="input">A input vector.</param>
-        /// <returns>The computed output.</returns>
-        /// 
-        [Obsolete("Please use Transform() instead.")]
-        public double[] Compute(double[] input)
-        {
-            int N = input.Length;
-            int M = coefficients.GetLength(1);
-
-            double[] result = new double[M];
-            for (int i = 0; i < M; i++)
-            {
-                result[i] = intercepts[i];
-                for (int j = 0; j < N; j++)
-                    result[i] += input[j] * coefficients[j, i];
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        ///   Computes the Multiple Linear Regression output for a given input.
-        /// </summary>
-        /// 
-        /// <param name="input">An array of input vectors.</param>
-        /// <returns>The computed outputs.</returns>
-        /// 
-        [Obsolete("Please use Transform() instead.")]
-        public double[][] Compute(double[][] input)
-        {
-            double[][] output = new double[input.Length][];
-            for (int j = 0; j < input.Length; j++)
-                output[j] = Compute(input[j]);
-            return output;
-        }
-
-        /// <summary>
         ///   Creates a new linear regression directly from data points.
         /// </summary>
         /// 
@@ -400,24 +177,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         public static MultivariateLinearRegression FromData(double[][] x, double[][] y)
         {
             return new OrdinaryLeastSquares().Learn(x, y);
-        }
-
-        /// <summary>
-        ///  Creates a new linear regression from the regression coefficients.
-        /// </summary>
-        /// 
-        /// <param name="coefficients">The linear coefficients.</param>
-        /// <param name="intercept">The intercept (bias) values.</param>
-        /// 
-        /// <returns>A linear regression with the given coefficients.</returns>
-        /// 
-        [Obsolete("Please use the parameterless constructor and set Weights and Intercept directly.")]
-        public static MultivariateLinearRegression FromCoefficients(double[][] coefficients, double[] intercept)
-        {
-            var regression = new MultivariateLinearRegression(coefficients.Length, coefficients[0].Length);
-            regression.Weights = coefficients;
-            regression.intercepts = intercept;
-            return regression;
         }
 
         /// <summary>
@@ -434,15 +193,6 @@ namespace Accord.Statistics.Models.Regression.Linear
                 Intercepts = intercepts != null ? intercepts.Dot(inv).Multiply(-1) : null
             };
         }
-
-#pragma warning disable 612, 618
-        [Obsolete("Please use Transform instead.")]
-        double[] ILinearRegression.Compute(double[] inputs)
-        {
-            return this.Compute(inputs);
-        }
-#pragma warning restore 612, 618
-
 
         /// <summary>
         /// Applies the transformation to an input, producing an associated output.

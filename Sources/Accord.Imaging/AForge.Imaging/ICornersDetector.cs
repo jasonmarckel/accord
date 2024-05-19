@@ -12,8 +12,6 @@ namespace Accord.Imaging
     using System.Collections.Generic;
     using System.Drawing;
     using System.Drawing.Imaging;
-    using AForge;
-    using Accord.Compat;
 
     /// <summary>
     /// Corners detector's interface.

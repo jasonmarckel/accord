@@ -23,7 +23,7 @@
 namespace Accord.Math.Integration
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Common interface for numeric integration methods.

@@ -28,7 +28,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Statistics;
     using System.Linq;
     using System.Diagnostics;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
     using Accord.Math.Optimization;
 
@@ -299,15 +299,9 @@ namespace Accord.Statistics.Distributions.Univariate
 
             this.table = new double[combinations];
 
-#if NET35
-            var seq = EnumerableEx.Zip<double[], long, Tuple<double[], long>>(
-                Combinatorics.Combinations(ranks, min), Vector.Range(combinations),
-                (double[] c, long i) => new Tuple<double[], long>(c, i));
-#else
             var seq = Enumerable.Zip<double[], long, Tuple<double[], long>>(
                 Combinatorics.Combinations(ranks, min), Vector.Range(combinations),
                 (double[] c, long i) => new Tuple<double[], long>(c, i));
-#endif
 
             Parallel.ForEach(seq, i =>
             {

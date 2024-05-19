@@ -9,7 +9,7 @@
 namespace Accord.Math
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     /// A structure representing 3x3 matrix.
@@ -866,7 +866,7 @@ namespace Accord.Math
             double[,] vArray;
             double[] eArray;
 
-            svd.svdcmp( uArray, out eArray, out vArray );
+            Accord.Math.SVD.svdcmp( uArray, out eArray, out vArray );
 
             // build U matrix
             u = new Matrix3x3( );

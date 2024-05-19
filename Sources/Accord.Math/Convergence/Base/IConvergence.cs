@@ -31,12 +31,6 @@ namespace Accord.Math
     public interface IConvergence<T> : IConvergence
     {
         /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        [Obsolete("Please use MaxIterations instead.")]
-        int Iterations { get; set; }
-
-        /// <summary>
         ///   Gets or sets the watched value after the iteration.
         /// </summary>
         /// 

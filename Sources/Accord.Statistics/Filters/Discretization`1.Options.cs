@@ -29,7 +29,7 @@ namespace Accord.Statistics.Filters
     using Accord.MachineLearning;
     using Accord.Math;
     using System.Collections.Generic;
-    using Accord.Compat;
+
 
     public partial class Discretization<TInput, TOutput>
     {
@@ -138,7 +138,6 @@ namespace Accord.Statistics.Filters
                 return result;
             }
 
-#if !NETSTANDARD1_4
             /// <summary>
             /// Applies the transformation to an input, producing an associated output.
             /// </summary>
@@ -175,7 +174,6 @@ namespace Accord.Statistics.Filters
                     result[i] = Transform(input[i]);
                 return result;
             }
-#endif
 
             /// <summary>
             /// Learns a model that can map the given inputs to the desired outputs.
@@ -196,7 +194,6 @@ namespace Accord.Statistics.Filters
                 return this;
             }
 
-#if !NETSTANDARD1_4
             /// <summary>
             /// Learns a model that can map the given inputs to the desired outputs.
             /// </summary>
@@ -234,7 +231,6 @@ namespace Accord.Statistics.Filters
 
                 return this;
             }
-#endif
 
             /// <summary>
             /// Learns a model that can map the given inputs to the desired outputs.

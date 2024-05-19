@@ -51,21 +51,14 @@ namespace Accord.Math
     using System;
     using System.ComponentModel;
     using System.Globalization;
-    using Accord.Compat;
-#if NETSTANDARD1_4
-    using SMath = Accord.Compat.SMath;
-#else
     using SMath = System.Math;
-#endif
 
     /// <summary>
     ///   Rational number.
     /// </summary>
     /// 
     [Serializable]
-#if !NETSTANDARD1_4
     [TypeConverter(typeof(Accord.Math.Converters.RationalConverter))]
-#endif
     public struct Rational : IComparable, IComparable<Rational>, IEquatable<Rational>, IFormattable
     {
         private const double DEFAULT_TOLERANCE = 1e-6;
@@ -235,11 +228,7 @@ namespace Accord.Math
 
         private static bool TryParse(string s, NumberStyles style, IFormatProvider provider, bool throwOnFailure, out Rational result)
         {
-#if NET35
-            if (StringEx.IsNullOrWhiteSpace(s))
-#else
             if (string.IsNullOrWhiteSpace(s))
-#endif
                 return ParseFailure(throwOnFailure, out result);
             var parts = s.Split('/');
             if (parts.Length > 2)

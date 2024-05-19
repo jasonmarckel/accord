@@ -117,34 +117,12 @@ namespace Accord.Imaging
             set { windowSize = value; }
         }
 
-
-
-        /// <summary>
-        ///   Constructs a new Correlation Matching algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the overload that accepts bitmaps.")]
-        public CorrelationMatching(int windowSize)
-            : this(windowSize, 0)
-        {
-        }
-
         /// <summary>
         ///   Constructs a new Correlation Matching algorithm.
         /// </summary>
         /// 
         public CorrelationMatching(int windowSize, Bitmap image1, Bitmap image2)
             : this(windowSize, 0, image1, image2)
-        {
-        }
-
-        /// <summary>
-        ///   Constructs a new Correlation Matching algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the overload that accepts bitmaps.")]
-        public CorrelationMatching(int windowSize, double maxDistance)
-            : this(windowSize, maxDistance, null, null)
         {
         }
 
@@ -168,35 +146,9 @@ namespace Accord.Imaging
         ///   Matches two sets of feature points computed from the given images.
         /// </summary>
         /// 
-        [Obsolete("Please use Match(points1, points2) instead.")]
-        public IntPoint[][] Match(Bitmap image1, Bitmap image2,
-            IEnumerable<IntPoint> points1, IEnumerable<IntPoint> points2)
-        {
-            this.image1 = image1;
-            this.image2 = image2;
-            return Match(points1, points2);
-        }
-
-        /// <summary>
-        ///   Matches two sets of feature points computed from the given images.
-        /// </summary>
-        /// 
         public IntPoint[][] Match(IEnumerable<IntPoint> points1, IEnumerable<IntPoint> points2)
         {
             return Match(points1.ToArray(), points2.ToArray());
-        }
-
-        /// <summary>
-        ///   Matches two sets of feature points computed from the given images.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Match(points1, points2) instead.")]
-        public IntPoint[][] Match(Bitmap image1, Bitmap image2, 
-            IntPoint[] points1, IntPoint[] points2)
-        {
-            this.image1 = image1;
-            this.image2 = image2;
-            return Match(points1, points2);
         }
 
         /// <summary>

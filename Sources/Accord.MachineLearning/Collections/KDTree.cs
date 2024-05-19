@@ -24,7 +24,7 @@ namespace Accord.Collections
 {
     using Accord.Math.Distances;
     using System;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Convenience class for k-dimensional tree static methods. To 

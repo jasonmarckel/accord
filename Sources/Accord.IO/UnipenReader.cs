@@ -26,7 +26,6 @@ namespace Accord.IO
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using Accord.Compat;
 
     /// <summary>
     ///   Reader for UNIPEN files (such as Pendigits dataset).
@@ -189,11 +188,7 @@ namespace Accord.IO
                 double y = double.Parse(parts[1]);
 
                 buffer.Add(new[] { x, y });
-#if NET35
-            } while (!StringEx.IsNullOrWhiteSpace(line));
-#else
             } while (!String.IsNullOrWhiteSpace(line));
-#endif
 
             coordinates = buffer.ToArray();
             return true;
@@ -225,8 +220,6 @@ namespace Accord.IO
             return Tuple.Create(vectors.ToArray(), labels.ToArray());
         }
 
-
-
         #region IDisposable members
         /// <summary>
         ///   Performs application-defined tasks associated with
@@ -253,9 +246,7 @@ namespace Accord.IO
                 // free managed resources
                 if (reader != null)
                 {
-#if !NETSTANDARD1_4
                     reader.Close();
-#endif
                     reader = null;
                 }
             }
@@ -271,7 +262,6 @@ namespace Accord.IO
             Dispose(false);
         }
         #endregion
-
 
     }
 }

@@ -25,7 +25,7 @@ namespace Accord.Math.Distances
     using System;
     using System.Collections;
     using System.Runtime.CompilerServices;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Hamming distance.
@@ -48,9 +48,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(byte[] x, byte[] y)
         {
             int sum = 0;
@@ -73,9 +71,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(string x, string y)
         {
             int sum = 0;
@@ -98,9 +94,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(double[] x, double[] y)
         {
             unsafe
@@ -138,9 +132,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(BitArray x, BitArray y)
         {
             BitArray bytes = x.Xor(y);

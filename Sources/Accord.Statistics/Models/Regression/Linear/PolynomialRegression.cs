@@ -28,7 +28,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     using System;
     using System.Text;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Polynomial Linear Regression.
@@ -50,7 +50,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     /// 
     [Serializable]
 #pragma warning disable 612, 618
-    public class PolynomialRegression : TransformBase<double, double>, ILinearRegression, IFormattable
+    public class PolynomialRegression : TransformBase<double, double>, IFormattable
 #pragma warning restore 612, 618
     {
         private MultipleLinearRegression regression;
@@ -101,20 +101,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         }
 
         /// <summary>
-        ///   Gets the coefficients of the polynomial regression,
-        ///   with the first being the higher-order term and the last
-        ///   the intercept term.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Weights instead.")]
-        public double[] Coefficients
-        {
-#pragma warning disable 612, 618
-            get { return regression.Weights.Concatenate(Intercept); }
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
         ///   Gets or sets the linear weights of the regression model. The
         ///   intercept term is not stored in this vector, but is instead
         ///   available through the <see cref="Intercept"/> property.
@@ -139,59 +125,6 @@ namespace Accord.Statistics.Models.Regression.Linear
             get { return regression.Intercept; }
             set { regression.Intercept = value; }
         }
-
-        /// <summary>
-        ///   Performs the regression using the input and output
-        ///   data, returning the sum of squared errors of the fit.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The output data.</param>
-        /// 
-        /// <returns>The regression Sum-of-Squares error.</returns>
-        /// 
-        [Obsolete("Please use the OrdinaryLeastSquares class instead.")]
-        public double Regress(double[] inputs, double[] outputs)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            var fit = new PolynomialLeastSquares()
-            {
-                Degree = Degree,
-            }.Learn(inputs, outputs);
-            regression.Weights.SetTo(fit.Weights);
-            regression.Intercept = fit.Intercept;
-
-            return new SquareLoss(outputs).Loss(Transform(inputs));
-        }
-
-        /// <summary>
-        ///   Computes the regressed model output for the given inputs.
-        /// </summary>
-        /// 
-        /// <param name="input">The input data.</param>
-        /// <returns>The computed outputs.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double[] Compute(double[] input)
-        {
-            return Transform(input);
-        }
-
-        /// <summary>
-        ///   Computes the regressed model output for the given input.
-        /// </summary>
-        /// 
-        /// <param name="input">The input value.</param>
-        /// <returns>The computed output.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double Compute(double input)
-        {
-            return Transform(input);
-        }
-
 
         /// <summary>
         ///   Gets the coefficient of determination, as known as R² (r-squared).
@@ -340,16 +273,6 @@ namespace Accord.Statistics.Models.Regression.Linear
             }.Learn(x, y);
         }
 
-#pragma warning disable 612, 618
-        [Obsolete("Please use Transform instead.")]
-        double[] ILinearRegression.Compute(double[] inputs)
-        {
-            if (inputs.Length > 1)
-                throw new ArgumentException("Polynomial regression supports only one-length input vectors", "inputs");
-            return new double[] { this.Compute(inputs[0]) };
-        }
-#pragma warning restore 612, 618
-
         /// <summary>
         /// Applies the transformation to an input, producing an associated output.
         /// </summary>
@@ -364,7 +287,6 @@ namespace Accord.Statistics.Models.Regression.Linear
                 polynomial[j] = Math.Pow(input, this.Degree - j);
             return regression.Transform(polynomial);
         }
-
 
         /// <summary>
         /// Applies the transformation to an input, producing an associated output.

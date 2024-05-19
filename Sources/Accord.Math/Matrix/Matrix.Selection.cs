@@ -868,9 +868,7 @@ namespace Accord.Math
         /// <param name="data">The array to search inside.</param>
         /// <param name="func">The search criteria.</param>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] Find<T>(this T[] data, Func<T, bool> func)
         {
             List<int> idx = new List<int>();
@@ -977,9 +975,7 @@ namespace Accord.Math
         /// <param name="values">The values to be ordered.</param>
         /// <param name="indices">The new index positions.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static void Swap<T>(this T[] values, int[] indices)
         {
             T[] newValues = values.Get(indices);
@@ -991,9 +987,7 @@ namespace Accord.Math
         ///   Swaps the contents of two object references.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static void Swap<T>(ref T a, ref T b)
         {
             var t = a;
@@ -1009,9 +1003,7 @@ namespace Accord.Math
         /// <param name="a">The index of the first element to be swapped.</param>
         /// <param name="b">The index of the second element to be swapped.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static void Swap<T>(this T[] array, int a, int b)
         {
             T aux = array[a];
@@ -1227,7 +1219,7 @@ namespace Accord.Math
         {
             int[] indices = Accord.Math.Vector.Range(keys.Length);
             Array.Sort<TKey, int>(keys.Copy(), indices, comparer);
-            return values.Submatrix(null, indices);
+            return values.Get(null, indices);
         }
 
         /// <summary>
@@ -1245,16 +1237,14 @@ namespace Accord.Math
         {
             int[] indices = Accord.Math.Vector.Range(keys.Length);
             Array.Sort<TKey, int>(keys.Copy(), indices);
-            return values.Submatrix(null, indices);
+            return values.Get(null, indices);
         }
 
         /// <summary>
         ///   Returns a copy of an array in reversed order.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static T[] Reversed<T>(this T[] values)
         {
             var r = new T[values.Length];
@@ -1267,9 +1257,7 @@ namespace Accord.Math
         ///   Returns a copy of an array in reversed order.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static T[] First<T>(this T[] values, int count)
         {
             var r = new T[count];
@@ -1282,9 +1270,7 @@ namespace Accord.Math
         ///   Returns the last <paramref name="count"/> elements of an array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static T[] Last<T>(this T[] values, int count)
         {
             var r = new T[count];
@@ -1340,48 +1326,6 @@ namespace Accord.Math
             Accord.Sort.Insertion(work, idx, 0, count, asc: true);
             return idx.First(count);
         }
-
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Accord.Sort.Partition instead.")]
-        public static int Partition<T, TValue>(this T[] list, TValue[] keys, int left, int right, bool asc = true)
-            where T : IComparable<T>
-        {
-            return Accord.Sort.Partition(list, left, right, asc);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Accord.Sort.Partition instead.")]
-        public static int Partition<T>(this T[] list, int left, int right, bool asc = true)
-            where T : IComparable<T>
-        {
-            return Accord.Sort.Partition(list, left, right, asc);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Accord.Sort.Partition instead.")]
-        public static int Partition<TKey, TValue>(this TKey[] list, TValue[] keys, int left, int right, Func<TKey, TKey, int> compare, bool asc = true)
-        {
-            return Accord.Sort.Partition(list, keys, left, right, compare, asc: asc);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Accord.Sort.Partition instead.")]
-        public static int Partition<T>(this T[] list, int left, int right, Func<T, T, int> compare, bool asc = true)
-        {
-            return Accord.Sort.Partition(list, left, right, compare, asc: asc);
-        }
-
-
-
 
         static T cast<T>(this object value)
         {

@@ -26,7 +26,7 @@ namespace Accord.Statistics.Models.Regression
     using Accord.Math.Optimization;
     using Accord.Statistics.Models.Regression.Fitting;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Regression function delegate.
@@ -166,24 +166,6 @@ namespace Accord.Statistics.Models.Regression
         {
             this.gradient = gradient;
         }
-
-
-
-        /// <summary>
-        ///   Computes the model output for the given input vector.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vector.</param>
-        /// 
-        /// <returns>The output value.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double Compute(double[] inputs)
-        {
-            return function(coefficients, inputs);
-        }
-
-
 
         /// <summary>
         ///   Creates a new object that is a copy of the current instance.

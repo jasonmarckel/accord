@@ -48,14 +48,13 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// <code source="Unit Tests\Accord.Tests.Statistics\Models\Markov\ViterbiLearningTest.cs" region="doc_learn" />
     /// </example>
     /// 
-    /// <seealso cref="ViterbiLearning{TDistribution}"/>
+    /// <seealso cref="ViterbiLearning{TDistribution,TObservation}"/>
     /// <seealso cref="BaumWelchLearning"/>
     /// 
     public class ViterbiLearning : BaseViterbiLearning<int[]>,
-        IUnsupervisedLearning, IConvergenceLearning,
+        IConvergenceLearning,
         IUnsupervisedLearning<HiddenMarkovModel, int[], int[]>
     {
-
         private MaximumLikelihoodLearning mle;
 
         /// <summary>
@@ -66,7 +65,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         {
             get { return mle.Model; }
         }
-
 
         /// <summary>
         ///   Gets or sets whether to use Laplace's rule
@@ -139,20 +137,20 @@ namespace Accord.Statistics.Models.Markov.Learning
             return logLikelihood;
         }
 
-        /// <summary>
-        ///   Runs the learning algorithm.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   Learning problem. Given some training observation sequences O = {o1, o2, ..., oK}
-        ///   and general structure of HMM (numbers of hidden and visible states), determine
-        ///   HMM parameters M = (A, B, pi) that best fit training data. 
-        /// </remarks>
-        /// 
-        double IUnsupervisedLearning.Run(Array[] observations)
-        {
-            return base.Run((int[][])observations);
-        }
+        ///// <summary>
+        /////   Runs the learning algorithm.
+        ///// </summary>
+        ///// 
+        ///// <remarks>
+        /////   Learning problem. Given some training observation sequences O = {o1, o2, ..., oK}
+        /////   and general structure of HMM (numbers of hidden and visible states), determine
+        /////   HMM parameters M = (A, B, pi) that best fit training data. 
+        ///// </remarks>
+        ///// 
+        //double IUnsupervisedLearning.Run(Array[] observations)
+        //{
+        //    return base.Run((int[][])observations);
+        //}
 
     }
 }

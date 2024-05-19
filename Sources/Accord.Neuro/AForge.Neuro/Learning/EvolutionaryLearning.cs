@@ -14,6 +14,7 @@ namespace Accord.Neuro.Learning
     using Accord.Genetic;
     using Accord.Math.Random;
     using Accord.Statistics.Distributions.Univariate;
+    using Range = Accord.Range;
 
     /// <summary>
     /// Neural networks' evolutionary learning algorithm, which is based on Genetic Algorithms.

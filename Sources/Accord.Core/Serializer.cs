@@ -33,7 +33,7 @@ namespace Accord.IO
     using System.Runtime.Serialization;
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Text;
-    using Accord.Compat;
+    using System.Text.Json;
 
     /// <summary>
     ///   Model serializer. Can be used to serialize and deserialize (i.e. save and 
@@ -76,6 +76,19 @@ namespace Accord.IO
             return SerializerCompression.None;
         }
 
+        ///// <summary>
+        /////   Saves an object to a stream.
+        ///// </summary>
+        ///// 
+        ///// <param name="obj">The object to be serialized.</param>
+        ///// <param name="stream">The stream to which the object is to be serialized.</param>
+        ///// <param name="compression">The type of compression to use. Default is None.</param>
+        ///// 
+        //public static void Save<T>(this T obj, Stream stream, SerializerCompression compression = DEFAULT_COMPRESSION)
+        //{
+        //    Save(obj, new BinaryFormatter(), stream, compression);
+        //}
+
         /// <summary>
         ///   Saves an object to a stream.
         /// </summary>
@@ -86,40 +99,17 @@ namespace Accord.IO
         /// 
         public static void Save<T>(this T obj, Stream stream, SerializerCompression compression = DEFAULT_COMPRESSION)
         {
-            Save(obj, new BinaryFormatter(), stream, compression);
-        }
-
-        /// <summary>
-        ///   Saves an object to a stream.
-        /// </summary>
-        /// 
-        /// <param name="obj">The object to be serialized.</param>
-        /// <param name="formatter">The binary formatter.</param>
-        /// <param name="stream">The stream to which the object is to be serialized.</param>
-        /// <param name="compression">The type of compression to use. Default is None.</param>
-        /// 
-#if NETSTANDARD1_4
-    internal
-#else
-    public
-#endif
-        static void Save<T>(this T obj, BinaryFormatter formatter, Stream stream, SerializerCompression compression = DEFAULT_COMPRESSION)
-        {
-            if (formatter.SurrogateSelector == null)
-                formatter.SurrogateSelector = GetSurrogate(typeof(T));
+            //if (formatter.SurrogateSelector == null)
+            //    formatter.SurrogateSelector = GetSurrogate(typeof(T));
 
             if (compression == SerializerCompression.GZip)
             {
-#if NET35 || NET40
-                using (var gzip = new GZipStream(stream, CompressionMode.Compress, leaveOpen: true))
-#else
                 using (var gzip = new GZipStream(stream, CompressionLevel.Optimal, leaveOpen: true))
-#endif
-                    formatter.Serialize(gzip, obj);
+                    JsonSerializer.Serialize(gzip, obj);
             }
             else if (compression == SerializerCompression.None)
             {
-                formatter.Serialize(stream, obj);
+                JsonSerializer.Serialize(stream, obj);
             }
             else
             {
@@ -199,19 +189,19 @@ namespace Accord.IO
             }
         }
 
-        /// <summary>
-        ///   Loads an object from a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream from which the object is to be deserialized.</param>
-        /// <param name="compression">The type of compression to use. Default is None.</param>
-        /// 
-        /// <returns>The deserialized machine.</returns>
-        /// 
-        public static T Load<T>(Stream stream, SerializerCompression compression = DEFAULT_COMPRESSION)
-        {
-            return Load<T>(stream, new BinaryFormatter(), compression);
-        }
+        ///// <summary>
+        /////   Loads an object from a stream.
+        ///// </summary>
+        ///// 
+        ///// <param name="stream">The stream from which the object is to be deserialized.</param>
+        ///// <param name="compression">The type of compression to use. Default is None.</param>
+        ///// 
+        ///// <returns>The deserialized machine.</returns>
+        ///// 
+        //public static T Load<T>(Stream stream, SerializerCompression compression = DEFAULT_COMPRESSION)
+        //{
+        //    return Load<T>(stream, new BinaryFormatter(), compression);
+        //}
 
         /// <summary>
         ///   Loads an object from a file.
@@ -268,21 +258,21 @@ namespace Accord.IO
 
 
 
-        /// <summary>
-        ///   Loads an object from a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream from which the object is to be deserialized.</param>
-        /// <param name="compression">The type of compression to use. Default is None.</param>
-        /// <param name="value">The object to be read. This parameter can be used to avoid the
-        ///   need of specifying a generic argument to this function.</param>
-        /// 
-        /// <returns>The deserialized machine.</returns>
-        /// 
-        public static T Load<T>(Stream stream, out T value, SerializerCompression compression = DEFAULT_COMPRESSION)
-        {
-            return value = Load<T>(stream, compression);
-        }
+        ///// <summary>
+        /////   Loads an object from a stream.
+        ///// </summary>
+        ///// 
+        ///// <param name="stream">The stream from which the object is to be deserialized.</param>
+        ///// <param name="compression">The type of compression to use. Default is None.</param>
+        ///// <param name="value">The object to be read. This parameter can be used to avoid the
+        /////   need of specifying a generic argument to this function.</param>
+        ///// 
+        ///// <returns>The deserialized machine.</returns>
+        ///// 
+        //public static T Load<T>(Stream stream, out T value, SerializerCompression compression = DEFAULT_COMPRESSION)
+        //{
+        //    return value = Load<T>(stream, compression);
+        //}
 
         /// <summary>
         ///   Loads an object from a file.
@@ -337,40 +327,28 @@ namespace Accord.IO
         /// </summary>
         /// 
         /// <typeparam name="T">The type of the model to be loaded.</typeparam>
-        /// <param name="formatter">The binary formatter.</param>
         /// <param name="stream">The stream from which to deserialize the object graph.</param>
         /// <param name="compression">The type of compression to use. Default is None.</param>
         /// 
         /// <returns>The deserialized object.</returns>
         /// 
-#if NETSTANDARD1_4
-    internal
-#else
-        public
-#endif
-        static T Load<T>(Stream stream, BinaryFormatter formatter, SerializerCompression compression = DEFAULT_COMPRESSION)
+        public static T Load<T>(Stream stream, SerializerCompression compression = DEFAULT_COMPRESSION)
         {
             lock (lockObj)
             {
                 try
                 {
-                    if (formatter.Binder == null)
-                        formatter.Binder = GetBinder(typeof(T));
-
                     AppDomain.CurrentDomain.AssemblyResolve += resolve;
-
-                    if (formatter.SurrogateSelector == null)
-                        formatter.SurrogateSelector = GetSurrogate(typeof(T));
 
                     object obj;
                     if (compression == SerializerCompression.GZip)
                     {
                         using (var gzip = new GZipStream(stream, CompressionMode.Decompress, leaveOpen: true))
-                            obj = formatter.Deserialize(gzip);
+                            obj = JsonSerializer.Deserialize<T>(gzip);
                     }
                     else if (compression == SerializerCompression.None)
                     {
-                        obj = formatter.Deserialize(stream);
+                        obj = JsonSerializer.Deserialize<T>(stream);
                     }
                     else
                     {
@@ -400,59 +378,6 @@ namespace Accord.IO
         public static T DeepClone<T>(this T obj)
         {
             return Load<T>(Save<T>(obj));
-        }
-
-
-        private static SerializationBinder GetBinder(Type type)
-        {
-#if NETSTANDARD1_4
-            throw new NotSupportedException("Serialization Binders are not supported in .NET Standard 1.4.");
-#else
-            // Try to get the binder by checking if there type is
-            // marked with a SerializationBinderAttribute
-            var attribute = Attribute.GetCustomAttribute(type,
-                typeof(SerializationBinderAttribute)) as SerializationBinderAttribute;
-
-            if (attribute != null)
-                return attribute.Binder;
-
-            // Check if the type has an internal static property containing the binder
-            var field = type.GetField("Binder", BindingFlags.NonPublic | BindingFlags.Static);
-            if (field != null)
-            {
-                var binder = field.GetValue(null) as SerializationBinder;
-                if (binder != null)
-                    return binder;
-            }
-
-            return null;
-#endif
-        }
-
-        private static SurrogateSelector GetSurrogate(Type type)
-        {
-#if NETSTANDARD1_4
-            throw new NotSupportedException("Surrogates are not supported in .NET Standard 1.4.");
-#else
-            // Try to get the binder by checking if there type is
-            // marked with a SerializationBinderAttribute
-            var attribute = Attribute.GetCustomAttribute(type,
-                typeof(SurrogateSelectorAttribute)) as SurrogateSelectorAttribute;
-
-            if (attribute != null)
-                return attribute.Selector;
-
-            // Check if the type has an internal static property containing the surrogate selector
-            var field = type.GetField("Selector", BindingFlags.NonPublic | BindingFlags.Static);
-            if (field != null)
-            {
-                var selector = field.GetValue(null) as SurrogateSelector;
-                if (selector != null)
-                    return selector;
-            }
-
-            return null;
-#endif
         }
 
         private static Assembly resolve(object sender, ResolveEventArgs args)

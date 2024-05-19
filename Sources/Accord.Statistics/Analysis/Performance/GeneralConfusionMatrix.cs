@@ -26,7 +26,7 @@ namespace Accord.Statistics.Analysis
     using System.ComponentModel;
     using Accord.Math;
     using Accord.Statistics.Testing;
-    using Accord.Compat;
+
     using Accord.MachineLearning;
 
     /* 
@@ -174,28 +174,6 @@ namespace Accord.Statistics.Analysis
         public int NumberOfClasses 
         {
             get { return classes; }
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="NumberOfSamples"/> instead.
-        /// </summary>
-        /// 
-        [DisplayName("Number of samples")]
-        [Obsolete("Please use NumberOfSamples instead.")]
-        public int Samples 
-        {
-            get { return NumberOfSamples; }
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="NumberOfClasses"/> instead.
-        /// </summary>
-        /// 
-        [DisplayName("Number of classes")]
-        [Obsolete("Please use NumberOfClasses instead.")]
-        public int Classes 
-        {
-            get { return NumberOfClasses; }
         }
 
         /// <summary>

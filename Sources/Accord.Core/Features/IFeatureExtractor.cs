@@ -25,17 +25,12 @@ namespace Accord
     using Accord.MachineLearning;
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
 
     /// <summary>
     ///   Common interface for feature extractors.
     /// </summary>
     /// 
-    public interface IFeatureExtractor<
-#if !NET35
-        out
-#endif
-        TPoint, in TInput> : 
+    public interface IFeatureExtractor<out TPoint, in TInput> : 
         ICovariantTransform<TInput, IEnumerable<TPoint>>, ICloneable, IDisposable
     {
 

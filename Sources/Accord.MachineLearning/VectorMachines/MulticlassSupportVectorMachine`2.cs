@@ -30,7 +30,7 @@ namespace Accord.MachineLearning.VectorMachines
     using System;
     using System.Collections.Generic;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
     using System.Runtime.CompilerServices;

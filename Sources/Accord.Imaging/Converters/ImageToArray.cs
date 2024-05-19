@@ -26,6 +26,7 @@ namespace Accord.Imaging.Converters
     using System.Drawing;
     using System.Drawing.Imaging;
     using System.Numerics;
+    using Vector = Math.Vector;
 
     /// <summary>
     ///   Bitmap to jagged array converter.

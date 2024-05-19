@@ -25,7 +25,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using System;
     using Accord.Math;
     using Accord.Statistics.Distributions.Fitting;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Inverse Gaussian (Normal) Distribution, also known as the Wald distribution.

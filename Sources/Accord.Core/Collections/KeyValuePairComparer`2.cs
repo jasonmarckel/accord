@@ -24,7 +24,6 @@ namespace Accord.Collections
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
 
     /// <summary>
     ///   Vanilla key-based comparer for <see cref="KeyValuePair{TKey, TValue}"/>.

@@ -23,7 +23,7 @@
 namespace Accord.Statistics.Testing
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Sign test for the median.

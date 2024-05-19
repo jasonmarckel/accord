@@ -29,7 +29,6 @@ namespace Accord.Math.Decompositions
 {
     using System;
     using Accord.Math;
-	using Accord.Compat;
 
     /// <summary>
     ///   LU decomposition of a jagged rectangular matrix.

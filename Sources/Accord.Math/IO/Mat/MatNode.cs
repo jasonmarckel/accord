@@ -29,7 +29,7 @@ namespace Accord.IO
     using System.IO.Compression;
     using System.Runtime.InteropServices;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Node object contained in <see cref="MatReader">.MAT file</see>. 
@@ -237,11 +237,7 @@ namespace Accord.IO
 
             if (nameTag.IsSmallFormat)
             {
-#if NETSTANDARD1_4
-                Name = new String((char*)nameTag.SmallData_Value, 0, nameTag.SmallData_NumberOfBytes);
-#else
                 Name = new String((sbyte*)nameTag.SmallData_Value, 0, nameTag.SmallData_NumberOfBytes);
-#endif
             }
             else
             {
@@ -398,11 +394,7 @@ namespace Accord.IO
                     matType = contentsTag.SmallData_Type;
                     if (matType == MatDataType.miUTF8)
                     {
-#if NETSTANDARD1_4
-                        value = new String((char*)contentsTag.SmallData_Value, 0, contentsTag.SmallData_NumberOfBytes);
-#else
                         value = new String((sbyte*)contentsTag.SmallData_Value, 0, contentsTag.SmallData_NumberOfBytes);
-#endif
                     }
                     else
                     {

@@ -34,7 +34,7 @@ namespace Accord.Statistics.Models
     ///  Contains statistical models with direct applications in machine learning, such as
     ///  <see cref="HiddenMarkovModel">Hidden Markov Models</see>, <see cref="ConditionalRandomField{T}">
     ///  Conditional Random Fields</see>, <see cref="HiddenConditionalRandomField{T}">Hidden Conditional 
-    ///  Random Fields</see> and <see cref="ILinearRegression">linear</see> and <see cref="LogisticRegression">
+    ///  Random Fields</see> and linear and <see cref="LogisticRegression">
     ///  logistic regressions</see>.
     /// </summary>
     /// 

@@ -26,7 +26,6 @@
 namespace Accord.Vision
 {
     using System;
-    using System.Collections.Generic;
     using System.Drawing;
 
     /// <summary>

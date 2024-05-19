@@ -26,7 +26,7 @@ namespace Accord.Statistics.Visualizations
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Scatter Plot.

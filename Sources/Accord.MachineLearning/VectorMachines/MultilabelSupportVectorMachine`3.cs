@@ -31,11 +31,11 @@ namespace Accord.MachineLearning.VectorMachines
     using System.Collections.Generic;
     using System.Runtime.Serialization;
     using System.Threading;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
-    ///   Probability computation strategies for <see cref="MultilabelSupportVectorMachine"/>
+    ///   Probability computation strategies for MultilabelSupportVectorMachine
     /// </summary>
     /// 
     public enum MultilabelProbabilityMethod
@@ -122,9 +122,7 @@ namespace Accord.MachineLearning.VectorMachines
         IDisposable
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         private MultilabelProbabilityMethod method = MultilabelProbabilityMethod.PerClass;
@@ -528,8 +526,6 @@ namespace Accord.MachineLearning.VectorMachines
             parallelOptions = new ParallelOptions();
         }
 
-
-
         /// <summary>
         ///   Performs application-defined tasks associated with
         ///   freeing, releasing, or resetting unmanaged resources.
@@ -562,9 +558,6 @@ namespace Accord.MachineLearning.VectorMachines
             }
         }
 
-
-
-
         #region Cache
         private Cache createOrResetCache()
         {
@@ -584,11 +577,10 @@ namespace Accord.MachineLearning.VectorMachines
                 // The cache has not been created
                 cache.Products = new double[vectorCount];
 
-#if !NET35      // Create synchronization objects
+                // Create synchronization objects
                 cache.SyncObjects = new SpinLock[vectorCount];
                 for (int i = 0; i < cache.SyncObjects.Length; i++)
                     cache.SyncObjects[i] = new SpinLock();
-#endif
             }
 
             // Initialize (or reset) the cache. A value of Not-a-Number
@@ -597,13 +589,11 @@ namespace Accord.MachineLearning.VectorMachines
             for (int i = 0; i < cache.Products.Length; i++)
                 cache.Products[i] = Double.NaN;
 
-
             cache.Evaluations = 0;
             cache.Hits = 0;
 
             return cache;
         }
-
 
         private int[][] computeSharedVectors()
         {
@@ -670,12 +660,9 @@ namespace Accord.MachineLearning.VectorMachines
                 }
             }
 
-
             sharedVectorsCount = shared.Count;
             return sharedVectors;
         }
-
-
 
         /// <summary>
         ///   Gets the total kernel evaluations performed in the last call
@@ -707,12 +694,9 @@ namespace Accord.MachineLearning.VectorMachines
             public int Evaluations;
             public double[] Products;
             public int[][] Vectors;
-#if !NET35
             public SpinLock[] SyncObjects;
-#endif
         }
         #endregion
-
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilabelSupportVectorMachine{TModel, TKernel, TInput}"/> class.

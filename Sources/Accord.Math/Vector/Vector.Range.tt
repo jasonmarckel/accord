@@ -1,7 +1,6 @@
 ﻿<#@ template debug="false" hostspecific="true" language="C#" #>
 <#@ output extension="Generated.cs" #>
 <#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
-<#@ include file="T4Toolbox.tt" #>
 // Accord Math Library
 // The Accord.NET Framework
 // http://accord-framework.net
@@ -323,7 +322,7 @@ namespace Accord.Math
         }
     }
 
-    string[] ranges = { "DoubleRange", "Range", "ByteRange", "IntRange" };
+    string[] ranges = { "DoubleRange", "Accord.Range", "ByteRange", "IntRange" };
     string[] rtypes = { "double", "float", "byte", "int" }; 
 
     for (int k = 0; k < ranges.Length; k++)

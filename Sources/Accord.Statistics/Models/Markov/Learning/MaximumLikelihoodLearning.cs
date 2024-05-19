@@ -27,7 +27,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     using Accord.MachineLearning;
     using Accord.Statistics.Distributions.Univariate;
     using Accord.Statistics.Distributions.Fitting;
-    using Accord.Compat;
+
     using System.Threading;
 
 #pragma warning disable 612, 618
@@ -39,8 +39,8 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// 
     /// <remarks>
     /// <para>
-    ///   The maximum likelihood estimate is a <see cref="ISupervisedLearning">
-    ///   supervised learning algorithm</see>. It considers both the sequence
+    ///   The maximum likelihood estimate is a 
+    ///   supervised learning algorithm. It considers both the sequence
     ///   of observations as well as the sequence of states in the Markov model
     ///   are visible and thus during training. </para>
     ///   
@@ -71,9 +71,8 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// 
     public class MaximumLikelihoodLearning :
         BaseMaximumLikelihoodLearning<HiddenMarkovModel, GeneralDiscreteDistribution, int, GeneralDiscreteOptions>,
-        ISupervisedLearning, ISupervisedLearning<HiddenMarkovModel, int[], int[]>
+        ISupervisedLearning<HiddenMarkovModel, int[], int[]>
     {
-
         /// <summary>
         ///   Creates a new instance of the Maximum Likelihood learning algorithm.
         /// </summary>
@@ -204,27 +203,27 @@ namespace Accord.Statistics.Models.Markov.Learning
             Accord.Diagnostics.Debug.Assert(!model.Emissions.HasNaN());
         }
 
-        /// <summary>
-        ///   Runs the Maximum Likelihood learning algorithm for hidden Markov models.
-        /// </summary>
-        /// 
-        /// <param name="observations">An array of observation sequences to be used to train the model.</param>
-        /// <param name="paths">An array of state labels associated to each observation sequence.</param>
-        /// 
-        /// <returns>
-        ///   The average log-likelihood for the observations after the model has been trained.
-        /// </returns>
-        /// 
-        /// <remarks>
-        ///   Supervised learning problem. Given some training observation sequences O = {o1, o2, ..., oK},
-        ///   known training state paths H = {h1, h2, ..., hK} and general structure of HMM (numbers of 
-        ///   hidden and visible states), determine HMM parameters M = (A, B, pi) that best fit training data.
-        /// </remarks>
-        /// 
-        double ISupervisedLearning.Run(Array[] observations, int[][] paths)
-        {
-            return Run(observations as int[][], paths);
-        }
+        ///// <summary>
+        /////   Runs the Maximum Likelihood learning algorithm for hidden Markov models.
+        ///// </summary>
+        ///// 
+        ///// <param name="observations">An array of observation sequences to be used to train the model.</param>
+        ///// <param name="paths">An array of state labels associated to each observation sequence.</param>
+        ///// 
+        ///// <returns>
+        /////   The average log-likelihood for the observations after the model has been trained.
+        ///// </returns>
+        ///// 
+        ///// <remarks>
+        /////   Supervised learning problem. Given some training observation sequences O = {o1, o2, ..., oK},
+        /////   known training state paths H = {h1, h2, ..., hK} and general structure of HMM (numbers of 
+        /////   hidden and visible states), determine HMM parameters M = (A, B, pi) that best fit training data.
+        ///// </remarks>
+        ///// 
+        //double ISupervisedLearning.Run(Array[] observations, int[][] paths)
+        //{
+        //    return Run(observations as int[][], paths);
+        //}
 
         /// <summary>
         ///   Creates an instance of the model to be learned. Inheritors of this abstract 

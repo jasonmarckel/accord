@@ -26,7 +26,7 @@
 namespace Accord.MachineLearning.Boosting.Learners
 {
     using System;
-    using Accord.Compat;
+    
     using Accord.MachineLearning.DecisionTrees;
 
     /// <summary>
@@ -129,82 +129,5 @@ namespace Accord.MachineLearning.Boosting.Learners
                     throw new InvalidOperationException();
             }
         }
-
-
-
-
-        #region Obsolete
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="DecisionStump"/> class.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of inputs for this classifier.</param>
-        /// 
-        [Obsolete("Please use the default constructor instead.")]
-        public DecisionStump(int inputs)
-        {
-        }
-
-        /// <summary>
-        ///   Gets the direction of the comparison 
-        ///   (if greater than or less than).
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Comparison property instead.")]
-        public int Sign
-        {
-            get
-            {
-                switch (Comparison)
-                {
-                    case ComparisonKind.Equal:
-                        return 0;
-                    case ComparisonKind.GreaterThanOrEqual:
-                    case ComparisonKind.GreaterThan:
-                        return 1;
-                    case ComparisonKind.LessThan:
-                    case ComparisonKind.LessThanOrEqual:
-                        return -1;
-                    default:
-                        throw new InvalidOperationException();
-                }
-            }
-        }
-
-        /// <summary>
-        ///   Computes the output class label for a given input.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vector.</param>
-        /// 
-        /// <returns>
-        ///   The most likely class label for the given input.
-        /// </returns>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(double[] inputs)
-        {
-            return Decide(inputs) ? +1 : -1;
-        }
-
-        /// <summary>
-        ///   Teaches the stump classifier to recognize
-        ///   the class labels of the given input samples.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input vectors.</param>
-        /// <param name="outputs">The class labels corresponding to each input vector.</param>
-        /// <param name="weights">The weights associated with each input vector.</param>
-        /// 
-        [Obsolete("Please use the ThresholdLearning class instead.")]
-        public void Learn(double[][] inputs, int[] outputs, double[] weights)
-        {
-            new ThresholdLearning()
-            {
-                Model = this
-            }.Learn(inputs, outputs, weights);
-        }
-
-        #endregion
     }
 }

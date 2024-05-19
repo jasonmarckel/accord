@@ -28,7 +28,7 @@ namespace Accord.Statistics.Analysis
     using Accord.Statistics.Distributions.Univariate;
     using System;
     using System.ComponentModel;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Descriptive statistics analysis.
@@ -64,11 +64,9 @@ namespace Accord.Statistics.Analysis
     ///
     [Serializable]
 #pragma warning disable 612, 618
-    public class DescriptiveAnalysis : IMultivariateAnalysis,
-        IDescriptiveLearning<DescriptiveAnalysis, double[]>
+    public class DescriptiveAnalysis : IDescriptiveLearning<DescriptiveAnalysis, double[]>
 #pragma warning restore 612, 618
     {
-
         private int samples;
         private int variables;
 
@@ -130,95 +128,6 @@ namespace Accord.Statistics.Analysis
             init(null, null, columnNames);
         }
 
-        /// <summary>
-        ///   Constructs the Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// 
-        [Obsolete("Please call the Learn() method passing the data to be analyzed.")]
-        public DescriptiveAnalysis(double[] data)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            double[,] matrix = new double[data.Length, 1];
-
-            System.Buffer.BlockCopy(data, 0, matrix, 0, data.Length * sizeof(double));
-
-            init(matrix, null, null);
-        }
-
-        /// <summary>
-        ///   Constructs the Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// 
-        [Obsolete("Please call the Learn() method passing the data to be analyzed.")]
-        public DescriptiveAnalysis(double[,] data)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            init(data, null, null);
-        }
-
-        /// <summary>
-        ///   Constructs the Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="columnNames">Names for the analyzed variables.</param>
-        /// 
-        [Obsolete("Please pass only columnNames and call the Learn() method passing the data to be analyzed.")]
-        public DescriptiveAnalysis(double[,] data, string[] columnNames)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (columnNames == null)
-                throw new ArgumentNullException("columnNames");
-
-            init(data, null, columnNames);
-        }
-
-        /// <summary>
-        ///   Constructs the Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// 
-        [Obsolete("Please call the Learn() method passing the data to be analyzed.")]
-        public DescriptiveAnalysis(double[][] data)
-        {
-            // Initial argument checking
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            init(null, data, null);
-        }
-
-        /// <summary>
-        ///   Constructs the Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="columnNames">Names for the analyzed variables.</param>
-        /// 
-        [Obsolete("Please pass only columnNames and call the Learn() method passing the data to be analyzed.")]
-        public DescriptiveAnalysis(double[][] data, string[] columnNames)
-        {
-            // Initial argument checking
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (columnNames == null)
-                throw new ArgumentNullException("columnNames");
-
-            init(null, data, columnNames);
-        }
-
         private void init(double[,] matrix, double[][] array, string[] columnNames)
         {
             this.sourceMatrix = matrix;
@@ -245,44 +154,6 @@ namespace Accord.Statistics.Analysis
             for (int i = 0; i < measures.Length; i++)
                 measures[i] = new DescriptiveMeasures(this, i);
             this.measuresCollection = new DescriptiveMeasureCollection(measures);
-        }
-
-
-        /// <summary>
-        ///   Computes the analysis using given source data and parameters.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn() instead.")]
-        public void Compute()
-        {
-            // Clear analysis
-            reset();
-
-            this.sums = Sums;
-            this.means = Means;
-            this.standardDeviations = StandardDeviations;
-            this.ranges = Ranges;
-            this.kurtosis = Kurtosis;
-            this.skewness = Skewness;
-            this.medians = Medians;
-            this.modes = Modes;
-            this.variances = Variances;
-            this.standardErrors = StandardErrors;
-            this.distinct = Distinct;
-            this.quartiles = Quartiles;
-            this.innerFences = InnerFences;
-            this.outerFences = OuterFences;
-
-            // Mean centered and standardized data
-            this.dScores = DeviationScores;
-            this.zScores = StandardScores;
-
-            // Covariance and correlation
-            this.covarianceMatrix = CovarianceMatrix;
-            this.correlationMatrix = CorrelationMatrix;
-
-            this.confidence = Confidence;
-            this.deviance = Deviance;
         }
 
         private void reset()
@@ -368,36 +239,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return lazy; }
             set { lazy = value; }
-        }
-
-        /// <summary>
-        ///   Gets the source matrix from which the analysis was run.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source
-        {
-            get
-            {
-                if (this.sourceMatrix == null)
-                    sourceMatrix = sourceArray.ToMatrix();
-                return sourceMatrix;
-            }
-        }
-
-        /// <summary>
-        ///   Gets the source matrix from which the analysis was run.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Array
-        {
-            get
-            {
-                if (this.sourceArray == null)
-                    sourceArray = sourceMatrix.ToJagged();
-                return sourceArray;
-            }
         }
 
         /// <summary>
@@ -1106,16 +947,6 @@ namespace Accord.Statistics.Analysis
         public DoubleRange Deviance
         {
             get { return analysis.Deviance[index]; }
-        }
-
-        /// <summary>
-        ///   Gets the variable's observations.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[] Samples
-        {
-            get { return analysis.Source.GetColumn(index); }
         }
 
         /// <summary>

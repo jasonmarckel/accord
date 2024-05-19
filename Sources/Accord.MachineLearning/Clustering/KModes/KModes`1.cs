@@ -26,7 +26,7 @@ namespace Accord.MachineLearning
     using Accord.Math;
     using Accord.Statistics;
     using Accord.Math.Distances;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using System.Collections.Concurrent;
 
@@ -147,20 +147,6 @@ namespace Accord.MachineLearning
         /// <param name="distance">The distance function to use. Default is to
         /// use the <see cref="Accord.Math.Distance.SquareEuclidean(double[], double[])"/> distance.</param>
         /// 
-        [Obsolete("Please specify the distance function using classes instead of lambda functions.")]
-        public KModes(int k, Func<T[], T[], double> distance)
-            : this(k, Accord.Math.Distance.GetDistance(distance))
-        {
-        }
-
-        /// <summary>
-        ///   Initializes a new instance of KModes algorithm
-        /// </summary>
-        /// 
-        /// <param name="k">The number of clusters to divide input data.</param>       
-        /// <param name="distance">The distance function to use. Default is to
-        /// use the <see cref="Accord.Math.Distance.SquareEuclidean(double[], double[])"/> distance.</param>
-        /// 
         public KModes(int k, IDistance<T[]> distance)
         {
             if (k <= 0)
@@ -176,18 +162,6 @@ namespace Accord.MachineLearning
             this.Initialization = Seeding.KMeansPlusPlus;
             this.Tolerance = 1e-5;
             this.MaxIterations = 100;
-        }
-
-        /// <summary>
-        ///   Divides the input data into K clusters. 
-        /// </summary>     
-        /// 
-        /// <param name="points">The data where to compute the algorithm.</param>
-        /// 
-        [Obsolete("Please use Learn(x) instead.")]
-        public int[] Compute(T[][] points)
-        {
-            return Learn(points).Decide(points);
         }
 
         /// <summary>

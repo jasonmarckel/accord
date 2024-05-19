@@ -26,7 +26,7 @@ namespace Accord.Math.Optimization
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq.Expressions;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Nonlinear objective function.
@@ -163,7 +163,6 @@ namespace Accord.Math.Optimization
             this.Gradient = gradient;
         }
 
-#if !NET35
         /// <summary>
         ///   Creates a new objective function specified through a lambda expression.
         /// </summary>
@@ -196,9 +195,6 @@ namespace Accord.Math.Optimization
             this.Function = func.Compile();
             this.Gradient = grad.Compile();
         }
-#endif
-
-
 
         internal static void CheckGradient(Func<double[], double[]> value, double[] probe)
         {

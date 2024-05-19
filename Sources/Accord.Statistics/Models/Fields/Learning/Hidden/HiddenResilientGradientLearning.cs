@@ -28,7 +28,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using System.ComponentModel;
     using Accord.Math;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -54,7 +54,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     /// 
     public class HiddenResilientGradientLearning<T> : BaseHiddenConditionalRandomFieldLearning<T>,
         ISupervisedLearning<HiddenConditionalRandomField<T>, T[], int>, IParallel,
-        IHiddenConditionalRandomFieldLearning<T>, IConvergenceLearning, IDisposable
+        IConvergenceLearning, IDisposable
     {
 
         private ForwardBackwardGradient<T> calculator = new ForwardBackwardGradient<T>();
@@ -175,17 +175,6 @@ namespace Accord.Statistics.Models.Fields.Learning
         }
 
         /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
-        }
-
-        /// <summary>
         ///   Gets or sets the maximum number of iterations
         ///   performed by the learning algorithm.
         /// </summary>
@@ -254,25 +243,6 @@ namespace Accord.Statistics.Models.Fields.Learning
             previousGradient = new double[parameters];
             weightsUpdates = new double[parameters];
             Reset(initialStep); // Initialize steps
-        }
-
-
-
-        /// <summary>
-        ///   Runs one iteration of the learning algorithm with the
-        ///   specified input training observation and corresponding
-        ///   output label.
-        /// </summary>
-        /// 
-        /// <param name="observations">The training observations.</param>
-        /// <param name="outputs">The observation's labels.</param>
-        /// 
-        /// <returns>The error in the last iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(T[][] observations, int[] outputs)
-        {
-            return InnerRun(observations, outputs);
         }
 
         /// <summary>

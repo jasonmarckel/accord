@@ -26,7 +26,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     using System;
     using Accord.Math;
     using Accord.Math.Decompositions;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>

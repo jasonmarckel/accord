@@ -25,7 +25,6 @@ namespace Accord
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.Runtime.Serialization;
-    using Accord.Compat;
 
     /// <summary>
     ///   Specifies a serialization binder to be used whenever a class is 

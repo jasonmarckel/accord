@@ -24,7 +24,7 @@ namespace Accord.Math.Integration
 {
     using System;
     using System.Diagnostics;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Status codes for the <see cref="NonAdaptiveGaussKronrod"/>

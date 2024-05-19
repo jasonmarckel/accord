@@ -23,7 +23,7 @@
 namespace Accord.Statistics.Links
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Link function interface.

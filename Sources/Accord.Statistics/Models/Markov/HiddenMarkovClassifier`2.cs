@@ -30,7 +30,7 @@ namespace Accord.Statistics.Models.Markov
     using Accord.Statistics.Models.Markov.Topology;
     using Accord.Statistics.Models.Markov.Learning;
     using System.Collections.Generic;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Arbitrary-density Hidden Markov Model Set for Sequence Classification.
@@ -43,7 +43,7 @@ namespace Accord.Statistics.Models.Markov
     ///   numbers or arrays of those numbers. Each model will try to learn and recognize each 
     ///   of the different output classes. For examples and details on how to learn such models,
     ///   please take a look on the documentation for 
-    ///   <see cref="HiddenMarkovClassifierLearning{TDistribution}"/>.</para>
+    ///   <see cref="HiddenMarkovClassifierLearning{TDistribution,TObservation}"/>.</para>
     ///   
     /// <para>
     ///   For the discrete version of this classifier, please see its non-generic counterpart 
@@ -56,7 +56,7 @@ namespace Accord.Statistics.Models.Markov
     ///   example, see <see cref="HiddenMarkovClassifierLearning{TDistribution, TObservation}"/>. </para>
     /// </example>
     /// 
-    /// <seealso cref="HiddenMarkovClassifierLearning{TDistribution}"/>
+    /// <seealso cref="HiddenMarkovClassifierLearning{TDistribution,TObservation}"/>
     /// <seealso cref="HiddenMarkovClassifier"/>
     ///   
     [Serializable]

@@ -26,7 +26,7 @@ namespace Accord.Statistics.Distributions.Multivariate
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Math;
     using System.Linq;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Joint distribution of multiple discrete univariate distributions.
@@ -152,16 +152,6 @@ namespace Accord.Statistics.Distributions.Multivariate
         /// </summary>
         /// 
         public int[] Lengths
-        {
-            get { return symbols; }
-        }
-
-        /// <summary>
-        ///   Gets the number of symbols for each discrete variable.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Lengths instead.")]
-        public int[] Symbols
         {
             get { return symbols; }
         }

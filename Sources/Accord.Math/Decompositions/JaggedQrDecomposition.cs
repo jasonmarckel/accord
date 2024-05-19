@@ -29,7 +29,6 @@ namespace Accord.Math.Decompositions
 {
     using System;
     using Accord.Math;
-	using Accord.Compat;
 
     /// <summary>
     ///   QR decomposition for a rectangular matrix.

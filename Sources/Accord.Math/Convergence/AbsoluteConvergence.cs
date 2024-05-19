@@ -87,17 +87,6 @@ namespace Accord.Math
         }
 
         /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
-        }
-
-        /// <summary>
         ///   Gets or sets the maximum number of iterations
         ///   performed by the iterative algorithm. Default 
         ///   is 100.

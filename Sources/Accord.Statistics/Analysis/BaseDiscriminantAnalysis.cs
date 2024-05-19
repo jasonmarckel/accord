@@ -25,7 +25,7 @@ namespace Accord.Statistics.Analysis
     using System;
     using Accord.Math;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -60,9 +60,7 @@ namespace Accord.Statistics.Analysis
         private double[][] eigenvectors;
         private double[] eigenvalues;
 
-        private double[,] result;
-        private double[,] source;
-        private int[] outputs;
+        private int[] outputs = null;
 
         private double[][] Sw, Sb, St; // Scatter matrices
 
@@ -72,38 +70,6 @@ namespace Accord.Statistics.Analysis
         private DiscriminantCollection discriminantCollection;
         private DiscriminantAnalysisClassCollection classCollection;
 
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete()]
-        protected void init(double[,] inputs, int[] outputs)
-        {
-            // Gets the number of classes
-            int startingClass = outputs.Min();
-            this.NumberOfClasses = outputs.Max() - startingClass + 1;
-            this.NumberOfSamples = inputs.Rows();
-            this.NumberOfInputs = inputs.Columns();
-            this.NumberOfOutputs = inputs.Columns();
-
-            // Store the original data
-            this.Source = inputs;
-            this.Classifications = outputs;
-
-            // Creates simple structures to hold information later
-            this.classCount = new int[NumberOfClasses];
-            this.classMeans = new double[NumberOfClasses][];
-            this.classStdDevs = new double[NumberOfClasses][];
-            this.classScatter = new double[NumberOfClasses][][];
-            this.projectedMeans = new double[NumberOfClasses][];
-
-            // Creates the object-oriented structure to hold information about the classes
-            var collection = new DiscriminantAnalysisClass[NumberOfClasses];
-            for (int i = 0; i < collection.Length; i++)
-                collection[i] = new DiscriminantAnalysisClass(this, i, startingClass + i);
-            this.Classes = new DiscriminantAnalysisClassCollection(collection);
-        }
-
         /// <summary>
         ///   Initializes common properties.
         /// </summary>
@@ -111,7 +77,7 @@ namespace Accord.Statistics.Analysis
         protected void Init(double[][] inputs, int[] outputs)
         {
 #pragma warning disable 612, 618
-            if (this.Classifications != null)
+            if (this.outputs != null)
                 return; // TODO: remove this
 #pragma warning restore 612, 618
 
@@ -147,18 +113,6 @@ namespace Accord.Statistics.Analysis
             set { token = value; }
         }
 
-
-        /// <summary>
-        ///   Returns the original supplied data to be analyzed.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source
-        {
-            get { return this.source; }
-            protected set { this.source = value; }
-        }
-
         /// <summary>
         ///   Gets or sets the minimum variance proportion needed to keep a
         ///   discriminant component. If set to zero, all components will be
@@ -176,30 +130,6 @@ namespace Accord.Statistics.Analysis
 
                 threshold = value;
             }
-        }
-
-        /// <summary>
-        ///   Gets the resulting projection of the source data given on
-        ///   the creation of the analysis into discriminant space.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Result
-        {
-            get { return this.result; }
-            protected set { this.result = value; }
-        }
-
-        /// <summary>
-        ///   Gets the original classifications (labels) of the source data
-        ///   given on the moment of creation of this analysis object.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public int[] Classifications
-        {
-            get { return this.outputs; }
-            protected set { this.outputs = value; }
         }
 
         /// <summary>
@@ -277,29 +207,11 @@ namespace Accord.Statistics.Analysis
         ///   composing a basis for the discriminant factor space.
         /// </summary>
         /// 
-        [Obsolete("Please use DiscriminantVectors.Transpose() instead.")]
-        public double[,] DiscriminantMatrix
-        {
-            get
-            {
-                if (eigenvectors == null)
-                    return null;
-                return this.eigenvectors.Transpose().ToMatrix();
-            }
-        }
-
-        /// <summary>
-        ///   Gets the Eigenvectors obtained during the analysis,
-        ///   composing a basis for the discriminant factor space.
-        /// </summary>
-        /// 
         public double[][] DiscriminantVectors
         {
             get { return this.eigenvectors; }
             protected set { this.eigenvectors = value; }
         }
-
-
 
         /// <summary>
         ///   Gets the Eigenvalues found by the analysis associated
@@ -398,56 +310,6 @@ namespace Accord.Statistics.Analysis
             get { return classCount; }
         }
 
-
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please set NumberOfOutputs to the desired number of dimensions and call Transform()")]
-        public virtual double[,] Transform(double[,] data, int dimensions)
-        {
-            int previous = NumberOfOutputs;
-            NumberOfOutputs = dimensions;
-            var result = Transform(data.ToJagged()).ToMatrix();
-            NumberOfOutputs = previous;
-            return result;
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please set NumberOfOutputs to the desired number of dimensions and call Transform()")]
-        public virtual double[][] Transform(double[][] data, int dimensions)
-        {
-            int previous = NumberOfOutputs;
-            NumberOfOutputs = dimensions;
-            var result = Transform(data);
-            NumberOfOutputs = previous;
-            return result;
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please set NumberOfOutputs to the desired number of dimensions and call Transform()")]
-        public double[] Transform(double[] data, int discriminants)
-        {
-            return Transform(data.ToJagged(), discriminants).GetRow(0);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public double[,] Transform(double[,] data)
-        {
-            return Transform(data.ToJagged(), NumberOfOutputs).ToMatrix();
-        }
-
         /// <summary>
         /// Applies the transformation to an input, producing an associated output.
         /// </summary>
@@ -519,27 +381,6 @@ namespace Accord.Statistics.Analysis
 
             return 0;
         }
-
-        /// <summary>
-        ///   Classifies a new instance into one of the available classes.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classifier.Decide() instead.")]
-        public abstract int Classify(double[] input);
-
-        /// <summary>
-        ///   Classifies a new instance into one of the available classes.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classifier.Decide() or Classifier.Scores() instead.")]
-        public abstract int Classify(double[] input, out double[] responses);
-
-        /// <summary>
-        ///   Classifies new instances into one of the available classes.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classifier.Decide() instead.")]
-        public abstract int[] Classify(double[][] inputs);
 
         /// <summary>
         ///   Gets the output of the discriminant function for a given class.

@@ -28,8 +28,6 @@ namespace Accord.MachineLearning.Bayes
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Statistics.Distributions.Univariate;
     using System;
-    using Accord.Compat;
-    using System.Threading;
     using System.Diagnostics;
 
     /// <summary>

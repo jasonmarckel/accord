@@ -23,7 +23,7 @@
 namespace Accord.Math.Distances
 {
     using System;
-    using Accord.Compat;
+
     using System.Runtime.CompilerServices;
 
     /// <summary>
@@ -61,9 +61,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(double x, double y)
         {
             return Math.Abs(x - y);
@@ -87,9 +85,7 @@ namespace Accord.Math.Distances
         ///   <code source="Unit Tests\Accord.Tests.Math\DistanceTest.cs" region="doc_euclidean_4" />
         /// </example>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(double[] x, double[] y)
         {
             double sum = 0.0;
@@ -119,9 +115,7 @@ namespace Accord.Math.Distances
         ///   <code source="Unit Tests\Accord.Tests.Math\DistanceTest.cs" region="doc_euclidean_4" />
         /// </example>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(double vector1x, double vector1y, double vector2x, double vector2y)
         {
             double dx = vector1x - vector2x;
@@ -138,9 +132,7 @@ namespace Accord.Math.Distances
         /// 
         /// <returns>The Euclidean distance between x and y.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(Tuple<double, double> x, Tuple<double, double> y)
         {
             double dx = x.Item1 - y.Item1;
@@ -162,9 +154,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(Sparse<double> x, Sparse<double> y)
         {
             return Math.Sqrt(SquareEuclidean.Sparse(x, y));
@@ -232,9 +222,7 @@ namespace Accord.Math.Distances
         /// 
         /// <returns>A similarity measure between x and y.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Similarity(Sparse<double> x, Sparse<double> y)
         {
             return 1.0 / (1.0 + Distance(x, y));

@@ -27,7 +27,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using System;
     using Accord.Math.Optimization;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -37,7 +37,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     /// 
     public abstract class BaseHiddenGradientOptimizationLearning<TData, TOptimizer> : BaseHiddenConditionalRandomFieldLearning<TData>,
         ISupervisedLearning<HiddenConditionalRandomField<TData>, TData[], int>, IParallel,
-        IHiddenConditionalRandomFieldLearning<TData>, IDisposable
+        IDisposable
         where TOptimizer : IGradientOptimizationMethod, ISupportsCancellation
     {
         private TOptimizer optimizer;
@@ -141,32 +141,6 @@ namespace Accord.Statistics.Models.Fields.Learning
         {
             throw new NotSupportedException("Online learning is not supported.");
         }
-
-
-        /// <summary>
-        ///   Runs the learning algorithm with the specified input
-        ///   training observations and corresponding output labels.
-        /// </summary>
-        /// 
-        /// <param name="observations">The training observations.</param>
-        /// <param name="outputs">The observation's labels.</param>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(TData[][] observations, int[] outputs)
-        {
-            return InnerRun(observations, outputs);
-        }
-
-        /// <summary>
-        ///   Online learning is not supported.
-        /// </summary>
-        ///   
-        [Obsolete("Use Run(T[][], int[]) instead.")]
-        public double RunEpoch(TData[][] observations, int[] output)
-        {
-            throw new NotSupportedException();
-        }
-
 
         #region IDisposable Members
 

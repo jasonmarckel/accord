@@ -27,7 +27,6 @@ namespace Accord.Collections
     using System.Collections.Generic;
     using System.Collections.Specialized;
     using System.Linq;
-    using Accord.Compat;
 
     /// <summary>
     ///   Ordered dictionary.

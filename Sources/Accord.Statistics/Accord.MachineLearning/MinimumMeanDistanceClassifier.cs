@@ -25,7 +25,7 @@ namespace Accord.MachineLearning
     using System;
     using Accord.Math;
     using Accord.Math.Distances;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -126,44 +126,6 @@ namespace Accord.MachineLearning
             this.distance = distance;
 
             Learn(inputs, outputs);
-        }
-
-
-        /// <summary>
-        ///   Computes the label for the given input.
-        /// </summary>
-        /// 
-        /// <param name="input">The input value.</param>
-        /// <param name="distances">The distances from <paramref name="input"/> to the class means.</param>
-        /// 
-        /// <returns>The output label assigned to this point.</returns>
-        /// 
-        [Obsolete("Please use Decide instead.")]
-        public int Compute(double[] input, out double[] distances)
-        {
-            distances = new double[means.Length];
-            for (int i = 0; i < distances.Length; i++)
-                distances[i] = distance.Distance(input, means[i]);
-
-            int imin;
-            distances.Min(out imin);
-
-            return imin;
-        }
-
-        /// <summary>
-        ///   Computes the label for the given input.
-        /// </summary>
-        /// 
-        /// <param name="input">A input.</param>
-        /// 
-        /// <returns>The output label assigned to this point.</returns>
-        /// 
-        [Obsolete("Please use Decide instead.")]
-        public int Compute(double[] input)
-        {
-            double[] distances;
-            return Compute(input, out distances);
         }
 
         /// <summary>

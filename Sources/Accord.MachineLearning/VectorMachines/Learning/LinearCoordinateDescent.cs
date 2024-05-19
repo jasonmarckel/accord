@@ -115,24 +115,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ILinearSupportVectorMachineLearning
     {
         /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearCoordinateDescent(SupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearCoordinateDescent(KernelSupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="LinearCoordinateDescent"/> class.
         /// </summary>
         public LinearCoordinateDescent()
@@ -648,21 +630,5 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             Model.Threshold = w[biasIndex];
         }
 
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete()]
-        protected BaseLinearCoordinateDescent(ISupportVectorMachine<double[]> model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        protected BaseLinearCoordinateDescent(TModel model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
     }
 }

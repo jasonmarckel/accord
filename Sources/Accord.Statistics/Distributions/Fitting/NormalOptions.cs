@@ -25,7 +25,7 @@ namespace Accord.Statistics.Distributions.Fitting
     using System;
     using Multivariate;
     using Univariate;
-    using Accord.Compat;
+
     using Accord.Math.Decompositions;
 
     /// <summary>

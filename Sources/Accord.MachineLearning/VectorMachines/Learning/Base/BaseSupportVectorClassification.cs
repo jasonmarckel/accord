@@ -33,7 +33,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Math.Optimization.Losses;
     using Accord.Statistics;
     using System.Collections;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Base class for <see cref="SupportVectorMachine"/> learning algorithms.
@@ -423,67 +423,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         /// </summary>
         /// 
         protected abstract void InnerRun();
-
-
-
-
-
-
-
-        /// <summary>
-        ///   Computes the error rate for a given set of input and outputs.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.Math.Optimization.ZeroOneLoss or any other losses of your choice from the Accord.Math.Optimization namespace.")]
-        public double ComputeError(TInput[] inputs, int[] expectedOutputs)
-        {
-            var classifier = (IClassifier<TInput, bool>)Model;
-            var loss = new ZeroOneLoss(Classes.Decide(expectedOutputs))
-            {
-                Mean = true
-            };
-
-            return loss.Loss(classifier.Decide(inputs));
-        }
-
-
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn() instead.")]
-        public double Run()
-        {
-            Learn(Inputs, Outputs, null);
-
-            var classifier = (IClassifier<TInput, bool>)Model;
-            return new ZeroOneLoss(Classes.Decide(Outputs))
-            {
-                Mean = true,
-            }.Loss(classifier.Decide(Inputs));
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn() instead.")]
-        public double Run(bool computeError)
-        {
-            Learn(Inputs, Outputs, null);
-            if (computeError)
-            {
-                var classifier = (IClassifier<TInput, bool>)Model;
-                return new ZeroOneLoss(Classes.Decide(Outputs))
-                {
-                    Mean = true,
-                }.Loss(classifier.Decide(Inputs));
-            }
-
-            return 0;
-        }
-
 
         ISupportVectorMachine<TInput> ISupervisedLearning<ISupportVectorMachine<TInput>, TInput, int>.Learn(TInput[] x, int[] y, double[] weights)
         {

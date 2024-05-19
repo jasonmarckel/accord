@@ -25,7 +25,7 @@ namespace Accord.MachineLearning.DecisionTrees
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using Accord.Compat;
+    
     using System.Linq;
 
     /// <summary>
@@ -80,42 +80,12 @@ namespace Accord.MachineLearning.DecisionTrees
         ///   Initializes a new instance of the <see cref="DecisionBranchNodeCollection"/> class.
         /// </summary>
         /// 
-        [Obsolete("Please specify an owner instead.")]
-        public DecisionBranchNodeCollection() { }
-
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="DecisionBranchNodeCollection"/> class.
-        /// </summary>
-        /// 
         /// <param name="owner">The <see cref="DecisionNode"/> to whom
         ///   this <see cref="DecisionBranchNodeCollection"/> belongs.</param>
         /// 
         public DecisionBranchNodeCollection(DecisionNode owner)
         {
             this.owner = owner;
-        }
-
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="DecisionBranchNodeCollection"/> class.
-        /// </summary>
-        /// 
-        /// <param name="attributeIndex">Index of the attribute to be processed.</param>
-        /// 
-        /// <param name="nodes">The children nodes. Each child node should be
-        /// responsible for a possible value of a discrete attribute, or for
-        /// a region of a continuous-valued attribute.</param>
-        /// 
-        [Obsolete("Please specify an owner instead.")]
-        public DecisionBranchNodeCollection(int attributeIndex, DecisionNode[] nodes)
-            : base(nodes)
-        {
-            if (nodes == null)
-                throw new ArgumentNullException("nodes");
-            if (nodes.Length == 0)
-                throw new ArgumentException("Node collection is empty.", "nodes");
-
-            this.AttributeIndex = attributeIndex;
-            this.owner = nodes[0].Parent;
         }
 
         /// <summary>

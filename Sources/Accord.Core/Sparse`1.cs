@@ -28,7 +28,6 @@ namespace Accord.Math
     using System.Globalization;
     using System.Linq;
     using System.Text;
-    using Accord.Compat;
 
     /// <summary>
     ///   Sparse vector representation (in LibSVM format).

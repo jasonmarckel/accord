@@ -25,7 +25,7 @@ namespace Accord.Audio
     using System;
     using System.Threading;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
     using System.Linq;
     using System.Data;
 

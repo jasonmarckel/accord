@@ -27,7 +27,7 @@ namespace Accord.Statistics.Analysis
     using Accord.Math;
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Testing;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Goodness-of-fit result for a given distribution.

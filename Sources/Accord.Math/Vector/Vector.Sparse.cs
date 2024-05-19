@@ -28,7 +28,7 @@ namespace Accord.Math
     using System.Linq;
     using System.Runtime.CompilerServices;
     using System.Text;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     public static partial class Vector
@@ -43,9 +43,7 @@ namespace Accord.Math
         /// 
         /// <returns>The inner product of the multiplication of the vectors.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Dot(this Sparse<double> a, Sparse<double> b)
         {
             double sum = 0;
@@ -85,9 +83,7 @@ namespace Accord.Math
         /// 
         /// <returns>The inner product of the multiplication of the vectors.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Dot(this Sparse<double> a, double[] b)
         {
             double sum = 0;
@@ -122,9 +118,7 @@ namespace Accord.Math
         ///   Adds a sparse vector to a dense vector.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] Add(this Sparse<double> a, double[] b, double[] result)
         {
             for (int j = 0; j < b.Length; j++)

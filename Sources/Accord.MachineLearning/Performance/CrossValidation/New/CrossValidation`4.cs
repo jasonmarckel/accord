@@ -27,7 +27,7 @@ namespace Accord.MachineLearning.Performance
     using Accord.Math;
     using Accord.Math.Optimization.Losses;
     using Accord.Statistics;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -114,7 +114,7 @@ namespace Accord.MachineLearning.Performance
         }
 
         /// <summary>
-        ///   Initializes a new instance of the <see cref="CrossValidation" /> class.
+        ///   Initializes a new instance of the CrossValidation class.
         /// </summary>
         /// 
         public CrossValidation()

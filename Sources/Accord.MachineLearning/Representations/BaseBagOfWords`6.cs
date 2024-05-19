@@ -27,7 +27,7 @@ namespace Accord.MachineLearning
     using System.Collections.Generic;
     using System.Threading;
     using System.Linq;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using Accord.Statistics.Distributions.Univariate;
     using System.Diagnostics;

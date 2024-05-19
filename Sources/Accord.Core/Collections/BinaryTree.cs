@@ -24,7 +24,6 @@ namespace Accord.Collections
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
 
     /// <summary>
     ///   Base class for binary trees. This class does not implement a binary search

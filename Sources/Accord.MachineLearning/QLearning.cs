@@ -29,7 +29,7 @@
 namespace Accord.MachineLearning
 {
     using System;
-    using Accord.Compat;
+    
 
     /// <summary>
     /// QLearning learning algorithm.

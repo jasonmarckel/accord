@@ -26,7 +26,7 @@ namespace Accord.Statistics.Distributions.Univariate
 
     using System;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Kumaraswamy distribution.

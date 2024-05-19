@@ -29,7 +29,7 @@ namespace Accord.Neuro.Networks
     using Accord.Neuro.ActivationFunctions;
     using Accord.Neuro.Layers;
     using Accord.Neuro.Neurons;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Deep Belief Network.
@@ -427,62 +427,5 @@ namespace Accord.Neuro.Networks
             return network;
         }
 
-#if !NO_BINARY_SERIALIZATION
-        /// <summary>
-        ///   Saves the network to a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream to which the network is to be serialized.</param>
-        /// 
-        public new void Save(Stream stream)
-        {
-            BinaryFormatter b = new BinaryFormatter();
-            b.Serialize(stream, this);
-        }
-
-        /// <summary>
-        ///   Saves the network to a stream.
-        /// </summary>
-        /// 
-        /// <param name="path">The file path to which the network is to be serialized.</param>
-        /// 
-        public new void Save(string path)
-        {
-            using (FileStream fs = new FileStream(path, FileMode.Create))
-            {
-                Save(fs);
-            }
-        }
-
-        /// <summary>
-        ///   Loads a network from a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The network from which the machine is to be deserialized.</param>
-        /// 
-        /// <returns>The deserialized network.</returns>
-        /// 
-        public static new DeepBeliefNetwork Load(Stream stream)
-        {
-            BinaryFormatter b = new BinaryFormatter();
-            return (DeepBeliefNetwork)b.Deserialize(stream);
-        }
-
-        /// <summary>
-        ///   Loads a network from a file.
-        /// </summary>
-        /// 
-        /// <param name="path">The path to the file from which the network is to be deserialized.</param>
-        /// 
-        /// <returns>The deserialized network.</returns>
-        /// 
-        public static new DeepBeliefNetwork Load(string path)
-        {
-            using (FileStream fs = new FileStream(path, FileMode.Open))
-            {
-                return Load(fs);
-            }
-        }
-#endif
     }
 }

@@ -50,16 +50,7 @@ namespace Accord.MachineLearning.DecisionTrees.Rules
     /// 
     public class DecisionSet : MulticlassClassifierBase<double[]>, IEnumerable<DecisionRule>
     {
-
         HashSet<DecisionRule> rules;
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="ClassifierBase{TInput, TClasses}.NumberOfClasses"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfClasses instead.")]
-        public int OutputClasses { get { return NumberOfClasses; } }
-
 
         /// <summary>
         ///   Initializes a new instance of the <see cref="DecisionSet"/> class.

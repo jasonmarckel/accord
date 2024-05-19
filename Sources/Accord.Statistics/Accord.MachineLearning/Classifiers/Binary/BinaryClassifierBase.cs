@@ -25,7 +25,7 @@ namespace Accord.MachineLearning
     using Accord.Math;
     using Accord.Statistics;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     /// Base class for binary classifiers.

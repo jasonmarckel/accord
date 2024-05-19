@@ -26,7 +26,7 @@ namespace Accord.Collections
     using System.Linq;
     using System.Collections.Generic;
     using Accord.Math.Distances;
-    using Accord.Compat;
+    
 
 #if !MONO
     /// <summary>

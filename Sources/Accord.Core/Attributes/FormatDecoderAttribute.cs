@@ -27,7 +27,6 @@ namespace Accord
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
     using System.Reflection;
-    using Accord.Compat;
     using System.IO;
 
     /// <summary>

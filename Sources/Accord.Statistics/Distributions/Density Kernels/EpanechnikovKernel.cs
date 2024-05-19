@@ -24,7 +24,7 @@ namespace Accord.Statistics.Distributions.DensityKernels
 {
     using System;
     using Accord.Math;
-    using Accord.Compat;
+
     using Accord.Statistics.Distributions.Multivariate;
 
     /// <summary>

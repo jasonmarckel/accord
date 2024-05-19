@@ -29,7 +29,7 @@ namespace Accord.MachineLearning
     using Accord.MachineLearning.VectorMachines;
     using System.Threading.Tasks;
     using System.Collections.ObjectModel;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Bag of words.
@@ -134,36 +134,6 @@ namespace Accord.MachineLearning
         ///   Constructs a new <see cref="BagOfWords"/>.
         /// </summary>
         /// 
-        /// <param name="texts">The texts to build the bag of words model from.</param>
-        /// 
-        [Obsolete("Please use the default constructor and pass the texts to the Learn() method.")]
-        public BagOfWords(params string[][] texts)
-        {
-            if (texts == null)
-                throw new ArgumentNullException("texts");
-
-            initialize(texts);
-        }
-
-        /// <summary>
-        ///   Constructs a new <see cref="BagOfWords"/>.
-        /// </summary>
-        /// 
-        /// <param name="texts">The texts to build the bag of words model from.</param>
-        /// 
-        [Obsolete("Please use the default constructor and pass the texts to the Learn() method.")]
-        public BagOfWords(params string[] texts)
-        {
-            if (texts == null)
-                throw new ArgumentNullException("texts");
-
-            initialize(new[] { texts });
-        }
-
-        /// <summary>
-        ///   Constructs a new <see cref="BagOfWords"/>.
-        /// </summary>
-        /// 
         public BagOfWords()
         {
             initialize(null);
@@ -181,17 +151,6 @@ namespace Accord.MachineLearning
 
             if (texts != null)
                 Learn(texts);
-        }
-
-
-        /// <summary>
-        ///   Computes the Bag of Words model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public void Compute(string[][] texts)
-        {
-            Learn(texts);
         }
 
         private static void checkArgs(string[][] texts, double[] weights)
@@ -214,28 +173,6 @@ namespace Accord.MachineLearning
                             "Token at text " + i + ", position " + i + " cannot be null.");
             }
         }
-
-        /// <summary>
-        ///   Gets the codeword representation of a given text.
-        /// </summary>
-        /// 
-        /// <param name="text">The text to be processed.</param>
-        /// 
-        /// <returns>An integer vector with the same length as words
-        /// in the code book.</returns>
-        /// 
-        [Obsolete("Please use Transform() instead.")]
-        public int[] GetFeatureVector(params string[] text)
-        {
-            return ((ITransform<string[], int[]>)this).Transform(text);
-        }
-
-
-        double[] IBagOfWords<string[]>.GetFeatureVector(string[] value)
-        {
-            return ((ITransform<string[], double[]>)this).Transform(value);
-        }
-
 
         [OnDeserialized]
         private void OnDeserialized(StreamingContext context)

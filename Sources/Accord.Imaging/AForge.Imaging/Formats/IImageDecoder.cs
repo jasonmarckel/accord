@@ -14,8 +14,7 @@ namespace Accord.Imaging.Formats
 
     /// <summary>
     ///   Common interface for image decoders. Image decoders can read images stored
-    ///   in different formats (e.g. PNG, JPG, <see cref="PNMCodec">PNM</see>, 
-    ///   <see cref="FITSCodec">FITS</see> and transform them into <see cref="Bitmap"/>.
+    ///   in different formats (e.g. PNG, JPG and transform them into <see cref="Bitmap"/>.
     /// </summary>
     /// 
     /// <remarks>
@@ -24,9 +23,6 @@ namespace Accord.Imaging.Formats
     ///   multiple frames and image formats which provide different type of image description 
     ///   (like acquisition parameters, etc).</para>
     /// </remarks>
-    /// 
-    /// <seealso cref="PNMCodec"/>
-    /// <seealso cref="FITSCodec"/>
     /// 
     public interface IImageDecoder
     {

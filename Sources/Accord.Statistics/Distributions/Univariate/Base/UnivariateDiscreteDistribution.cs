@@ -44,7 +44,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Math.Optimization;
     using Accord.Math.Random;
     using System.ComponentModel.DataAnnotations;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Abstract class for univariate discrete probability distributions.
@@ -662,11 +662,7 @@ namespace Accord.Statistics.Distributions.Univariate
         /// <returns>A sample which could original the given probability 
         ///   value when applied in the <see cref="DistributionFunction(int)"/>.</returns>
         /// 
-        public int InverseDistributionFunction(
-#if !NET35
-[RangeAttribute(0, 1)]
-#endif 
-            double p)
+        public int InverseDistributionFunction([RangeAttribute(0, 1)] double p)
         {
             if (p < 0.0 || p > 1.0)
                 throw new ArgumentOutOfRangeException("p", "Value must be between 0 and 1.");

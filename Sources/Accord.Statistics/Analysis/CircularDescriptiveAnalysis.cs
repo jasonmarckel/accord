@@ -29,7 +29,7 @@ namespace Accord.Statistics.Analysis
     using System;
     using System.ComponentModel;
     using System.Reflection;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Descriptive statistics analysis for circular data.
@@ -42,11 +42,9 @@ namespace Accord.Statistics.Analysis
     ///
     [Serializable]
 #pragma warning disable 612, 618
-    public class CircularDescriptiveAnalysis : IMultivariateAnalysis,
-        IDescriptiveLearning<CircularDescriptiveAnalysis, double[]>
+    public class CircularDescriptiveAnalysis : IDescriptiveLearning<CircularDescriptiveAnalysis, double[]>
 #pragma warning restore 612, 618
     {
-
         private int samples;
         private int variables;
 
@@ -97,133 +95,6 @@ namespace Accord.Statistics.Analysis
         ///   Constructs the Circular Descriptive Analysis.
         /// </summary>
         /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
-        /// <param name="columnName">The names for the analyzed variable.</param>
-        /// <param name="inPlace">
-        ///   Whether the analysis should conserve memory by doing 
-        ///   operations over the original <paramref name="data"/> array.
-        /// </param>
-        /// 
-        [Obsolete("Please pass only the lengths and columnNames parameters and call the Learn() method passing the data to be analyzed.")]
-        public CircularDescriptiveAnalysis(double[] data, double length, String columnName, bool inPlace = false)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            compute(data, null, null, new[] { length }, new[] { columnName }, inPlace);
-        }
-
-        /// <summary>
-        ///   Constructs the Circular Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
-        /// <param name="inPlace">
-        ///   Whether the analysis should conserve memory by doing 
-        ///   operations over the original <paramref name="data"/> array.
-        /// </param>
-        /// 
-        [Obsolete("Please pass only the lengths and columnNames parameters and call the Learn() method passing the data to be analyzed.")]
-        public CircularDescriptiveAnalysis(double[] data, double length, bool inPlace = false)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            compute(data, null, null, new[] { length }, null, inPlace);
-        }
-
-        /// <summary>
-        ///   Constructs the Circular Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
-        /// 
-        [Obsolete("Please pass only the lengths and columnNames parameters and call the Learn() method passing the data to be analyzed.")]
-        public CircularDescriptiveAnalysis(double[,] data, double[] length)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (length == null)
-                throw new ArgumentNullException("length");
-
-            compute(null, data, null, length, null);
-        }
-
-        /// <summary>
-        ///   Constructs the Circular Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
-        /// <param name="columnNames">Names for the analyzed variables.</param>
-        /// 
-        [Obsolete("Please pass only the lengths and columnNames parameters and call the Learn() method passing the data to be analyzed.")]
-        public CircularDescriptiveAnalysis(double[,] data, double[] length, string[] columnNames)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (length == null)
-                throw new ArgumentNullException("length");
-
-            if (columnNames == null)
-                throw new ArgumentNullException("columnNames");
-
-            compute(null, data, null, length, columnNames);
-        }
-
-        /// <summary>
-        ///   Constructs the Circular Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
-        /// 
-        [Obsolete("Please pass only the lengths and columnNames parameters and call the Learn() method passing the data to be analyzed.")]
-        public CircularDescriptiveAnalysis(double[][] data, double[] length)
-        {
-            // Initial argument checking
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (length == null)
-                throw new ArgumentNullException("length");
-
-            compute(null, null, data, length, null);
-        }
-
-        /// <summary>
-        ///   Constructs the Circular Descriptive Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
-        /// <param name="columnNames">Names for the analyzed variables.</param>
-        /// 
-        [Obsolete("Please pass only the lengths and columnNames parameters and call the Learn() method passing the data to be analyzed.")]
-        public CircularDescriptiveAnalysis(double[][] data, double[] length, string[] columnNames)
-        {
-            // Initial argument checking
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (length == null)
-                throw new ArgumentNullException("length");
-
-            if (columnNames == null)
-                throw new ArgumentNullException("columnNames");
-
-            compute(null, null, data, length, columnNames);
-        }
-
-        /// <summary>
-        ///   Constructs the Circular Descriptive Analysis.
-        /// </summary>
-        /// 
         /// <param name="length">The length of each circular variable (i.e. 24 for hours).</param>
         /// <param name="columnNames">Names for the analyzed variables.</param>
         /// 
@@ -242,7 +113,6 @@ namespace Accord.Statistics.Analysis
         {
             compute(null, null, null, length, null);
         }
-
 
         private void compute(double[] row, double[,] matrix, double[][] array,
             double[] length, string[] columnNames, bool inPlace = false)
@@ -307,36 +177,6 @@ namespace Accord.Statistics.Analysis
             for (int i = 0; i < measures.Length; i++)
                 measures[i] = new CircularDescriptiveMeasures(this, i);
             this.measuresCollection = new CircularDescriptiveMeasureCollection(measures);
-        }
-
-
-        /// <summary>
-        ///   Computes the analysis using given source data and parameters.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn() instead.")]
-        public void Compute()
-        {
-            reset();
-
-            this.sums = Sums;
-            this.means = Means;
-            this.standardDeviations = StandardDeviations;
-            this.ranges = Ranges;
-            this.medians = Medians;
-            this.variances = Variances;
-            this.distinct = Distinct;
-            this.quartiles = Quartiles;
-            this.innerFences = InnerFences;
-            this.outerFences = OuterFences;
-            this.modes = Modes;
-            this.cos = CosineSum;
-            this.sin = SineSum;
-            this.skewness = Skewness;
-            this.kurtosis = Kurtosis;
-            this.concentration = Concentration;
-            this.deviances = Deviance;
-            this.confidences = Confidence;
         }
 
         private void reset()
@@ -429,57 +269,6 @@ namespace Accord.Statistics.Analysis
             }
         }
 
-
-        /// <summary>
-        ///   Gets the source matrix from which the analysis was run.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source
-        {
-            get
-            {
-                if (this.sourceMatrix == null)
-                {
-                    if (this.sourceArray == null)
-                    {
-                        sourceMatrix = sourceRow.ToMatrix(asColumnVector: true);
-                    }
-                    else
-                    {
-                        sourceMatrix = sourceArray.ToMatrix();
-                    }
-                }
-
-                return sourceMatrix;
-            }
-        }
-
-        /// <summary>
-        ///   Gets the source matrix from which the analysis was run.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Array
-        {
-            get
-            {
-                if (this.sourceArray == null)
-                {
-                    if (this.sourceRow == null)
-                    {
-                        sourceArray = sourceMatrix.ToJagged();
-                    }
-                    else
-                    {
-                        sourceArray = sourceRow.ToJagged(asColumnVector: true);
-                    }
-                }
-
-                return sourceArray;
-            }
-        }
-
         /// <summary>
         ///   Gets or sets the method to be used when computing quantiles (median and quartiles).
         /// </summary>
@@ -503,16 +292,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return lazy; }
             set { lazy = value; }
-        }
-
-        /// <summary>
-        ///   Gets the source matrix from which the analysis was run.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[][] Angles
-        {
-            get { return this.angles; }
         }
 
         /// <summary>
@@ -1274,16 +1053,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Gets the transformed variable's observations.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[] Angles
-        {
-            get { return analysis.Angles[index]; }
-        }
-
-        /// <summary>
         ///   Gets the variable's standard error of the mean.
         /// </summary>
         /// 
@@ -1308,16 +1077,6 @@ namespace Accord.Statistics.Analysis
         public DoubleRange Deviance
         {
             get { return analysis.Deviance[index]; }
-        }
-
-        /// <summary>
-        ///   Gets the variable's observations.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[] Samples
-        {
-            get { return analysis.Source.GetColumn(index); }
         }
 
         /// <summary>

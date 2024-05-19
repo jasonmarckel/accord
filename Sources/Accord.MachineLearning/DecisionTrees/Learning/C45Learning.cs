@@ -29,7 +29,7 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
     using Accord.Statistics;
     using Accord.MachineLearning;
     using Accord.Math.Optimization.Losses;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -259,26 +259,6 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
 
             this.run(x.ToDouble(), y, weights);
             return Model;
-        }
-
-        /// <summary>
-        ///   Runs the learning algorithm, creating a decision
-        ///   tree modeling the given inputs and outputs.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The inputs.</param>
-        /// <param name="outputs">The corresponding outputs.</param>
-        /// 
-        /// <returns>The error of the generated tree.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, int[] outputs)
-        {
-            run(inputs, outputs, null);
-            return new ZeroOneLoss(outputs)
-            {
-                Mean = true
-            }.Loss(Model.Decide(inputs));
         }
 
         private void run(double[][] inputs, int[] outputs, double[] weights)
@@ -703,25 +683,6 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
 
             threshold = bestThreshold;
             return bestGain;
-        }
-
-        /// <summary>
-        ///   Computes the prediction error for the tree
-        ///   over a given set of input and outputs.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input points.</param>
-        /// <param name="outputs">The corresponding output labels.</param>
-        /// 
-        /// <returns>The percentage error of the prediction.</returns>
-        /// 
-        [Obsolete("Please use the ZeroOneLoss class instead.")]
-        public double ComputeError(double[][] inputs, int[] outputs)
-        {
-            return new ZeroOneLoss(outputs)
-            {
-                Mean = true
-            }.Loss(Model.Decide(inputs));
         }
 
     }

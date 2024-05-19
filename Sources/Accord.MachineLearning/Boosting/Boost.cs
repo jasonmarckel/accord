@@ -27,7 +27,7 @@ namespace Accord.MachineLearning.Boosting
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
     using Accord.Statistics;
 
     // TODO: Divide into separate classes
@@ -63,8 +63,8 @@ namespace Accord.MachineLearning.Boosting
         public double Weight { get; set; }
 
         /// <summary>
-        ///   Gets or sets the <see cref="IWeakClassifier">weak
-        ///   classifier</see> associated with the <see cref="Weight"/>.
+        ///   Gets or sets the weak
+        ///   classifier associated with the <see cref="Weight"/>.
         /// </summary>
         /// 
         public TModel Model { get; set; }
@@ -100,21 +100,7 @@ namespace Accord.MachineLearning.Boosting
         {
         }
 
-        /// <summary>
-        ///   Computes the output class label for a given input.
-        /// </summary>
-        /// 
-        /// <param name="input">The input vector.</param>
-        /// 
-        /// <returns>The most likely class label for the given input.</returns>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(double[] input)
-        {
-            return Decide(input) ? +1 : -1;
-        }
     }
-
 
     /// <summary>
     ///   Boosted classification model.

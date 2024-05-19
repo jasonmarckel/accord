@@ -85,9 +85,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Outer(<#=a#>[] a, <#=b#>[] b)
         {
             return Outer(a, b, Jagged.Zeros<<#=r#>>(a.Length, b.Length));
@@ -121,9 +119,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Outer(<#=a#>[] a, <#=b#>[] b, <#=r#>[][] result)
         {
             for (int i = 0; i < a.Length; i++)

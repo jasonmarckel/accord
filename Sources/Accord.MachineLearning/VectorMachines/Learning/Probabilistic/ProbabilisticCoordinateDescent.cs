@@ -61,7 +61,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Math;
     using Statistics.Models.Regression.Fitting;
     using Statistics.Models.Regression;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   L1-regularized logistic regression (probabilistic SVM) 
@@ -136,15 +136,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             return new SupportVectorMachine(inputs) { Kernel = kernel };
         }
 
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public ProbabilisticCoordinateDescent(ISupportVectorMachine<double[]> model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
     }
 
     /// <summary>

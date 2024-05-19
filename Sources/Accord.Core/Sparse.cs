@@ -26,7 +26,6 @@ namespace Accord.Math
     using System;
     using System.Linq;
     using System.Collections.Generic;
-    using Accord.Compat;
     using System.Collections.Concurrent;
 
     /// <summary>

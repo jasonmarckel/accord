@@ -38,7 +38,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// 
     /// <remarks>
     ///   <para>
-    ///   The Baum-Welch algorithm is an <see cref="IUnsupervisedLearning">unsupervised algorithm</see>
+    ///   The Baum-Welch algorithm is an unsupervised algorithm
     ///   used to learn a single hidden Markov model object from a set of observation sequences. It works
     ///   by using a variant of the <see cref="Mixture{T}.Fit(double[], double[], MixtureOptions)">
     ///   Expectation-Maximization</see> algorithm to search a set of model parameters (i.e. the matrix
@@ -70,7 +70,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// 
     /// <seealso cref="HiddenMarkovModel"/>
     /// <seealso cref="HiddenMarkovModel{TDistribution}"/>
-    /// <seealso cref="BaumWelchLearning{TDistribution}"/>
+    /// <seealso cref="BaumWelchLearning{TDistribution,TObservation}"/>
     /// 
     public class BaumWelchLearning : BaseBaumWelchLearningOptions<HiddenMarkovModel, GeneralDiscreteDistribution, int, GeneralDiscreteOptions>
     {
@@ -103,66 +103,46 @@ namespace Accord.Statistics.Models.Markov.Learning
             NumberOfSymbols = model.NumberOfSymbols;
         }
 
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(int[] observations)
-        {
-            Learn(new[] { observations });
-            return LogLikelihood;
-        }
+        ///// <summary>
+        /////   Creates a Baum-Welch with default configurations for
+        /////   hidden Markov models with normal mixture densities.
+        ///// </summary>
+        ///// 
+        //public static BaumWelchLearning<Mixture<NormalDistribution>> FromMixtureModel(
+        //    HiddenMarkovModel<Mixture<NormalDistribution>> model, NormalOptions options)
+        //{
+        //    MixtureOptions mixOptions = new MixtureOptions()
+        //    {
+        //        MaxIterations = 1,
+        //        InnerOptions = options,
+        //        //ParallelOptions = ParallelOptions, // TODO:
+        //    };
 
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(int[][] observations)
-        {
-            Learn(observations);
-            return LogLikelihood;
-        }
+        //    return new BaumWelchLearning<Mixture<NormalDistribution>>(model)
+        //    {
+        //        FittingOptions = mixOptions
+        //    };
+        //}
 
-        /// <summary>
-        ///   Creates a Baum-Welch with default configurations for
-        ///   hidden Markov models with normal mixture densities.
-        /// </summary>
-        /// 
-        public static BaumWelchLearning<Mixture<NormalDistribution>> FromMixtureModel(
-            HiddenMarkovModel<Mixture<NormalDistribution>> model, NormalOptions options)
-        {
-            MixtureOptions mixOptions = new MixtureOptions()
-            {
-                Iterations = 1,
-                InnerOptions = options,
-                //ParallelOptions = ParallelOptions, // TODO:
-            };
+        ///// <summary>
+        /////   Creates a Baum-Welch with default configurations for
+        /////   hidden Markov models with normal mixture densities.
+        ///// </summary>
+        ///// 
+        //public static BaumWelchLearning<MultivariateMixture<MultivariateNormalDistribution>> FromMixtureModel(
+        //    HiddenMarkovModel<MultivariateMixture<MultivariateNormalDistribution>> model, NormalOptions options)
+        //{
+        //    MixtureOptions mixOptions = new MixtureOptions()
+        //    {
+        //        MaxIterations = 1,
+        //        InnerOptions = options
+        //    };
 
-            return new BaumWelchLearning<Mixture<NormalDistribution>>(model)
-            {
-                FittingOptions = mixOptions
-            };
-        }
-
-        /// <summary>
-        ///   Creates a Baum-Welch with default configurations for
-        ///   hidden Markov models with normal mixture densities.
-        /// </summary>
-        /// 
-        public static BaumWelchLearning<MultivariateMixture<MultivariateNormalDistribution>> FromMixtureModel(
-            HiddenMarkovModel<MultivariateMixture<MultivariateNormalDistribution>> model, NormalOptions options)
-        {
-            MixtureOptions mixOptions = new MixtureOptions()
-            {
-                Iterations = 1,
-                InnerOptions = options
-            };
-
-            return new BaumWelchLearning<MultivariateMixture<MultivariateNormalDistribution>>(model)
-            {
-                FittingOptions = mixOptions
-            };
-        }
+        //    return new BaumWelchLearning<MultivariateMixture<MultivariateNormalDistribution>>(model)
+        //    {
+        //        FittingOptions = mixOptions
+        //    };
+        //}
 
         /// <summary>
         ///   Creates an instance of the model to be learned. Inheritors of this abstract 

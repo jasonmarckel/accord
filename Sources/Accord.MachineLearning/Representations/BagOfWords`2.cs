@@ -22,20 +22,8 @@
 
 namespace Accord.MachineLearning
 {
-    using Accord.Math;
-    using System;
-    using System.Collections.Generic;
-    using System.Runtime.Serialization;
-    using System.Threading;
     using Accord.MachineLearning.VectorMachines;
-
-    using Accord.Compat;
-    using System.Threading.Tasks;
-
-#if !NET35 && !NET40
-    using System.Collections.ObjectModel;
-    using System.Text.RegularExpressions;
-#endif
+    using System;
 
     /// <summary>
     ///   Bag of words.
@@ -62,7 +50,6 @@ namespace Accord.MachineLearning
     public class BagOfWords<TInput, TClustering> : BaseBagOfWords<BagOfWords<TInput, TClustering>, TInput, TClustering>
         where TClustering : IUnsupervisedLearning<IClassifier<TInput, int>, TInput, int>
     {
-
         /// <summary>
         ///   Constructs a new <see cref="BagOfWords"/>.
         /// </summary>
@@ -70,7 +57,6 @@ namespace Accord.MachineLearning
         public BagOfWords()
         {
         }
-
 
     }
 }

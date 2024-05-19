@@ -28,7 +28,7 @@ namespace Accord.Statistics.Models.Regression.Linear
     using MachineLearning;
     using Accord.Statistics.Testing;
     using Accord.Statistics.Distributions.Univariate;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Simple Linear Regression of the form y = Ax + B.
@@ -69,12 +69,9 @@ namespace Accord.Statistics.Models.Regression.Linear
     /// 
     [Serializable]
 #pragma warning disable 612, 618
-    public class SimpleLinearRegression : TransformBase<double, double>, ILinearRegression
+    public class SimpleLinearRegression : TransformBase<double, double>
 #pragma warning restore 612, 618
     {
-        [Obsolete]
-        private MultipleLinearRegression regression;
-
         private double slope;
         private double intercept;
 
@@ -115,63 +112,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         public int NumberOfParameters
         {
             get { return 2; }
-        }
-
-        /// <summary>
-        ///   Performs the regression using the input and output
-        ///   data, returning the sum of squared errors of the fit.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The output data.</param>
-        /// <returns>The regression Sum-of-Squares error.</returns>
-        /// 
-        [Obsolete("Please use the OrdinaryLeastSquares class.")]
-        public double Regress(double[] inputs, double[] outputs)
-        {
-            if (inputs.Length != outputs.Length)
-                throw new ArgumentException("Number of input and output samples does not match", "outputs");
-
-            double[][] X = new double[inputs.Length][];
-            for (int i = 0; i < inputs.Length; i++)
-                X[i] = new double[] { 1.0, inputs[i] };
-
-#pragma warning disable 612, 618
-            regression = new MultipleLinearRegression(2, false);
-            double err = regression.Regress(X, outputs);
-            slope = regression.Coefficients[1];
-            intercept = regression.Coefficients[0];
-#pragma warning restore 612, 618
-            return err;
-        }
-
-        /// <summary>
-        ///   Computes the regression output for a given input.
-        /// </summary>
-        /// 
-        /// <param name="input">An array of input values.</param>
-        /// <returns>The array of calculated output values.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double[] Compute(double[] input)
-        {
-            double[] output = new double[input.Length];
-            for (int i = 0; i < input.Length; i++)
-                output[i] = Compute(input[i]);
-            return output;
-        }
-
-        /// <summary>
-        ///   Computes the regression for a single input.
-        /// </summary>
-        /// 
-        /// <param name="input">The input value.</param>
-        /// <returns>The calculated output.</returns>
-        /// 
-        [Obsolete("Please use Transform instead.")]
-        public double Compute(double input)
-        {
-            return Slope * input + Intercept;
         }
 
         /// <summary>
@@ -299,18 +239,6 @@ namespace Accord.Statistics.Models.Regression.Linear
         {
             return new OrdinaryLeastSquares().Learn(x, y);
         }
-
-
-#pragma warning disable 612, 618
-        [Obsolete("Please use Transform instead.")]
-        double[] ILinearRegression.Compute(double[] inputs)
-        {
-            if (inputs.Length > 1)
-                throw new ArgumentException("Simple regression supports only one-length input vectors", "inputs");
-
-            return new double[] { this.Compute(inputs[0]) };
-        }
-#pragma warning restore 612, 618
 
         /// <summary>
         /// Applies the transformation to an input, producing an associated output.

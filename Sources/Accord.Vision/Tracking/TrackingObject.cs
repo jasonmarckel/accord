@@ -22,14 +22,12 @@
 
 namespace Accord.Vision.Tracking
 {
-    using System;
-    using System.Drawing;
-    using AForge;
     using Accord.Imaging;
     using Accord.Math.Geometry;
-    using Point = Accord.Point;
+    using System;
+    using System.Drawing;
     using System.Xml.Serialization;
-
+    using Point = Accord.Point;
 
     /// <summary>
     ///   Axis orientation.
@@ -48,7 +46,6 @@ namespace Accord.Vision.Tracking
         /// </summary>
         /// 
         Vertical
-
     }
 
     /// <summary>
@@ -58,7 +55,6 @@ namespace Accord.Vision.Tracking
     [Serializable]
     public class TrackingObject : ICloneable
     {
-
         [NonSerialized]
         UnmanagedImage image;
 
@@ -221,8 +217,6 @@ namespace Accord.Vision.Tracking
             this.Image = null;
             this.Angle = 0;
         }
-
-
         
         #region ICloneable Members
 

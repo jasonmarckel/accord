@@ -23,7 +23,7 @@
 namespace Accord.Math.Transforms
 {
     using System;
-    using Accord.Compat;
+
     using System.Numerics;
 
     /// <summary>

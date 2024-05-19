@@ -25,7 +25,7 @@ namespace Accord.Math.Distances
     using Accord.Math.Decompositions;
     using System;
     using System.Runtime.CompilerServices;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Squared Mahalanobis distance.
@@ -150,9 +150,7 @@ namespace Accord.Math.Distances
         ///   <code source="Unit Tests\Accord.Tests.Math\DistanceTest.cs" region="doc_square_mahalanobis_3" />
         /// </example>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(double[] x, double[] y)
         {
             double[] d = new double[x.Length];

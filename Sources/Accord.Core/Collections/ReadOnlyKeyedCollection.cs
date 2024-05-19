@@ -26,7 +26,6 @@ namespace Accord.Collections
     using System.Collections;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using Accord.Compat;
 
     /// <summary>
     ///   Read-only keyed collection wrapper.
@@ -45,9 +44,7 @@ namespace Accord.Collections
     [Serializable]
     public abstract class ReadOnlyKeyedCollection<TKey, TValue> 
         : ReadOnlyCollection<TValue>, IDictionary<TKey, TValue>, IList<TValue>
-#if !MONO && !NET35
         , IReadOnlyCollection<TValue>
-#endif
     {
 
         Dictionary<TKey, TValue> dictionary;

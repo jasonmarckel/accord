@@ -30,7 +30,7 @@ namespace Accord.Statistics.Models.Regression
     using Accord.Math;
     using Accord.Statistics.Models.Regression.Linear;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Generalized Linear Model Regression.
@@ -91,57 +91,9 @@ namespace Accord.Statistics.Models.Regression
         ///   Creates a new Generalized Linear Regression Model.
         /// </summary>
         /// 
-        /// <param name="function">The link function to use.</param>
-        /// <param name="inputs">The number of input variables for the model.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set the NumberOfInputs property instead.")]
-        public GeneralizedLinearRegression(ILinkFunction function, int inputs)
-            : this(function)
-        {
-            this.NumberOfInputs = inputs;
-        }
-
-        /// <summary>
-        ///   Creates a new Generalized Linear Regression Model.
-        /// </summary>
-        /// 
-        /// <param name="function">The link function to use.</param>
-        /// <param name="inputs">The number of input variables for the model.</param>
-        /// <param name="intercept">The starting intercept value. Default is 0.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set the NumberofInputs and Intercept properties instead.")]
-        public GeneralizedLinearRegression(ILinkFunction function, int inputs, double intercept)
-            : this(function)
-        {
-            this.NumberOfInputs = inputs;
-            this.Intercept = intercept;
-        }
-
-        /// <summary>
-        ///   Creates a new Generalized Linear Regression Model.
-        /// </summary>
-        /// 
         public GeneralizedLinearRegression()
             : this(new LogitLinkFunction())
         {
-        }
-
-        /// <summary>
-        ///   Creates a new Generalized Linear Regression Model.
-        /// </summary>
-        /// 
-        /// <param name="function">The link function to use.</param>
-        /// <param name="coefficients">The coefficient vector.</param>
-        /// <param name="standardErrors">The standard error vector.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set the Weights and StandardErrors properties instead.")]
-        public GeneralizedLinearRegression(ILinkFunction function,
-            double[] coefficients, double[] standardErrors)
-            : this()
-        {
-            this.linkFunction = function;
-            this.Weights = coefficients.Get(1, 0);
-            this.StandardErrors = standardErrors;
         }
 
         /// <summary>
@@ -156,17 +108,6 @@ namespace Accord.Statistics.Models.Regression
                 Linear.NumberOfInputs = value;
                 this.standardErrors = Vector.Create(value + 1, this.standardErrors);
             }
-        }
-
-        /// <summary>
-        ///   Obsolete. For quick compatibility fixes in the short term, use
-        ///   <see cref="GetCoefficient(int)"/> and <see cref="SetCoefficient(int, double)"/>.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Weights and Intercept instead.")]
-        public double[] Coefficients
-        {
-            get { return Intercept.Concatenate(Weights); }
         }
 
         /// <summary>
@@ -202,16 +143,6 @@ namespace Accord.Statistics.Models.Regression
         }
 
         /// <summary>
-        ///   Gets the number of inputs handled by this model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Inputs
-        {
-            get { return NumberOfInputs; }
-        }
-
-        /// <summary>
         ///   Gets the link function used by
         ///   this generalized linear model.
         /// </summary>
@@ -234,7 +165,7 @@ namespace Accord.Statistics.Models.Regression
 
         /// <summary>
         ///   Gets or sets the intercept term. This is always the 
-        ///   first value of the <see cref="Coefficients"/> array.
+        ///   first value of the <see cref="Weights"/> array.
         /// </summary>
         /// 
         public double Intercept
@@ -271,36 +202,6 @@ namespace Accord.Statistics.Models.Regression
                 Weights[index - 1] = value;
             }
         }
-
-
-        /// <summary>
-        ///   Computes the model output for the given input vector.
-        /// </summary>
-        /// 
-        /// <param name="input">The input vector.</param>
-        /// 
-        /// <returns>The output value.</returns>
-        /// 
-        [Obsolete("Please use the Probability method instead.")]
-        public double Compute(double[] input)
-        {
-            return Probability(input);
-        }
-
-        /// <summary>
-        ///   Computes the model output for each of the given input vectors.
-        /// </summary>
-        /// 
-        /// <param name="input">The array of input vectors.</param>
-        /// 
-        /// <returns>The array of output values.</returns>
-        /// 
-        [Obsolete("Please use the Probability method instead.")]
-        public double[] Compute(double[][] input)
-        {
-            return Probability(input);
-        }
-
 
         /// <summary>
         ///   Gets the Wald Test for a given coefficient.
@@ -670,39 +571,6 @@ namespace Accord.Statistics.Models.Regression
                  StandardErrors = (double[])this.StandardErrors.Clone()
              };
         }
-
-
-        /// <summary>
-        ///   Creates a GeneralizedLinearRegression from a <see cref="LogisticRegression"/> object. 
-        /// </summary>
-        /// 
-        /// <param name="regression">A <see cref="LogisticRegression"/> object.</param>
-        /// <param name="makeCopy">True to make a copy of the logistic regression values, false
-        /// to use the actual values. If the actual values are used, changes done on one model
-        /// will be reflected on the other model.</param>
-        /// 
-        /// <returns>A new <see cref="GeneralizedLinearRegression"/> which is a copy of the 
-        /// given <see cref="LogisticRegression"/>.</returns>
-        /// 
-        [Obsolete("Simply cast the logistic regression to a GeneralizedLinearRegression instead, using Clone() if necessary.")]
-        public static GeneralizedLinearRegression FromLogisticRegression(LogisticRegression regression, bool makeCopy)
-        {
-#pragma warning disable 612, 618
-            if (makeCopy)
-            {
-                double[] coefficients = (double[])regression.Coefficients.Clone();
-                double[] standardErrors = (double[])regression.StandardErrors.Clone();
-                return new GeneralizedLinearRegression(new LogitLinkFunction(),
-                    coefficients, standardErrors);
-            }
-            else
-            {
-                return new GeneralizedLinearRegression(new LogitLinkFunction(),
-                    regression.Coefficients, regression.StandardErrors);
-            }
-#pragma warning restore 612, 618
-        }
-
 
         /// <summary>
         /// Computes a numerical score measuring the association between

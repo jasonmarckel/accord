@@ -35,7 +35,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     using Accord.Statistics.Models.Markov.Topology;
     using System.Threading;
     using System.Linq;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Base class for implementations of the Baum-Welch learning algorithm.
@@ -184,18 +184,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         {
             get { return convergence.Tolerance; }
             set { convergence.Tolerance = value; }
-        }
-
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
         }
 
         /// <summary>

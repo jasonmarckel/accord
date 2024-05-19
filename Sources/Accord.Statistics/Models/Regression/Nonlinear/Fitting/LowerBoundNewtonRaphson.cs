@@ -26,7 +26,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     using Accord.Math;
     using Accord.Math.Decompositions;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -69,7 +69,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
         ISupervisedLearning<MultinomialLogisticRegression, double[], int>,
         ISupervisedLearning<MultinomialLogisticRegression, double[], int[]>,
         ISupervisedLearning<MultinomialLogisticRegression, double[], double[]>,
-        IMultipleRegressionFitting, IConvergenceLearning
+        IConvergenceLearning
 #pragma warning restore 612, 618
     {
         [NonSerialized]
@@ -176,16 +176,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
         }
 
         /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return convergence.MaxIterations; }
-            set { convergence.MaxIterations = value; }
-        }
-
-        /// <summary>
         /// Gets or sets the maximum number of iterations
         /// performed by the learning algorithm.
         /// </summary>
@@ -283,43 +273,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
             weights = (-0.5).Multiply(Matrix.Identity(K).Subtract(Matrix.Create(K, K, 1.0 / M)));
         }
 
-
-        /// <summary>
-        ///   Runs one iteration of the Lower-Bound Newton-Raphson iteration.
-        /// </summary>
-        /// <param name="inputs">The input data.</param>
-        /// <param name="classes">The outputs associated with each input vector.</param>
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public double Run(double[][] inputs, int[] classes)
-        {
-            int old = Iterations;
-            Iterations = 1;
-            Learn(inputs, classes);
-            Iterations = old;
-            return deltas.Max();
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Lower-Bound Newton-Raphson iteration.
-        /// </summary>
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public double Run(double[][] inputs, double[][] outputs)
-        {
-            int old = Iterations;
-            Iterations = 1;
-            Learn(inputs, outputs);
-            Iterations = old;
-            return deltas.Max();
-        }
-
-
-
         private void compute(double[] x, double[] responses)
         {
             double[][] coefficients = this.regression.Coefficients;
@@ -344,8 +297,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
             for (int j = 0; j < responses.Length; j++)
                 responses[j] /= sum;
         }
-
-
 
         /// <summary>
         /// Gets or sets a cancellation token that can be used to

@@ -29,7 +29,7 @@ namespace Accord.MachineLearning.VectorMachines
     using System.IO;
     using System.Reflection;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>

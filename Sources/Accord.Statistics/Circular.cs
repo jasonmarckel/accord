@@ -56,7 +56,7 @@ namespace Accord.Statistics
 {
     using System;
     using Accord.Math;
-    using Accord.Compat;
+
     using System.Numerics;
 
     /// <summary>

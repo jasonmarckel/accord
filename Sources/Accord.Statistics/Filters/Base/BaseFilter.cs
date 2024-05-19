@@ -26,7 +26,7 @@ namespace Accord.Statistics.Filters
     using System.ComponentModel;
     using System.Collections.Generic;
     using System.Collections;
-    using Accord.Compat;
+
     using System.Threading;
     using System.Data;
 
@@ -84,7 +84,6 @@ namespace Accord.Statistics.Filters
             this.Active = true;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Applies the Filter to a <see cref="System.Data.DataTable"/>.
         /// </summary>
@@ -136,7 +135,6 @@ namespace Accord.Statistics.Filters
         /// </summary>
         /// 
         protected abstract DataTable ProcessFilter(DataTable data);
-#endif
 
         /// <summary>
         ///   Gets options associated with a given variable (data column).

@@ -111,7 +111,7 @@ namespace Accord.Imaging.Filters
         ///
         protected override unsafe void ProcessFilter( UnmanagedImage image )
         {
-            // get collection of corners
+            // get collection of corners            
             List<IntPoint> corners = detector.ProcessImage( image );
             // mark all corners
             foreach ( IntPoint corner in corners )

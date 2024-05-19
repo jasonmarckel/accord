@@ -83,7 +83,7 @@ namespace Accord.Math.Optimization
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Hungarian method for solving the assignment problem, also known

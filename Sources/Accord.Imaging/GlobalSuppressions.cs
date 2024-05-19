@@ -8,6 +8,8 @@
 // "In Project Suppression File".
 // You do not need to add suppressions to this file manually.
 
+using System.Diagnostics.CodeAnalysis;
+
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Scope = "member", Target = "Accord.Imaging.SpeededUpRobustFeaturesDetector.#GetDescriptor()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Scope = "member", Target = "Accord.Imaging.Moments.CentralMoments.#GetOrientation()")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Scope = "member", Target = "Accord.Imaging.Moments.CentralMoments.#GetSize()")]

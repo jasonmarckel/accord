@@ -25,7 +25,7 @@ namespace Accord.Math.Differentiation
     using System;
     using Accord.Math;
     using System.Threading;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Derivative approximation by finite differences.
@@ -166,17 +166,6 @@ namespace Accord.Math.Differentiation
         }
 
         /// <summary>
-        ///   Obsolete. Please use <see cref="NumberOfPoints"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfPoints instead.")]
-        public int Points
-        {
-            get { return NumberOfPoints; }
-            set { NumberOfPoints = value; }
-        }
-
-        /// <summary>
         ///   Gets the number of parameters expected by the <see cref="Function"/> to be differentiated.
         /// </summary>
         /// 
@@ -267,27 +256,6 @@ namespace Accord.Math.Differentiation
             this.StepSize = stepSize.GetValueOrDefault(DEFAULT_STEPSIZE);
             this.NumberOfPoints = points.GetValueOrDefault(DEFAULT_NPOINTS);
             this.Order = order.GetValueOrDefault(DEFAULT_ORDER);
-        }
-
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Gradient(double[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Gradient(double[]) instead.")]
-        public double[] Compute(params double[] x)
-        {
-            return Gradient(x);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Gradient(double[], double[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Gradient(double[], double[]) instead.")]
-        public void Compute(double[] x, double[] gradient)
-        {
-            Gradient(x, gradient);
         }
 
         /// <summary>

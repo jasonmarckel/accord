@@ -37,7 +37,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Math.Optimization;
     using System.Collections;
     using Math.Optimization.Losses;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Stochastic Gradient Descent (SGD) for training linear support vector machines.
@@ -175,9 +175,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseStochasticGradientDescent<SupportVectorMachine<TKernel, TInput>, TKernel, TInput, TLoss>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
         where TLoss : struct, IDifferentiableLoss<bool, double, double>
     {
         /// <summary>
@@ -226,9 +224,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
         where TLoss : struct, IDifferentiableLoss<bool, double, double>
     {
 
@@ -277,17 +273,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         {
             get { return eta0; }
             set { eta0 = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
         }
 
         /// <summary>

@@ -24,7 +24,7 @@ namespace Accord.Statistics.Kernels
 {
     using System;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Precomputed Gram Matrix Kernel.
@@ -52,30 +52,9 @@ namespace Accord.Statistics.Kernels
         ///   Constructs a new Precomputed Matrix Kernel.
         /// </summary>
         /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public Precomputed(double[,] matrix)
-        {
-            this.matrix = matrix.ToJagged();
-        }
-
-        /// <summary>
-        ///   Constructs a new Precomputed Matrix Kernel.
-        /// </summary>
-        /// 
         public Precomputed(double[][] matrix)
         {
             this.matrix = matrix;
-        }
-
-        /// <summary>
-        ///   Gets or sets the precomputed Gram matrix for this kernel.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Values property instead.")]
-        public double[,] Matrix
-        {
-            get { return matrix.ToMatrix(); }
-            set { matrix = value.ToJagged(); }
         }
 
         /// <summary>

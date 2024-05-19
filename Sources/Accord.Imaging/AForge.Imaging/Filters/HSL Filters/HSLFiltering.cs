@@ -13,6 +13,7 @@ namespace Accord.Imaging.Filters
     using System.Drawing.Imaging;
     using AForge;
     using Accord;
+    using Range = Range;
 
     /// <summary>
     /// Color filtering in HSL color space.

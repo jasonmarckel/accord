@@ -28,7 +28,7 @@ namespace Accord.MachineLearning.DecisionTrees
     using System;
     using System.Runtime.Serialization;
     using Accord.Math;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
     using System.Collections.Generic;
@@ -76,14 +76,6 @@ namespace Accord.MachineLearning.DecisionTrees
         {
             get { return trees; }
         }
-
-        /// <summary>
-        ///   Gets the number of classes that can be recognized
-        ///   by this random forest.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfOutputs instead.")]
-        public int Classes { get { return NumberOfOutputs; } }
 
         /// <summary>
         ///   Gets or sets the parallelization options for this algorithm.
@@ -172,21 +164,6 @@ namespace Accord.MachineLearning.DecisionTrees
                     throw new Exception("The decision tree produces less outputs than {0}".Format(NumberOfOutputs));
             }
         }
-
-        /// <summary>
-        ///   Computes the decision output for a given input vector.
-        /// </summary>
-        /// 
-        /// <param name="data">The input vector.</param>
-        /// 
-        /// <returns>The forest decision for the given vector.</returns>
-        /// 
-        [Obsolete("Please use Decide() instead.")]
-        public int Compute(double[] data)
-        {
-            return Decide(data);
-        }
-
 
         /// <summary>
         /// Computes a class-label decision for a given <paramref name="input" />.

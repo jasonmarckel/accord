@@ -53,7 +53,6 @@ namespace Accord.Collections
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
 
     /// <summary>
     ///   Red-black tree specialized for key-based value retrieval.

@@ -25,7 +25,7 @@ namespace Accord.Statistics.Kernels
     using System;
     using System.Runtime.Serialization;
     using Accord.Math.Distances;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>

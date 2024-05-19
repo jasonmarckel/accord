@@ -23,6 +23,7 @@
 namespace Accord.Math
 {
     using Accord.Math.Random;
+    using Range = Range;
     using System;
     using System.Runtime.CompilerServices;
 
@@ -32,27 +33,6 @@ namespace Accord.Math
     /// 
     public static partial class Tools
     {
-
-        /// <summary>
-        ///   Gets a reference to the random number generator used
-        ///   internally by the Accord.NET classes and methods.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Generator.Random instead.")]
-        public static System.Random Random { get { return Generator.Random; } }
-
-        /// <summary>
-        ///   Sets a random seed for the framework's main 
-        ///   <see cref="Random">internal number generator</see>.
-        /// </summary>
-        ///
-        [Obsolete("Please set the Seed property of Accord.Math.Random.Generator instead.")]
-        public static void SetupGenerator(int? seed)
-        {
-            Generator.Seed = seed;
-        }
-
-
         /// <summary>
         ///   Gets the angle formed by the vector [x,y].
         /// </summary>
@@ -294,237 +274,6 @@ namespace Accord.Math
             return r < 0 ? r + m : r;
         }
 
-
-        #region Scaling functions
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static int Scale(this IntRange from, IntRange to, int x)
-        {
-            return Accord.Math.Vector.Scale(x, (IRange<int>)from, (IRange<int>)to);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double Scale(this DoubleRange from, DoubleRange to, double x)
-        {
-            return Accord.Math.Vector.Scale(x, from, to);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double Scale(double fromMin, double fromMax, double toMin, double toMax, double x)
-        {
-            return Accord.Math.Vector.Scale(x, fromMin, fromMax, toMin, toMax);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[] Scale(double fromMin, double fromMax, double toMin, double toMax, double[] x)
-        {
-            return Accord.Math.Vector.Scale(x, fromMin, fromMax, toMin, toMax);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static int[] Scale(int fromMin, int fromMax, int toMin, int toMax, int[] x)
-        {
-            return Accord.Math.Vector.Scale(x, fromMin, fromMax, toMin, toMax);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static int[] Scale(IntRange from, IntRange to, int[] x)
-        {
-            return Accord.Math.Vector.Scale(x, (IRange<int>)from, (IRange<int>)to);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[] Scale(DoubleRange from, DoubleRange to, double[] x)
-        {
-            return Accord.Math.Vector.Scale(values: x, fromRange: from, toRange: to);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static float[] Scale(float fromMin, float fromMax, float toMin, float toMax, float[] x)
-        {
-            return Accord.Math.Vector.Scale(x, fromMin, fromMax, toMin, toMax);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static float[] Scale(Range from, Range to, float[] x)
-        {
-            return Accord.Math.Vector.Scale(x, (IRange<float>)from, (IRange<float>)to);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[] Scale(double toMin, double toMax, double[] x)
-        {
-            return Accord.Math.Vector.Scale(x, toMin, toMax);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[][] Scale(double[] fromMin, double[] fromMax, double[] toMin, double[] toMax, double[][] x)
-        {
-            int rows = x.Length;
-            int cols = fromMin.Length;
-
-            double[][] result = new double[rows][];
-            for (int i = 0; i < rows; i++)
-            {
-                result[i] = new double[cols];
-                for (int j = 0; j < cols; j++)
-                {
-                    result[i][j] = (toMax[j] - toMin[j]) * (x[i][j] - fromMin[j]) / (fromMax[j] - fromMin[j]) + toMin[j];
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[][] Scale(double fromMin, double fromMax, double toMin, double toMax, double[][] x)
-        {
-            int rows = x.Length;
-
-            double[][] result = new double[rows][];
-            for (int i = 0; i < rows; i++)
-            {
-                result[i] = new double[x[i].Length];
-                for (int j = 0; j < result[i].Length; j++)
-                {
-                    result[i][j] = (toMax - toMin) * (x[i][j] - fromMin) / (fromMax - fromMin) + toMin;
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[][] Scale(double[] fromMin, double[] fromMax, double toMin, double toMax, double[][] x)
-        {
-            int rows = x.Length;
-            int cols = fromMin.Length;
-
-            double[][] result = new double[rows][];
-            for (int i = 0; i < rows; i++)
-            {
-                result[i] = new double[cols];
-                for (int j = 0; j < cols; j++)
-                {
-                    result[i][j] = (toMax - toMin) * (x[i][j] - fromMin[j]) / (fromMax[j] - fromMin[j]) + toMin;
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[][] Scale(double[] toMin, double[] toMax, double[][] x)
-        {
-            var min = Matrix.Min(x, 0);
-            var max = Matrix.Max(x, 0);
-            return Scale(min, max, toMin, toMax, x);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double[][] Scale(double toMin, double toMax, double[][] x)
-        {
-            return Scale(Matrix.Min(x, 0), Matrix.Max(x, 0), toMin, toMax, x);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static float Scale(float fromMin, float fromMax, float toMin, float toMax, float x)
-        {
-            return Accord.Math.Vector.Scale(x, fromMin, fromMax, toMin, toMax);
-        }
-
-        /// <summary>
-        ///   Converts the value x (which is measured in the scale
-        ///   'from') to another value measured in the scale 'to'.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Scale instead.")]
-        public static double Scale(IntRange from, DoubleRange to, int x)
-        {
-            return Accord.Math.Vector.Scale(x, from, to);
-        }
-        #endregion
-
-
         /// <summary>
         ///   Returns the hyperbolic arc cosine of the specified value.
         /// </summary>
@@ -600,9 +349,7 @@ namespace Accord.Math
         ///   Fast inverse floating-point square root.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float InvSqrt(float f)
         {
             unsafe
@@ -614,39 +361,6 @@ namespace Accord.Math
                 f = f * (1.5f - xhalf * f * f);
                 return f;
             }
-        }
-
-
-        /// <summary>
-        ///   Sorts the elements of an entire one-dimensional array using the given comparison.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Sort instead.")]
-        public static void StableSort<T>(this T[] values, Comparison<T> comparison)
-        {
-            Vector.Sort(values, comparison, true);
-        }
-
-        /// <summary>
-        ///   Sorts the elements of an entire one-dimensional array using the given comparison.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Sort instead.")]
-        public static void StableSort<T>(this T[] values)
-            where T : IComparable<T>
-        {
-            Vector.Sort(values, true);
-        }
-
-        /// <summary>
-        ///   Sorts the elements of an entire one-dimensional array using the given comparison.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Sort instead.")]
-        public static void StableSort<T>(this T[] values, out int[] order)
-            where T : IComparable<T>
-        {
-            Vector.Sort(values, out order, true);
         }
 
         /// <summary>

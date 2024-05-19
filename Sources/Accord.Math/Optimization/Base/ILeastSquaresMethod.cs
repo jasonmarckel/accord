@@ -22,7 +22,7 @@
 
 namespace Accord.Math.Optimization
 {
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -107,7 +107,7 @@ namespace Accord.Math.Optimization
         /// 
         /// <value>The number of parameters.</value>
         /// 
-        int NumberOfVariables { get; set; }
+        int NumberOfParameters { get; set; }
 
         /// <summary>
         ///   Attempts to find the best values for the parameter vector

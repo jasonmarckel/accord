@@ -37,7 +37,7 @@ namespace Accord.Imaging
     using System.Drawing.Imaging;
     using System.Collections.Generic;
     using Accord.Imaging.Filters;
-    using Accord.Compat;
+
 
     /// <summary>
     /// Susan corners detector.
@@ -68,7 +68,7 @@ namespace Accord.Imaging
     /// 
     /// <para>The class processes only grayscale 8 bpp and color 24/32 bpp images.
     /// In the case of color image, it is converted to grayscale internally using
-    /// <see cref="GrayscaleBT709"/> filter.</para>
+    /// <see cref="Grayscale.CommonAlgorithms.BT709"/> filter.</para>
     /// 
     /// <para>Sample usage:</para>
     /// <code>

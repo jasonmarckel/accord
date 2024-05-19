@@ -40,9 +40,7 @@ namespace Accord.Math
         ///   Converts a integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this int[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -52,9 +50,7 @@ namespace Accord.Math
         ///   Converts a integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this int[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<int, short>(value));
@@ -64,9 +60,7 @@ namespace Accord.Math
         ///   Converts a integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this int[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<int, short>(value));
@@ -76,9 +70,7 @@ namespace Accord.Math
         ///   Converts a integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this int[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<int, short>(value));
@@ -88,9 +80,7 @@ namespace Accord.Math
         ///   Converts a integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this int[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<int, short>(value));
@@ -103,9 +93,7 @@ namespace Accord.Math
         ///   Converts a integer array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this int[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -117,9 +105,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this int[,] value, short[,] result)
         {
 					unsafe
@@ -139,9 +125,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this int[,,] value, short[,,] result)
         {
 					unsafe
@@ -161,9 +145,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this int[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -176,9 +158,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this int[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -191,9 +171,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this int[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -207,9 +185,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this int[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -221,9 +197,7 @@ namespace Accord.Math
         ///   Converts a integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this int[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -233,9 +207,7 @@ namespace Accord.Math
         ///   Converts a integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this int[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<int, float>(value));
@@ -245,9 +217,7 @@ namespace Accord.Math
         ///   Converts a integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this int[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<int, float>(value));
@@ -257,9 +227,7 @@ namespace Accord.Math
         ///   Converts a integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this int[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<int, float>(value));
@@ -269,9 +237,7 @@ namespace Accord.Math
         ///   Converts a integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this int[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<int, float>(value));
@@ -284,9 +250,7 @@ namespace Accord.Math
         ///   Converts a integer array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this int[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -298,9 +262,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this int[,] value, float[,] result)
         {
 					unsafe
@@ -320,9 +282,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this int[,,] value, float[,,] result)
         {
 					unsafe
@@ -342,9 +302,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this int[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -357,9 +315,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this int[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -372,9 +328,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this int[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -388,9 +342,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this int[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -402,9 +354,7 @@ namespace Accord.Math
         ///   Converts a integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this int[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -414,9 +364,7 @@ namespace Accord.Math
         ///   Converts a integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this int[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<int, double>(value));
@@ -426,9 +374,7 @@ namespace Accord.Math
         ///   Converts a integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this int[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<int, double>(value));
@@ -438,9 +384,7 @@ namespace Accord.Math
         ///   Converts a integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this int[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<int, double>(value));
@@ -450,9 +394,7 @@ namespace Accord.Math
         ///   Converts a integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this int[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<int, double>(value));
@@ -465,9 +407,7 @@ namespace Accord.Math
         ///   Converts a integer array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this int[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -479,9 +419,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this int[,] value, double[,] result)
         {
 					unsafe
@@ -501,9 +439,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this int[,,] value, double[,,] result)
         {
 					unsafe
@@ -523,9 +459,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this int[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -538,9 +472,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this int[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -553,9 +485,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this int[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -569,9 +499,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this int[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -583,9 +511,7 @@ namespace Accord.Math
         ///   Converts a integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this int[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -595,9 +521,7 @@ namespace Accord.Math
         ///   Converts a integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this int[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<int, long>(value));
@@ -607,9 +531,7 @@ namespace Accord.Math
         ///   Converts a integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this int[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<int, long>(value));
@@ -619,9 +541,7 @@ namespace Accord.Math
         ///   Converts a integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this int[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<int, long>(value));
@@ -631,9 +551,7 @@ namespace Accord.Math
         ///   Converts a integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this int[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<int, long>(value));
@@ -646,9 +564,7 @@ namespace Accord.Math
         ///   Converts a integer array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this int[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -660,9 +576,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this int[,] value, long[,] result)
         {
 					unsafe
@@ -682,9 +596,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this int[,,] value, long[,,] result)
         {
 					unsafe
@@ -704,9 +616,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this int[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -719,9 +629,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this int[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -734,9 +642,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this int[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -750,9 +656,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this int[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -764,9 +668,7 @@ namespace Accord.Math
         ///   Converts a integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this int[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -776,9 +678,7 @@ namespace Accord.Math
         ///   Converts a integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this int[,] value)
         {
             return ToByte(value, Matrix.CreateAs<int, byte>(value));
@@ -788,9 +688,7 @@ namespace Accord.Math
         ///   Converts a integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this int[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<int, byte>(value));
@@ -800,9 +698,7 @@ namespace Accord.Math
         ///   Converts a integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this int[][] value)
         {
             return ToByte(value, Jagged.CreateAs<int, byte>(value));
@@ -812,9 +708,7 @@ namespace Accord.Math
         ///   Converts a integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this int[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<int, byte>(value));
@@ -827,9 +721,7 @@ namespace Accord.Math
         ///   Converts a integer array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this int[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -841,9 +733,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this int[,] value, byte[,] result)
         {
 					unsafe
@@ -863,9 +753,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this int[,,] value, byte[,,] result)
         {
 					unsafe
@@ -885,9 +773,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this int[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -900,9 +786,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this int[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -915,9 +799,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this int[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -931,9 +813,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this int[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -945,9 +825,7 @@ namespace Accord.Math
         ///   Converts a integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this int[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -957,9 +835,7 @@ namespace Accord.Math
         ///   Converts a integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this int[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<int, sbyte>(value));
@@ -969,9 +845,7 @@ namespace Accord.Math
         ///   Converts a integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this int[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<int, sbyte>(value));
@@ -981,9 +855,7 @@ namespace Accord.Math
         ///   Converts a integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this int[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<int, sbyte>(value));
@@ -993,9 +865,7 @@ namespace Accord.Math
         ///   Converts a integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this int[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<int, sbyte>(value));
@@ -1008,9 +878,7 @@ namespace Accord.Math
         ///   Converts a integer array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this int[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1022,9 +890,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this int[,] value, sbyte[,] result)
         {
 					unsafe
@@ -1044,9 +910,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this int[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -1066,9 +930,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this int[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -1081,9 +943,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this int[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1096,9 +956,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this int[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1112,9 +970,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this int[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -1126,9 +982,7 @@ namespace Accord.Math
         ///   Converts a integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this int[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -1138,9 +992,7 @@ namespace Accord.Math
         ///   Converts a integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this int[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<int, decimal>(value));
@@ -1150,9 +1002,7 @@ namespace Accord.Math
         ///   Converts a integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this int[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<int, decimal>(value));
@@ -1162,9 +1012,7 @@ namespace Accord.Math
         ///   Converts a integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this int[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<int, decimal>(value));
@@ -1174,9 +1022,7 @@ namespace Accord.Math
         ///   Converts a integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this int[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<int, decimal>(value));
@@ -1189,9 +1035,7 @@ namespace Accord.Math
         ///   Converts a integer array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this int[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1203,9 +1047,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this int[,] value, decimal[,] result)
         {
 					unsafe
@@ -1225,9 +1067,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this int[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -1247,9 +1087,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this int[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -1262,9 +1100,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this int[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1277,9 +1113,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this int[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1293,9 +1127,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this int[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -1307,9 +1139,7 @@ namespace Accord.Math
         ///   Converts a integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this int[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -1319,9 +1149,7 @@ namespace Accord.Math
         ///   Converts a integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this int[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<int, bool>(value));
@@ -1331,9 +1159,7 @@ namespace Accord.Math
         ///   Converts a integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this int[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<int, bool>(value));
@@ -1343,9 +1169,7 @@ namespace Accord.Math
         ///   Converts a integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this int[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<int, bool>(value));
@@ -1355,9 +1179,7 @@ namespace Accord.Math
         ///   Converts a integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this int[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<int, bool>(value));
@@ -1370,9 +1192,7 @@ namespace Accord.Math
         ///   Converts a integer array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this int[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1384,9 +1204,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this int[,] value, bool[,] result)
         {
 					unsafe
@@ -1406,9 +1224,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this int[,,] value, bool[,,] result)
         {
 					unsafe
@@ -1428,9 +1244,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this int[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -1443,9 +1257,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this int[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1458,9 +1270,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this int[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1474,9 +1284,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this int[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -1488,9 +1296,7 @@ namespace Accord.Math
         ///   Converts a integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this int[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -1500,9 +1306,7 @@ namespace Accord.Math
         ///   Converts a integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this int[,] value)
         {
             return ToObject(value, Matrix.CreateAs<int, object>(value));
@@ -1512,9 +1316,7 @@ namespace Accord.Math
         ///   Converts a integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this int[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<int, object>(value));
@@ -1524,9 +1326,7 @@ namespace Accord.Math
         ///   Converts a integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this int[][] value)
         {
             return ToObject(value, Jagged.CreateAs<int, object>(value));
@@ -1536,9 +1336,7 @@ namespace Accord.Math
         ///   Converts a integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this int[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<int, object>(value));
@@ -1551,9 +1349,7 @@ namespace Accord.Math
         ///   Converts a integer array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this int[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1565,9 +1361,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this int[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -1583,9 +1377,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this int[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -1603,9 +1395,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this int[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -1618,9 +1408,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this int[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1633,9 +1421,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this int[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1649,9 +1435,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this int[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -1663,9 +1447,7 @@ namespace Accord.Math
         ///   Converts a integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this int[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -1675,9 +1457,7 @@ namespace Accord.Math
         ///   Converts a integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this int[,] value)
         {
             return ToString(value, Matrix.CreateAs<int, string>(value));
@@ -1687,9 +1467,7 @@ namespace Accord.Math
         ///   Converts a integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this int[,,] value)
         {
             return ToString(value, Matrix.CreateAs<int, string>(value));
@@ -1699,9 +1477,7 @@ namespace Accord.Math
         ///   Converts a integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this int[][] value)
         {
             return ToString(value, Jagged.CreateAs<int, string>(value));
@@ -1711,9 +1487,7 @@ namespace Accord.Math
         ///   Converts a integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this int[][][] value)
         {
             return ToString(value, Jagged.CreateAs<int, string>(value));
@@ -1726,9 +1500,7 @@ namespace Accord.Math
         ///   Converts a integer array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this int[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1740,9 +1512,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this int[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -1758,9 +1528,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this int[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -1778,9 +1546,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this int[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -1793,9 +1559,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this int[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1808,9 +1572,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this int[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1824,9 +1586,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this int[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -1838,9 +1598,7 @@ namespace Accord.Math
         ///   Converts a integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this int[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -1850,9 +1608,7 @@ namespace Accord.Math
         ///   Converts a integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this int[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<int, Complex>(value));
@@ -1862,9 +1618,7 @@ namespace Accord.Math
         ///   Converts a integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this int[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<int, Complex>(value));
@@ -1874,9 +1628,7 @@ namespace Accord.Math
         ///   Converts a integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this int[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<int, Complex>(value));
@@ -1886,9 +1638,7 @@ namespace Accord.Math
         ///   Converts a integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this int[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<int, Complex>(value));
@@ -1901,9 +1651,7 @@ namespace Accord.Math
         ///   Converts a integer array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this int[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1915,9 +1663,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this int[,] value, Complex[,] result)
         {
 					unsafe
@@ -1937,9 +1683,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this int[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -1959,9 +1703,7 @@ namespace Accord.Math
         ///   Converts a multidimensional integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this int[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -1974,9 +1716,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this int[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -1989,9 +1729,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this int[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2005,9 +1743,7 @@ namespace Accord.Math
         ///   Converts a jagged integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this int[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -2019,9 +1755,7 @@ namespace Accord.Math
         ///   Converts a short integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this short[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -2031,9 +1765,7 @@ namespace Accord.Math
         ///   Converts a short integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this short[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<short, int>(value));
@@ -2043,9 +1775,7 @@ namespace Accord.Math
         ///   Converts a short integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this short[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<short, int>(value));
@@ -2055,9 +1785,7 @@ namespace Accord.Math
         ///   Converts a short integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this short[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<short, int>(value));
@@ -2067,9 +1795,7 @@ namespace Accord.Math
         ///   Converts a short integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this short[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<short, int>(value));
@@ -2082,9 +1808,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this short[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2096,9 +1820,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this short[,] value, int[,] result)
         {
 					unsafe
@@ -2118,9 +1840,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this short[,,] value, int[,,] result)
         {
 					unsafe
@@ -2140,9 +1860,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this short[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -2155,9 +1873,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this short[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2170,9 +1886,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this short[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2186,9 +1900,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this short[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -2200,9 +1912,7 @@ namespace Accord.Math
         ///   Converts a short integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this short[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -2212,9 +1922,7 @@ namespace Accord.Math
         ///   Converts a short integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this short[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<short, float>(value));
@@ -2224,9 +1932,7 @@ namespace Accord.Math
         ///   Converts a short integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this short[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<short, float>(value));
@@ -2236,9 +1942,7 @@ namespace Accord.Math
         ///   Converts a short integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this short[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<short, float>(value));
@@ -2248,9 +1952,7 @@ namespace Accord.Math
         ///   Converts a short integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this short[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<short, float>(value));
@@ -2263,9 +1965,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this short[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2277,9 +1977,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this short[,] value, float[,] result)
         {
 					unsafe
@@ -2299,9 +1997,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this short[,,] value, float[,,] result)
         {
 					unsafe
@@ -2321,9 +2017,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this short[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -2336,9 +2030,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this short[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2351,9 +2043,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this short[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2367,9 +2057,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this short[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -2381,9 +2069,7 @@ namespace Accord.Math
         ///   Converts a short integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this short[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -2393,9 +2079,7 @@ namespace Accord.Math
         ///   Converts a short integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this short[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<short, double>(value));
@@ -2405,9 +2089,7 @@ namespace Accord.Math
         ///   Converts a short integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this short[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<short, double>(value));
@@ -2417,9 +2099,7 @@ namespace Accord.Math
         ///   Converts a short integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this short[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<short, double>(value));
@@ -2429,9 +2109,7 @@ namespace Accord.Math
         ///   Converts a short integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this short[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<short, double>(value));
@@ -2444,9 +2122,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this short[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2458,9 +2134,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this short[,] value, double[,] result)
         {
 					unsafe
@@ -2480,9 +2154,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this short[,,] value, double[,,] result)
         {
 					unsafe
@@ -2502,9 +2174,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this short[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -2517,9 +2187,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this short[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2532,9 +2200,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this short[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2548,9 +2214,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this short[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -2562,9 +2226,7 @@ namespace Accord.Math
         ///   Converts a short integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this short[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -2574,9 +2236,7 @@ namespace Accord.Math
         ///   Converts a short integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this short[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<short, long>(value));
@@ -2586,9 +2246,7 @@ namespace Accord.Math
         ///   Converts a short integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this short[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<short, long>(value));
@@ -2598,9 +2256,7 @@ namespace Accord.Math
         ///   Converts a short integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this short[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<short, long>(value));
@@ -2610,9 +2266,7 @@ namespace Accord.Math
         ///   Converts a short integer to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this short[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<short, long>(value));
@@ -2625,9 +2279,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this short[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2639,9 +2291,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this short[,] value, long[,] result)
         {
 					unsafe
@@ -2661,9 +2311,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this short[,,] value, long[,,] result)
         {
 					unsafe
@@ -2683,9 +2331,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this short[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -2698,9 +2344,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this short[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2713,9 +2357,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this short[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2729,9 +2371,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this short[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -2743,9 +2383,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this short[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -2755,9 +2393,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this short[,] value)
         {
             return ToByte(value, Matrix.CreateAs<short, byte>(value));
@@ -2767,9 +2403,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this short[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<short, byte>(value));
@@ -2779,9 +2413,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this short[][] value)
         {
             return ToByte(value, Jagged.CreateAs<short, byte>(value));
@@ -2791,9 +2423,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this short[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<short, byte>(value));
@@ -2806,9 +2436,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this short[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2820,9 +2448,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this short[,] value, byte[,] result)
         {
 					unsafe
@@ -2842,9 +2468,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this short[,,] value, byte[,,] result)
         {
 					unsafe
@@ -2864,9 +2488,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this short[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -2879,9 +2501,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this short[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2894,9 +2514,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this short[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -2910,9 +2528,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this short[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -2924,9 +2540,7 @@ namespace Accord.Math
         ///   Converts a short integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this short[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -2936,9 +2550,7 @@ namespace Accord.Math
         ///   Converts a short integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this short[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<short, sbyte>(value));
@@ -2948,9 +2560,7 @@ namespace Accord.Math
         ///   Converts a short integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this short[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<short, sbyte>(value));
@@ -2960,9 +2570,7 @@ namespace Accord.Math
         ///   Converts a short integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this short[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<short, sbyte>(value));
@@ -2972,9 +2580,7 @@ namespace Accord.Math
         ///   Converts a short integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this short[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<short, sbyte>(value));
@@ -2987,9 +2593,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this short[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3001,9 +2605,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this short[,] value, sbyte[,] result)
         {
 					unsafe
@@ -3023,9 +2625,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this short[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -3045,9 +2645,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this short[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -3060,9 +2658,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this short[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3075,9 +2671,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this short[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3091,9 +2685,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this short[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -3105,9 +2697,7 @@ namespace Accord.Math
         ///   Converts a short integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this short[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -3117,9 +2707,7 @@ namespace Accord.Math
         ///   Converts a short integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this short[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<short, decimal>(value));
@@ -3129,9 +2717,7 @@ namespace Accord.Math
         ///   Converts a short integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this short[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<short, decimal>(value));
@@ -3141,9 +2727,7 @@ namespace Accord.Math
         ///   Converts a short integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this short[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<short, decimal>(value));
@@ -3153,9 +2737,7 @@ namespace Accord.Math
         ///   Converts a short integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this short[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<short, decimal>(value));
@@ -3168,9 +2750,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this short[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3182,9 +2762,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this short[,] value, decimal[,] result)
         {
 					unsafe
@@ -3204,9 +2782,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this short[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -3226,9 +2802,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this short[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -3241,9 +2815,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this short[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3256,9 +2828,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this short[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3272,9 +2842,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this short[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -3286,9 +2854,7 @@ namespace Accord.Math
         ///   Converts a short integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this short[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -3298,9 +2864,7 @@ namespace Accord.Math
         ///   Converts a short integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this short[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<short, bool>(value));
@@ -3310,9 +2874,7 @@ namespace Accord.Math
         ///   Converts a short integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this short[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<short, bool>(value));
@@ -3322,9 +2884,7 @@ namespace Accord.Math
         ///   Converts a short integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this short[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<short, bool>(value));
@@ -3334,9 +2894,7 @@ namespace Accord.Math
         ///   Converts a short integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this short[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<short, bool>(value));
@@ -3349,9 +2907,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this short[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3363,9 +2919,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this short[,] value, bool[,] result)
         {
 					unsafe
@@ -3385,9 +2939,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this short[,,] value, bool[,,] result)
         {
 					unsafe
@@ -3407,9 +2959,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this short[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -3422,9 +2972,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this short[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3437,9 +2985,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this short[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3453,9 +2999,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this short[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -3467,9 +3011,7 @@ namespace Accord.Math
         ///   Converts a short integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this short[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -3479,9 +3021,7 @@ namespace Accord.Math
         ///   Converts a short integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this short[,] value)
         {
             return ToObject(value, Matrix.CreateAs<short, object>(value));
@@ -3491,9 +3031,7 @@ namespace Accord.Math
         ///   Converts a short integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this short[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<short, object>(value));
@@ -3503,9 +3041,7 @@ namespace Accord.Math
         ///   Converts a short integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this short[][] value)
         {
             return ToObject(value, Jagged.CreateAs<short, object>(value));
@@ -3515,9 +3051,7 @@ namespace Accord.Math
         ///   Converts a short integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this short[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<short, object>(value));
@@ -3530,9 +3064,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this short[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3544,9 +3076,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this short[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -3562,9 +3092,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this short[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -3582,9 +3110,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this short[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -3597,9 +3123,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this short[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3612,9 +3136,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this short[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3628,9 +3150,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this short[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -3642,9 +3162,7 @@ namespace Accord.Math
         ///   Converts a short integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this short[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -3654,9 +3172,7 @@ namespace Accord.Math
         ///   Converts a short integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this short[,] value)
         {
             return ToString(value, Matrix.CreateAs<short, string>(value));
@@ -3666,9 +3182,7 @@ namespace Accord.Math
         ///   Converts a short integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this short[,,] value)
         {
             return ToString(value, Matrix.CreateAs<short, string>(value));
@@ -3678,9 +3192,7 @@ namespace Accord.Math
         ///   Converts a short integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this short[][] value)
         {
             return ToString(value, Jagged.CreateAs<short, string>(value));
@@ -3690,9 +3202,7 @@ namespace Accord.Math
         ///   Converts a short integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this short[][][] value)
         {
             return ToString(value, Jagged.CreateAs<short, string>(value));
@@ -3705,9 +3215,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this short[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3719,9 +3227,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this short[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -3737,9 +3243,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this short[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -3757,9 +3261,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this short[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -3772,9 +3274,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this short[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3787,9 +3287,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this short[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3803,9 +3301,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this short[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -3817,9 +3313,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this short[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -3829,9 +3323,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this short[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<short, Complex>(value));
@@ -3841,9 +3333,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this short[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<short, Complex>(value));
@@ -3853,9 +3343,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this short[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<short, Complex>(value));
@@ -3865,9 +3353,7 @@ namespace Accord.Math
         ///   Converts a short integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this short[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<short, Complex>(value));
@@ -3880,9 +3366,7 @@ namespace Accord.Math
         ///   Converts a short integer array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this short[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3894,9 +3378,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this short[,] value, Complex[,] result)
         {
 					unsafe
@@ -3916,9 +3398,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this short[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -3938,9 +3418,7 @@ namespace Accord.Math
         ///   Converts a multidimensional short integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this short[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -3953,9 +3431,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this short[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3968,9 +3444,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this short[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -3984,9 +3458,7 @@ namespace Accord.Math
         ///   Converts a jagged short integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this short[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -3998,9 +3470,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this float[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -4010,9 +3480,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this float[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<float, int>(value));
@@ -4022,9 +3490,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this float[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<float, int>(value));
@@ -4034,9 +3500,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this float[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<float, int>(value));
@@ -4046,9 +3510,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this float[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<float, int>(value));
@@ -4061,9 +3523,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this float[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4075,9 +3535,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this float[,] value, int[,] result)
         {
 					unsafe
@@ -4097,9 +3555,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this float[,,] value, int[,,] result)
         {
 					unsafe
@@ -4119,9 +3575,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this float[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -4134,9 +3588,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this float[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4149,9 +3601,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this float[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4165,9 +3615,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this float[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -4179,9 +3627,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this float[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -4191,9 +3637,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this float[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<float, short>(value));
@@ -4203,9 +3647,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this float[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<float, short>(value));
@@ -4215,9 +3657,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this float[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<float, short>(value));
@@ -4227,9 +3667,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this float[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<float, short>(value));
@@ -4242,9 +3680,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this float[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4256,9 +3692,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this float[,] value, short[,] result)
         {
 					unsafe
@@ -4278,9 +3712,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this float[,,] value, short[,,] result)
         {
 					unsafe
@@ -4300,9 +3732,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this float[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -4315,9 +3745,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this float[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4330,9 +3758,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this float[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4346,9 +3772,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this float[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -4360,9 +3784,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this float[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -4372,9 +3794,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this float[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<float, double>(value));
@@ -4384,9 +3804,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this float[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<float, double>(value));
@@ -4396,9 +3814,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this float[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<float, double>(value));
@@ -4408,9 +3824,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this float[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<float, double>(value));
@@ -4423,9 +3837,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this float[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4437,9 +3849,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this float[,] value, double[,] result)
         {
 					unsafe
@@ -4459,9 +3869,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this float[,,] value, double[,,] result)
         {
 					unsafe
@@ -4481,9 +3889,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this float[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -4496,9 +3902,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this float[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4511,9 +3915,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this float[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4527,9 +3929,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this float[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -4541,9 +3941,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this float[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -4553,9 +3951,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this float[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<float, long>(value));
@@ -4565,9 +3961,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this float[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<float, long>(value));
@@ -4577,9 +3971,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this float[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<float, long>(value));
@@ -4589,9 +3981,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this float[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<float, long>(value));
@@ -4604,9 +3994,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this float[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4618,9 +4006,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this float[,] value, long[,] result)
         {
 					unsafe
@@ -4640,9 +4026,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this float[,,] value, long[,,] result)
         {
 					unsafe
@@ -4662,9 +4046,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this float[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -4677,9 +4059,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this float[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4692,9 +4072,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this float[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4708,9 +4086,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this float[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -4722,9 +4098,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this float[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -4734,9 +4108,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this float[,] value)
         {
             return ToByte(value, Matrix.CreateAs<float, byte>(value));
@@ -4746,9 +4118,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this float[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<float, byte>(value));
@@ -4758,9 +4128,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this float[][] value)
         {
             return ToByte(value, Jagged.CreateAs<float, byte>(value));
@@ -4770,9 +4138,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this float[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<float, byte>(value));
@@ -4785,9 +4151,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this float[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4799,9 +4163,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this float[,] value, byte[,] result)
         {
 					unsafe
@@ -4821,9 +4183,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this float[,,] value, byte[,,] result)
         {
 					unsafe
@@ -4843,9 +4203,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this float[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -4858,9 +4216,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this float[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4873,9 +4229,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this float[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4889,9 +4243,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this float[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -4903,9 +4255,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this float[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -4915,9 +4265,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this float[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<float, sbyte>(value));
@@ -4927,9 +4275,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this float[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<float, sbyte>(value));
@@ -4939,9 +4285,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this float[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<float, sbyte>(value));
@@ -4951,9 +4295,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this float[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<float, sbyte>(value));
@@ -4966,9 +4308,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this float[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -4980,9 +4320,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this float[,] value, sbyte[,] result)
         {
 					unsafe
@@ -5002,9 +4340,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this float[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -5024,9 +4360,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this float[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -5039,9 +4373,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this float[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5054,9 +4386,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this float[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5070,9 +4400,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this float[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -5084,9 +4412,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this float[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -5096,9 +4422,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this float[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<float, decimal>(value));
@@ -5108,9 +4432,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this float[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<float, decimal>(value));
@@ -5120,9 +4442,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this float[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<float, decimal>(value));
@@ -5132,9 +4452,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this float[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<float, decimal>(value));
@@ -5147,9 +4465,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this float[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5161,9 +4477,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this float[,] value, decimal[,] result)
         {
 					unsafe
@@ -5183,9 +4497,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this float[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -5205,9 +4517,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this float[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -5220,9 +4530,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this float[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5235,9 +4543,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this float[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5251,9 +4557,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this float[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -5265,9 +4569,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this float[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -5277,9 +4579,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this float[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<float, bool>(value));
@@ -5289,9 +4589,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this float[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<float, bool>(value));
@@ -5301,9 +4599,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this float[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<float, bool>(value));
@@ -5313,9 +4609,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this float[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<float, bool>(value));
@@ -5328,9 +4622,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this float[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5342,9 +4634,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this float[,] value, bool[,] result)
         {
 					unsafe
@@ -5364,9 +4654,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this float[,,] value, bool[,,] result)
         {
 					unsafe
@@ -5386,9 +4674,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this float[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -5401,9 +4687,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this float[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5416,9 +4700,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this float[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5432,9 +4714,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this float[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -5446,9 +4726,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this float[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -5458,9 +4736,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this float[,] value)
         {
             return ToObject(value, Matrix.CreateAs<float, object>(value));
@@ -5470,9 +4746,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this float[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<float, object>(value));
@@ -5482,9 +4756,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this float[][] value)
         {
             return ToObject(value, Jagged.CreateAs<float, object>(value));
@@ -5494,9 +4766,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this float[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<float, object>(value));
@@ -5509,9 +4779,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this float[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5523,9 +4791,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this float[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -5541,9 +4807,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this float[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -5561,9 +4825,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this float[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -5576,9 +4838,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this float[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5591,9 +4851,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this float[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5607,9 +4865,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this float[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -5621,9 +4877,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this float[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -5633,9 +4887,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this float[,] value)
         {
             return ToString(value, Matrix.CreateAs<float, string>(value));
@@ -5645,9 +4897,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this float[,,] value)
         {
             return ToString(value, Matrix.CreateAs<float, string>(value));
@@ -5657,9 +4907,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this float[][] value)
         {
             return ToString(value, Jagged.CreateAs<float, string>(value));
@@ -5669,9 +4917,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this float[][][] value)
         {
             return ToString(value, Jagged.CreateAs<float, string>(value));
@@ -5684,9 +4930,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this float[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5698,9 +4942,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this float[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -5716,9 +4958,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this float[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -5736,9 +4976,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this float[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -5751,9 +4989,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this float[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5766,9 +5002,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this float[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5782,9 +5016,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this float[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -5796,9 +5028,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this float[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -5808,9 +5038,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this float[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<float, Complex>(value));
@@ -5820,9 +5048,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this float[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<float, Complex>(value));
@@ -5832,9 +5058,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this float[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<float, Complex>(value));
@@ -5844,9 +5068,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this float[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<float, Complex>(value));
@@ -5859,9 +5081,7 @@ namespace Accord.Math
         ///   Converts a single-precision floating point array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this float[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5873,9 +5093,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this float[,] value, Complex[,] result)
         {
 					unsafe
@@ -5895,9 +5113,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this float[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -5917,9 +5133,7 @@ namespace Accord.Math
         ///   Converts a multidimensional single-precision floating point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this float[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -5932,9 +5146,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this float[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5947,9 +5159,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this float[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -5963,9 +5173,7 @@ namespace Accord.Math
         ///   Converts a jagged single-precision floating point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this float[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -5977,9 +5185,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this double[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -5989,9 +5195,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this double[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<double, int>(value));
@@ -6001,9 +5205,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this double[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<double, int>(value));
@@ -6013,9 +5215,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this double[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<double, int>(value));
@@ -6025,9 +5225,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this double[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<double, int>(value));
@@ -6040,9 +5238,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this double[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6054,9 +5250,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this double[,] value, int[,] result)
         {
 					unsafe
@@ -6076,9 +5270,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this double[,,] value, int[,,] result)
         {
 					unsafe
@@ -6098,9 +5290,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this double[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -6113,9 +5303,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this double[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6128,9 +5316,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this double[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6144,9 +5330,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this double[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -6158,9 +5342,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this double[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -6170,9 +5352,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this double[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<double, short>(value));
@@ -6182,9 +5362,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this double[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<double, short>(value));
@@ -6194,9 +5372,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this double[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<double, short>(value));
@@ -6206,9 +5382,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this double[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<double, short>(value));
@@ -6221,9 +5395,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this double[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6235,9 +5407,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this double[,] value, short[,] result)
         {
 					unsafe
@@ -6257,9 +5427,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this double[,,] value, short[,,] result)
         {
 					unsafe
@@ -6279,9 +5447,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this double[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -6294,9 +5460,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this double[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6309,9 +5473,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this double[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6325,9 +5487,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this double[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -6339,9 +5499,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this double[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -6351,9 +5509,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this double[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<double, float>(value));
@@ -6363,9 +5519,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this double[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<double, float>(value));
@@ -6375,9 +5529,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this double[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<double, float>(value));
@@ -6387,9 +5539,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this double[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<double, float>(value));
@@ -6402,9 +5552,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this double[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6416,9 +5564,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this double[,] value, float[,] result)
         {
 					unsafe
@@ -6438,9 +5584,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this double[,,] value, float[,,] result)
         {
 					unsafe
@@ -6460,9 +5604,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this double[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -6475,9 +5617,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this double[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6490,9 +5630,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this double[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6506,9 +5644,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this double[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -6520,9 +5656,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this double[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -6532,9 +5666,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this double[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<double, long>(value));
@@ -6544,9 +5676,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this double[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<double, long>(value));
@@ -6556,9 +5686,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this double[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<double, long>(value));
@@ -6568,9 +5696,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this double[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<double, long>(value));
@@ -6583,9 +5709,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this double[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6597,9 +5721,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this double[,] value, long[,] result)
         {
 					unsafe
@@ -6619,9 +5741,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this double[,,] value, long[,,] result)
         {
 					unsafe
@@ -6641,9 +5761,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this double[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -6656,9 +5774,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this double[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6671,9 +5787,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this double[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6687,9 +5801,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this double[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -6701,9 +5813,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this double[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -6713,9 +5823,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this double[,] value)
         {
             return ToByte(value, Matrix.CreateAs<double, byte>(value));
@@ -6725,9 +5833,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this double[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<double, byte>(value));
@@ -6737,9 +5843,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this double[][] value)
         {
             return ToByte(value, Jagged.CreateAs<double, byte>(value));
@@ -6749,9 +5853,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this double[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<double, byte>(value));
@@ -6764,9 +5866,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this double[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6778,9 +5878,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this double[,] value, byte[,] result)
         {
 					unsafe
@@ -6800,9 +5898,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this double[,,] value, byte[,,] result)
         {
 					unsafe
@@ -6822,9 +5918,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this double[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -6837,9 +5931,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this double[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6852,9 +5944,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this double[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6868,9 +5958,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this double[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -6882,9 +5970,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this double[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -6894,9 +5980,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this double[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<double, sbyte>(value));
@@ -6906,9 +5990,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this double[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<double, sbyte>(value));
@@ -6918,9 +6000,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this double[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<double, sbyte>(value));
@@ -6930,9 +6010,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this double[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<double, sbyte>(value));
@@ -6945,9 +6023,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this double[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -6959,9 +6035,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this double[,] value, sbyte[,] result)
         {
 					unsafe
@@ -6981,9 +6055,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this double[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -7003,9 +6075,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this double[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -7018,9 +6088,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this double[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7033,9 +6101,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this double[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7049,9 +6115,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this double[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -7063,9 +6127,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this double[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -7075,9 +6137,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this double[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<double, decimal>(value));
@@ -7087,9 +6147,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this double[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<double, decimal>(value));
@@ -7099,9 +6157,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this double[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<double, decimal>(value));
@@ -7111,9 +6167,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this double[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<double, decimal>(value));
@@ -7126,9 +6180,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this double[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7140,9 +6192,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this double[,] value, decimal[,] result)
         {
 					unsafe
@@ -7162,9 +6212,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this double[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -7184,9 +6232,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this double[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -7199,9 +6245,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this double[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7214,9 +6258,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this double[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7230,9 +6272,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this double[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -7244,9 +6284,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this double[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -7256,9 +6294,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this double[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<double, bool>(value));
@@ -7268,9 +6304,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this double[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<double, bool>(value));
@@ -7280,9 +6314,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this double[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<double, bool>(value));
@@ -7292,9 +6324,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this double[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<double, bool>(value));
@@ -7307,9 +6337,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this double[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7321,9 +6349,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this double[,] value, bool[,] result)
         {
 					unsafe
@@ -7343,9 +6369,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this double[,,] value, bool[,,] result)
         {
 					unsafe
@@ -7365,9 +6389,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this double[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -7380,9 +6402,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this double[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7395,9 +6415,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this double[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7411,9 +6429,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this double[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -7425,9 +6441,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this double[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -7437,9 +6451,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this double[,] value)
         {
             return ToObject(value, Matrix.CreateAs<double, object>(value));
@@ -7449,9 +6461,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this double[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<double, object>(value));
@@ -7461,9 +6471,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this double[][] value)
         {
             return ToObject(value, Jagged.CreateAs<double, object>(value));
@@ -7473,9 +6481,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this double[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<double, object>(value));
@@ -7488,9 +6494,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this double[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7502,9 +6506,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this double[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -7520,9 +6522,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this double[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -7540,9 +6540,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this double[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -7555,9 +6553,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this double[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7570,9 +6566,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this double[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7586,9 +6580,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this double[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -7600,9 +6592,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this double[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -7612,9 +6602,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this double[,] value)
         {
             return ToString(value, Matrix.CreateAs<double, string>(value));
@@ -7624,9 +6612,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this double[,,] value)
         {
             return ToString(value, Matrix.CreateAs<double, string>(value));
@@ -7636,9 +6622,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this double[][] value)
         {
             return ToString(value, Jagged.CreateAs<double, string>(value));
@@ -7648,9 +6632,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this double[][][] value)
         {
             return ToString(value, Jagged.CreateAs<double, string>(value));
@@ -7663,9 +6645,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this double[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7677,9 +6657,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this double[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -7695,9 +6673,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this double[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -7715,9 +6691,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this double[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -7730,9 +6704,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this double[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7745,9 +6717,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this double[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7761,9 +6731,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this double[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -7775,9 +6743,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this double[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -7787,9 +6753,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this double[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<double, Complex>(value));
@@ -7799,9 +6763,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this double[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<double, Complex>(value));
@@ -7811,9 +6773,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this double[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<double, Complex>(value));
@@ -7823,9 +6783,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this double[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<double, Complex>(value));
@@ -7838,9 +6796,7 @@ namespace Accord.Math
         ///   Converts a double-precision floating point array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this double[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7852,9 +6808,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this double[,] value, Complex[,] result)
         {
 					unsafe
@@ -7874,9 +6828,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this double[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -7896,9 +6848,7 @@ namespace Accord.Math
         ///   Converts a multidimensional double-precision floating point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this double[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -7911,9 +6861,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this double[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7926,9 +6874,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this double[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -7942,9 +6888,7 @@ namespace Accord.Math
         ///   Converts a jagged double-precision floating point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this double[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -7956,9 +6900,7 @@ namespace Accord.Math
         ///   Converts a long integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this long[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -7968,9 +6910,7 @@ namespace Accord.Math
         ///   Converts a long integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this long[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<long, int>(value));
@@ -7980,9 +6920,7 @@ namespace Accord.Math
         ///   Converts a long integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this long[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<long, int>(value));
@@ -7992,9 +6930,7 @@ namespace Accord.Math
         ///   Converts a long integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this long[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<long, int>(value));
@@ -8004,9 +6940,7 @@ namespace Accord.Math
         ///   Converts a long integer to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this long[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<long, int>(value));
@@ -8019,9 +6953,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this long[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8033,9 +6965,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this long[,] value, int[,] result)
         {
 					unsafe
@@ -8055,9 +6985,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this long[,,] value, int[,,] result)
         {
 					unsafe
@@ -8077,9 +7005,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this long[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -8092,9 +7018,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this long[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8107,9 +7031,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this long[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8123,9 +7045,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this long[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -8137,9 +7057,7 @@ namespace Accord.Math
         ///   Converts a long integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this long[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -8149,9 +7067,7 @@ namespace Accord.Math
         ///   Converts a long integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this long[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<long, short>(value));
@@ -8161,9 +7077,7 @@ namespace Accord.Math
         ///   Converts a long integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this long[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<long, short>(value));
@@ -8173,9 +7087,7 @@ namespace Accord.Math
         ///   Converts a long integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this long[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<long, short>(value));
@@ -8185,9 +7097,7 @@ namespace Accord.Math
         ///   Converts a long integer to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this long[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<long, short>(value));
@@ -8200,9 +7110,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this long[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8214,9 +7122,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this long[,] value, short[,] result)
         {
 					unsafe
@@ -8236,9 +7142,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this long[,,] value, short[,,] result)
         {
 					unsafe
@@ -8258,9 +7162,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this long[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -8273,9 +7175,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this long[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8288,9 +7188,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this long[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8304,9 +7202,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this long[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -8318,9 +7214,7 @@ namespace Accord.Math
         ///   Converts a long integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this long[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -8330,9 +7224,7 @@ namespace Accord.Math
         ///   Converts a long integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this long[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<long, float>(value));
@@ -8342,9 +7234,7 @@ namespace Accord.Math
         ///   Converts a long integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this long[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<long, float>(value));
@@ -8354,9 +7244,7 @@ namespace Accord.Math
         ///   Converts a long integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this long[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<long, float>(value));
@@ -8366,9 +7254,7 @@ namespace Accord.Math
         ///   Converts a long integer to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this long[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<long, float>(value));
@@ -8381,9 +7267,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this long[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8395,9 +7279,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this long[,] value, float[,] result)
         {
 					unsafe
@@ -8417,9 +7299,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this long[,,] value, float[,,] result)
         {
 					unsafe
@@ -8439,9 +7319,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this long[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -8454,9 +7332,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this long[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8469,9 +7345,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this long[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8485,9 +7359,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this long[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -8499,9 +7371,7 @@ namespace Accord.Math
         ///   Converts a long integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this long[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -8511,9 +7381,7 @@ namespace Accord.Math
         ///   Converts a long integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this long[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<long, double>(value));
@@ -8523,9 +7391,7 @@ namespace Accord.Math
         ///   Converts a long integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this long[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<long, double>(value));
@@ -8535,9 +7401,7 @@ namespace Accord.Math
         ///   Converts a long integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this long[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<long, double>(value));
@@ -8547,9 +7411,7 @@ namespace Accord.Math
         ///   Converts a long integer to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this long[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<long, double>(value));
@@ -8562,9 +7424,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this long[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8576,9 +7436,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this long[,] value, double[,] result)
         {
 					unsafe
@@ -8598,9 +7456,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this long[,,] value, double[,,] result)
         {
 					unsafe
@@ -8620,9 +7476,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this long[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -8635,9 +7489,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this long[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8650,9 +7502,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this long[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8666,9 +7516,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this long[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -8680,9 +7528,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this long[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -8692,9 +7538,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this long[,] value)
         {
             return ToByte(value, Matrix.CreateAs<long, byte>(value));
@@ -8704,9 +7548,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this long[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<long, byte>(value));
@@ -8716,9 +7558,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this long[][] value)
         {
             return ToByte(value, Jagged.CreateAs<long, byte>(value));
@@ -8728,9 +7568,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this long[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<long, byte>(value));
@@ -8743,9 +7581,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this long[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8757,9 +7593,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this long[,] value, byte[,] result)
         {
 					unsafe
@@ -8779,9 +7613,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this long[,,] value, byte[,,] result)
         {
 					unsafe
@@ -8801,9 +7633,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this long[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -8816,9 +7646,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this long[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8831,9 +7659,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this long[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8847,9 +7673,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this long[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -8861,9 +7685,7 @@ namespace Accord.Math
         ///   Converts a long integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this long[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -8873,9 +7695,7 @@ namespace Accord.Math
         ///   Converts a long integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this long[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<long, sbyte>(value));
@@ -8885,9 +7705,7 @@ namespace Accord.Math
         ///   Converts a long integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this long[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<long, sbyte>(value));
@@ -8897,9 +7715,7 @@ namespace Accord.Math
         ///   Converts a long integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this long[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<long, sbyte>(value));
@@ -8909,9 +7725,7 @@ namespace Accord.Math
         ///   Converts a long integer to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this long[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<long, sbyte>(value));
@@ -8924,9 +7738,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this long[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -8938,9 +7750,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this long[,] value, sbyte[,] result)
         {
 					unsafe
@@ -8960,9 +7770,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this long[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -8982,9 +7790,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this long[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -8997,9 +7803,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this long[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9012,9 +7816,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this long[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9028,9 +7830,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this long[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -9042,9 +7842,7 @@ namespace Accord.Math
         ///   Converts a long integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this long[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -9054,9 +7852,7 @@ namespace Accord.Math
         ///   Converts a long integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this long[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<long, decimal>(value));
@@ -9066,9 +7862,7 @@ namespace Accord.Math
         ///   Converts a long integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this long[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<long, decimal>(value));
@@ -9078,9 +7872,7 @@ namespace Accord.Math
         ///   Converts a long integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this long[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<long, decimal>(value));
@@ -9090,9 +7882,7 @@ namespace Accord.Math
         ///   Converts a long integer to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this long[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<long, decimal>(value));
@@ -9105,9 +7895,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this long[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9119,9 +7907,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this long[,] value, decimal[,] result)
         {
 					unsafe
@@ -9141,9 +7927,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this long[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -9163,9 +7947,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this long[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -9178,9 +7960,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this long[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9193,9 +7973,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this long[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9209,9 +7987,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this long[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -9223,9 +7999,7 @@ namespace Accord.Math
         ///   Converts a long integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this long[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -9235,9 +8009,7 @@ namespace Accord.Math
         ///   Converts a long integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this long[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<long, bool>(value));
@@ -9247,9 +8019,7 @@ namespace Accord.Math
         ///   Converts a long integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this long[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<long, bool>(value));
@@ -9259,9 +8029,7 @@ namespace Accord.Math
         ///   Converts a long integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this long[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<long, bool>(value));
@@ -9271,9 +8039,7 @@ namespace Accord.Math
         ///   Converts a long integer to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this long[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<long, bool>(value));
@@ -9286,9 +8052,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this long[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9300,9 +8064,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this long[,] value, bool[,] result)
         {
 					unsafe
@@ -9322,9 +8084,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this long[,,] value, bool[,,] result)
         {
 					unsafe
@@ -9344,9 +8104,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this long[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -9359,9 +8117,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this long[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9374,9 +8130,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this long[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9390,9 +8144,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this long[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -9404,9 +8156,7 @@ namespace Accord.Math
         ///   Converts a long integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this long[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -9416,9 +8166,7 @@ namespace Accord.Math
         ///   Converts a long integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this long[,] value)
         {
             return ToObject(value, Matrix.CreateAs<long, object>(value));
@@ -9428,9 +8176,7 @@ namespace Accord.Math
         ///   Converts a long integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this long[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<long, object>(value));
@@ -9440,9 +8186,7 @@ namespace Accord.Math
         ///   Converts a long integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this long[][] value)
         {
             return ToObject(value, Jagged.CreateAs<long, object>(value));
@@ -9452,9 +8196,7 @@ namespace Accord.Math
         ///   Converts a long integer to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this long[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<long, object>(value));
@@ -9467,9 +8209,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this long[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9481,9 +8221,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this long[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -9499,9 +8237,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this long[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -9519,9 +8255,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this long[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -9534,9 +8268,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this long[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9549,9 +8281,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this long[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9565,9 +8295,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this long[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -9579,9 +8307,7 @@ namespace Accord.Math
         ///   Converts a long integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this long[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -9591,9 +8317,7 @@ namespace Accord.Math
         ///   Converts a long integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this long[,] value)
         {
             return ToString(value, Matrix.CreateAs<long, string>(value));
@@ -9603,9 +8327,7 @@ namespace Accord.Math
         ///   Converts a long integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this long[,,] value)
         {
             return ToString(value, Matrix.CreateAs<long, string>(value));
@@ -9615,9 +8337,7 @@ namespace Accord.Math
         ///   Converts a long integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this long[][] value)
         {
             return ToString(value, Jagged.CreateAs<long, string>(value));
@@ -9627,9 +8347,7 @@ namespace Accord.Math
         ///   Converts a long integer to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this long[][][] value)
         {
             return ToString(value, Jagged.CreateAs<long, string>(value));
@@ -9642,9 +8360,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this long[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9656,9 +8372,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this long[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -9674,9 +8388,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this long[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -9694,9 +8406,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this long[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -9709,9 +8419,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this long[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9724,9 +8432,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this long[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9740,9 +8446,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this long[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -9754,9 +8458,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this long[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -9766,9 +8468,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this long[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<long, Complex>(value));
@@ -9778,9 +8478,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this long[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<long, Complex>(value));
@@ -9790,9 +8488,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this long[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<long, Complex>(value));
@@ -9802,9 +8498,7 @@ namespace Accord.Math
         ///   Converts a long integer to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this long[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<long, Complex>(value));
@@ -9817,9 +8511,7 @@ namespace Accord.Math
         ///   Converts a long integer array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this long[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9831,9 +8523,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this long[,] value, Complex[,] result)
         {
 					unsafe
@@ -9853,9 +8543,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this long[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -9875,9 +8563,7 @@ namespace Accord.Math
         ///   Converts a multidimensional long integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this long[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -9890,9 +8576,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this long[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9905,9 +8589,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this long[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -9921,9 +8603,7 @@ namespace Accord.Math
         ///   Converts a jagged long integer array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this long[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -9935,9 +8615,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this byte[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -9947,9 +8625,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this byte[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<byte, int>(value));
@@ -9959,9 +8635,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this byte[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<byte, int>(value));
@@ -9971,9 +8645,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this byte[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<byte, int>(value));
@@ -9983,9 +8655,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this byte[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<byte, int>(value));
@@ -9998,9 +8668,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this byte[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10012,9 +8680,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this byte[,] value, int[,] result)
         {
 					unsafe
@@ -10034,9 +8700,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this byte[,,] value, int[,,] result)
         {
 					unsafe
@@ -10056,9 +8720,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this byte[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -10071,9 +8733,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this byte[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10086,9 +8746,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this byte[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10102,9 +8760,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this byte[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -10116,9 +8772,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this byte[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -10128,9 +8782,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this byte[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<byte, short>(value));
@@ -10140,9 +8792,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this byte[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<byte, short>(value));
@@ -10152,9 +8802,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this byte[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<byte, short>(value));
@@ -10164,9 +8812,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this byte[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<byte, short>(value));
@@ -10179,9 +8825,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this byte[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10193,9 +8837,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this byte[,] value, short[,] result)
         {
 					unsafe
@@ -10215,9 +8857,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this byte[,,] value, short[,,] result)
         {
 					unsafe
@@ -10237,9 +8877,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this byte[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -10252,9 +8890,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this byte[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10267,9 +8903,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this byte[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10283,9 +8917,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this byte[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -10297,9 +8929,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this byte[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -10309,9 +8939,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this byte[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<byte, float>(value));
@@ -10321,9 +8949,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this byte[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<byte, float>(value));
@@ -10333,9 +8959,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this byte[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<byte, float>(value));
@@ -10345,9 +8969,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this byte[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<byte, float>(value));
@@ -10360,9 +8982,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this byte[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10374,9 +8994,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this byte[,] value, float[,] result)
         {
 					unsafe
@@ -10396,9 +9014,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this byte[,,] value, float[,,] result)
         {
 					unsafe
@@ -10418,9 +9034,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this byte[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -10433,9 +9047,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this byte[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10448,9 +9060,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this byte[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10464,9 +9074,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this byte[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -10478,9 +9086,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this byte[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -10490,9 +9096,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this byte[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<byte, double>(value));
@@ -10502,9 +9106,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this byte[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<byte, double>(value));
@@ -10514,9 +9116,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this byte[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<byte, double>(value));
@@ -10526,9 +9126,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this byte[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<byte, double>(value));
@@ -10541,9 +9139,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this byte[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10555,9 +9151,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this byte[,] value, double[,] result)
         {
 					unsafe
@@ -10577,9 +9171,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this byte[,,] value, double[,,] result)
         {
 					unsafe
@@ -10599,9 +9191,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this byte[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -10614,9 +9204,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this byte[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10629,9 +9217,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this byte[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10645,9 +9231,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this byte[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -10659,9 +9243,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this byte[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -10671,9 +9253,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this byte[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<byte, long>(value));
@@ -10683,9 +9263,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this byte[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<byte, long>(value));
@@ -10695,9 +9273,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this byte[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<byte, long>(value));
@@ -10707,9 +9283,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this byte[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<byte, long>(value));
@@ -10722,9 +9296,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this byte[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10736,9 +9308,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this byte[,] value, long[,] result)
         {
 					unsafe
@@ -10758,9 +9328,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this byte[,,] value, long[,,] result)
         {
 					unsafe
@@ -10780,9 +9348,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this byte[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -10795,9 +9361,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this byte[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10810,9 +9374,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this byte[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10826,9 +9388,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this byte[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -10840,9 +9400,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this byte[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -10852,9 +9410,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this byte[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<byte, sbyte>(value));
@@ -10864,9 +9420,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this byte[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<byte, sbyte>(value));
@@ -10876,9 +9430,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this byte[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<byte, sbyte>(value));
@@ -10888,9 +9440,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this byte[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<byte, sbyte>(value));
@@ -10903,9 +9453,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this byte[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10917,9 +9465,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this byte[,] value, sbyte[,] result)
         {
 					unsafe
@@ -10939,9 +9485,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this byte[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -10961,9 +9505,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this byte[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -10976,9 +9518,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this byte[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -10991,9 +9531,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this byte[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11007,9 +9545,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this byte[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -11021,9 +9557,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this byte[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -11033,9 +9567,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this byte[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<byte, decimal>(value));
@@ -11045,9 +9577,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this byte[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<byte, decimal>(value));
@@ -11057,9 +9587,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this byte[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<byte, decimal>(value));
@@ -11069,9 +9597,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this byte[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<byte, decimal>(value));
@@ -11084,9 +9610,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this byte[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11098,9 +9622,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this byte[,] value, decimal[,] result)
         {
 					unsafe
@@ -11120,9 +9642,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this byte[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -11142,9 +9662,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this byte[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -11157,9 +9675,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this byte[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11172,9 +9688,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this byte[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11188,9 +9702,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this byte[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -11202,9 +9714,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this byte[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -11214,9 +9724,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this byte[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<byte, bool>(value));
@@ -11226,9 +9734,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this byte[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<byte, bool>(value));
@@ -11238,9 +9744,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this byte[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<byte, bool>(value));
@@ -11250,9 +9754,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this byte[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<byte, bool>(value));
@@ -11265,9 +9767,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this byte[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11279,9 +9779,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this byte[,] value, bool[,] result)
         {
 					unsafe
@@ -11301,9 +9799,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this byte[,,] value, bool[,,] result)
         {
 					unsafe
@@ -11323,9 +9819,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this byte[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -11338,9 +9832,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this byte[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11353,9 +9845,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this byte[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11369,9 +9859,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this byte[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -11383,9 +9871,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this byte[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -11395,9 +9881,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this byte[,] value)
         {
             return ToObject(value, Matrix.CreateAs<byte, object>(value));
@@ -11407,9 +9891,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this byte[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<byte, object>(value));
@@ -11419,9 +9901,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this byte[][] value)
         {
             return ToObject(value, Jagged.CreateAs<byte, object>(value));
@@ -11431,9 +9911,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this byte[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<byte, object>(value));
@@ -11446,9 +9924,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this byte[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11460,9 +9936,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this byte[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -11478,9 +9952,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this byte[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -11498,9 +9970,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this byte[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -11513,9 +9983,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this byte[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11528,9 +9996,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this byte[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11544,9 +10010,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this byte[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -11558,9 +10022,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this byte[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -11570,9 +10032,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this byte[,] value)
         {
             return ToString(value, Matrix.CreateAs<byte, string>(value));
@@ -11582,9 +10042,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this byte[,,] value)
         {
             return ToString(value, Matrix.CreateAs<byte, string>(value));
@@ -11594,9 +10052,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this byte[][] value)
         {
             return ToString(value, Jagged.CreateAs<byte, string>(value));
@@ -11606,9 +10062,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this byte[][][] value)
         {
             return ToString(value, Jagged.CreateAs<byte, string>(value));
@@ -11621,9 +10075,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this byte[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11635,9 +10087,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this byte[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -11653,9 +10103,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this byte[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -11673,9 +10121,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this byte[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -11688,9 +10134,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this byte[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11703,9 +10147,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this byte[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11719,9 +10161,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this byte[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -11733,9 +10173,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this byte[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -11745,9 +10183,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this byte[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<byte, Complex>(value));
@@ -11757,9 +10193,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this byte[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<byte, Complex>(value));
@@ -11769,9 +10203,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this byte[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<byte, Complex>(value));
@@ -11781,9 +10213,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this byte[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<byte, Complex>(value));
@@ -11796,9 +10226,7 @@ namespace Accord.Math
         ///   Converts a 8-bit byte array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this byte[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11810,9 +10238,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this byte[,] value, Complex[,] result)
         {
 					unsafe
@@ -11832,9 +10258,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this byte[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -11854,9 +10278,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 8-bit byte array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this byte[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -11869,9 +10291,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this byte[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11884,9 +10304,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this byte[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11900,9 +10318,7 @@ namespace Accord.Math
         ///   Converts a jagged 8-bit byte array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this byte[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -11914,9 +10330,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this sbyte[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -11926,9 +10340,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this sbyte[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<sbyte, int>(value));
@@ -11938,9 +10350,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this sbyte[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<sbyte, int>(value));
@@ -11950,9 +10360,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this sbyte[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<sbyte, int>(value));
@@ -11962,9 +10370,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this sbyte[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<sbyte, int>(value));
@@ -11977,9 +10383,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this sbyte[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -11991,9 +10395,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this sbyte[,] value, int[,] result)
         {
 					unsafe
@@ -12013,9 +10415,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this sbyte[,,] value, int[,,] result)
         {
 					unsafe
@@ -12035,9 +10435,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this sbyte[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -12050,9 +10448,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this sbyte[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12065,9 +10461,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this sbyte[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12081,9 +10475,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this sbyte[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -12095,9 +10487,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this sbyte[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -12107,9 +10497,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this sbyte[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<sbyte, short>(value));
@@ -12119,9 +10507,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this sbyte[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<sbyte, short>(value));
@@ -12131,9 +10517,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this sbyte[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<sbyte, short>(value));
@@ -12143,9 +10527,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this sbyte[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<sbyte, short>(value));
@@ -12158,9 +10540,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this sbyte[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12172,9 +10552,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this sbyte[,] value, short[,] result)
         {
 					unsafe
@@ -12194,9 +10572,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this sbyte[,,] value, short[,,] result)
         {
 					unsafe
@@ -12216,9 +10592,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this sbyte[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -12231,9 +10605,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this sbyte[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12246,9 +10618,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this sbyte[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12262,9 +10632,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this sbyte[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -12276,9 +10644,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this sbyte[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -12288,9 +10654,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this sbyte[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<sbyte, float>(value));
@@ -12300,9 +10664,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this sbyte[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<sbyte, float>(value));
@@ -12312,9 +10674,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this sbyte[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<sbyte, float>(value));
@@ -12324,9 +10684,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this sbyte[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<sbyte, float>(value));
@@ -12339,9 +10697,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this sbyte[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12353,9 +10709,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this sbyte[,] value, float[,] result)
         {
 					unsafe
@@ -12375,9 +10729,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this sbyte[,,] value, float[,,] result)
         {
 					unsafe
@@ -12397,9 +10749,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this sbyte[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -12412,9 +10762,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this sbyte[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12427,9 +10775,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this sbyte[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12443,9 +10789,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this sbyte[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -12457,9 +10801,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this sbyte[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -12469,9 +10811,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this sbyte[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<sbyte, double>(value));
@@ -12481,9 +10821,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this sbyte[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<sbyte, double>(value));
@@ -12493,9 +10831,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this sbyte[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<sbyte, double>(value));
@@ -12505,9 +10841,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this sbyte[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<sbyte, double>(value));
@@ -12520,9 +10854,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this sbyte[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12534,9 +10866,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this sbyte[,] value, double[,] result)
         {
 					unsafe
@@ -12556,9 +10886,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this sbyte[,,] value, double[,,] result)
         {
 					unsafe
@@ -12578,9 +10906,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this sbyte[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -12593,9 +10919,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this sbyte[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12608,9 +10932,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this sbyte[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12624,9 +10946,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this sbyte[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -12638,9 +10958,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this sbyte[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -12650,9 +10968,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this sbyte[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<sbyte, long>(value));
@@ -12662,9 +10978,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this sbyte[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<sbyte, long>(value));
@@ -12674,9 +10988,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this sbyte[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<sbyte, long>(value));
@@ -12686,9 +10998,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this sbyte[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<sbyte, long>(value));
@@ -12701,9 +11011,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this sbyte[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12715,9 +11023,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this sbyte[,] value, long[,] result)
         {
 					unsafe
@@ -12737,9 +11043,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this sbyte[,,] value, long[,,] result)
         {
 					unsafe
@@ -12759,9 +11063,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this sbyte[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -12774,9 +11076,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this sbyte[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12789,9 +11089,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this sbyte[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12805,9 +11103,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this sbyte[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -12819,9 +11115,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this sbyte[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -12831,9 +11125,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this sbyte[,] value)
         {
             return ToByte(value, Matrix.CreateAs<sbyte, byte>(value));
@@ -12843,9 +11135,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this sbyte[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<sbyte, byte>(value));
@@ -12855,9 +11145,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this sbyte[][] value)
         {
             return ToByte(value, Jagged.CreateAs<sbyte, byte>(value));
@@ -12867,9 +11155,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this sbyte[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<sbyte, byte>(value));
@@ -12882,9 +11168,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this sbyte[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12896,9 +11180,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this sbyte[,] value, byte[,] result)
         {
 					unsafe
@@ -12918,9 +11200,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this sbyte[,,] value, byte[,,] result)
         {
 					unsafe
@@ -12940,9 +11220,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this sbyte[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -12955,9 +11233,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this sbyte[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12970,9 +11246,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this sbyte[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -12986,9 +11260,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this sbyte[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -13000,9 +11272,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this sbyte[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -13012,9 +11282,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this sbyte[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<sbyte, decimal>(value));
@@ -13024,9 +11292,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this sbyte[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<sbyte, decimal>(value));
@@ -13036,9 +11302,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this sbyte[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<sbyte, decimal>(value));
@@ -13048,9 +11312,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this sbyte[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<sbyte, decimal>(value));
@@ -13063,9 +11325,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this sbyte[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13077,9 +11337,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this sbyte[,] value, decimal[,] result)
         {
 					unsafe
@@ -13099,9 +11357,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this sbyte[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -13121,9 +11377,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this sbyte[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -13136,9 +11390,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this sbyte[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13151,9 +11403,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this sbyte[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13167,9 +11417,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this sbyte[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -13181,9 +11429,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this sbyte[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -13193,9 +11439,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this sbyte[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<sbyte, bool>(value));
@@ -13205,9 +11449,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this sbyte[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<sbyte, bool>(value));
@@ -13217,9 +11459,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this sbyte[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<sbyte, bool>(value));
@@ -13229,9 +11469,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this sbyte[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<sbyte, bool>(value));
@@ -13244,9 +11482,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this sbyte[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13258,9 +11494,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this sbyte[,] value, bool[,] result)
         {
 					unsafe
@@ -13280,9 +11514,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this sbyte[,,] value, bool[,,] result)
         {
 					unsafe
@@ -13302,9 +11534,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this sbyte[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -13317,9 +11547,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this sbyte[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13332,9 +11560,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this sbyte[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13348,9 +11574,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this sbyte[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -13362,9 +11586,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this sbyte[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -13374,9 +11596,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this sbyte[,] value)
         {
             return ToObject(value, Matrix.CreateAs<sbyte, object>(value));
@@ -13386,9 +11606,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this sbyte[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<sbyte, object>(value));
@@ -13398,9 +11616,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this sbyte[][] value)
         {
             return ToObject(value, Jagged.CreateAs<sbyte, object>(value));
@@ -13410,9 +11626,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this sbyte[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<sbyte, object>(value));
@@ -13425,9 +11639,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this sbyte[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13439,9 +11651,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this sbyte[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -13457,9 +11667,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this sbyte[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -13477,9 +11685,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this sbyte[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -13492,9 +11698,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this sbyte[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13507,9 +11711,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this sbyte[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13523,9 +11725,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this sbyte[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -13537,9 +11737,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this sbyte[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -13549,9 +11747,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this sbyte[,] value)
         {
             return ToString(value, Matrix.CreateAs<sbyte, string>(value));
@@ -13561,9 +11757,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this sbyte[,,] value)
         {
             return ToString(value, Matrix.CreateAs<sbyte, string>(value));
@@ -13573,9 +11767,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this sbyte[][] value)
         {
             return ToString(value, Jagged.CreateAs<sbyte, string>(value));
@@ -13585,9 +11777,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this sbyte[][][] value)
         {
             return ToString(value, Jagged.CreateAs<sbyte, string>(value));
@@ -13600,9 +11790,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this sbyte[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13614,9 +11802,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this sbyte[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -13632,9 +11818,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this sbyte[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -13652,9 +11836,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this sbyte[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -13667,9 +11849,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this sbyte[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13682,9 +11862,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this sbyte[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13698,9 +11876,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this sbyte[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -13712,9 +11888,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this sbyte[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -13724,9 +11898,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this sbyte[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<sbyte, Complex>(value));
@@ -13736,9 +11908,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this sbyte[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<sbyte, Complex>(value));
@@ -13748,9 +11918,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this sbyte[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<sbyte, Complex>(value));
@@ -13760,9 +11928,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this sbyte[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<sbyte, Complex>(value));
@@ -13775,9 +11941,7 @@ namespace Accord.Math
         ///   Converts a signed 7-bit byte array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this sbyte[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13789,9 +11953,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this sbyte[,] value, Complex[,] result)
         {
 					unsafe
@@ -13811,9 +11973,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this sbyte[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -13833,9 +11993,7 @@ namespace Accord.Math
         ///   Converts a multidimensional signed 7-bit byte array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this sbyte[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -13848,9 +12006,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this sbyte[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13863,9 +12019,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this sbyte[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13879,9 +12033,7 @@ namespace Accord.Math
         ///   Converts a jagged signed 7-bit byte array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this sbyte[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -13893,9 +12045,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this decimal[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -13905,9 +12055,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this decimal[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<decimal, int>(value));
@@ -13917,9 +12065,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this decimal[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<decimal, int>(value));
@@ -13929,9 +12075,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this decimal[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<decimal, int>(value));
@@ -13941,9 +12085,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this decimal[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<decimal, int>(value));
@@ -13956,9 +12098,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this decimal[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -13970,9 +12110,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this decimal[,] value, int[,] result)
         {
 					unsafe
@@ -13992,9 +12130,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this decimal[,,] value, int[,,] result)
         {
 					unsafe
@@ -14014,9 +12150,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this decimal[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -14029,9 +12163,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this decimal[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14044,9 +12176,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this decimal[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14060,9 +12190,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this decimal[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -14074,9 +12202,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this decimal[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -14086,9 +12212,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this decimal[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<decimal, short>(value));
@@ -14098,9 +12222,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this decimal[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<decimal, short>(value));
@@ -14110,9 +12232,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this decimal[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<decimal, short>(value));
@@ -14122,9 +12242,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this decimal[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<decimal, short>(value));
@@ -14137,9 +12255,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this decimal[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14151,9 +12267,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this decimal[,] value, short[,] result)
         {
 					unsafe
@@ -14173,9 +12287,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this decimal[,,] value, short[,,] result)
         {
 					unsafe
@@ -14195,9 +12307,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this decimal[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -14210,9 +12320,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this decimal[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14225,9 +12333,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this decimal[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14241,9 +12347,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this decimal[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -14255,9 +12359,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this decimal[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -14267,9 +12369,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this decimal[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<decimal, float>(value));
@@ -14279,9 +12379,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this decimal[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<decimal, float>(value));
@@ -14291,9 +12389,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this decimal[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<decimal, float>(value));
@@ -14303,9 +12399,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this decimal[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<decimal, float>(value));
@@ -14318,9 +12412,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this decimal[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14332,9 +12424,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this decimal[,] value, float[,] result)
         {
 					unsafe
@@ -14354,9 +12444,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this decimal[,,] value, float[,,] result)
         {
 					unsafe
@@ -14376,9 +12464,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this decimal[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -14391,9 +12477,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this decimal[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14406,9 +12490,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this decimal[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14422,9 +12504,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this decimal[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -14436,9 +12516,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this decimal[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -14448,9 +12526,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this decimal[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<decimal, double>(value));
@@ -14460,9 +12536,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this decimal[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<decimal, double>(value));
@@ -14472,9 +12546,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this decimal[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<decimal, double>(value));
@@ -14484,9 +12556,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this decimal[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<decimal, double>(value));
@@ -14499,9 +12569,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this decimal[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14513,9 +12581,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this decimal[,] value, double[,] result)
         {
 					unsafe
@@ -14535,9 +12601,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this decimal[,,] value, double[,,] result)
         {
 					unsafe
@@ -14557,9 +12621,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this decimal[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -14572,9 +12634,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this decimal[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14587,9 +12647,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this decimal[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14603,9 +12661,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this decimal[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -14617,9 +12673,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this decimal[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -14629,9 +12683,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this decimal[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<decimal, long>(value));
@@ -14641,9 +12693,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this decimal[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<decimal, long>(value));
@@ -14653,9 +12703,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this decimal[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<decimal, long>(value));
@@ -14665,9 +12713,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this decimal[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<decimal, long>(value));
@@ -14680,9 +12726,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this decimal[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14694,9 +12738,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this decimal[,] value, long[,] result)
         {
 					unsafe
@@ -14716,9 +12758,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this decimal[,,] value, long[,,] result)
         {
 					unsafe
@@ -14738,9 +12778,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this decimal[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -14753,9 +12791,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this decimal[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14768,9 +12804,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this decimal[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14784,9 +12818,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this decimal[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -14798,9 +12830,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this decimal[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -14810,9 +12840,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this decimal[,] value)
         {
             return ToByte(value, Matrix.CreateAs<decimal, byte>(value));
@@ -14822,9 +12850,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this decimal[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<decimal, byte>(value));
@@ -14834,9 +12860,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this decimal[][] value)
         {
             return ToByte(value, Jagged.CreateAs<decimal, byte>(value));
@@ -14846,9 +12870,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this decimal[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<decimal, byte>(value));
@@ -14861,9 +12883,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this decimal[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14875,9 +12895,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this decimal[,] value, byte[,] result)
         {
 					unsafe
@@ -14897,9 +12915,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this decimal[,,] value, byte[,,] result)
         {
 					unsafe
@@ -14919,9 +12935,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this decimal[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -14934,9 +12948,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this decimal[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14949,9 +12961,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this decimal[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -14965,9 +12975,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this decimal[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -14979,9 +12987,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this decimal[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -14991,9 +12997,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this decimal[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<decimal, sbyte>(value));
@@ -15003,9 +13007,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this decimal[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<decimal, sbyte>(value));
@@ -15015,9 +13017,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this decimal[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<decimal, sbyte>(value));
@@ -15027,9 +13027,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this decimal[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<decimal, sbyte>(value));
@@ -15042,9 +13040,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this decimal[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15056,9 +13052,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this decimal[,] value, sbyte[,] result)
         {
 					unsafe
@@ -15078,9 +13072,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this decimal[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -15100,9 +13092,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this decimal[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -15115,9 +13105,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this decimal[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15130,9 +13118,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this decimal[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15146,9 +13132,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this decimal[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -15160,9 +13144,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this decimal[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -15172,9 +13154,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this decimal[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<decimal, bool>(value));
@@ -15184,9 +13164,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this decimal[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<decimal, bool>(value));
@@ -15196,9 +13174,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this decimal[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<decimal, bool>(value));
@@ -15208,9 +13184,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this decimal[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<decimal, bool>(value));
@@ -15223,9 +13197,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this decimal[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15237,9 +13209,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this decimal[,] value, bool[,] result)
         {
 					unsafe
@@ -15259,9 +13229,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this decimal[,,] value, bool[,,] result)
         {
 					unsafe
@@ -15281,9 +13249,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this decimal[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -15296,9 +13262,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this decimal[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15311,9 +13275,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this decimal[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15327,9 +13289,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this decimal[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -15341,9 +13301,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this decimal[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -15353,9 +13311,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this decimal[,] value)
         {
             return ToObject(value, Matrix.CreateAs<decimal, object>(value));
@@ -15365,9 +13321,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this decimal[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<decimal, object>(value));
@@ -15377,9 +13331,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this decimal[][] value)
         {
             return ToObject(value, Jagged.CreateAs<decimal, object>(value));
@@ -15389,9 +13341,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this decimal[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<decimal, object>(value));
@@ -15404,9 +13354,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this decimal[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15418,9 +13366,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this decimal[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -15436,9 +13382,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this decimal[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -15456,9 +13400,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this decimal[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -15471,9 +13413,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this decimal[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15486,9 +13426,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this decimal[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15502,9 +13440,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this decimal[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -15516,9 +13452,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this decimal[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -15528,9 +13462,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this decimal[,] value)
         {
             return ToString(value, Matrix.CreateAs<decimal, string>(value));
@@ -15540,9 +13472,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this decimal[,,] value)
         {
             return ToString(value, Matrix.CreateAs<decimal, string>(value));
@@ -15552,9 +13482,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this decimal[][] value)
         {
             return ToString(value, Jagged.CreateAs<decimal, string>(value));
@@ -15564,9 +13492,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this decimal[][][] value)
         {
             return ToString(value, Jagged.CreateAs<decimal, string>(value));
@@ -15579,9 +13505,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this decimal[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15593,9 +13517,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this decimal[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -15611,9 +13533,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this decimal[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -15631,9 +13551,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this decimal[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -15646,9 +13564,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this decimal[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15661,9 +13577,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this decimal[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15677,9 +13591,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this decimal[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -15691,9 +13603,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this decimal[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -15703,9 +13613,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this decimal[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<decimal, Complex>(value));
@@ -15715,9 +13623,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this decimal[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<decimal, Complex>(value));
@@ -15727,9 +13633,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this decimal[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<decimal, Complex>(value));
@@ -15739,9 +13643,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this decimal[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<decimal, Complex>(value));
@@ -15754,9 +13656,7 @@ namespace Accord.Math
         ///   Converts a decimal fixed-point array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this decimal[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15768,9 +13668,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this decimal[,] value, Complex[,] result)
         {
 					unsafe
@@ -15790,9 +13688,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this decimal[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -15812,9 +13708,7 @@ namespace Accord.Math
         ///   Converts a multidimensional decimal fixed-point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this decimal[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -15827,9 +13721,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this decimal[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15842,9 +13734,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this decimal[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15858,9 +13748,7 @@ namespace Accord.Math
         ///   Converts a jagged decimal fixed-point array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this decimal[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -15872,9 +13760,7 @@ namespace Accord.Math
         ///   Converts a boolean to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this bool[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -15884,9 +13770,7 @@ namespace Accord.Math
         ///   Converts a boolean to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this bool[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<bool, int>(value));
@@ -15896,9 +13780,7 @@ namespace Accord.Math
         ///   Converts a boolean to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this bool[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<bool, int>(value));
@@ -15908,9 +13790,7 @@ namespace Accord.Math
         ///   Converts a boolean to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this bool[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<bool, int>(value));
@@ -15920,9 +13800,7 @@ namespace Accord.Math
         ///   Converts a boolean to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this bool[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<bool, int>(value));
@@ -15935,9 +13813,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this bool[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -15949,9 +13825,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this bool[,] value, int[,] result)
         {
 					unsafe
@@ -15971,9 +13845,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this bool[,,] value, int[,,] result)
         {
 					unsafe
@@ -15993,9 +13865,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this bool[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -16008,9 +13878,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this bool[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16023,9 +13891,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this bool[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16039,9 +13905,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this bool[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -16053,9 +13917,7 @@ namespace Accord.Math
         ///   Converts a boolean to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this bool[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -16065,9 +13927,7 @@ namespace Accord.Math
         ///   Converts a boolean to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this bool[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<bool, short>(value));
@@ -16077,9 +13937,7 @@ namespace Accord.Math
         ///   Converts a boolean to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this bool[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<bool, short>(value));
@@ -16089,9 +13947,7 @@ namespace Accord.Math
         ///   Converts a boolean to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this bool[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<bool, short>(value));
@@ -16101,9 +13957,7 @@ namespace Accord.Math
         ///   Converts a boolean to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this bool[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<bool, short>(value));
@@ -16116,9 +13970,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this bool[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16130,9 +13982,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this bool[,] value, short[,] result)
         {
 					unsafe
@@ -16152,9 +14002,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this bool[,,] value, short[,,] result)
         {
 					unsafe
@@ -16174,9 +14022,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this bool[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -16189,9 +14035,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this bool[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16204,9 +14048,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this bool[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16220,9 +14062,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this bool[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -16234,9 +14074,7 @@ namespace Accord.Math
         ///   Converts a boolean to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this bool[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -16246,9 +14084,7 @@ namespace Accord.Math
         ///   Converts a boolean to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this bool[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<bool, float>(value));
@@ -16258,9 +14094,7 @@ namespace Accord.Math
         ///   Converts a boolean to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this bool[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<bool, float>(value));
@@ -16270,9 +14104,7 @@ namespace Accord.Math
         ///   Converts a boolean to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this bool[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<bool, float>(value));
@@ -16282,9 +14114,7 @@ namespace Accord.Math
         ///   Converts a boolean to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this bool[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<bool, float>(value));
@@ -16297,9 +14127,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this bool[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16311,9 +14139,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this bool[,] value, float[,] result)
         {
 					unsafe
@@ -16333,9 +14159,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this bool[,,] value, float[,,] result)
         {
 					unsafe
@@ -16355,9 +14179,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this bool[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -16370,9 +14192,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this bool[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16385,9 +14205,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this bool[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16401,9 +14219,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this bool[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -16415,9 +14231,7 @@ namespace Accord.Math
         ///   Converts a boolean to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this bool[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -16427,9 +14241,7 @@ namespace Accord.Math
         ///   Converts a boolean to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this bool[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<bool, double>(value));
@@ -16439,9 +14251,7 @@ namespace Accord.Math
         ///   Converts a boolean to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this bool[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<bool, double>(value));
@@ -16451,9 +14261,7 @@ namespace Accord.Math
         ///   Converts a boolean to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this bool[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<bool, double>(value));
@@ -16463,9 +14271,7 @@ namespace Accord.Math
         ///   Converts a boolean to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this bool[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<bool, double>(value));
@@ -16478,9 +14284,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this bool[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16492,9 +14296,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this bool[,] value, double[,] result)
         {
 					unsafe
@@ -16514,9 +14316,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this bool[,,] value, double[,,] result)
         {
 					unsafe
@@ -16536,9 +14336,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this bool[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -16551,9 +14349,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this bool[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16566,9 +14362,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this bool[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16582,9 +14376,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this bool[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -16596,9 +14388,7 @@ namespace Accord.Math
         ///   Converts a boolean to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this bool[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -16608,9 +14398,7 @@ namespace Accord.Math
         ///   Converts a boolean to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this bool[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<bool, long>(value));
@@ -16620,9 +14408,7 @@ namespace Accord.Math
         ///   Converts a boolean to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this bool[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<bool, long>(value));
@@ -16632,9 +14418,7 @@ namespace Accord.Math
         ///   Converts a boolean to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this bool[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<bool, long>(value));
@@ -16644,9 +14428,7 @@ namespace Accord.Math
         ///   Converts a boolean to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this bool[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<bool, long>(value));
@@ -16659,9 +14441,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this bool[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16673,9 +14453,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this bool[,] value, long[,] result)
         {
 					unsafe
@@ -16695,9 +14473,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this bool[,,] value, long[,,] result)
         {
 					unsafe
@@ -16717,9 +14493,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this bool[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -16732,9 +14506,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this bool[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16747,9 +14519,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this bool[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16763,9 +14533,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this bool[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -16777,9 +14545,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this bool[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -16789,9 +14555,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this bool[,] value)
         {
             return ToByte(value, Matrix.CreateAs<bool, byte>(value));
@@ -16801,9 +14565,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this bool[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<bool, byte>(value));
@@ -16813,9 +14575,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this bool[][] value)
         {
             return ToByte(value, Jagged.CreateAs<bool, byte>(value));
@@ -16825,9 +14585,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this bool[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<bool, byte>(value));
@@ -16840,9 +14598,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this bool[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16854,9 +14610,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this bool[,] value, byte[,] result)
         {
 					unsafe
@@ -16876,9 +14630,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this bool[,,] value, byte[,,] result)
         {
 					unsafe
@@ -16898,9 +14650,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this bool[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -16913,9 +14663,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this bool[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16928,9 +14676,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this bool[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -16944,9 +14690,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this bool[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -16958,9 +14702,7 @@ namespace Accord.Math
         ///   Converts a boolean to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this bool[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -16970,9 +14712,7 @@ namespace Accord.Math
         ///   Converts a boolean to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this bool[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<bool, sbyte>(value));
@@ -16982,9 +14722,7 @@ namespace Accord.Math
         ///   Converts a boolean to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this bool[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<bool, sbyte>(value));
@@ -16994,9 +14732,7 @@ namespace Accord.Math
         ///   Converts a boolean to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this bool[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<bool, sbyte>(value));
@@ -17006,9 +14742,7 @@ namespace Accord.Math
         ///   Converts a boolean to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this bool[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<bool, sbyte>(value));
@@ -17021,9 +14755,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this bool[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17035,9 +14767,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this bool[,] value, sbyte[,] result)
         {
 					unsafe
@@ -17057,9 +14787,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this bool[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -17079,9 +14807,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this bool[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -17094,9 +14820,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this bool[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17109,9 +14833,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this bool[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17125,9 +14847,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this bool[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -17139,9 +14859,7 @@ namespace Accord.Math
         ///   Converts a boolean to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this bool[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -17151,9 +14869,7 @@ namespace Accord.Math
         ///   Converts a boolean to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this bool[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<bool, decimal>(value));
@@ -17163,9 +14879,7 @@ namespace Accord.Math
         ///   Converts a boolean to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this bool[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<bool, decimal>(value));
@@ -17175,9 +14889,7 @@ namespace Accord.Math
         ///   Converts a boolean to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this bool[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<bool, decimal>(value));
@@ -17187,9 +14899,7 @@ namespace Accord.Math
         ///   Converts a boolean to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this bool[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<bool, decimal>(value));
@@ -17202,9 +14912,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this bool[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17216,9 +14924,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this bool[,] value, decimal[,] result)
         {
 					unsafe
@@ -17238,9 +14944,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this bool[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -17260,9 +14964,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this bool[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -17275,9 +14977,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this bool[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17290,9 +14990,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this bool[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17306,9 +15004,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this bool[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -17320,9 +15016,7 @@ namespace Accord.Math
         ///   Converts a boolean to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this bool[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -17332,9 +15026,7 @@ namespace Accord.Math
         ///   Converts a boolean to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this bool[,] value)
         {
             return ToObject(value, Matrix.CreateAs<bool, object>(value));
@@ -17344,9 +15036,7 @@ namespace Accord.Math
         ///   Converts a boolean to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this bool[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<bool, object>(value));
@@ -17356,9 +15046,7 @@ namespace Accord.Math
         ///   Converts a boolean to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this bool[][] value)
         {
             return ToObject(value, Jagged.CreateAs<bool, object>(value));
@@ -17368,9 +15056,7 @@ namespace Accord.Math
         ///   Converts a boolean to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this bool[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<bool, object>(value));
@@ -17383,9 +15069,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this bool[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17397,9 +15081,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this bool[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -17415,9 +15097,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this bool[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -17435,9 +15115,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this bool[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -17450,9 +15128,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this bool[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17465,9 +15141,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this bool[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17481,9 +15155,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this bool[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -17495,9 +15167,7 @@ namespace Accord.Math
         ///   Converts a boolean to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this bool[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -17507,9 +15177,7 @@ namespace Accord.Math
         ///   Converts a boolean to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this bool[,] value)
         {
             return ToString(value, Matrix.CreateAs<bool, string>(value));
@@ -17519,9 +15187,7 @@ namespace Accord.Math
         ///   Converts a boolean to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this bool[,,] value)
         {
             return ToString(value, Matrix.CreateAs<bool, string>(value));
@@ -17531,9 +15197,7 @@ namespace Accord.Math
         ///   Converts a boolean to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this bool[][] value)
         {
             return ToString(value, Jagged.CreateAs<bool, string>(value));
@@ -17543,9 +15207,7 @@ namespace Accord.Math
         ///   Converts a boolean to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this bool[][][] value)
         {
             return ToString(value, Jagged.CreateAs<bool, string>(value));
@@ -17558,9 +15220,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this bool[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17572,9 +15232,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this bool[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -17590,9 +15248,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this bool[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -17610,9 +15266,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this bool[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -17625,9 +15279,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this bool[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17640,9 +15292,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this bool[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17656,9 +15306,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this bool[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -17670,9 +15318,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this bool[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -17682,9 +15328,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this bool[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<bool, Complex>(value));
@@ -17694,9 +15338,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this bool[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<bool, Complex>(value));
@@ -17706,9 +15348,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this bool[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<bool, Complex>(value));
@@ -17718,9 +15358,7 @@ namespace Accord.Math
         ///   Converts a boolean to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this bool[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<bool, Complex>(value));
@@ -17733,9 +15371,7 @@ namespace Accord.Math
         ///   Converts a boolean array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this bool[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17747,9 +15383,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this bool[,] value, Complex[,] result)
         {
 					unsafe
@@ -17769,9 +15403,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this bool[,,] value, Complex[,,] result)
         {
 					unsafe
@@ -17791,9 +15423,7 @@ namespace Accord.Math
         ///   Converts a multidimensional boolean array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this bool[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -17806,9 +15436,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this bool[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17821,9 +15449,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this bool[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17837,9 +15463,7 @@ namespace Accord.Math
         ///   Converts a jagged boolean array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this bool[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -17851,9 +15475,7 @@ namespace Accord.Math
         ///   Converts a object to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this object[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -17863,9 +15485,7 @@ namespace Accord.Math
         ///   Converts a object to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this object[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<object, int>(value));
@@ -17875,9 +15495,7 @@ namespace Accord.Math
         ///   Converts a object to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this object[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<object, int>(value));
@@ -17887,9 +15505,7 @@ namespace Accord.Math
         ///   Converts a object to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this object[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<object, int>(value));
@@ -17899,9 +15515,7 @@ namespace Accord.Math
         ///   Converts a object to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this object[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<object, int>(value));
@@ -17914,9 +15528,7 @@ namespace Accord.Math
         ///   Converts a object array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this object[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17928,9 +15540,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this object[,] value, int[,] result)
         {
 					int r = value.GetLength(0);
@@ -17946,9 +15556,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this object[,,] value, int[,,] result)
         {
 					int r = value.GetLength(0);
@@ -17966,9 +15574,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this object[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -17981,9 +15587,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this object[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -17996,9 +15600,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this object[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18012,9 +15614,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this object[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -18026,9 +15626,7 @@ namespace Accord.Math
         ///   Converts a object to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this object[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -18038,9 +15636,7 @@ namespace Accord.Math
         ///   Converts a object to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this object[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<object, short>(value));
@@ -18050,9 +15646,7 @@ namespace Accord.Math
         ///   Converts a object to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this object[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<object, short>(value));
@@ -18062,9 +15656,7 @@ namespace Accord.Math
         ///   Converts a object to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this object[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<object, short>(value));
@@ -18074,9 +15666,7 @@ namespace Accord.Math
         ///   Converts a object to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this object[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<object, short>(value));
@@ -18089,9 +15679,7 @@ namespace Accord.Math
         ///   Converts a object array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this object[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18103,9 +15691,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this object[,] value, short[,] result)
         {
 					int r = value.GetLength(0);
@@ -18121,9 +15707,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this object[,,] value, short[,,] result)
         {
 					int r = value.GetLength(0);
@@ -18141,9 +15725,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this object[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -18156,9 +15738,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this object[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18171,9 +15751,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this object[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18187,9 +15765,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this object[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -18201,9 +15777,7 @@ namespace Accord.Math
         ///   Converts a object to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this object[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -18213,9 +15787,7 @@ namespace Accord.Math
         ///   Converts a object to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this object[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<object, float>(value));
@@ -18225,9 +15797,7 @@ namespace Accord.Math
         ///   Converts a object to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this object[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<object, float>(value));
@@ -18237,9 +15807,7 @@ namespace Accord.Math
         ///   Converts a object to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this object[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<object, float>(value));
@@ -18249,9 +15817,7 @@ namespace Accord.Math
         ///   Converts a object to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this object[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<object, float>(value));
@@ -18264,9 +15830,7 @@ namespace Accord.Math
         ///   Converts a object array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this object[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18278,9 +15842,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this object[,] value, float[,] result)
         {
 					int r = value.GetLength(0);
@@ -18296,9 +15858,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this object[,,] value, float[,,] result)
         {
 					int r = value.GetLength(0);
@@ -18316,9 +15876,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this object[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -18331,9 +15889,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this object[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18346,9 +15902,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this object[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18362,9 +15916,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this object[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -18376,9 +15928,7 @@ namespace Accord.Math
         ///   Converts a object to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this object[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -18388,9 +15938,7 @@ namespace Accord.Math
         ///   Converts a object to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this object[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<object, double>(value));
@@ -18400,9 +15948,7 @@ namespace Accord.Math
         ///   Converts a object to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this object[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<object, double>(value));
@@ -18412,9 +15958,7 @@ namespace Accord.Math
         ///   Converts a object to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this object[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<object, double>(value));
@@ -18424,9 +15968,7 @@ namespace Accord.Math
         ///   Converts a object to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this object[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<object, double>(value));
@@ -18439,9 +15981,7 @@ namespace Accord.Math
         ///   Converts a object array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this object[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18453,9 +15993,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this object[,] value, double[,] result)
         {
 					int r = value.GetLength(0);
@@ -18471,9 +16009,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this object[,,] value, double[,,] result)
         {
 					int r = value.GetLength(0);
@@ -18491,9 +16027,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this object[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -18506,9 +16040,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this object[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18521,9 +16053,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this object[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18537,9 +16067,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this object[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -18551,9 +16079,7 @@ namespace Accord.Math
         ///   Converts a object to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this object[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -18563,9 +16089,7 @@ namespace Accord.Math
         ///   Converts a object to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this object[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<object, long>(value));
@@ -18575,9 +16099,7 @@ namespace Accord.Math
         ///   Converts a object to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this object[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<object, long>(value));
@@ -18587,9 +16109,7 @@ namespace Accord.Math
         ///   Converts a object to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this object[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<object, long>(value));
@@ -18599,9 +16119,7 @@ namespace Accord.Math
         ///   Converts a object to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this object[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<object, long>(value));
@@ -18614,9 +16132,7 @@ namespace Accord.Math
         ///   Converts a object array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this object[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18628,9 +16144,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this object[,] value, long[,] result)
         {
 					int r = value.GetLength(0);
@@ -18646,9 +16160,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this object[,,] value, long[,,] result)
         {
 					int r = value.GetLength(0);
@@ -18666,9 +16178,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this object[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -18681,9 +16191,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this object[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18696,9 +16204,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this object[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18712,9 +16218,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this object[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -18726,9 +16230,7 @@ namespace Accord.Math
         ///   Converts a object to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this object[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -18738,9 +16240,7 @@ namespace Accord.Math
         ///   Converts a object to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this object[,] value)
         {
             return ToByte(value, Matrix.CreateAs<object, byte>(value));
@@ -18750,9 +16250,7 @@ namespace Accord.Math
         ///   Converts a object to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this object[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<object, byte>(value));
@@ -18762,9 +16260,7 @@ namespace Accord.Math
         ///   Converts a object to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this object[][] value)
         {
             return ToByte(value, Jagged.CreateAs<object, byte>(value));
@@ -18774,9 +16270,7 @@ namespace Accord.Math
         ///   Converts a object to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this object[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<object, byte>(value));
@@ -18789,9 +16283,7 @@ namespace Accord.Math
         ///   Converts a object array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this object[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18803,9 +16295,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this object[,] value, byte[,] result)
         {
 					int r = value.GetLength(0);
@@ -18821,9 +16311,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this object[,,] value, byte[,,] result)
         {
 					int r = value.GetLength(0);
@@ -18841,9 +16329,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this object[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -18856,9 +16342,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this object[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18871,9 +16355,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this object[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18887,9 +16369,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this object[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -18901,9 +16381,7 @@ namespace Accord.Math
         ///   Converts a object to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this object[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -18913,9 +16391,7 @@ namespace Accord.Math
         ///   Converts a object to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this object[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<object, sbyte>(value));
@@ -18925,9 +16401,7 @@ namespace Accord.Math
         ///   Converts a object to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this object[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<object, sbyte>(value));
@@ -18937,9 +16411,7 @@ namespace Accord.Math
         ///   Converts a object to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this object[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<object, sbyte>(value));
@@ -18949,9 +16421,7 @@ namespace Accord.Math
         ///   Converts a object to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this object[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<object, sbyte>(value));
@@ -18964,9 +16434,7 @@ namespace Accord.Math
         ///   Converts a object array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this object[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -18978,9 +16446,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this object[,] value, sbyte[,] result)
         {
 					int r = value.GetLength(0);
@@ -18996,9 +16462,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this object[,,] value, sbyte[,,] result)
         {
 					int r = value.GetLength(0);
@@ -19016,9 +16480,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this object[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -19031,9 +16493,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this object[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19046,9 +16506,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this object[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19062,9 +16520,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this object[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -19076,9 +16532,7 @@ namespace Accord.Math
         ///   Converts a object to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this object[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -19088,9 +16542,7 @@ namespace Accord.Math
         ///   Converts a object to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this object[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<object, decimal>(value));
@@ -19100,9 +16552,7 @@ namespace Accord.Math
         ///   Converts a object to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this object[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<object, decimal>(value));
@@ -19112,9 +16562,7 @@ namespace Accord.Math
         ///   Converts a object to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this object[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<object, decimal>(value));
@@ -19124,9 +16572,7 @@ namespace Accord.Math
         ///   Converts a object to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this object[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<object, decimal>(value));
@@ -19139,9 +16585,7 @@ namespace Accord.Math
         ///   Converts a object array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this object[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19153,9 +16597,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this object[,] value, decimal[,] result)
         {
 					int r = value.GetLength(0);
@@ -19171,9 +16613,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this object[,,] value, decimal[,,] result)
         {
 					int r = value.GetLength(0);
@@ -19191,9 +16631,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this object[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -19206,9 +16644,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this object[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19221,9 +16657,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this object[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19237,9 +16671,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this object[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -19251,9 +16683,7 @@ namespace Accord.Math
         ///   Converts a object to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this object[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -19263,9 +16693,7 @@ namespace Accord.Math
         ///   Converts a object to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this object[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<object, bool>(value));
@@ -19275,9 +16703,7 @@ namespace Accord.Math
         ///   Converts a object to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this object[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<object, bool>(value));
@@ -19287,9 +16713,7 @@ namespace Accord.Math
         ///   Converts a object to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this object[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<object, bool>(value));
@@ -19299,9 +16723,7 @@ namespace Accord.Math
         ///   Converts a object to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this object[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<object, bool>(value));
@@ -19314,9 +16736,7 @@ namespace Accord.Math
         ///   Converts a object array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this object[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19328,9 +16748,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this object[,] value, bool[,] result)
         {
 					int r = value.GetLength(0);
@@ -19346,9 +16764,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this object[,,] value, bool[,,] result)
         {
 					int r = value.GetLength(0);
@@ -19366,9 +16782,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this object[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -19381,9 +16795,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this object[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19396,9 +16808,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this object[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19412,9 +16822,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this object[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -19426,9 +16834,7 @@ namespace Accord.Math
         ///   Converts a object to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this object[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -19438,9 +16844,7 @@ namespace Accord.Math
         ///   Converts a object to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this object[,] value)
         {
             return ToString(value, Matrix.CreateAs<object, string>(value));
@@ -19450,9 +16854,7 @@ namespace Accord.Math
         ///   Converts a object to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this object[,,] value)
         {
             return ToString(value, Matrix.CreateAs<object, string>(value));
@@ -19462,9 +16864,7 @@ namespace Accord.Math
         ///   Converts a object to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this object[][] value)
         {
             return ToString(value, Jagged.CreateAs<object, string>(value));
@@ -19474,9 +16874,7 @@ namespace Accord.Math
         ///   Converts a object to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this object[][][] value)
         {
             return ToString(value, Jagged.CreateAs<object, string>(value));
@@ -19489,9 +16887,7 @@ namespace Accord.Math
         ///   Converts a object array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this object[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19503,9 +16899,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this object[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -19521,9 +16915,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this object[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -19541,9 +16933,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this object[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -19556,9 +16946,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this object[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19571,9 +16959,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this object[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19587,9 +16973,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this object[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -19601,9 +16985,7 @@ namespace Accord.Math
         ///   Converts a object to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this object[] value)
         {
             return ToComplex(value, new Complex[value.Length]);
@@ -19613,9 +16995,7 @@ namespace Accord.Math
         ///   Converts a object to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this object[,] value)
         {
             return ToComplex(value, Matrix.CreateAs<object, Complex>(value));
@@ -19625,9 +17005,7 @@ namespace Accord.Math
         ///   Converts a object to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this object[,,] value)
         {
             return ToComplex(value, Matrix.CreateAs<object, Complex>(value));
@@ -19637,9 +17015,7 @@ namespace Accord.Math
         ///   Converts a object to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this object[][] value)
         {
             return ToComplex(value, Jagged.CreateAs<object, Complex>(value));
@@ -19649,9 +17025,7 @@ namespace Accord.Math
         ///   Converts a object to a 128-bit complex.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this object[][][] value)
         {
             return ToComplex(value, Jagged.CreateAs<object, Complex>(value));
@@ -19664,9 +17038,7 @@ namespace Accord.Math
         ///   Converts a object array to a 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[] ToComplex(this object[] value, Complex[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19678,9 +17050,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this object[,] value, Complex[,] result)
         {
 					int r = value.GetLength(0);
@@ -19696,9 +17066,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,,] ToComplex(this object[,,] value, Complex[,,] result)
         {
 					int r = value.GetLength(0);
@@ -19716,9 +17084,7 @@ namespace Accord.Math
         ///   Converts a multidimensional object array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this object[,] value, Complex[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -19731,9 +17097,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][] ToComplex(this object[][] value, Complex[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19746,9 +17110,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a jagged 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[][][] ToComplex(this object[][][] value, Complex[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19762,9 +17124,7 @@ namespace Accord.Math
         ///   Converts a jagged object array to a multidimensional 128-bit complex array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Complex[,] ToComplex(this object[][] value, Complex[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -19776,9 +17136,7 @@ namespace Accord.Math
         ///   Converts a string to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this string[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -19788,9 +17146,7 @@ namespace Accord.Math
         ///   Converts a string to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this string[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<string, int>(value));
@@ -19800,9 +17156,7 @@ namespace Accord.Math
         ///   Converts a string to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this string[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<string, int>(value));
@@ -19812,9 +17166,7 @@ namespace Accord.Math
         ///   Converts a string to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this string[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<string, int>(value));
@@ -19824,9 +17176,7 @@ namespace Accord.Math
         ///   Converts a string to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this string[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<string, int>(value));
@@ -19839,9 +17189,7 @@ namespace Accord.Math
         ///   Converts a string array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this string[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19853,9 +17201,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this string[,] value, int[,] result)
         {
 					int r = value.GetLength(0);
@@ -19871,9 +17217,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this string[,,] value, int[,,] result)
         {
 					int r = value.GetLength(0);
@@ -19891,9 +17235,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this string[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -19906,9 +17248,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this string[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19921,9 +17261,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this string[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -19937,9 +17275,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this string[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -19951,9 +17287,7 @@ namespace Accord.Math
         ///   Converts a string to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this string[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -19963,9 +17297,7 @@ namespace Accord.Math
         ///   Converts a string to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this string[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<string, short>(value));
@@ -19975,9 +17307,7 @@ namespace Accord.Math
         ///   Converts a string to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this string[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<string, short>(value));
@@ -19987,9 +17317,7 @@ namespace Accord.Math
         ///   Converts a string to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this string[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<string, short>(value));
@@ -19999,9 +17327,7 @@ namespace Accord.Math
         ///   Converts a string to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this string[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<string, short>(value));
@@ -20014,9 +17340,7 @@ namespace Accord.Math
         ///   Converts a string array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this string[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20028,9 +17352,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this string[,] value, short[,] result)
         {
 					int r = value.GetLength(0);
@@ -20046,9 +17368,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this string[,,] value, short[,,] result)
         {
 					int r = value.GetLength(0);
@@ -20066,9 +17386,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this string[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -20081,9 +17399,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this string[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20096,9 +17412,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this string[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20112,9 +17426,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this string[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -20126,9 +17438,7 @@ namespace Accord.Math
         ///   Converts a string to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this string[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -20138,9 +17448,7 @@ namespace Accord.Math
         ///   Converts a string to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this string[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<string, float>(value));
@@ -20150,9 +17458,7 @@ namespace Accord.Math
         ///   Converts a string to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this string[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<string, float>(value));
@@ -20162,9 +17468,7 @@ namespace Accord.Math
         ///   Converts a string to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this string[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<string, float>(value));
@@ -20174,9 +17478,7 @@ namespace Accord.Math
         ///   Converts a string to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this string[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<string, float>(value));
@@ -20189,9 +17491,7 @@ namespace Accord.Math
         ///   Converts a string array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this string[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20203,9 +17503,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this string[,] value, float[,] result)
         {
 					int r = value.GetLength(0);
@@ -20221,9 +17519,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this string[,,] value, float[,,] result)
         {
 					int r = value.GetLength(0);
@@ -20241,9 +17537,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this string[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -20256,9 +17550,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this string[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20271,9 +17563,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this string[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20287,9 +17577,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this string[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -20301,9 +17589,7 @@ namespace Accord.Math
         ///   Converts a string to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this string[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -20313,9 +17599,7 @@ namespace Accord.Math
         ///   Converts a string to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this string[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<string, double>(value));
@@ -20325,9 +17609,7 @@ namespace Accord.Math
         ///   Converts a string to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this string[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<string, double>(value));
@@ -20337,9 +17619,7 @@ namespace Accord.Math
         ///   Converts a string to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this string[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<string, double>(value));
@@ -20349,9 +17629,7 @@ namespace Accord.Math
         ///   Converts a string to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this string[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<string, double>(value));
@@ -20364,9 +17642,7 @@ namespace Accord.Math
         ///   Converts a string array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this string[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20378,9 +17654,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this string[,] value, double[,] result)
         {
 					int r = value.GetLength(0);
@@ -20396,9 +17670,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this string[,,] value, double[,,] result)
         {
 					int r = value.GetLength(0);
@@ -20416,9 +17688,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this string[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -20431,9 +17701,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this string[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20446,9 +17714,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this string[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20462,9 +17728,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this string[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -20476,9 +17740,7 @@ namespace Accord.Math
         ///   Converts a string to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this string[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -20488,9 +17750,7 @@ namespace Accord.Math
         ///   Converts a string to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this string[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<string, long>(value));
@@ -20500,9 +17760,7 @@ namespace Accord.Math
         ///   Converts a string to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this string[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<string, long>(value));
@@ -20512,9 +17770,7 @@ namespace Accord.Math
         ///   Converts a string to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this string[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<string, long>(value));
@@ -20524,9 +17780,7 @@ namespace Accord.Math
         ///   Converts a string to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this string[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<string, long>(value));
@@ -20539,9 +17793,7 @@ namespace Accord.Math
         ///   Converts a string array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this string[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20553,9 +17805,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this string[,] value, long[,] result)
         {
 					int r = value.GetLength(0);
@@ -20571,9 +17821,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this string[,,] value, long[,,] result)
         {
 					int r = value.GetLength(0);
@@ -20591,9 +17839,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this string[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -20606,9 +17852,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this string[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20621,9 +17865,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this string[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20637,9 +17879,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this string[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -20651,9 +17891,7 @@ namespace Accord.Math
         ///   Converts a string to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this string[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -20663,9 +17901,7 @@ namespace Accord.Math
         ///   Converts a string to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this string[,] value)
         {
             return ToByte(value, Matrix.CreateAs<string, byte>(value));
@@ -20675,9 +17911,7 @@ namespace Accord.Math
         ///   Converts a string to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this string[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<string, byte>(value));
@@ -20687,9 +17921,7 @@ namespace Accord.Math
         ///   Converts a string to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this string[][] value)
         {
             return ToByte(value, Jagged.CreateAs<string, byte>(value));
@@ -20699,9 +17931,7 @@ namespace Accord.Math
         ///   Converts a string to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this string[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<string, byte>(value));
@@ -20714,9 +17944,7 @@ namespace Accord.Math
         ///   Converts a string array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this string[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20728,9 +17956,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this string[,] value, byte[,] result)
         {
 					int r = value.GetLength(0);
@@ -20746,9 +17972,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this string[,,] value, byte[,,] result)
         {
 					int r = value.GetLength(0);
@@ -20766,9 +17990,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this string[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -20781,9 +18003,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this string[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20796,9 +18016,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this string[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20812,9 +18030,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this string[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -20826,9 +18042,7 @@ namespace Accord.Math
         ///   Converts a string to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this string[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -20838,9 +18052,7 @@ namespace Accord.Math
         ///   Converts a string to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this string[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<string, sbyte>(value));
@@ -20850,9 +18062,7 @@ namespace Accord.Math
         ///   Converts a string to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this string[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<string, sbyte>(value));
@@ -20862,9 +18072,7 @@ namespace Accord.Math
         ///   Converts a string to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this string[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<string, sbyte>(value));
@@ -20874,9 +18082,7 @@ namespace Accord.Math
         ///   Converts a string to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this string[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<string, sbyte>(value));
@@ -20889,9 +18095,7 @@ namespace Accord.Math
         ///   Converts a string array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this string[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20903,9 +18107,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this string[,] value, sbyte[,] result)
         {
 					int r = value.GetLength(0);
@@ -20921,9 +18123,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this string[,,] value, sbyte[,,] result)
         {
 					int r = value.GetLength(0);
@@ -20941,9 +18141,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this string[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -20956,9 +18154,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this string[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20971,9 +18167,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this string[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -20987,9 +18181,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this string[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -21001,9 +18193,7 @@ namespace Accord.Math
         ///   Converts a string to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this string[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -21013,9 +18203,7 @@ namespace Accord.Math
         ///   Converts a string to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this string[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<string, decimal>(value));
@@ -21025,9 +18213,7 @@ namespace Accord.Math
         ///   Converts a string to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this string[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<string, decimal>(value));
@@ -21037,9 +18223,7 @@ namespace Accord.Math
         ///   Converts a string to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this string[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<string, decimal>(value));
@@ -21049,9 +18233,7 @@ namespace Accord.Math
         ///   Converts a string to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this string[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<string, decimal>(value));
@@ -21064,9 +18246,7 @@ namespace Accord.Math
         ///   Converts a string array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this string[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21078,9 +18258,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this string[,] value, decimal[,] result)
         {
 					int r = value.GetLength(0);
@@ -21096,9 +18274,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this string[,,] value, decimal[,,] result)
         {
 					int r = value.GetLength(0);
@@ -21116,9 +18292,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this string[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -21131,9 +18305,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this string[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21146,9 +18318,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this string[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21162,9 +18332,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this string[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -21176,9 +18344,7 @@ namespace Accord.Math
         ///   Converts a string to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this string[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -21188,9 +18354,7 @@ namespace Accord.Math
         ///   Converts a string to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this string[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<string, bool>(value));
@@ -21200,9 +18364,7 @@ namespace Accord.Math
         ///   Converts a string to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this string[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<string, bool>(value));
@@ -21212,9 +18374,7 @@ namespace Accord.Math
         ///   Converts a string to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this string[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<string, bool>(value));
@@ -21224,9 +18384,7 @@ namespace Accord.Math
         ///   Converts a string to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this string[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<string, bool>(value));
@@ -21239,9 +18397,7 @@ namespace Accord.Math
         ///   Converts a string array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this string[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21253,9 +18409,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this string[,] value, bool[,] result)
         {
 					int r = value.GetLength(0);
@@ -21271,9 +18425,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this string[,,] value, bool[,,] result)
         {
 					int r = value.GetLength(0);
@@ -21291,9 +18443,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this string[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -21306,9 +18456,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this string[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21321,9 +18469,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this string[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21337,9 +18483,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this string[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -21351,9 +18495,7 @@ namespace Accord.Math
         ///   Converts a string to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this string[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -21363,9 +18505,7 @@ namespace Accord.Math
         ///   Converts a string to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this string[,] value)
         {
             return ToObject(value, Matrix.CreateAs<string, object>(value));
@@ -21375,9 +18515,7 @@ namespace Accord.Math
         ///   Converts a string to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this string[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<string, object>(value));
@@ -21387,9 +18525,7 @@ namespace Accord.Math
         ///   Converts a string to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this string[][] value)
         {
             return ToObject(value, Jagged.CreateAs<string, object>(value));
@@ -21399,9 +18535,7 @@ namespace Accord.Math
         ///   Converts a string to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this string[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<string, object>(value));
@@ -21414,9 +18548,7 @@ namespace Accord.Math
         ///   Converts a string array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this string[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21428,9 +18560,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this string[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -21446,9 +18576,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this string[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -21466,9 +18594,7 @@ namespace Accord.Math
         ///   Converts a multidimensional string array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this string[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -21481,9 +18607,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this string[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21496,9 +18620,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this string[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21512,9 +18634,7 @@ namespace Accord.Math
         ///   Converts a jagged string array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this string[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -21526,9 +18646,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this Complex[] value)
         {
             return ToInt32(value, new int[value.Length]);
@@ -21538,9 +18656,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this Complex[,] value)
         {
             return ToInt32(value, Matrix.CreateAs<Complex, int>(value));
@@ -21550,9 +18666,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this Complex[,,] value)
         {
             return ToInt32(value, Matrix.CreateAs<Complex, int>(value));
@@ -21562,9 +18676,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this Complex[][] value)
         {
             return ToInt32(value, Jagged.CreateAs<Complex, int>(value));
@@ -21574,9 +18686,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this Complex[][][] value)
         {
             return ToInt32(value, Jagged.CreateAs<Complex, int>(value));
@@ -21589,9 +18699,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[] ToInt32(this Complex[] value, int[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21603,9 +18711,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this Complex[,] value, int[,] result)
         {
 					unsafe
@@ -21625,9 +18731,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,,] ToInt32(this Complex[,,] value, int[,,] result)
         {
 					unsafe
@@ -21647,9 +18751,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this Complex[,] value, int[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -21662,9 +18764,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] ToInt32(this Complex[][] value, int[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21677,9 +18777,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][][] ToInt32(this Complex[][][] value, int[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21693,9 +18791,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] ToInt32(this Complex[][] value, int[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -21707,9 +18803,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this Complex[] value)
         {
             return ToInt16(value, new short[value.Length]);
@@ -21719,9 +18813,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this Complex[,] value)
         {
             return ToInt16(value, Matrix.CreateAs<Complex, short>(value));
@@ -21731,9 +18823,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this Complex[,,] value)
         {
             return ToInt16(value, Matrix.CreateAs<Complex, short>(value));
@@ -21743,9 +18833,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this Complex[][] value)
         {
             return ToInt16(value, Jagged.CreateAs<Complex, short>(value));
@@ -21755,9 +18843,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a short integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this Complex[][][] value)
         {
             return ToInt16(value, Jagged.CreateAs<Complex, short>(value));
@@ -21770,9 +18856,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[] ToInt16(this Complex[] value, short[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21784,9 +18868,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this Complex[,] value, short[,] result)
         {
 					unsafe
@@ -21806,9 +18888,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,,] ToInt16(this Complex[,,] value, short[,,] result)
         {
 					unsafe
@@ -21828,9 +18908,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this Complex[,] value, short[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -21843,9 +18921,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] ToInt16(this Complex[][] value, short[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21858,9 +18934,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][][] ToInt16(this Complex[][][] value, short[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21874,9 +18948,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional short integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[,] ToInt16(this Complex[][] value, short[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -21888,9 +18960,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this Complex[] value)
         {
             return ToSingle(value, new float[value.Length]);
@@ -21900,9 +18970,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this Complex[,] value)
         {
             return ToSingle(value, Matrix.CreateAs<Complex, float>(value));
@@ -21912,9 +18980,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this Complex[,,] value)
         {
             return ToSingle(value, Matrix.CreateAs<Complex, float>(value));
@@ -21924,9 +18990,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this Complex[][] value)
         {
             return ToSingle(value, Jagged.CreateAs<Complex, float>(value));
@@ -21936,9 +19000,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a single-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this Complex[][][] value)
         {
             return ToSingle(value, Jagged.CreateAs<Complex, float>(value));
@@ -21951,9 +19013,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[] ToSingle(this Complex[] value, float[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -21965,9 +19025,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this Complex[,] value, float[,] result)
         {
 					unsafe
@@ -21987,9 +19045,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,,] ToSingle(this Complex[,,] value, float[,,] result)
         {
 					unsafe
@@ -22009,9 +19065,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this Complex[,] value, float[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -22024,9 +19078,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] ToSingle(this Complex[][] value, float[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22039,9 +19091,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][][] ToSingle(this Complex[][][] value, float[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22055,9 +19105,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional single-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] ToSingle(this Complex[][] value, float[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -22069,9 +19117,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this Complex[] value)
         {
             return ToDouble(value, new double[value.Length]);
@@ -22081,9 +19127,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this Complex[,] value)
         {
             return ToDouble(value, Matrix.CreateAs<Complex, double>(value));
@@ -22093,9 +19137,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this Complex[,,] value)
         {
             return ToDouble(value, Matrix.CreateAs<Complex, double>(value));
@@ -22105,9 +19147,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this Complex[][] value)
         {
             return ToDouble(value, Jagged.CreateAs<Complex, double>(value));
@@ -22117,9 +19157,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a double-precision floating point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this Complex[][][] value)
         {
             return ToDouble(value, Jagged.CreateAs<Complex, double>(value));
@@ -22132,9 +19170,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[] ToDouble(this Complex[] value, double[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22146,9 +19182,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this Complex[,] value, double[,] result)
         {
 					unsafe
@@ -22168,9 +19202,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,,] ToDouble(this Complex[,,] value, double[,,] result)
         {
 					unsafe
@@ -22190,9 +19222,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this Complex[,] value, double[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -22205,9 +19235,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] ToDouble(this Complex[][] value, double[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22220,9 +19248,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][][] ToDouble(this Complex[][][] value, double[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22236,9 +19262,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional double-precision floating point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] ToDouble(this Complex[][] value, double[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -22250,9 +19274,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this Complex[] value)
         {
             return ToInt64(value, new long[value.Length]);
@@ -22262,9 +19284,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this Complex[,] value)
         {
             return ToInt64(value, Matrix.CreateAs<Complex, long>(value));
@@ -22274,9 +19294,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this Complex[,,] value)
         {
             return ToInt64(value, Matrix.CreateAs<Complex, long>(value));
@@ -22286,9 +19304,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this Complex[][] value)
         {
             return ToInt64(value, Jagged.CreateAs<Complex, long>(value));
@@ -22298,9 +19314,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a long integer.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this Complex[][][] value)
         {
             return ToInt64(value, Jagged.CreateAs<Complex, long>(value));
@@ -22313,9 +19327,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[] ToInt64(this Complex[] value, long[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22327,9 +19339,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this Complex[,] value, long[,] result)
         {
 					unsafe
@@ -22349,9 +19359,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,,] ToInt64(this Complex[,,] value, long[,,] result)
         {
 					unsafe
@@ -22371,9 +19379,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this Complex[,] value, long[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -22386,9 +19392,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] ToInt64(this Complex[][] value, long[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22401,9 +19405,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][][] ToInt64(this Complex[][][] value, long[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22417,9 +19419,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional long integer array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[,] ToInt64(this Complex[][] value, long[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -22431,9 +19431,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this Complex[] value)
         {
             return ToByte(value, new byte[value.Length]);
@@ -22443,9 +19441,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this Complex[,] value)
         {
             return ToByte(value, Matrix.CreateAs<Complex, byte>(value));
@@ -22455,9 +19451,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this Complex[,,] value)
         {
             return ToByte(value, Matrix.CreateAs<Complex, byte>(value));
@@ -22467,9 +19461,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this Complex[][] value)
         {
             return ToByte(value, Jagged.CreateAs<Complex, byte>(value));
@@ -22479,9 +19471,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a 8-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this Complex[][][] value)
         {
             return ToByte(value, Jagged.CreateAs<Complex, byte>(value));
@@ -22494,9 +19484,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[] ToByte(this Complex[] value, byte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22508,9 +19496,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this Complex[,] value, byte[,] result)
         {
 					unsafe
@@ -22530,9 +19516,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,,] ToByte(this Complex[,,] value, byte[,,] result)
         {
 					unsafe
@@ -22552,9 +19536,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this Complex[,] value, byte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -22567,9 +19549,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] ToByte(this Complex[][] value, byte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22582,9 +19562,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][][] ToByte(this Complex[][][] value, byte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22598,9 +19576,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional 8-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] ToByte(this Complex[][] value, byte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -22612,9 +19588,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this Complex[] value)
         {
             return ToSByte(value, new sbyte[value.Length]);
@@ -22624,9 +19598,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this Complex[,] value)
         {
             return ToSByte(value, Matrix.CreateAs<Complex, sbyte>(value));
@@ -22636,9 +19608,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this Complex[,,] value)
         {
             return ToSByte(value, Matrix.CreateAs<Complex, sbyte>(value));
@@ -22648,9 +19618,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this Complex[][] value)
         {
             return ToSByte(value, Jagged.CreateAs<Complex, sbyte>(value));
@@ -22660,9 +19628,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a signed 7-bit byte.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this Complex[][][] value)
         {
             return ToSByte(value, Jagged.CreateAs<Complex, sbyte>(value));
@@ -22675,9 +19641,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[] ToSByte(this Complex[] value, sbyte[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22689,9 +19653,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this Complex[,] value, sbyte[,] result)
         {
 					unsafe
@@ -22711,9 +19673,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,,] ToSByte(this Complex[,,] value, sbyte[,,] result)
         {
 					unsafe
@@ -22733,9 +19693,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this Complex[,] value, sbyte[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -22748,9 +19706,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] ToSByte(this Complex[][] value, sbyte[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22763,9 +19719,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][][] ToSByte(this Complex[][][] value, sbyte[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22779,9 +19733,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional signed 7-bit byte array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[,] ToSByte(this Complex[][] value, sbyte[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -22793,9 +19745,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this Complex[] value)
         {
             return ToDecimal(value, new decimal[value.Length]);
@@ -22805,9 +19755,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this Complex[,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<Complex, decimal>(value));
@@ -22817,9 +19765,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this Complex[,,] value)
         {
             return ToDecimal(value, Matrix.CreateAs<Complex, decimal>(value));
@@ -22829,9 +19775,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this Complex[][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<Complex, decimal>(value));
@@ -22841,9 +19785,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a decimal fixed-point.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this Complex[][][] value)
         {
             return ToDecimal(value, Jagged.CreateAs<Complex, decimal>(value));
@@ -22856,9 +19798,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[] ToDecimal(this Complex[] value, decimal[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22870,9 +19810,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this Complex[,] value, decimal[,] result)
         {
 					unsafe
@@ -22892,9 +19830,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,,] ToDecimal(this Complex[,,] value, decimal[,,] result)
         {
 					unsafe
@@ -22914,9 +19850,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this Complex[,] value, decimal[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -22929,9 +19863,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] ToDecimal(this Complex[][] value, decimal[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22944,9 +19876,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][][] ToDecimal(this Complex[][][] value, decimal[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -22960,9 +19890,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional decimal fixed-point array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] ToDecimal(this Complex[][] value, decimal[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -22974,9 +19902,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this Complex[] value)
         {
             return ToBoolean(value, new bool[value.Length]);
@@ -22986,9 +19912,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this Complex[,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<Complex, bool>(value));
@@ -22998,9 +19922,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this Complex[,,] value)
         {
             return ToBoolean(value, Matrix.CreateAs<Complex, bool>(value));
@@ -23010,9 +19932,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this Complex[][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<Complex, bool>(value));
@@ -23022,9 +19942,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a boolean.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this Complex[][][] value)
         {
             return ToBoolean(value, Jagged.CreateAs<Complex, bool>(value));
@@ -23037,9 +19955,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] ToBoolean(this Complex[] value, bool[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23051,9 +19967,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this Complex[,] value, bool[,] result)
         {
 					unsafe
@@ -23073,9 +19987,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,,] ToBoolean(this Complex[,,] value, bool[,,] result)
         {
 					unsafe
@@ -23095,9 +20007,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this Complex[,] value, bool[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -23110,9 +20020,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] ToBoolean(this Complex[][] value, bool[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23125,9 +20033,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][][] ToBoolean(this Complex[][][] value, bool[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23141,9 +20047,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional boolean array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] ToBoolean(this Complex[][] value, bool[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -23155,9 +20059,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this Complex[] value)
         {
             return ToObject(value, new object[value.Length]);
@@ -23167,9 +20069,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this Complex[,] value)
         {
             return ToObject(value, Matrix.CreateAs<Complex, object>(value));
@@ -23179,9 +20079,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this Complex[,,] value)
         {
             return ToObject(value, Matrix.CreateAs<Complex, object>(value));
@@ -23191,9 +20089,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this Complex[][] value)
         {
             return ToObject(value, Jagged.CreateAs<Complex, object>(value));
@@ -23203,9 +20099,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a object.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this Complex[][][] value)
         {
             return ToObject(value, Jagged.CreateAs<Complex, object>(value));
@@ -23218,9 +20112,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[] ToObject(this Complex[] value, object[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23232,9 +20124,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this Complex[,] value, object[,] result)
         {
 					int r = value.GetLength(0);
@@ -23250,9 +20140,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,,] ToObject(this Complex[,,] value, object[,,] result)
         {
 					int r = value.GetLength(0);
@@ -23270,9 +20158,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this Complex[,] value, object[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -23285,9 +20171,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][] ToObject(this Complex[][] value, object[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23300,9 +20184,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[][][] ToObject(this Complex[][][] value, object[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23316,9 +20198,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional object array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static object[,] ToObject(this Complex[][] value, object[,] result)
         {
                         for (int i = 0; i < value.Length; i++)
@@ -23330,9 +20210,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this Complex[] value)
         {
             return ToString(value, new string[value.Length]);
@@ -23342,9 +20220,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this Complex[,] value)
         {
             return ToString(value, Matrix.CreateAs<Complex, string>(value));
@@ -23354,9 +20230,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this Complex[,,] value)
         {
             return ToString(value, Matrix.CreateAs<Complex, string>(value));
@@ -23366,9 +20240,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this Complex[][] value)
         {
             return ToString(value, Jagged.CreateAs<Complex, string>(value));
@@ -23378,9 +20250,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex to a string.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this Complex[][][] value)
         {
             return ToString(value, Jagged.CreateAs<Complex, string>(value));
@@ -23393,9 +20263,7 @@ namespace Accord.Math
         ///   Converts a 128-bit complex array to a string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[] ToString(this Complex[] value, string[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23407,9 +20275,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this Complex[,] value, string[,] result)
         {
 					int r = value.GetLength(0);
@@ -23425,9 +20291,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,,] ToString(this Complex[,,] value, string[,,] result)
         {
 					int r = value.GetLength(0);
@@ -23445,9 +20309,7 @@ namespace Accord.Math
         ///   Converts a multidimensional 128-bit complex array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this Complex[,] value, string[][] result)
         {
                         for (int i = 0; i < result.Length; i++)
@@ -23460,9 +20322,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][] ToString(this Complex[][] value, string[][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23475,9 +20335,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a jagged string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[][][] ToString(this Complex[][][] value, string[][][] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -23491,9 +20349,7 @@ namespace Accord.Math
         ///   Converts a jagged 128-bit complex array to a multidimensional string array.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static string[,] ToString(this Complex[][] value, string[,] result)
         {
                         for (int i = 0; i < value.Length; i++)

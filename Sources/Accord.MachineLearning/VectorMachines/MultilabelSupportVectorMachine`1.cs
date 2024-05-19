@@ -33,7 +33,7 @@ namespace Accord.MachineLearning.VectorMachines
     using System.Runtime.Serialization;
     using Accord.MachineLearning;
     using System.Reflection;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>

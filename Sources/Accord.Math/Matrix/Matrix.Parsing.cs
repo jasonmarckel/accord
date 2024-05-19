@@ -552,24 +552,6 @@ namespace Accord.Math
         /// <summary>
         ///   Converts the string representation of a matrix to its
         ///   double-precision floating-point number matrix equivalent.
-        /// </summary>
-        /// <param name="s">The string representation of the matrix.</param>
-        /// <param name="provider">
-        ///   The format provider to use in the conversion. Default is to use
-        ///   <see cref="DefaultMatrixFormatProvider.CurrentCulture"/>.
-        /// </param>
-        /// <returns>A double-precision floating-point number matrix parsed
-        /// from the given string using the given format provider.</returns>
-        /// 
-        [Obsolete("Please use the Jagged.Parse() method instead.")]
-        public static double[][] ParseJagged(string s, IMatrixFormatProvider provider)
-        {
-            return Jagged.Parse(s, provider);
-        }
-
-        /// <summary>
-        ///   Converts the string representation of a matrix to its
-        ///   double-precision floating-point number matrix equivalent.
         ///   A return value indicates whether the conversion succeeded or failed.
         /// </summary>
         /// <param name="s">The string representation of the matrix.</param>

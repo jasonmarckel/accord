@@ -284,42 +284,6 @@ namespace Accord.Imaging
             return Create<SpeededUpRobustFeaturesDetector, TClustering, SpeededUpRobustFeaturePoint, double[]>(new SpeededUpRobustFeaturesDetector(), clustering);
         }
 
-#if NET35
-        /// <summary>
-        /// Creates a Bag-of-Words model using the given feature detector and clustering algorithm.
-        /// </summary>
-        /// 
-        public static BagOfVisualWords<FastRetinaKeypoint, byte[], TClustering, FastRetinaKeypointDetector>
-            Create<TExtractor, TClustering, TPoint>(FastRetinaKeypointDetector detector, TClustering clustering)
-            where TClustering : IUnsupervisedLearning<IClassifier<byte[], int>, byte[], int>
-            where TExtractor : FastRetinaKeypointDetector
-        {
-            return Create<FastRetinaKeypointDetector, TClustering, FastRetinaKeypoint, byte[]>(detector, clustering);
-        }
-
-        /// <summary>
-        /// Creates a Bag-of-Words model using the given feature detector and clustering algorithm.
-        /// </summary>
-        /// 
-        public static BagOfVisualWords<FastRetinaKeypoint, double[], TClustering, FastRetinaKeypointDetector>
-            Create<TClustering>(FastRetinaKeypointDetector detector, TClustering clustering)
-            where TClustering : IUnsupervisedLearning<IClassifier<double[], int>, double[], int>
-        {
-            return Create<FastRetinaKeypointDetector, TClustering, FastRetinaKeypoint, double[]>(detector, clustering);
-        }
-
-        /// <summary>
-        /// Creates a Bag-of-Words model using the given feature detector and clustering algorithm.
-        /// </summary>
-        /// 
-        public static BagOfVisualWords<FeatureDescriptor, double[], TClustering, TExtractor>
-            Create<TExtractor, TClustering>(TExtractor detector, TClustering clustering)
-            where TClustering : IUnsupervisedLearning<IClassifier<double[], int>, double[], int>
-            where TExtractor : BaseFeatureExtractor<FeatureDescriptor>
-        {
-            return Create<TExtractor, TClustering, FeatureDescriptor, double[]>(detector, clustering);
-        }
-#else
         /// <summary>
         /// Creates a Bag-of-Words model using the given feature detector and clustering algorithm.
         /// </summary>
@@ -331,8 +295,6 @@ namespace Accord.Imaging
         {
             return Create<TExtractor, TClustering, IFeatureDescriptor<double[]>, double[]>(detector, clustering);
         }
-#endif
-
 
         /// <summary>
         /// Creates a Bag-of-Words model using the given feature detector and <see cref="KMeans"/>.

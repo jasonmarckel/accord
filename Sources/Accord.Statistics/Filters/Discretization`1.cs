@@ -28,7 +28,7 @@ namespace Accord.Statistics.Filters
     using System.Collections.Generic;
     using System.Linq.Expressions;
     using System.Data;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Value discretization preprocessing filter.
@@ -88,7 +88,6 @@ namespace Accord.Statistics.Filters
         {
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Creates a new Discretization Filter.
         /// </summary>
@@ -98,7 +97,6 @@ namespace Accord.Statistics.Filters
         {
             this.Learn(data);
         }
-#endif
 
         /// <summary>
         ///   Creates a new Discretization Filter.
@@ -133,7 +131,6 @@ namespace Accord.Statistics.Filters
                 Columns.Add(new Options(columns[i])).Learn(data.GetColumn(i));
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Creates a new Discretization Filter.
         /// </summary>
@@ -144,7 +141,6 @@ namespace Accord.Statistics.Filters
             for (int i = 0; i < columns.Length; i++)
                 Columns.Add(new Options(columns[i]).Learn(data));
         }
-#endif
 
         /// <summary>
         ///   Translates a value of a given variable into its codeword representation.
@@ -223,7 +219,6 @@ namespace Accord.Statistics.Filters
             return result;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Translates an array of values into their codeword representation, 
         ///   assuming values are given in original order of columns.
@@ -240,7 +235,6 @@ namespace Accord.Statistics.Filters
                 result[i] = this.Columns[columnNames[i]].Transform(row);
             return result;
         }
-#endif
 
         /// <summary>
         ///   Translates a value of the given variables
@@ -327,7 +321,6 @@ namespace Accord.Statistics.Filters
         }
 
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Processes the current filter.
         /// </summary>
@@ -390,7 +383,6 @@ namespace Accord.Statistics.Filters
 
             return result;
         }
-#endif
 
         /// <summary>
         /// Learns a model that can map the given inputs to the desired outputs.
@@ -431,7 +423,6 @@ namespace Accord.Statistics.Filters
             return this;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         /// Learns a model that can map the given inputs to the desired outputs.
         /// </summary>
@@ -478,7 +469,6 @@ namespace Accord.Statistics.Filters
                 }
             }
         }
-#endif
 
         /// <summary>
         /// Adds the specified matching rule to a column.

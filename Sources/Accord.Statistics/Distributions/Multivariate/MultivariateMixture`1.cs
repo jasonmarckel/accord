@@ -29,7 +29,7 @@ namespace Accord.Statistics.Distributions.Multivariate
     using Accord.Statistics.Distributions.Univariate;
     using System;
     using System.Text;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Represents one component distribution in a 
@@ -453,7 +453,7 @@ namespace Accord.Statistics.Distributions.Multivariate
 
 #pragma warning disable 612, 618
                 if (options != null)
-                    options.Iterations = em.Convergence.CurrentIteration;
+                    options.MaxIterations = em.Convergence.CurrentIteration;
 #pragma warning restore 612, 618
             }
             else
@@ -472,7 +472,7 @@ namespace Accord.Statistics.Distributions.Multivariate
 
 #pragma warning disable 612, 618
                 if (options != null)
-                    options.Iterations = em.Convergence.CurrentIteration;
+                    options.MaxIterations = em.Convergence.CurrentIteration;
 #pragma warning restore 612, 618
             }
 

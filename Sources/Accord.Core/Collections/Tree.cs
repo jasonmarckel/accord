@@ -24,7 +24,6 @@ namespace Accord.Collections
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
 
     /// <summary>
     ///   Base class for tree structures.

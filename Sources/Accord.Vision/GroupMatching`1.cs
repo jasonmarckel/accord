@@ -27,7 +27,6 @@ namespace Accord.Vision
 {
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
 
     /// <summary>
     ///   Group matching algorithm for detection region averaging.
@@ -41,7 +40,6 @@ namespace Accord.Vision
     /// 
     public abstract class GroupMatching<T>
     {
-
         private int classCount;
         private int minNeighbors;
 
@@ -122,8 +120,6 @@ namespace Accord.Vision
 
             return output;
         }
-
-
 
         /// <summary>
         ///   Detects rectangles which are near and 

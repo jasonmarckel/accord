@@ -26,7 +26,7 @@ namespace Accord.MachineLearning.DecisionTrees.Learning
     using System.Collections.Generic;
     using Accord.MachineLearning;
     using System.Collections;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using System.Linq;
 

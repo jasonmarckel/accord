@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Models.Markov.Topology;
     using Accord.Statistics.Distributions.Univariate;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -50,7 +50,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     ///   by discrete symbols, such as class labels, integers, and so on. If you need
     ///   to classify sequences of other entities, such as real numbers, vectors (i.e.
     ///   multivariate observations), then you can use 
-    ///   <see cref="HiddenMarkovClassifierLearning{TDistribution}">generic-density
+    ///   <see cref="HiddenMarkovClassifierLearning{TDistribution,TObservation}">generic-density
     ///   hidden Markov models</see>. Those models can be modeled after any kind of
     ///   <see cref="IDistribution">probability distribution</see> implementing
     ///   the <see cref="IDistribution"/> interface.</para>
@@ -78,7 +78,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// <para>
     ///   In this example we will be using the <see cref="BaumWelchLearning">Baum-Welch</see>
     ///   algorithm to learn each model in our generative classifier; however, any other
-    ///   <see cref="IUnsupervisedLearning">unsupervised learning algorithm</see> could be used.
+    ///   unsupervised learning algorithm could be used.
     /// </para>
     ///   
     /// <code source="Unit Tests\Accord.Tests.Statistics\Models\Markov\HiddenMarkovClassifierTest.cs" region="doc_learn" />
@@ -156,40 +156,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         }
 
         /// <summary>
-        ///   Trains each model to recognize each of the output labels.
-        /// </summary>
-        /// 
-        /// <returns>The sum log-likelihood for all models after training.</returns>
-        /// 
-        [Obsolete("Please use the Learn(x, y) method instead.")]
-        public double Run(int[][] inputs, int[] outputs)
-        {
-            if (inputs == null)
-                throw new ArgumentNullException("inputs");
-
-            for (int i = 0; i < inputs.Length; i++)
-            {
-                for (int j = 0; j < inputs[i].Length; j++)
-                {
-                    int symbol = inputs[i][j];
-
-                    if (symbol < 0 || symbol >= Classifier.Symbols)
-                    {
-                        string message = "Observation sequences should only contain symbols that are " +
-                        "greater than or equal to 0, and lesser than the number of symbols passed to " +
-                        "the HiddenMarkovClassifier. This classifier is expecting at most {0} symbols.";
-
-                        throw new ArgumentOutOfRangeException("inputs", String.Format(message, Classifier.Symbols));
-                    }
-                }
-            }
-
-            Learn(inputs, outputs);
-            return LogLikelihood;
-        }
-
-
-        /// <summary>
         ///   Compute model error for a given data set.
         /// </summary>
         /// 
@@ -206,7 +172,7 @@ namespace Accord.Statistics.Models.Markov.Learning
             Parallel.For(0, inputs.Length, i =>
             {
                 int expectedOutput = outputs[i];
-                int actualOutput = Classifier.Compute(inputs[i]);
+                int actualOutput = Classifier.Decide(inputs[i]);
 
                 if (expectedOutput != actualOutput)
                     Interlocked.Increment(ref errors);

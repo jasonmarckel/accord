@@ -11,6 +11,7 @@ namespace Accord.Genetic
     using System;
     using AForge;
     using Accord;
+    using Range = Accord.Range;
 
     /// <summary>Base class for one dimensional function optimizations.</summary>
     /// 

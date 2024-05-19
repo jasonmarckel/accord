@@ -29,142 +29,11 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Statistics.Kernels;
     using Accord.Statistics;
     using Accord.Math.Optimization.Losses;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     using InnerParameters = InnerParameters<SupportVectorMachine<Accord.Statistics.Kernels.IKernel<double[]>>, double[]>;
     using InnerLearning = ISupervisedLearning<SupportVectorMachine<Accord.Statistics.Kernels.IKernel<double[]>>, double[], bool>;
-
-    /// <summary>
-    ///   Obsolete. Please use <see cref="MultilabelSupportVectorLearning{TKernel}"/> instead.
-    /// </summary>
-    /// 
-    [Obsolete("Please specify the desired kernel function as a template parameter.")]
-    public class MultilabelSupportVectorLearning :
-        BaseMultilabelSupportVectorLearning<double[],
-            SupportVectorMachine<IKernel<double[]>>, IKernel<double[]>,
-            MultilabelSupportVectorMachine>
-    {
-
-        private double[][] input;
-        private int[][] output;
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public MultilabelSupportVectorLearning(MultilabelSupportVectorMachine model, double[][] input, int[][] output)
-        {
-            this.Model = model;
-            this.input = input;
-            this.output = output;
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public MultilabelSupportVectorLearning(MultilabelSupportVectorMachine model, double[][] input, int[] output)
-        {
-            this.Model = model;
-            this.input = input;
-            this.output = Jagged.OneHot<int>(output);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public double Run()
-        {
-            Learn(input, output);
-            return new HammingLoss(output)
-            {
-                Mean = true
-            }.Loss(Model.Decide(input));
-        }
-
-#pragma warning disable 0618
-#pragma warning disable 0612
-        SupportVectorMachineLearningConfigurationFunction algorithm;
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use the Configure method instead.")]
-        public SupportVectorMachineLearningConfigurationFunction Algorithm
-        {
-            get { return algorithm; }
-            set
-            {
-                algorithm = value;
-                base.Learner = Convert(value);
-            }
-        }
-
-        /// <summary>
-        ///   Converts <see cref="SupportVectorMachineLearningConfigurationFunction"/>
-        ///   into a lambda function that can be passed to the <see cref="OneVsRestLearning{TInput, TBinary, TModel}.Learner"/>
-        ///   property of a <see cref="MultilabelSupportVectorLearning"/> learning algorithm.
-        /// </summary>
-        /// 
-        public static Func<InnerParameters, InnerLearning> Convert(
-            SupportVectorMachineLearningConfigurationFunction conf)
-        {
-            return delegate(InnerParameters parameters)
-            {
-                int[] y = Classes.ToMinusOnePlusOne(parameters.Outputs);
-                var machine = (KernelSupportVectorMachine)parameters.Model;
-                ISupportVectorMachineLearning r = conf(machine, parameters.Inputs, y, parameters.Pair.Class1, parameters.Pair.Class2);
-
-                var c = r as ISupervisedLearning<SupportVectorMachine<IKernel<double[]>>, double[], bool>;
-                if (c != null)
-                    return c;
-
-
-                // TODO: The following checks exist only to provide support to previous way of using
-                // the library and should be removed after a few releases.
-                var svc = r as ISupportVectorMachineLearning;
-                if (svc != null)
-                {
-                    svc.Run();
-                    return null;
-                }
-
-                throw new Exception();
-            };
-        }
-#pragma warning restore 0618
-#pragma warning restore 0612
-
-        /// <summary>
-        /// Creates an instance of the model to be learned. Inheritors
-        /// of this abstract class must define this method so new models
-        /// can be created from the training data.
-        /// </summary>
-        protected override MultilabelSupportVectorMachine Create(int inputs, int classes, bool multilabel)
-        {
-            return new MultilabelSupportVectorMachine(inputs, Kernel, classes)
-            {
-                Method = multilabel ? MultilabelProbabilityMethod.PerClass : MultilabelProbabilityMethod.SumsToOne
-            };
-        }
-
-        
-        /// <summary>
-        ///   Gets or sets the kernel function to be used to learn the
-        ///   <see cref="SupportVectorMachine{TKernel}">kernel support 
-        ///   vector machines</see>.
-        /// </summary>
-        /// 
-        public new IKernel Kernel
-        {
-            // TODO: Remove the shadowing and convert this class to a Linear
-            // Multi label support vector learning
-            get { return base.Kernel as IKernel; }
-            set { base.Kernel = value; }
-        }
-    }
 
     /// <summary>
     ///   One-against-all Multi-label Support Vector Machine Learning Algorithm
@@ -291,9 +160,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             SupportVectorMachine<TKernel, TInput>, TKernel,
             MultilabelSupportVectorMachine<TKernel, TInput>>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
@@ -340,9 +207,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TBinary : SupportVectorMachine<TKernel, TInput>
         where TModel : OneVsRest<TBinary, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         ///   Gets or sets the kernel function to be used to learn the

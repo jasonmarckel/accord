@@ -1241,9 +1241,7 @@ namespace Accord.Statistics
         ///   and a predicted value between 0 and 1.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Entropy(bool expected, double predicted)
         {
             if (!expected)
@@ -1256,9 +1254,7 @@ namespace Accord.Statistics
         ///   and a predicted value.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Entropy(bool expected, bool predicted)
         {
             if (!expected)

@@ -39,9 +39,9 @@ namespace Accord.Imaging.Filters
     /// <img src="..\images\imaging\grayscale.jpg" width="480" height="361" />
     /// </remarks>
     ///
-    /// <seealso cref="GrayscaleBT709"/>
-    /// <seealso cref="GrayscaleRMY"/>
-    /// <seealso cref="GrayscaleY"/>
+    /// <seealso cref="Grayscale.CommonAlgorithms.BT709"/>
+    /// <seealso cref="Grayscale.CommonAlgorithms.RMY"/>
+    /// <seealso cref="Grayscale.CommonAlgorithms.Y"/>
     ///
     public class Grayscale : BaseFilter
     {

@@ -344,9 +344,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q1(double[] x, double p)
         {
             if (p == 0.0)
@@ -378,9 +376,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q2(double[] x, double p)
         {
             if (p == 0.0)
@@ -421,9 +417,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static T Q3<T>(T[] x, double p, double lowThreshold)
         {
             if (p <= lowThreshold)
@@ -457,9 +451,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q4(double[] x, double pj, double lowThreshold)
         {
             if (pj < lowThreshold)
@@ -504,9 +496,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q5(double[] x, double p, double lowThreshold, double highThreshold)
         {
             if (p < lowThreshold)
@@ -551,9 +541,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q6(double[] x, double p, double lowThreshold, double highThreshold)
         {
             if (p < lowThreshold)
@@ -594,9 +582,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q7(double[] x, double p)
         {
             if (p == 1.0)
@@ -637,9 +623,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q8(double[] x, double p, double lowThreshold, double highThreshold)
         {
             if (p < lowThreshold)
@@ -683,9 +667,7 @@ namespace Accord.Statistics
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private static double Q9(double[] x, double p, double lowThreshold, double highThreshold)
         {
             if (p < lowThreshold)

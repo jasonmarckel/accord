@@ -64,7 +64,7 @@ namespace Accord.MachineLearning.Clustering
     using System.IO;
     using System.Linq;
     using Accord.Math;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Barnes-Hutt t-SNE.

@@ -61,7 +61,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Statistics.Kernels;
     using Accord.Math.Optimization.Losses;
     using Accord.Math;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   L2-regularized L2-loss linear support vector regression
@@ -92,15 +92,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         /// Initializes a new instance of the <see cref="LinearRegressionNewtonMethod"/> class.
         /// </summary>
         public LinearRegressionNewtonMethod()
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearRegressionNewtonMethod(SupportVectorMachine model, double[][] input, double[] output)
-            : base(model, input, output)
         {
         }
 
@@ -168,9 +159,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseSupportVectorRegression<TModel, TKernel, TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         TrustRegionNewtonMethod tron;

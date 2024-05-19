@@ -79,13 +79,7 @@ namespace Accord.Math
         /// <code source="Unit Tests\Accord.Tests.Math\Matrix\Matrix.Conversion.cs" region="doc_convert_jagged" />
         /// </example>
         /// 
-        public static TOutput[][] Convert<TInput, TOutput>(this TInput[,] matrix,
-#if !NETSTANDARD1_4
-            Converter<TInput, TOutput> converter
-#else
-            Func<TInput, TOutput> converter
-#endif
-            )
+        public static TOutput[][] Convert<TInput, TOutput>(this TInput[,] matrix, Converter<TInput, TOutput> converter)
         {
             int rows = matrix.Rows();
             int cols = matrix.Columns();
@@ -111,13 +105,7 @@ namespace Accord.Math
         /// <code source="Unit Tests\Accord.Tests.Math\Matrix\Matrix.Conversion.cs" region="doc_convert_jagged" />
         /// </example>
         /// 
-        public static TOutput[][] Convert<TInput, TOutput>(this TInput[][] matrix,
-#if !NETSTANDARD1_4
-            Converter<TInput, TOutput> converter
-#else
-            Func<TInput, TOutput> converter
-#endif
-            )
+        public static TOutput[][] Convert<TInput, TOutput>(this TInput[][] matrix, Converter<TInput, TOutput> converter)
         {
             int rows = matrix.Rows();
             int cols = matrix.Columns();

@@ -35,7 +35,6 @@ namespace Accord.MachineLearning.VectorMachines
     using System.Runtime.Serialization;
     using System.Security.Permissions;
     using Statistics.Models.Regression.Linear;
-    using Accord.Compat;
 
     /// <summary>
     ///  Linear Support Vector Machine (SVM).
@@ -91,9 +90,7 @@ namespace Accord.MachineLearning.VectorMachines
     /// <seealso cref="Accord.MachineLearning.VectorMachines.Learning.SequentialMinimalOptimization{TKernel}"/>
     ///
     [Serializable]
-#if !NETSTANDARD1_4
     [SerializationBinder(typeof(SupportVectorMachine.SupportVectorMachineBinder))]
-#endif
     public class SupportVectorMachine : SupportVectorMachine<Linear>,
         IBinaryClassifier<double[]>, ISupportVectorMachine<double[]>
     {
@@ -126,7 +123,7 @@ namespace Accord.MachineLearning.VectorMachines
         }
 
 #region Serialization backwards compatibility
-#if !NETSTANDARD1_4
+
         internal class SupportVectorMachineBinder : SerializationBinder
         {
             public override Type BindToType(string assemblyName, string typeName)
@@ -156,12 +153,12 @@ namespace Accord.MachineLearning.VectorMachines
             public ILinkFunction linkFunction;
 
 
-            [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+            //[SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
             void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
             {
             }
 
-            [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+            //[SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
             private SupportVectorMachine_2_13(SerializationInfo info, StreamingContext context)
             {
                 info.GetValue("inputCount", out inputCount);
@@ -195,7 +192,7 @@ namespace Accord.MachineLearning.VectorMachines
 
 #pragma warning restore 0169
 #pragma warning restore 0649
-#endif
+
 #endregion
 
 

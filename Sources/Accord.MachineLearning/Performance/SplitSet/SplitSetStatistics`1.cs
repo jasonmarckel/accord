@@ -24,7 +24,7 @@ namespace Accord.MachineLearning
 {
     using Accord.MachineLearning.Performance;
     using System;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Summary statistics for a Split-set validation trial.
@@ -92,38 +92,4 @@ namespace Accord.MachineLearning
 
     }
 
-    /// <summary>
-    ///   Obsolete. Please refer to <see cref="SplitSetValidation{TModel, TInput, TOutput}"/> instead.
-    /// </summary>
-    /// 
-    [Obsolete("Please refer to SplitSetValidation<TModel, TInput> instead.")]
-    public class SplitSetStatistics : SplitSetStatistics<object>
-    {
-        /// <summary>
-        ///   Create a new split-set statistics class.
-        /// </summary>
-        /// 
-        /// <param name="model">The generated model.</param>
-        /// <param name="size">The number of samples used to compute the statistic.</param>
-        /// <param name="value">The performance statistic gathered during the run.</param>
-        /// <param name="variance">The variance of the performance statistic during the run.</param>
-        /// 
-        public SplitSetStatistics(object model, int size, double value, double variance)
-            : base(model, size, value, variance) { }
-
-        /// <summary>
-        ///   Create a new split-set statistics class.
-        /// </summary>
-        /// 
-        /// <param name="model">The generated model.</param>
-        /// <param name="size">The number of samples used to compute the statistic.</param>
-        /// <param name="value">The performance statistic gathered during the run.</param>
-        /// <param name="variance">The variance of the performance statistic during the run.</param>
-        /// 
-        public static SplitSetStatistics<TModel> Create<TModel>(TModel model, int size,
-            double value, double variance) where TModel : class
-        {
-            return new SplitSetStatistics<TModel>(model, size, value, variance);
-        }
-    }
 }

@@ -27,7 +27,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     using Accord.Math.Decompositions;
     using Accord.MachineLearning;
     using System.Threading;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Stochastic Gradient Descent learning for Logistic Regression fitting.
@@ -38,7 +38,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
         ISupervisedLearning<LogisticRegression, double[], int>,
         ISupervisedLearning<LogisticRegression, double[], bool>,
         ISupervisedLearning<LogisticRegression, double[], double>,
-        IRegressionFitting, IConvergenceLearning
+        IConvergenceLearning
 #pragma warning restore 612, 618
     {
         [NonSerialized]
@@ -105,16 +105,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
         {
             get { return rate; }
             set { rate = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return convergence.MaxIterations; }
-            set { convergence.MaxIterations = value; }
         }
 
         /// <summary>
@@ -189,88 +179,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
             this.gradient = new double[parameterCount];
             this.deltas = new double[parameterCount];
         }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use the Learn(x, y) method instead.")]
-        public double Run(double[][] inputs, double[][] outputs)
-        {
-            if (outputs[0].Length != 1)
-                throw new ArgumentException("Function must have a single output.", "outputs");
-
-            double[] output = new double[outputs.Length];
-            for (int i = 0; i < outputs.Length; i++)
-                output[i] = outputs[i][0];
-
-            return Run(inputs, output);
-        }
-
-        /// <summary>
-        ///   Runs a single pass of the gradient descent algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn(x, y) method instead.")]
-        public double Run(double[] input, double output)
-        {
-            int old = convergence.Iterations;
-            convergence.Iterations = 1;
-            Learn(new[] { input }, new[] { output });
-            convergence.Iterations = old;
-            return Matrix.Max(deltas);
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use the Learn(x, y) method instead.")]
-        public double Run(double[][] inputs, double[] outputs)
-        {
-            int old = convergence.Iterations;
-            convergence.Iterations = 1;
-            Learn(inputs, outputs);
-            convergence.Iterations = old;
-            return Matrix.Max(deltas);
-        }
-
-        /// <summary>
-        ///   Computes the sum-of-squared error between the
-        ///   model outputs and the expected outputs.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data set.</param>
-        /// <param name="outputs">The output values.</param>
-        /// 
-        /// <returns>The sum-of-squared errors.</returns>
-        /// 
-        [Obsolete("Please use the LogLikelihoodLoss class instead.")]
-        public double ComputeError(double[][] inputs, double[] outputs)
-        {
-            double sum = 0;
-
-            for (int i = 0; i < inputs.Length; i++)
-            {
-#pragma warning disable 612, 618
-                double actual = regression.Compute(inputs[i]);
-#pragma warning restore 612, 618
-                double expected = outputs[i];
-                double delta = actual - expected;
-                sum += delta * delta;
-            }
-
-            return sum;
-        }
-
 
         /// <summary>
         /// Gets or sets a cancellation token that can be used to

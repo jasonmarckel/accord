@@ -35,7 +35,7 @@ namespace Accord.Statistics.Analysis
     using System.Diagnostics.CodeAnalysis;
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Statistics.Distributions.Reflection;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -59,8 +59,6 @@ namespace Accord.Statistics.Analysis
     [Serializable]
     public class DistributionAnalysis
     {
-        private double[] data;
-
         /// <summary>
         ///   Gets the tested distribution names.
         /// </summary>
@@ -137,20 +135,6 @@ namespace Accord.Statistics.Analysis
         /// 
         public GoodnessOfFitCollection GoodnessOfFit { get; private set; }
 
-
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="DistributionAnalysis"/> class.
-        /// </summary>
-        /// 
-        /// <param name="observations">The observations to be fitted against candidate distributions.</param>
-        /// 
-        [Obsolete("Please use the default parameterless constructor instead.")]
-        public DistributionAnalysis(double[] observations)
-            : this()
-        {
-            this.data = observations;
-        }
-
         /// <summary>
         ///   Initializes a new instance of the <see cref="DistributionAnalysis"/> class.
         /// </summary>
@@ -167,17 +151,6 @@ namespace Accord.Statistics.Analysis
             };
 
             Options = new Dictionary<IFittableDistribution<double>, IFittingOptions>();
-        }
-
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="Learn(double[], double[])"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn(x) method instead.")]
-        public void Compute()
-        {
-            compute(data, null);
         }
 
         /// <summary>
@@ -292,15 +265,6 @@ namespace Accord.Statistics.Analysis
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         private static void run(Action a, int timeoutMilliseconds)
         {
-#if NET35
-            try
-            {
-                a();
-            }
-            catch
-            {
-            }
-#else
             var task = Task.Factory.StartNew(() =>
             {
                 try
@@ -313,7 +277,6 @@ namespace Accord.Statistics.Analysis
             });
 
             task.Wait(timeoutMilliseconds);
-#endif
         }
 
         private int[] getRank(double[] ks)

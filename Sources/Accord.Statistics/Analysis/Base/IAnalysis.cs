@@ -109,19 +109,4 @@ namespace Accord.Statistics.Analysis
         KernelMatrix = 4,
     };
 
-    /// <summary>
-    ///   Common interface for statistical analysis.
-    /// </summary>
-    /// 
-    [Obsolete]
-    public interface IAnalysis
-    {
-
-        /// <summary>
-        ///   Computes the analysis using given source data and parameters.
-        /// </summary>
-        /// 
-        void Compute();
-
-    }
 }

@@ -22,13 +22,11 @@
 
 namespace Accord.Vision.Tracking
 {
-    using System.Drawing;
     using Accord.Imaging;
     using Accord.Imaging.Filters;
-    using AForge;
-    using System;
     using Accord.Math;
     using Accord.Vision.Detection;
+    using System.Drawing;
 
     /// <summary>
     ///   Template matching object tracker.

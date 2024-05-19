@@ -28,7 +28,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using AForge;
     using Accord.Statistics.Testing;
     using Accord;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Grubb's statistic distribution.

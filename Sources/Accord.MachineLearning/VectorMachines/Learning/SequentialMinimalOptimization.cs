@@ -31,7 +31,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using System.Collections.Generic;
     using System.Threading;
     using System.Diagnostics;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Gets the selection strategy to be used in SMO.
@@ -62,197 +62,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         /// 
         SecondOrder,
     };
-
-    /// <summary>
-    ///   Sequential Minimal Optimization (SMO) Algorithm
-    /// </summary>
-    /// 
-    /// <remarks>
-    /// <para>
-    ///   The SMO algorithm is an algorithm for solving large quadratic programming (QP)
-    ///   optimization problems, widely used for the training of support vector machines.
-    ///   First developed by John C. Platt in 1998, SMO breaks up large QP problems into
-    ///   a series of smallest possible QP problems, which are then solved analytically.</para>
-    /// <para>
-    ///   This class follows the original algorithm by Platt with additional modifications
-    ///   by Keerthi et al.</para>
-    ///   
-    /// <para>
-    ///   This class can also be used in combination with <see cref="MulticlassSupportVectorLearning{TKernel}"/>
-    ///   or <see cref="MultilabelSupportVectorLearning{TKernel}"/> to learn <see cref="MulticlassSupportVectorMachine{TKernel}"/>s
-    ///   using the <c>one-vs-one</c> or <c>one-vs-all</c> multi-class decision strategies, respectively.</para>
-    ///  
-    /// <para>
-    ///   References:
-    ///   <list type="bullet">
-    ///     <item><description>
-    ///       <a href="http://en.wikipedia.org/wiki/Sequential_Minimal_Optimization">
-    ///       Wikipedia, The Free Encyclopedia. Sequential Minimal Optimization. Available on:
-    ///       http://en.wikipedia.org/wiki/Sequential_Minimal_Optimization </a></description></item>
-    ///     <item><description>
-    ///       <a href="http://research.microsoft.com/en-us/um/people/jplatt/smoTR.pdf">
-    ///       John C. Platt, Sequential Minimal Optimization: A Fast Algorithm for Training Support
-    ///       Vector Machines. 1998. Available on: http://research.microsoft.com/en-us/um/people/jplatt/smoTR.pdf </a></description></item>
-    ///     <item><description>
-    ///       <a href="http://www.cs.iastate.edu/~honavar/keerthi-svm.pdf">
-    ///       S. S. Keerthi et al. Improvements to Platt's SMO Algorithm for SVM Classifier Design.
-    ///       Technical Report CD-99-14. Available on: http://www.cs.iastate.edu/~honavar/keerthi-svm.pdf </a></description></item>
-    ///     <item><description>
-    ///       <a href="http://www.idiom.com/~zilla/Work/Notes/svmtutorial.pdf">
-    ///       J. P. Lewis. A Short SVM (Support Vector Machine) Tutorial. Available on:
-    ///       http://www.idiom.com/~zilla/Work/Notes/svmtutorial.pdf </a></description></item>
-    ///     </list></para>  
-    /// </remarks>
-    /// 
-    /// <example>
-    ///   <para>The following example shows how to use a SVM to learn a simple XOR function.</para>
-    ///   <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\SequentialMinimalOptimizationTest.cs" region="doc_xor_normal" />
-    ///   
-    ///   <para>The next example shows how to solve a multi-class problem using a one-vs-one SVM 
-    ///   where the binary machines are learned using SMO.</para>
-    ///   <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\MulticlassSupportVectorLearningTest.cs" region="doc_learn" />
-    ///   
-    ///   <para>The same as before, but using a Gaussian kernel.</para>
-    ///   <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\MulticlassSupportVectorLearningTest.cs" region="doc_learn_gaussian" />
-    ///   
-    ///   <para>
-    ///   The following example shows how to learn a simple binary SVM using
-    ///    a precomputed kernel matrix obtained from a Gaussian kernel.</para>
-    ///   <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\SequentialMinimalOptimizationTest.cs" region="doc_precomputed" />
-    /// </example>
-    /// 
-    /// <seealso cref="SupportVectorMachine"/>
-    /// <seealso cref="ProbabilisticOutputCalibration"/>
-    /// <seealso cref="MulticlassSupportVectorLearning{TKernel}"/>
-    /// 
-    //[Obsolete("Please use SequentialMinimalOptimization<TKernel> instead.")]
-    public class SequentialMinimalOptimization :
-        BaseSequentialMinimalOptimization<ISupportVectorMachine<double[]>, IKernel<double[]>, double[]>,
-        ISupportVectorMachineLearning
-    {
-        /// <summary>
-        /// Creates an instance of the model to be learned. Inheritors
-        /// of this abstract class must define this method so new models
-        /// can be created from the training data.
-        /// </summary>
-        protected override ISupportVectorMachine<double[]> Create(int inputs, IKernel<double[]> kernel)
-        {
-            if (kernel is Linear)
-                return new SupportVectorMachine(inputs) { Kernel = (Linear)kernel };
-            return new SupportVectorMachine<IKernel<double[]>>(inputs, kernel);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public SequentialMinimalOptimization(SupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-            init();
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public SequentialMinimalOptimization(KernelSupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-            init();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SequentialMinimalOptimization"/> class.
-        /// </summary>
-        public SequentialMinimalOptimization()
-        {
-            init();
-        }
-
-        private void init()
-        {
-            if (Kernel == null)
-                this.Kernel = new Linear();
-        }
-
-
-        // TODO: Those methods are being shadowed to provide temporary support to the 
-        // previous way of creating support vector machines in the framework. After a
-        // a few releases, those methods will have to be removed and this class will need
-        // to be updated to derive from SequentialMinimalOptimization<SupportVectorMachine>.
-
-        /// <summary>
-        /// Learns a model that can map the given inputs to the given outputs.
-        /// </summary>
-        /// <param name="x">The model inputs.</param>
-        /// <param name="y">The desired outputs associated with each <paramref name="x">inputs</paramref>.</param>
-        /// <param name="weights">The weight of importance for each input-output pair (if supported by the learning algorithm).</param>
-        /// <returns>
-        /// A model that has learned how to produce <paramref name="y" /> given <paramref name="x" />.
-        /// </returns>
-        public new SupportVectorMachine Learn(double[][] x, double[] y, double[] weights = null)
-        {
-            return Learn(x, Classes.Decide(y), weights);
-        }
-
-        /// <summary>
-        /// Learns a model that can map the given inputs to the given outputs.
-        /// </summary>
-        /// <param name="x">The model inputs.</param>
-        /// <param name="y">The desired outputs associated with each <paramref name="x">inputs</paramref>.</param>
-        /// <param name="weights">The weight of importance for each input-output pair (if supported by the learning algorithm).</param>
-        /// <returns>
-        /// A model that has learned how to produce <paramref name="y" /> given <paramref name="x" />.
-        /// </returns>
-        public new SupportVectorMachine Learn(double[][] x, int[] y, double[] weights = null)
-        {
-            return Learn(x, Classes.Decide(y), weights);
-        }
-
-        /// <summary>
-        /// Learns a model that can map the given inputs to the given outputs.
-        /// </summary>
-        /// <param name="x">The model inputs.</param>
-        /// <param name="y">The desired outputs associated with each <paramref name="x">inputs</paramref>.</param>
-        /// <param name="weights">The weight of importance for each input-output pair (if supported by the learning algorithm).</param>
-        /// <returns>
-        /// A model that has learned how to produce <paramref name="y" /> given <paramref name="x" />.
-        /// </returns>
-        public new SupportVectorMachine Learn(double[][] x, int[][] y, double[] weights = null)
-        {
-            return Learn(x, Classes.Decide(y.GetColumn(0)), weights);
-        }
-
-        /// <summary>
-        /// Learns a model that can map the given inputs to the given outputs.
-        /// </summary>
-        /// <param name="x">The model inputs.</param>
-        /// <param name="y">The desired outputs associated with each <paramref name="x">inputs</paramref>.</param>
-        /// <param name="weights">The weight of importance for each input-output pair (if supported by the learning algorithm).</param>
-        /// <returns>
-        /// A model that has learned how to produce <paramref name="y" /> given <paramref name="x" />.
-        /// </returns>
-        public new SupportVectorMachine Learn(double[][] x, bool[][] y, double[] weights = null)
-        {
-            return Learn(x, y.GetColumn(0), weights);
-        }
-
-        /// <summary>
-        /// Learns a model that can map the given inputs to the given outputs.
-        /// </summary>
-        /// <param name="x">The model inputs.</param>
-        /// <param name="y">The desired outputs associated with each <paramref name="x">inputs</paramref>.</param>
-        /// <param name="weights">The weight of importance for each input-output pair (if supported by the learning algorithm).</param>
-        /// <returns>
-        /// A model that has learned how to produce <paramref name="y" /> given <paramref name="x" />.
-        /// </returns>
-        public new SupportVectorMachine Learn(double[][] x, bool[] y, double[] weights = null)
-        {
-            ISupportVectorMachine<double[]> svm = base.Learn(x, y, weights);
-            return (SupportVectorMachine)svm;
-        }
-    }
 
     /// <summary>
     ///   Sequential Minimal Optimization (SMO) Algorithm.
@@ -418,8 +227,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     /// </summary>
     /// 
     public abstract class BaseSequentialMinimalOptimization<TModel, TKernel, TInput> :
-        BaseSupportVectorClassification<TModel, TKernel, TInput>,
-        ISupportVectorMachineLearning<TInput>
+        BaseSupportVectorClassification<TModel, TKernel, TInput>
         where TKernel : IKernel<TInput>
         where TModel : ISupportVectorMachine<TInput>
         // TODO: after a few releases, the TModel constraint should be changed to:
@@ -432,7 +240,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
 
         // Support Vector Machine parameters
         private double[] alpha;
-        private bool isCompact;
+        private bool isCompact = false;
 
         private HashSet<int> activeExamples;   // alpha[i] > 0
         private HashSet<int> nonBoundExamples; // alpha[i] > 0 && alpha[i] < c
@@ -561,23 +369,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         public double[] Lagrange { get { return alpha; } }
 
         /// <summary>
-        ///   Gets or sets whether to produce compact models. Compact
-        ///   formulation is currently limited to linear models.
-        /// </summary>
-        /// 
-        [Obsolete("To generate compact linear machines, call the Compact method after creation.")]
-        public bool Compact
-        {
-            get { return isCompact; }
-            set
-            {
-                if (!(Kernel is Linear) && value)
-                    throw new InvalidOperationException("Only linear machines can be created in compact form.");
-                isCompact = value;
-            }
-        }
-
-        /// <summary>
         ///   Gets the indices of the active examples (examples which have
         ///   the corresponding Lagrange multiplier different than zero).
         /// </summary>
@@ -606,9 +397,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         {
             get { return atBoundsExamples; }
         }
-
-
-
 
         /// <summary>
         ///   Runs the learning algorithm.

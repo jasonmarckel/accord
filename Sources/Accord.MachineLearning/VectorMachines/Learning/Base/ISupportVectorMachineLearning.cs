@@ -22,11 +22,6 @@
 
 namespace Accord.MachineLearning.VectorMachines.Learning
 {
-    using Accord.Statistics.Kernels;
-    using System;
-    using System.Threading;
-    using Accord.Compat;
-
     /// <summary>
     ///   Common interface for Support Machine Vector learning algorithms.
     /// </summary>
@@ -38,25 +33,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupportVectorMachineLearning
     {
     }
-
-    /*public interface ISupportVectorMachineLearning : 
-        ISupportVectorMachineLearning<double[]>
-    {
-    }*/
-
-    /*
-    /// <summary>
-    ///   Common interface for Support Machine Vector learning algorithms.
-    /// </summary>
-    /// 
-    public interface ISupportVectorMachineLearning<TInput> :
-        ISupervisedBinaryLearning<SupportVectorMachine<IKernel<TInput>, TInput>, TInput>,
-        ISupervisedLearning<SupportVectorMachine<IKernel<TInput>, TInput>, TInput, double>
-    {
-
-    }*/
-
-    // TODO: Remove those interfaces
 
     /// <summary>
     ///   Common interface for Support Machine Vector learning algorithms.
@@ -75,47 +51,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupervisedBinaryLearning<ISupportVectorMachine<TInput>, TInput>,
         ISupervisedLearning<ISupportVectorMachine<TInput>, TInput, double>
     {
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete]
-        double Run();
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete]
-        double Run(bool computeError);
     }
-
-    /// <summary>
-    ///   Common interface for Support Machine Vector learning algorithms.
-    /// </summary>
-    /// 
-    public interface ISupportVectorMachineLearning<TKernel, TInput> :
-        ISupervisedBinaryLearning<SupportVectorMachine<TKernel, TInput>, TInput>,
-        ISupervisedLearning<SupportVectorMachine<TKernel, TInput>, TInput, double>
-        where TKernel : IKernel<TInput>
-        where TInput : ICloneable
-    {
-        /// <summary>
-        ///   Gets or sets the support vector machine being learned.
-        /// </summary>
-        /// 
-        SupportVectorMachine<TKernel, TInput> Model { get; set; }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete]
-        double Run();
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete]
-        double Run(bool computeError);
-    }
-
 
 }

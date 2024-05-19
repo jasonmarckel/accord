@@ -28,7 +28,7 @@ namespace Accord.Neuro.Learning
     using Accord.Neuro.Neurons;
     using Accord.Math;
     using Accord.Neuro.ActivationFunctions;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -212,13 +212,6 @@ namespace Accord.Neuro.Learning
         {
             double errors = 0;
             
-
-#if NET35
-            var partial = storage.Value.Clear();
-            for (int i = 0; i < input.Length; i++)
-            {
-                int observationIndex = i;
-#else
             Object lockObj = new Object();
 
             // For each training instance
@@ -231,7 +224,6 @@ namespace Accord.Neuro.Learning
 
                 // Map
                 (observationIndex, loopState, partial) =>
-#endif
                 {
                     var observation = input[observationIndex];
 
@@ -243,7 +235,6 @@ namespace Accord.Neuro.Learning
                     var weightGradient = partial.WeightGradient;
                     var hiddenGradient = partial.HiddenBiasGradient;
                     var visibleGradient = partial.VisibleBiasGradient;
-
 
                     // 1. Compute a forward pass. The network is being
                     //    driven by data, so we will gather activations
@@ -272,14 +263,11 @@ namespace Accord.Neuro.Learning
                         }
                     }
 
-
                     // 3. Compute outputs for the reconstruction. The network
                     //    is now being driven by reconstructions, so we should
                     //    gather the output probabilities without sampling
                     for (int j = 0; j < hidden.Neurons.Length; j++)
                         reprobability[j] = hidden.Neurons[j].Compute(reconstruction);
-
-
 
                     // 4.1. Compute positive associations
                     for (int k = 0; k < observation.Length; k++)
@@ -292,7 +280,6 @@ namespace Accord.Neuro.Learning
                     for (int j = 0; j < visibleGradient.Length; j++)
                         visibleGradient[j] += observation[j];
 
-
                     // 4.2. Compute negative associations
                     for (int k = 0; k < reconstruction.Length; k++)
                         for (int j = 0; j < reprobability.Length; j++)
@@ -304,15 +291,12 @@ namespace Accord.Neuro.Learning
                     for (int j = 0; j < reconstruction.Length; j++)
                         visibleGradient[j] -= reconstruction[j];
 
-
                     // Compute current error
                     for (int j = 0; j < observation.Length; j++)
                     {
                         double e = observation[j] - reconstruction[j];
                         partial.ErrorSumOfSquares += e * e;
                     }
-
-#if !NET35
                     return partial; // Report partial solution
                 },
 
@@ -335,15 +319,6 @@ namespace Accord.Neuro.Learning
                         errors += partial.ErrorSumOfSquares;
                     }
                 });
-#else
-                }
-            }
-
-            weightsGradient = partial.WeightGradient;
-            hiddenBiasGradient = partial.HiddenBiasGradient;
-            visibleBiasGradient = partial.VisibleBiasGradient;
-            errors = partial.ErrorSumOfSquares;
-#endif
 
             return errors;
         }
@@ -362,35 +337,24 @@ namespace Accord.Neuro.Learning
         {
             double errors = 0;
 
-
-#if NET35
-            var partial = storage.Value.Clear();
-            for (int i = 0; i < input.Length; i++)
-            {
-                int observationIndex = i;
-#else
             Object lockObj = new Object();
 
             // For each training instance
             Parallel.For(0, input.Length,
-
 #if DEBUG
 				new ParallelOptions() { MaxDegreeOfParallelism = 1 },
 #endif
-
                 // Initialize
                 () => storage.Value.Clear(),
 
                 // Map
                 (observationIndex, loopState, partial) =>
-#endif
                 {
                     var observation = input[observationIndex];
 
                     var probability = partial.OriginalProbability;
                     var activations = partial.OriginalActivations;
                     var reconstruction = partial.ReconstructedInput;
-
 
                     // 1. Compute a forward pass. The network is being
                     //    driven by data, so we will gather activations
@@ -424,11 +388,8 @@ namespace Accord.Neuro.Learning
                         double e = observation[j] - reconstruction[j];
                         partial.ErrorSumOfSquares += e * e;
                     }
-
-#if !NET35
                     return partial; // Report partial solution
                 },
-
                 // Reduce
                 (partial) =>
                 {
@@ -437,15 +398,6 @@ namespace Accord.Neuro.Learning
                         errors += partial.ErrorSumOfSquares;
                     }
                 });
-#else
-                }
-            }
-
-            weightsGradient = partial.WeightGradient;
-            hiddenBiasGradient = partial.HiddenBiasGradient;
-            visibleBiasGradient = partial.VisibleBiasGradient;
-            errors = partial.ErrorSumOfSquares;
-#endif
 
             return errors;
         }
@@ -496,8 +448,6 @@ namespace Accord.Neuro.Learning
             visible.CopyReversedWeightsFrom(hidden);
         }
 
-
-
         private class ParallelStorage
         {
             public double[][] WeightGradient { get; set; }
@@ -538,7 +488,6 @@ namespace Accord.Neuro.Learning
             }
 
         }
-
 
         #region IDisposable members
         /// <summary>

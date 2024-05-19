@@ -30,7 +30,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using System;
     using Accord.Math;
     using Accord.Math.Differentiation;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Kolmogorov-Smirnov distribution.

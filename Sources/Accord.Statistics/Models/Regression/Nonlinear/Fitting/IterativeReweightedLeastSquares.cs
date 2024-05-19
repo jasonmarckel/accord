@@ -27,7 +27,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
     using Accord.Math.Decompositions;
     using Accord.Statistics.Links;
     using Accord.MachineLearning;
-    using Accord.Compat;
     using System.Threading;
 
     /// <summary>
@@ -72,8 +71,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     /// </example>
     /// 
 #pragma warning disable 612, 618
-    public class IterativeReweightedLeastSquares : IterativeReweightedLeastSquares<GeneralizedLinearRegression>,
-        IRegressionFitting
+    public class IterativeReweightedLeastSquares : IterativeReweightedLeastSquares<GeneralizedLinearRegression>
 #pragma warning restore 612, 618
     {
         /// <summary>
@@ -105,158 +103,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
         public IterativeReweightedLeastSquares(GeneralizedLinearRegression regression)
         {
             Initialize(regression);
-        }
-
-
-
-        /// <summary> 
-        /// Runs one iteration of the Reweighted Least Squares algorithm. 
-        /// </summary> 
-        /// <param name="inputs">The input data.</param> 
-        /// <param name="outputs">The outputs associated with each input vector.</param> 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns> 
-        ///  
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, int[] outputs)
-        {
-            return Run(inputs, outputs.Apply(x => x > 0 ? 1.0 : 0.0));
-        }
-
-        /// <summary> 
-        /// Runs one iteration of the Reweighted Least Squares algorithm. 
-        /// </summary> 
-        /// <param name="inputs">The input data.</param> 
-        /// <param name="outputs">The outputs associated with each input vector.</param> 
-        /// <param name="weights">The weights associated with each sample.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns> 
-        ///  
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, int[] outputs, double[] weights)
-        {
-            return Run(inputs, outputs.Apply(x => x > 0 ? 1.0 : 0.0), weights);
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, int[][] outputs)
-        {
-            if (outputs[0].Length != 1)
-                throw new ArgumentException("Function must have a single output.", "outputs");
-            double[] output = new double[outputs.Length];
-            for (int i = 0; i < outputs.Length; i++)
-                output[i] = outputs[i][0] > 0 ? 1.0 : 0.0;
-            return Run(inputs, output);
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// <param name="sampleWeight">The weight associated with each sample.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, int[][] outputs, double[] sampleWeight)
-        {
-            if (outputs[0].Length != 1)
-                throw new ArgumentException("Function must have a single output.", "outputs");
-            double[] output = new double[outputs.Length];
-            for (int i = 0; i < outputs.Length; i++)
-                output[i] = outputs[i][0] > 0 ? 1.0 : 0.0;
-            return Run(inputs, output, sampleWeight);
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, double[][] outputs)
-        {
-            if (outputs[0].Length != 1)
-                throw new ArgumentException("Function must have a single output.", "outputs");
-
-            double[] output = new double[outputs.Length];
-            for (int i = 0; i < outputs.Length; i++)
-                output[i] = outputs[i][0];
-
-            return Run(inputs, output);
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, double[] outputs)
-        {
-            return Run(inputs, outputs, null);
-        }
-
-        /// <summary>
-        ///   Runs one iteration of the Reweighted Least Squares algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="outputs">The outputs associated with each input vector.</param>
-        /// <param name="sampleWeights">An weight associated with each sample.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, double[] outputs, double[] sampleWeights)
-        {
-            int old = Iterations;
-            Iterations = 1;
-            Learn(inputs, outputs, sampleWeights);
-            Iterations = old;
-            return Updates.Abs().Max();
-        }
-
-        /// <summary>
-        ///   Computes the sum-of-squared error between the
-        ///   model outputs and the expected outputs.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data set.</param>
-        /// <param name="outputs">The output values.</param>
-        /// 
-        /// <returns>The sum-of-squared errors.</returns>
-        /// 
-        [Obsolete("Please use the LogLikelihoodLoss class instead.")]
-        public double ComputeError(double[][] inputs, double[] outputs)
-        {
-            double sum = 0;
-
-            for (int i = 0; i < inputs.Length; i++)
-            {
-                double actual = Model.Probability(inputs[i]);
-                double expected = outputs[i];
-                double delta = actual - expected;
-                sum += delta * delta;
-            }
-
-            return sum;
         }
 
     }
@@ -367,16 +213,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
         {
             get { return token; }
             set { token = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return convergence.MaxIterations; }
-            set { convergence.MaxIterations = value; }
         }
 
         /// <summary>

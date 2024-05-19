@@ -26,7 +26,7 @@ namespace Accord.Statistics.Kernels
     using System.Collections.Generic;
     using Accord.Math;
     using System.Diagnostics;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Value cache for kernel function evaluations. The total memory size occupied by the 

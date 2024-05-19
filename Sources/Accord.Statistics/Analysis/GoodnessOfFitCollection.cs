@@ -25,7 +25,7 @@ namespace Accord.Statistics.Analysis
     using System;
     using System.Collections.Generic;
     using Accord.Collections;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Collection of goodness-of-fit measures.

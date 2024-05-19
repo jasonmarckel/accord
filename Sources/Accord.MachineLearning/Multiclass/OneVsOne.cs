@@ -52,7 +52,7 @@ namespace Accord.MachineLearning
     using System.Collections.Generic;
     using System.Linq;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Threading.Tasks;
     using System.Runtime.CompilerServices;
@@ -383,19 +383,13 @@ namespace Accord.MachineLearning
             return Scores(input)[classIndex];
         }
 
-
-
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByVoting(TInput input)
         {
             return DistanceByVoting(input, new double[NumberOfOutputs]).ArgMax();
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByElimination(TInput input)
         {
             int i = NumberOfOutputs - 1;
@@ -412,9 +406,7 @@ namespace Accord.MachineLearning
             return i;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByElimination(TInput input, Decision[] path)
         {
             int i = NumberOfOutputs - 1;
@@ -439,9 +431,7 @@ namespace Accord.MachineLearning
             return i;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByElimination(TInput input, double[] result)
         {
             int i = NumberOfOutputs - 1;
@@ -478,9 +468,7 @@ namespace Accord.MachineLearning
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByElimination(TInput input, double[] result, Decision[] path)
         {
             int i = NumberOfOutputs - 1;
@@ -520,9 +508,7 @@ namespace Accord.MachineLearning
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByVoting(TInput input, double[] result)
         {
             Parallel.For(0, indices.Length, options, k =>
@@ -537,9 +523,6 @@ namespace Accord.MachineLearning
 
             return result;
         }
-
-
-
 
         /// <summary>
         ///   Returns an enumerator that iterates through all machines

@@ -29,7 +29,7 @@ namespace Accord.Statistics.Analysis
     using Accord.Statistics.Analysis.ContrastFunctions;
     using Accord.MachineLearning;
     using Accord.Statistics.Models.Regression.Linear;
-    using Accord.Compat;
+
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -114,17 +114,13 @@ namespace Accord.Statistics.Analysis
     [Serializable]
 #pragma warning disable 612, 618
     public class IndependentComponentAnalysis : MultipleTransformBase<double[], double>,
-        IMultivariateAnalysis, IParallel,
+        IParallel,
         IUnsupervisedLearning<MultivariateLinearRegression, double[], double[]>
 #pragma warning restore 612, 618
     {
-        private double[,] sourceMatrix;
-
-
         private double[][] whiteningMatrix; // pre-whitening matrix
         private double[][] mixingMatrix; // estimated mixing matrix
         private double[][] revertMatrix; // estimated de-mixing matrix
-        private double[,] resultMatrix;
 
         private AnalysisMethod analysisMethod = AnalysisMethod.Center;
         private bool overwriteSourceMatrix;
@@ -146,111 +142,6 @@ namespace Accord.Statistics.Analysis
         private MultivariateLinearRegression mix;
         private MultivariateLinearRegression demix;
 
-
-
-        /// <summary>
-        ///   Constructs a new Independent Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// 
-        [Obsolete("Please do not pass data to this constructor, and use the Learn method instead.")]
-        public IndependentComponentAnalysis(double[,] data)
-            : this(data, AnalysisMethod.Center, IndependentComponentAlgorithm.Parallel)
-        {
-        }
-
-        /// <summary>
-        ///   Constructs a new Independent Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="algorithm">The FastICA algorithm to be used in the analysis. Default
-        ///   is <see cref="IndependentComponentAlgorithm.Parallel"/>.</param>
-        ///   
-        [Obsolete("Please do not pass data to this constructor, and use the Learn method instead.")]
-        public IndependentComponentAnalysis(double[,] data, IndependentComponentAlgorithm algorithm)
-            : this(data, AnalysisMethod.Center, algorithm)
-        {
-        }
-
-        /// <summary>
-        ///   Constructs a new Independent Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="method">The analysis method to perform. Default is
-        ///   <see cref="AnalysisMethod.Center"/>.</param>
-        /// 
-        [Obsolete("Please do not pass data to this constructor, and use the Learn method instead.")]
-        public IndependentComponentAnalysis(double[,] data, AnalysisMethod method)
-            : this(data, method, IndependentComponentAlgorithm.Parallel)
-        {
-        }
-
-        /// <summary>
-        ///   Constructs a new Independent Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="method">The analysis method to perform. Default is
-        ///   <see cref="AnalysisMethod.Center"/>.</param>
-        /// <param name="algorithm">The FastICA algorithm to be used in the analysis. Default
-        ///   is <see cref="IndependentComponentAlgorithm.Parallel"/>.</param>
-        ///   
-        [Obsolete("Please do not pass data to this constructor, and use the Learn method instead.")]
-        public IndependentComponentAnalysis(double[,] data, AnalysisMethod method,
-            IndependentComponentAlgorithm algorithm)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            this.sourceMatrix = data;
-            this.algorithm = algorithm;
-            this.analysisMethod = method;
-
-            // Calculate common measures to speedup other calculations
-            this.columnMeans = Measures.Mean(sourceMatrix, dimension: 0);
-            this.columnStdDev = Measures.StandardDeviation(sourceMatrix, columnMeans);
-
-            this.NumberOfInputs = data.Columns();
-            this.NumberOfOutputs = data.Columns();
-        }
-
-        /// <summary>
-        ///   Constructs a new Independent Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="method">The analysis method to perform. Default is
-        ///   <see cref="AnalysisMethod.Center"/>.</param>
-        /// <param name="algorithm">The FastICA algorithm to be used in the analysis. Default
-        ///   is <see cref="IndependentComponentAlgorithm.Parallel"/>.</param>
-        ///   
-        [Obsolete("Please do not pass data to this constructor, and use the Learn method instead.")]
-        public IndependentComponentAnalysis(double[][] data, AnalysisMethod method = AnalysisMethod.Center,
-          IndependentComponentAlgorithm algorithm = IndependentComponentAlgorithm.Parallel)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            this.sourceMatrix = data.ToMatrix();
-            this.algorithm = algorithm;
-            this.analysisMethod = method;
-
-            // Calculate common measures to speedup other calculations
-            this.columnMeans = Measures.Mean(sourceMatrix, dimension: 0);
-            this.columnStdDev = Measures.StandardDeviation(sourceMatrix, columnMeans);
-
-            this.NumberOfInputs = data.Columns();
-            this.NumberOfOutputs = data.Columns();
-        }
-
         /// <summary>
         ///   Constructs a new Independent Component Analysis.
         /// </summary>
@@ -261,7 +152,6 @@ namespace Accord.Statistics.Analysis
             this.algorithm = algorithm;
             this.analysisMethod = method;
         }
-
 
         /// <summary>
         ///   Gets or sets the parallelization options for this algorithm.
@@ -282,17 +172,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return parallelOptions.CancellationToken; }
             set { parallelOptions.CancellationToken = value; }
-        }
-
-
-        /// <summary>
-        ///   Source data used in the analysis.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source
-        {
-            get { return sourceMatrix; }
         }
 
         /// <summary>
@@ -319,20 +198,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return tolerance; }
             set { tolerance = value; }
-        }
-
-        /// <summary>
-        ///   Gets the resulting projection of the source
-        ///   data given on the creation of the analysis 
-        ///   into the space spawned by independent components.
-        /// </summary>
-        /// 
-        /// <value>The resulting projection in independent component space.</value>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Result
-        {
-            get { return resultMatrix; }
         }
 
         /// <summary>
@@ -438,117 +303,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return columnStdDev; }
         }
-
-
-
-
-
-
-        /// <summary>
-        ///   Computes the Independent Component Analysis algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn instead.")]
-        public void Compute()
-        {
-            Compute(NumberOfOutputs);
-        }
-
-        /// <summary>
-        ///   Computes the Independent Component Analysis algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please set NumberOfOutputs to the desired number of components and use Learn instead.")]
-        public void Compute(int components)
-        {
-            NumberOfOutputs = components;
-
-            // First, the data should be centered by subtracting
-            //  the mean of each column in the source data matrix.
-            double[][] matrix = Adjust(sourceMatrix.ToJagged(), overwriteSourceMatrix);
-
-            // Pre-process the centered data matrix to have unit variance
-            double[][] whiten = Statistics.Tools.Whitening(matrix, out whiteningMatrix);
-
-            // Generate a new unitary initial guess for the de-mixing matrix
-            double[][] initial = Jagged.Random(components, matrix.Columns());
-
-
-            // Compute the demixing matrix using the selected algorithm
-            if (algorithm == IndependentComponentAlgorithm.Deflation)
-            {
-                revertMatrix = deflation(whiten, components, initial);
-            }
-            else // if (algorithm == IndependentComponentAlgorithm.Parallel)
-            {
-                revertMatrix = parallel(whiten, components, initial);
-            }
-
-            // Combine the rotation and demixing matrices
-            revertMatrix = whiteningMatrix.DotWithTransposed(revertMatrix);
-            revertMatrix.Divide(revertMatrix.Sum(), result: revertMatrix);
-
-            // Compute the original source mixing matrix
-            mixingMatrix = Matrix.PseudoInverse(revertMatrix);
-            mixingMatrix.Divide(mixingMatrix.Sum(), result: mixingMatrix);
-
-            // Demix the data into independent components
-            resultMatrix = Matrix.Dot(matrix, revertMatrix).ToMatrix();
-
-            this.demix = createRegression(revertMatrix, columnMeans, columnStdDev, analysisMethod);
-            this.mix = demix.Inverse();
-
-            // Creates the object-oriented structure to hold the principal components
-            var array = new IndependentComponent[components];
-            for (int i = 0; i < array.Length; i++)
-                array[i] = new IndependentComponent(this, i);
-            this.componentCollection = new IndependentComponentCollection(array);
-        }
-
-
-        /// <summary>
-        ///   Separates a mixture into its components (demixing).
-        /// </summary>
-        /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public double[,] Separate(double[,] data)
-        {
-            return demix.Transform(data.ToJagged()).ToMatrix();
-        }
-
-        /// <summary>
-        ///   Separates a mixture into its components (demixing).
-        /// </summary>
-        /// 
-        [Obsolete("Please use Demix.Transform() instead.")]
-        public float[][] Separate(float[][] data)
-        {
-            return demix.Transform(data.ToDouble().Transpose()).ToSingle().Transpose(); // TODO: Implement float support in linear regression
-        }
-
-
-
-        /// <summary>
-        ///   Combines components into a single mixture (mixing).
-        /// </summary>
-        /// 
-        [Obsolete("Please use Mix.Transform instead.")]
-        public double[,] Combine(double[,] data)
-        {
-            return mix.Transform(data.ToJagged()).ToMatrix();
-        }
-
-        /// <summary>
-        ///   Combines components into a single mixture (mixing).
-        /// </summary>
-        /// 
-        [Obsolete("Please use Mix.Transform instead.")]
-        public float[][] Combine(float[][] data)
-        {
-            return mix.Transform(data.ToDouble().Transpose()).ToSingle().Transpose(); // TODO: Implement float support in linear regression;
-        }
-
-
 
         #region FastICA Algorithms
 
@@ -817,8 +571,6 @@ namespace Accord.Statistics.Analysis
 
 
         #endregion
-
-
 
         /// <summary>
         ///   Computes the maximum absolute change between two members of a matrix.

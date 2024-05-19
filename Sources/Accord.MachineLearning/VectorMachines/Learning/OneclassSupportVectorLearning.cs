@@ -27,58 +27,9 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Math;
     using Accord.Math.Optimization.Losses;
     using System;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Diagnostics;
-
-    /// <summary>
-    ///   One-class Support Vector Machine learning algorithm.
-    /// </summary>
-    /// 
-    /// <example>
-    ///   <para>The following example shows how to use an one-class SVM.</para>
-    ///   <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\OneclassSupportVectorLearningTest.cs" region="doc_learn" />
-    /// </example>
-    /// 
-    /// <seealso cref="SupportVectorMachine"/>
-    /// <seealso cref="ProbabilisticOutputCalibration"/>
-    /// <seealso cref="MulticlassSupportVectorLearning{TKernel}"/>
-    /// 
-#pragma warning disable 0618
-    [Obsolete("Please use OneclassSupportVectorLearning<TKernel> instead.")]
-    public class OneclassSupportVectorLearning
-        : BaseOneclassSupportVectorLearning<ISupportVectorMachine<double[]>, IKernel<double[]>, double[]>
-    {
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public OneclassSupportVectorLearning(KernelSupportVectorMachine model, double[][] input)
-            : base(model, input)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OneclassSupportVectorLearning"/> class.
-        /// </summary>
-        public OneclassSupportVectorLearning()
-        {
-
-        }
-
-        /// <summary>
-        /// Creates an instance of the model to be learned. Inheritors
-        /// of this abstract class must define this method so new models
-        /// can be created from the training data.
-        /// </summary>
-        protected override ISupportVectorMachine<double[]> Create(int inputs, IKernel<double[]> kernel)
-        {
-            if (kernel is Linear)
-                return new SupportVectorMachine(inputs) { Kernel = (Linear)kernel };
-            return new SupportVectorMachine<IKernel<double[]>>(inputs, kernel);
-        }
-    }
-#pragma warning restore 0618
 
     /// <summary>
     ///   One-class Support Vector Machine learning algorithm.
@@ -124,9 +75,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     public class OneclassSupportVectorLearning<TKernel, TInput>
         : BaseOneclassSupportVectorLearning<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
@@ -164,13 +113,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
 
         double eps = 0.001;
         bool shrinking = true;
-
-        // TODO: Remove this field after a few releases. It exists
-        // only to provide compatibility with previous releases of
-        // the framework.
-        private ISupportVectorMachine<TInput> machine;
-
-
 
         /// <summary>
         ///   Gets or sets the classifier being learned.
@@ -409,45 +351,9 @@ namespace Accord.MachineLearning.VectorMachines.Learning
                                 "the complexity parameter C or try a different kernel function.");
                 }
             }
-            finally
-            {
-                if (machine != null)
-                {
-                    // TODO: This block is only necessary to offer compatibility
-                    // to code written using previous versions of the framework,
-                    // and should be removed after a few releases.
-                    machine.SupportVectors = Model.SupportVectors;
-                    machine.Weights = Model.Weights;
-                    machine.Threshold = Model.Threshold;
-                    machine.Kernel = Model.Kernel;
-                    machine.IsProbabilistic = Model.IsProbabilistic;
-                }
-            }
+            finally { }
 
             return Model;
-        }
-
-
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        protected BaseOneclassSupportVectorLearning(ISupportVectorMachine<TInput> model, TInput[] input)
-        {
-            this.machine = model;
-            this.inputs = input;
-            this.Kernel = (TKernel)model.Kernel;
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete()]
-        public double Run()
-        {
-            Learn(inputs);
-            return new LogLikelihoodLoss().Loss(Model.Score(inputs));
         }
     }
 }

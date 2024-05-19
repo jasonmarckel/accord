@@ -152,18 +152,11 @@ namespace Accord.Math
         /// 
         public static IDistance<T> GetDistance<T>(Func<T, T, double> func)
         {
-#if NETSTANDARD1_4
-            var methods = typeof(Distance).GetTypeInfo().DeclaredMethods.Where(m=>m.IsPublic && m.IsStatic);
-#else
             var methods = typeof(Distance).GetMethods(BindingFlags.Public | BindingFlags.Static);
-#endif
+
             foreach (var method in methods)
             {
-#if NETSTANDARD1_4
-                var methodInfo = func.GetMethodInfo();
-#else
                 var methodInfo = func.Method;
-#endif
                 if (methodInfo == method)
                 {
                     var t = Type.GetType("Accord.Math.Distances." + method.Name);
@@ -184,18 +177,6 @@ namespace Accord.Math
         }
 
         /// <summary>
-        ///   Gets the Bitwise Hamming distance between two points.
-        ///   Please use the <see cref="Distance.Hamming(byte[], byte[])">Distance.Hamming</see>
-        ///   method or the <see cref="Accord.Math.Distances.Hamming"/> class instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Distance.Hamming instead.")]
-        public static double BitwiseHamming(byte[] x, byte[] y)
-        {
-            return Distance.Hamming(x, y);
-        }
-
-        /// <summary>
         ///   Gets the Levenshtein distance between two points.
         /// </summary>
         ///  
@@ -204,9 +185,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Levenshtein distance between x and y.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double Levenshtein<T>(T[] x, T[] y)
         {
             return new Levenshtein<T>().Distance(x, y);

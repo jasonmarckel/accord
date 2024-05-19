@@ -27,7 +27,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Math.Optimization;
     using System.ComponentModel;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Beta Distribution (of the first kind).

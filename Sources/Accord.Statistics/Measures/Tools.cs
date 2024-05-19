@@ -29,7 +29,7 @@ namespace Accord.Statistics
     using Accord.Statistics.Kernels;
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Distributions.Fitting;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Set of statistics functions.
@@ -44,100 +44,6 @@ namespace Accord.Statistics
     /// 
     public static partial class Tools
     {
-        // TODO: Make this class obsolete
-
-        #region Summarizing, grouping and extending operations
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.GetRatio(int[], int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.GetRatio instead.")]
-        public static double[] Proportions(int[] positives, int[] negatives)
-        {
-            return Accord.Statistics.Classes.GetRatio(positives, negatives);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.GetRatio(int[][], int, int)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.GetRatio instead.")]
-        public static double[] Proportions(int[][] data, int positiveColumn, int negativeColumn)
-        {
-            return Accord.Statistics.Classes.GetRatio(data, positiveColumn, negativeColumn);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.Summarize(int[][], int, int)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.Summarize instead.")]
-        public static int[][] Group(int[][] data, int labelColumn, int dataColumn)
-        {
-            return Accord.Statistics.Classes.Summarize(data, labelColumn, dataColumn);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.Expand(int[], int[], int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.Expand instead.")]
-        public static int[][] Expand(int[] data, int[] positives, int[] negatives)
-        {
-            return Accord.Statistics.Classes.Expand(data, positives, negatives);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.Expand(int[], int[], int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.Expand instead.")]
-        public static int[][] Expand(int[][] data, int labelColumn, int positiveColumn, int negativeColumn)
-        {
-            return Accord.Statistics.Classes.Expand(data, labelColumn, positiveColumn, negativeColumn);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Jagged.OneHot(int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Jagged.OneHot instead.")]
-        public static double[][] Expand(int[] labels)
-        {
-            return Jagged.OneHot(labels, labels.DistinctCount());
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Jagged.OneHot(int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Jagged.OneHot instead.")]
-        public static double[][] Expand(int[] labels, double negative, double positive)
-        {
-            return Jagged.OneHot(labels).Replace(0, negative).Replace(1, positive);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Jagged.OneHot(int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Jagged.OneHot instead.")]
-        public static double[][] Expand(int[] labels, int classes)
-        {
-            return Jagged.OneHot(labels, classes);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Jagged.OneHot(int[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Jagged.OneHot instead.")]
-        public static double[][] Expand(int[] labels, int classes, double negative, double positive)
-        {
-            return Jagged.OneHot(labels, classes).Replace(0, negative).Replace(1, positive);
-        }
-        #endregion
-
 
         #region Determination and performance measures
         /// <summary>
@@ -184,83 +90,6 @@ namespace Accord.Statistics
             return 1.0 - (SSe / SSt);
         }
         #endregion
-
-
-        #region Permutations and combinatorials
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Vector.Sample(int, int)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Sample instead.")]
-        public static int[] RandomSample(int n, int k)
-        {
-            return Accord.Math.Vector.Sample(k, n);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.Random(int, int)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.Random instead.")]
-        public static int[] RandomGroups(int size, int groups)
-        {
-            return Accord.Statistics.Classes.Random(size, groups);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.Random(int, double)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.Random instead.")]
-        public static int[] RandomGroups(int size, double proportion)
-        {
-            return Accord.Statistics.Classes.Random(size, proportion);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Classes.Random(int[], int, int)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Classes.Random instead.")]
-        public static int[] RandomGroups(int[] labels, int classes, int groups)
-        {
-            return Accord.Statistics.Classes.Random(labels, classes, groups);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Vector.Sample(int)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Sample instead.")]
-        public static int[] Random(int n)
-        {
-            return Vector.Sample(n);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Vector.Shuffle{T}(T[])"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Shuffle instead.")]
-        public static void Shuffle<T>(T[] array)
-        {
-            Vector.Shuffle(array);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use <see cref="Vector.Shuffle{T}(IList{T})"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Vector.Shuffle instead.")]
-        public static void Shuffle<T>(IList<T> array)
-        {
-            Vector.Shuffle(array);
-        }
-
-
-        #endregion
-
 
         // ------------------------------------------------------------
 

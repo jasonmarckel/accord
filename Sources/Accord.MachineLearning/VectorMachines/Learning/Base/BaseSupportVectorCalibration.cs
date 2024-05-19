@@ -27,7 +27,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Math;
     using Accord.Math.Optimization.Losses;
     using Accord.Statistics;
-    using Accord.Compat;
+    
     using System.Threading;
 
     /// <summary>
@@ -38,9 +38,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupervisedBinaryLearning<TModel, TInput>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         [NonSerialized]
         CancellationToken token = new CancellationToken();
@@ -90,12 +88,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             var type = typeof(TModel);
             if (type == typeof(SupportVectorMachine))
                 result = new SupportVectorMachine(inputs) as TModel;
-#if !NETSTANDARD1_4
-#pragma warning disable 0618
-            else if (type == typeof(KernelSupportVectorMachine))
-                result = new KernelSupportVectorMachine(kernel as IKernel, inputs) as TModel;
-#pragma warning restore 0618
-#endif
             else if (type == typeof(SupportVectorMachine<TKernel, TInput>))
                 result = new SupportVectorMachine<TKernel, TInput>(inputs, kernel) as TModel;
 
@@ -255,17 +247,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             this.Model = model as TModel;
             this.Input = input;
             this.Output = Classes.Decide(output);
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Learn() instead.")]
-        public virtual double Run()
-        {
-            Learn(Input, Output, null);
-            var classifier = (IClassifier<TInput, bool>)machine;
-            return new ZeroOneLoss(Output).Loss(classifier.Decide(Input));
         }
 
     }

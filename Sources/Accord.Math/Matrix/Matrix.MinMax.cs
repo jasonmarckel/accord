@@ -23,7 +23,7 @@
 namespace Accord.Math
 {
     using System;
-    using Accord.Compat;
+
 
     public static partial class Matrix
     {
@@ -570,63 +570,7 @@ namespace Accord.Math
             return ranges;
         }
 
-
-
-
-
-
-        /// <summary>
-        ///   Deprecated. Please use GetRange() instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use GetRange instead.")]
-        public static IntRange Range(this int[] values)
-        {
-            return GetRange(values);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use GetRange() instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use GetRange instead.")]
-        public static DoubleRange Range(this double[] values)
-        {
-            return GetRange(values);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use GetRange() instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use GetRange instead.")]
-        public static IntRange Range(this int[,] values)
-        {
-            return GetRange(values);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use GetRange() instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use GetRange instead.")]
-        public static DoubleRange Range(this double[,] values)
-        {
-            return GetRange(values);
-        }
-
-        /// <summary>
-        ///   Deprecated. Please use GetRange() instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use GetRange instead.")]
-        public static DoubleRange[] Range(this double[,] value, int dimension)
-        {
-            return GetRange(value, dimension);
-        }
-
         #endregion
-
 
     }
 }

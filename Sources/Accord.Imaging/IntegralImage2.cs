@@ -406,9 +406,7 @@ namespace Accord.Imaging
         ///   Computes the integral image representation from the given image.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public void Update(UnmanagedImage image, int channel)
         {
             int width = image.Width;
@@ -545,9 +543,7 @@ namespace Accord.Imaging
         /// <returns>The sum of all pixels contained in the rectangle, computed
         ///   as I[y, x] + I[y + h, x + w] - I[y + h, x] - I[y, x + w].</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public long GetSum(int x, int y, int width, int height)
         {
             size_t a = nWidth * (y) + (x);
@@ -570,9 +566,7 @@ namespace Accord.Imaging
         /// <returns>The sum of all pixels contained in the rectangle, computed
         ///   as I²[y, x] + I²[y + h, x + w] - I²[y + h, x] - I²[y, x + w].</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public long GetSum2(int x, int y, int width, int height)
         {
             size_t a = nWidth * (y) + (x);
@@ -596,9 +590,7 @@ namespace Accord.Imaging
         /// <returns>The sum of all pixels contained in the rectangle, computed
         ///   as T[y + w, x + w + 1] + T[y + h, x - h + 1] - T[y, x + 1] - T[y + w + h, x + w - h + 1].</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public long GetSumT(int x, int y, int width, int height)
         {
             size_t a = tWidth * (y + width) + (x + width + 1);

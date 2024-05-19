@@ -24,7 +24,7 @@ namespace Accord.Statistics.Distributions.Univariate
 {
     using System;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Negative Binomial distribution.

@@ -20,7 +20,6 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-#if !NET35 && !NET40
 namespace Accord.IO
 {
     using Accord.Math;
@@ -34,7 +33,7 @@ namespace Accord.IO
     using System.IO.Compression;
     using System.Collections;
     using System.Data;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Lazily-loaded collection of arrays from a compressed .npz archive.
@@ -47,9 +46,7 @@ namespace Accord.IO
     /// 
     public class NpzDictionary<T> : IDisposable, IReadOnlyDictionary<string, T>, ICollection<T>
         where T : class,
-#if !NETSTANDARD1_4
         ICloneable,
-#endif
         IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
     {
         Stream stream;
@@ -322,4 +319,3 @@ namespace Accord.IO
 
     }
 }
-#endif

@@ -3,7 +3,6 @@
 <#@ output extension="Generated.cs" #>
 <#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ include file="T4Toolbox.tt" #>
 // Accord Math Library
 // The Accord.NET Framework
 // http://accord-framework.net
@@ -100,9 +99,7 @@ namespace Accord.Math
         ///    coordinate vectors gives their inner product.</para>  
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#> Dot(this <#=a#>[] a, <#=b#>[] b)
         {
             <#=t#> r = (<#=t#>)0;
@@ -123,9 +120,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*b</c> of the given matrix <c>A</c> and vector <c>b</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[][] a, <#=b#>[] columnVector)
         {
             return Dot(a, columnVector, new <#=r#>[a.Length]);
@@ -140,9 +135,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*b</c> of the given matrix <c>A</c> and vector <c>b</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[,] a, <#=b#>[] columnVector)
         {
             return Dot(a, columnVector, new <#=r#>[a.Rows()]);
@@ -157,9 +150,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>a*B</c> of the given vector <c>a</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[] rowVector, <#=b#>[][] b)
         {
             return Dot(rowVector, b, new <#=r#>[b.Columns()]);
@@ -174,9 +165,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>a*B</c> of the given vector <c>a</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[] rowVector, <#=b#>[,] b)
         {
             return Dot(rowVector, b, new <#=r#>[b.Columns()]);
@@ -191,9 +180,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Dot(this <#=a#>[][] a, <#=b#>[][] b)
         {
             return Dot(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Length, b.Columns()));
@@ -208,9 +195,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] Dot(this <#=a#>[,] a, <#=b#>[,] b)
         {
             return Dot(a, b, new <#=r#>[a.Rows(), b.Columns()]);
@@ -225,9 +210,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Dot(this <#=a#>[][] a, <#=b#>[,] b)
         {
             return Dot(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Length, b.Columns()));
@@ -242,9 +225,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Dot(this <#=a#>[,] a, <#=b#>[][] b)
         {
             return Dot(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Rows(), b.Columns()));
@@ -265,9 +246,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B'</c> of the given matrix <c>A</c> and vector <c>b</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[][] a, <#=b#>[] columnVector)
         {
             return DotWithTransposed(a, columnVector, Accord.Math.Jagged.Create<<#=r#>>(a.Length, columnVector.Length));
@@ -282,9 +261,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B'</c> of the given matrix <c>A</c> and vector <c>b</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DotWithTransposed(this <#=a#>[,] a, <#=b#>[] columnVector)
         {
             return DotWithTransposed(a, columnVector, new <#=r#>[a.Rows(), columnVector.Length]);
@@ -299,9 +276,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>a*B'</c> of the given vector <c>a</c> and matrix <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] DotWithTransposed(this <#=a#>[] rowVector, <#=b#>[][] b)
         {
             return DotWithTransposed(rowVector, b, new <#=r#>[b.Length]);
@@ -316,9 +291,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>a*B'</c> of the given vector <c>a</c> and matrix <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] DotWithTransposed(this <#=a#>[] rowVector, <#=b#>[,] b)
         {
             return DotWithTransposed(rowVector, b, new <#=r#>[b.Rows()]);
@@ -333,9 +306,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B'</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[][] a, <#=b#>[][] b)
         {
             return DotWithTransposed(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Length, b.Length));
@@ -350,9 +321,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B'</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DotWithTransposed(this <#=a#>[,] a, <#=b#>[,] b)
         {
             return DotWithTransposed(a, b, new <#=r#>[a.Rows(), b.Rows()]);
@@ -367,9 +336,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B'</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[][] a, <#=b#>[,] b)
         {
             return DotWithTransposed(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Length, b.Rows()));
@@ -384,9 +351,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B'</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[,] a, <#=b#>[][] b)
         {
             return DotWithTransposed(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Rows(), b.Length));
@@ -404,9 +369,7 @@ namespace Accord.Math
         /// <param name="a">The transposed left matrix <c>A</c>.</param>
         /// <param name="columnVector">The right matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] TransposeAndDot(this <#=a#>[][] a, <#=b#>[] columnVector)
         {
             return TransposeAndDot(a, columnVector, new <#=r#>[a.Columns()]);
@@ -419,9 +382,7 @@ namespace Accord.Math
         /// <param name="a">The transposed left matrix <c>A</c>.</param>
         /// <param name="columnVector">The right matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] TransposeAndDot(this <#=a#>[,] a, <#=b#>[] columnVector)
         {
             return TransposeAndDot(a, columnVector, new <#=r#>[a.Columns()]);
@@ -436,9 +397,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>a'*B</c> of the given vector <c>a</c> and matrix <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[] columnVector, <#=b#>[][] b)
         {
             return TransposeAndDot(columnVector, b, Accord.Math.Jagged.Create<<#=r#>>(columnVector.Length, b.Columns()));
@@ -453,9 +412,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>a'*B</c> of the given vector <c>a</c> and matrix <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] TransposeAndDot(this <#=a#>[] columnVector, <#=b#>[,] b)
         {
             return TransposeAndDot(columnVector, b, new <#=r#>[columnVector.Length, b.Columns()]);
@@ -470,9 +427,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A'*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[][] a, <#=b#>[][] b)
         {
             return TransposeAndDot(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Columns(), b.Columns()));
@@ -487,9 +442,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A'*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] TransposeAndDot(this <#=a#>[,] a, <#=b#>[,] b)
         {
             return TransposeAndDot(a, b, Matrix.Create<<#=r#>>(a.Columns(), b.Columns()));
@@ -504,9 +457,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A'*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[][] a, <#=b#>[,] b)
         {
             return TransposeAndDot(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Columns(), b.Columns()));
@@ -521,9 +472,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A'*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[,] a, <#=b#>[][] b)
         {
             return TransposeAndDot(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Rows(), b.Columns()));
@@ -547,9 +496,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithDiagonal(this <#=a#>[][] a, <#=b#>[] b)
         {
             return DotWithDiagonal(a, b, Accord.Math.Jagged.Create<<#=r#>>(a.Length, b.Length));
@@ -564,9 +511,7 @@ namespace Accord.Math
         ///
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DotWithDiagonal(this <#=a#>[,] a, <#=b#>[] b)
         {
             return DotWithDiagonal(a, b, Matrix.Create<<#=r#>>(a.Rows(), b.Length));
@@ -580,9 +525,7 @@ namespace Accord.Math
         /// <param name="a">The left matrix <c>A</c>.</param>
         /// <param name="b">The diagonal vector of right matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] TransposeAndDotWithDiagonal(this <#=a#>[,] a, <#=b#>[] b)
         {
             return TransposeAndDotWithDiagonal(a, b, Matrix.Create<<#=r#>>(a.Columns(), b.Length));
@@ -595,9 +538,7 @@ namespace Accord.Math
         /// <param name="a">The left matrix <c>A</c>.</param>
         /// <param name="b">The diagonal vector of right matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDotWithDiagonal(this <#=a#>[][] a, <#=b#>[] b)
         {
             return TransposeAndDotWithDiagonal(a, b, Jagged.Create<<#=r#>>(a.Columns(), b.Length));
@@ -613,9 +554,7 @@ namespace Accord.Math
         /// <param name="b">The diagonal vector of inverse right matrix <c>B</c>.</param>
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DivideByDiagonal(this <#=a#>[,] a, <#=b#>[] b)
         {
             return DivideByDiagonal(a, b, Matrix.CreateAs<<#=a#>, <#=r#>>(a));
@@ -629,9 +568,7 @@ namespace Accord.Math
         /// <param name="b">The diagonal vector of inverse right matrix <c>B</c>.</param>
         /// <returns>The product <c>A*B</c> of the given matrices <c>A</c> and <c>B</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DivideByDiagonal(this <#=a#>[][] a, <#=b#>[] b)
         {
             return DivideByDiagonal(a, b, Jagged.CreateAs<<#=a#>, <#=r#>>(a));
@@ -653,9 +590,7 @@ namespace Accord.Math
         ///   containing them. It has many applications in mathematics, engineering and physics.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Cross(this <#=a#>[] a, <#=b#>[] b)
         {
             return Cross(a, b, new <#=r#>[a.Length]);
@@ -673,24 +608,11 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] Outer(this <#=a#>[] a, <#=b#>[] b)
         {
             return Outer(a, b, new <#=r#>[a.Length, b.Length]);
         }
-
-        /// <summary>
-        ///   Gets the inner product (dot product) between two vectors (a*bT).
-        /// </summary>
-        /// 
-        [Obsolete("Please use Matrix.Dot instead.")]
-        public static <#=r#> Inner(this <#=a#>[] a, <#=b#>[] b)
-        {
-            return Dot(a, b);
-        }
-
 
         /// <summary>
         ///   Computes the Kronecker product between two vectors.
@@ -701,9 +623,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two vectors.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Kronecker(this <#=a#>[] a, <#=b#>[] b)
         {
             return Kronecker(a, b, new <#=r#>[a.Length * b.Length]);
@@ -718,9 +638,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Kronecker(this <#=a#>[][] a, <#=b#>[][] b)
         {
             int crows = a.Length * b.Length;
@@ -737,9 +655,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] Kronecker(this <#=a#>[,] a, <#=b#>[,] b)
         {
             int crows = a.Rows() * b.Rows();
@@ -756,9 +672,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Kronecker(this <#=a#>[][] a, <#=b#>[,] b)
         {
             int crows = a.Rows() * b.Rows();
@@ -775,9 +689,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Kronecker(this <#=a#>[,] a, <#=b#>[][] b)
         {
             int crows = a.Rows() * b.Rows();
@@ -820,9 +732,7 @@ namespace Accord.Math
         /// <returns>The product <c>a*B*c</c> of the given vector <c>a</c>,
         ///   matrix <c>B</c> and vector <c>c</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=t#> DotAndDot(this <#=a#>[] rowVector, <#=b#>[][] matrix, <#=c#>[] columnVector)
         {
 #if DEBUG
@@ -854,9 +764,7 @@ namespace Accord.Math
         /// <returns>The product <c>a*B*c</c> of the given vector <c>a</c>,
         ///   matrix <c>B</c> and vector <c>c</c>.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=t#> DotAndDot(this <#=a#>[] rowVector, <#=b#>[,] matrix, <#=c#>[] columnVector)
         {
             int cols = matrix.Columns();
@@ -945,9 +853,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] Dot(this <#=a#>[,] a, <#=b#>[,] b, <#=r#>[,] result)
         {
             int N = result.Rows();
@@ -1012,9 +918,7 @@ namespace Accord.Math
         /// <param name="b">The right matrix <c>B</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Dot(this <#=a#>[][] a, <#=b#>[][] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1058,9 +962,7 @@ namespace Accord.Math
         /// <param name="b">The right matrix <c>B</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Dot(this <#=a#>[][] a, <#=b#>[,] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1115,9 +1017,7 @@ namespace Accord.Math
         /// <param name="b">The right matrix <c>B</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Dot(this <#=a#>[,] a, <#=b#>[][] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1166,9 +1066,7 @@ namespace Accord.Math
         /// <param name="matrix">The matrix <c>A</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[] rowVector, <#=b#>[,] matrix, <#=r#>[] result)
         {
 #if DEBUG
@@ -1196,9 +1094,7 @@ namespace Accord.Math
         /// <param name="columnVector">The column vector <c>v</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[][] matrix, <#=b#>[] columnVector, <#=r#>[] result)
         {
 #if DEBUG
@@ -1225,9 +1121,7 @@ namespace Accord.Math
         /// <param name="columnVector">The column vector <c>v</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[,] matrix, <#=b#>[] columnVector, <#=r#>[] result)
         {
             int cols = matrix.Columns();
@@ -1294,9 +1188,7 @@ namespace Accord.Math
         /// <param name="matrix">The right matrix <c>B</c>.</param>
         /// <param name="result">The matrix <c>R</c> to store the product.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Dot(this <#=a#>[] rowVector, <#=b#>[][] matrix, <#=r#>[] result)
         {
 #if DEBUG
@@ -1333,9 +1225,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DotWithTransposed(this <#=a#>[,] a, <#=b#>[,] b, <#=r#>[,] result)
         {
 #if DEBUG
@@ -1387,9 +1277,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[][] a, <#=b#>[,] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1434,9 +1322,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///   
-#if NET45 || NET46 || NET462 || NETSTANDARD
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] 
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[,] a, <#=b#>[][] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1481,9 +1367,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[][] a, <#=b#>[][] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1521,9 +1405,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] DotWithTransposed(this <#=a#>[] rowVector, <#=b#>[,] b, <#=r#>[] result)
         {
             <#// TODO: Optimize this call: return b.Dot(rowVector); #>
@@ -1540,9 +1422,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DotWithTransposed(this <#=a#>[,] a, <#=b#>[] columnVector, <#=r#>[,] result)
         {
             <#// TODO: Optimize this call#>
@@ -1559,9 +1439,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] DotWithTransposed(this <#=a#>[] rowVector, <#=b#>[][] b, <#=r#>[] result)
         {
             <#// TODO: Optimize this call#>
@@ -1578,9 +1456,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B'</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         ///    
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithTransposed(this <#=a#>[][] a, <#=b#>[] columnVector, <#=r#>[][] result)
         {
             <#// TODO: Optimize this call#>
@@ -1609,9 +1485,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A'*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] TransposeAndDot(this <#=a#>[,] a, <#=b#>[,] b, <#=r#>[,] result)
         {
             int n = a.Rows();
@@ -1671,9 +1545,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A'*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[][] a, <#=b#>[][] b, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1718,9 +1590,7 @@ namespace Accord.Math
         /// <param name="result">The vector <c>r</c> to store the product <c>r = A'*b</c>
         ///   of the given matrix <c>A</c> and vector <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] TransposeAndDot(this <#=a#>[,] matrix, <#=b#>[] columnVector, <#=r#>[] result)
         {
 #if DEBUG
@@ -1753,9 +1623,7 @@ namespace Accord.Math
         /// <param name="result">The vector <c>r</c> to store the product <c>r = A'*b</c>
         ///   of the given matrix <c>A</c> and vector <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] TransposeAndDot(this <#=a#>[][] matrix, <#=b#>[] columnVector, <#=r#>[] result)
         {
 #if DEBUG
@@ -1787,9 +1655,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A'*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[][] a, <#=b#>[,] b, <#=r#>[][] result)
         {
             <#// TODO: Optimize this call#>
@@ -1805,9 +1671,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A'*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[,] a, <#=b#>[][] b, <#=r#>[][] result)
         {
             <#// TODO: Optimize this call#>
@@ -1826,9 +1690,7 @@ namespace Accord.Math
         /// <param name="result">The vector <c>r</c> to store the product <c>r = A'*b</c>
         ///   of the given matrix <c>A</c> and vector <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] TransposeAndDot(this <#=a#>[] rowVector, <#=b#>[,] b, <#=r#>[,] result)
         {
             <#// TODO: Optimize this call#>
@@ -1844,9 +1706,7 @@ namespace Accord.Math
         /// <param name="result">The vector <c>r</c> to store the product <c>r = A'*b</c>
         ///   of the given matrix <c>A</c> and vector <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDot(this <#=a#>[] rowVector, <#=b#>[][] b, <#=r#>[][] result)
         {
             <#// TODO: Optimize this call#>
@@ -1870,9 +1730,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] TransposeAndDotWithDiagonal(this <#=a#>[,] a, <#=b#>[] diagonal, <#=r#>[,] result)
         {
 #if DEBUG
@@ -1898,9 +1756,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] TransposeAndDotWithDiagonal(this <#=a#>[][] a, <#=b#>[] diagonal, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1926,9 +1782,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DotWithDiagonal(this <#=a#>[,] a, <#=b#>[] diagonal, <#=r#>[,] result)
         {
 #if DEBUG
@@ -1964,9 +1818,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DotWithDiagonal(this <#=a#>[][] a, <#=b#>[] diagonal, <#=r#>[][] result)
         {
 #if DEBUG
@@ -1992,9 +1844,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] DivideByDiagonal(this <#=a#>[,] a, <#=b#>[] diagonal, <#=r#>[,] result)
         {
             int rows = a.Rows();
@@ -2024,9 +1874,7 @@ namespace Accord.Math
         /// <param name="result">The matrix <c>R</c> to store the product <c>R = A*B</c>
         ///   of the given matrices <c>A</c> and <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] DivideByDiagonal(this <#=a#>[][] a, <#=b#>[] diagonal, <#=r#>[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2049,9 +1897,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] Outer(this <#=a#>[] a, <#=b#>[] b, <#=r#>[,] result)
         {
 			unsafe
@@ -2082,9 +1928,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Outer(this <#=a#>[] a, <#=b#>[] b, <#=r#>[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2104,9 +1948,7 @@ namespace Accord.Math
         ///   containing them. It has many applications in mathematics, engineering and physics.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] Cross(this <#=a#>[] a, <#=b#>[] b, <#=r#>[] result)
         {
             result[0] = (<#=r#>)((<#=t#>)a[1]*(<#=t#>)b[2] - (<#=t#>)a[2]*(<#=t#>)b[1]);
@@ -2134,9 +1976,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] Kronecker(this <#=a#>[,] a, <#=b#>[,] b, <#=r#>[,] result)
         {
             int arows = a.Rows();
@@ -2191,9 +2031,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Kronecker(this <#=a#>[][] a, <#=b#>[][] b, <#=r#>[][] result)
         {
             int arows = a.Rows();
@@ -2227,9 +2065,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Kronecker(this <#=a#>[][] a, <#=b#>[,] b, <#=r#>[][] result)
         {
             int arows = a.Rows();
@@ -2266,9 +2102,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two matrices.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] Kronecker(this <#=a#>[,] a, <#=b#>[][] b, <#=r#>[][] result)
         {
             int arows = a.Rows();
@@ -2302,9 +2136,7 @@ namespace Accord.Math
         /// 
         /// <returns>The Kronecker product of the two vectors.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
 		public static <#=r#>[] Kronecker(this <#=a#>[] a, <#=b#>[] b, <#=r#>[] result)
 		{
 			unsafe

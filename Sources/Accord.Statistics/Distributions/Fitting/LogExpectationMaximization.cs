@@ -25,7 +25,7 @@ namespace Accord.Statistics.Distributions.Fitting
     using Accord.Math;
     using System;
     using MachineLearning;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>

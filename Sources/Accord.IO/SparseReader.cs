@@ -28,7 +28,6 @@ namespace Accord.IO
     using System.Globalization;
     using System.IO;
     using System.Text;
-    using Accord.Compat;
 
     /// <summary>
     ///   Reader for data files containing samples in libsvm's sparse format.
@@ -130,16 +129,6 @@ namespace Accord.IO
         public List<string> SampleDescriptions { get { return descriptions; } }
 
         /// <summary>
-        ///   Obsolete. Please use <see cref="NumberOfInputs"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Dimensions
-        {
-            get { return NumberOfInputs; }
-        }
-
-        /// <summary>
         ///   Gets the number of features present in this dataset. Please 
         ///   note that, when using the sparse representation, it is not
         ///   strictly necessary to know this value.
@@ -159,20 +148,12 @@ namespace Accord.IO
 
         private void createReader(string path)
         {
-#if NETSTANDARD1_4
-            this.reader = new StreamReader(new FileStream(path, FileMode.Open));
-#else
             this.reader = new StreamReader(path);
-#endif
         }
 
         private void createReader(string path, System.Text.Encoding encoding)
         {
-#if NETSTANDARD1_4
-            this.reader = new StreamReader(new FileStream(path, FileMode.Open), encoding);
-#else
             this.reader = new StreamReader(path);
-#endif
         }
 
         /// <summary>
@@ -212,8 +193,7 @@ namespace Accord.IO
             this.reader = new StreamReader(stream);
             this.sampleSize = sampleSize;
         }
-
-        
+  
         /// <summary>
         ///   Initializes a new instance of the <see cref="SparseReader"/> class.
         /// </summary>
@@ -315,7 +295,6 @@ namespace Accord.IO
             get { return reader.EndOfStream; }
         }
 
-
         /// <summary>
         ///   Reads one line from the feature file, returning the array of values 
         ///   for the sparse vector and its corresponding label.
@@ -341,7 +320,6 @@ namespace Accord.IO
             Array.Copy(fields, 1, values, 0, values.Length);
             return Tuple.Create(values, output);
         }
-
 
         /// <summary>
         ///   Reads a sample from the file and returns it as a
@@ -457,7 +435,6 @@ namespace Accord.IO
             samples = sampleList.ToArray();
             outputs = outputList.ToArray();
         }
-
 
         /// <summary>
         ///   Reads <paramref name="count"/> samples from the file and returns
@@ -576,7 +553,6 @@ namespace Accord.IO
             Read(-1, out samples, out outputs);
         }
 
-
         /// <summary>
         ///   Reads a sample from the file and returns it as a
         ///   dense vector, together with its associated output value.
@@ -624,12 +600,6 @@ namespace Accord.IO
             return ReadDense(-1);
         }
 
-
-
-
-
-
-
         private int guessSampleSize()
         {
             // Scan the whole file and identify
@@ -659,7 +629,6 @@ namespace Accord.IO
 
             return max;
         }
-
 
 #region IDisposable members
         /// <summary>

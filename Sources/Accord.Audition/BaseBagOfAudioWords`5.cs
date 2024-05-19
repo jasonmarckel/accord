@@ -22,12 +22,10 @@
 
 namespace Accord.Audition
 {
+    using Accord.Audio;
     using Accord.MachineLearning;
     using Accord.Math;
     using System;
-    using System.Collections.Generic;
-    using Accord.Compat;
-    using Accord.Audio;
 
     /// <summary>
     ///   Base class for <see cref="BagOfAudioWords">Bag of Visual Words</see> implementations.
@@ -60,7 +58,6 @@ namespace Accord.Audition
         protected BaseBagOfAudioWords()
         {
         }
-
 
         /// <summary>
         /// Applies the transformation to a set of input vectors,
@@ -169,9 +166,6 @@ namespace Accord.Audition
             return result;
         }
 
-
-
-
         /// <summary>
         /// Learns a model that can map the given inputs to the desired outputs.
         /// </summary>
@@ -188,14 +182,5 @@ namespace Accord.Audition
             });
         }
 
-        double[] IBagOfWords<string>.GetFeatureVector(string value)
-        {
-            throw new NotImplementedException();
-        }
-
-        double[] IBagOfWords<Signal>.GetFeatureVector(Signal value)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -26,7 +26,6 @@ namespace Accord.Math.Optimization
     using System.Collections.Generic;
     using System.Linq.Expressions;
 
-#if !NET35
     internal static class ExpressionParser
     {
         public static void Parse(SortedSet<string> list, Expression expr)
@@ -142,6 +141,6 @@ namespace Accord.Math.Optimization
             }
         }
     }
-#endif
+
 }
 

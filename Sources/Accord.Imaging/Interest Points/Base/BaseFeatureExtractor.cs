@@ -22,7 +22,7 @@
 
 namespace Accord.Imaging
 {
-    using Accord.Compat;
+
     using Accord.MachineLearning;
     using System;
     using System.Collections.Generic;
@@ -42,7 +42,7 @@ namespace Accord.Imaging
     [Serializable]
 #pragma warning disable CS0612 // Type or member is obsolete
 #pragma warning disable CS0618 // Type or member is obsolete
-    public abstract class BaseFeatureExtractor<TFeature> : IImageFeatureExtractor<TFeature>, IDisposable, IFeatureDetector<TFeature>, ICloneable
+    public abstract class BaseFeatureExtractor<TFeature> : IImageFeatureExtractor<TFeature>, IDisposable, ICloneable
 #pragma warning restore CS0618 // Type or member is obsolete
 #pragma warning restore CS0612 // Type or member is obsolete
     {
@@ -80,54 +80,6 @@ namespace Accord.Imaging
         public BaseFeatureExtractor()
         {
             this.SupportedFormats = new HashSet<PixelFormat>();
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="Transform(Bitmap)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(image) method instead.")]
-        public List<double[]> ProcessImage(Bitmap image)
-        {
-            var t = (IEnumerable<IFeatureDescriptor<double[]>>)Transform(image);
-            return new List<double[]>(t.Select(x => x.Descriptor));
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="Transform(Bitmap)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(image) method instead.")]
-        public List<double[]> ProcessImage(BitmapData imageData)
-        {
-            var t = (IEnumerable<IFeatureDescriptor<double[]>>)Transform(new UnmanagedImage(imageData));
-            return new List<double[]>(t.Select(x => x.Descriptor));
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="Transform(Bitmap)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(image) method instead.")]
-        public List<double[]> ProcessImage(UnmanagedImage image)
-        {
-            var t = (IEnumerable<IFeatureDescriptor<double[]>>)Transform(image);
-            return new List<double[]>(t.Select(x => x.Descriptor));
-        }
-
-        IEnumerable<TFeature> IFeatureDetector<TFeature>.ProcessImage(Bitmap image)
-        {
-            return Transform(image);
-        }
-
-        IEnumerable<TFeature> IFeatureDetector<TFeature>.ProcessImage(BitmapData imageData)
-        {
-            return Transform(new UnmanagedImage(imageData));
-        }
-
-        IEnumerable<TFeature> IFeatureDetector<TFeature>.ProcessImage(UnmanagedImage image)
-        {
-            return Transform(image);
         }
 
         /// <summary>

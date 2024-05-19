@@ -44,14 +44,6 @@ namespace Accord.Statistics.Models
         ///   performed by the learning algorithm.
         /// </summary>
         /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        int Iterations { get; set; }
-
-        /// <summary>
-        ///   Gets or sets the maximum number of iterations
-        ///   performed by the learning algorithm.
-        /// </summary>
-        /// 
         int MaxIterations { get; set; }
 
         /// <summary>

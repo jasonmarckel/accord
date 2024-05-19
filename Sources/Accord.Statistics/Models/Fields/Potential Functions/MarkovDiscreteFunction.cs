@@ -30,7 +30,7 @@ namespace Accord.Statistics.Models.Fields.Functions
     using Accord.Statistics.Models.Fields.Functions.Specialized;
     using Accord.Statistics.Distributions.Univariate;
     using Accord.Math.Random;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Potential function modeling Hidden Markov Models.
@@ -165,7 +165,7 @@ namespace Accord.Statistics.Models.Fields.Functions
         /// 
         public MarkovDiscreteFunction(HiddenMarkovClassifier classifier, bool includePriors = true)
         {
-            this.Symbols = classifier.Symbols;
+            this.Symbols = classifier.NumberOfSymbols;
             this.Outputs = classifier.Classes;
 
             int factorIndex = 0;
@@ -264,7 +264,7 @@ namespace Accord.Statistics.Models.Fields.Functions
 
             for (int c = 0; c < classifier.Models.Length; c++)
             {
-                Factors[c] = new MarkovDiscreteFactor(this, classifier.Models[c].States, c, classifier.Symbols,
+                Factors[c] = new MarkovDiscreteFactor(this, classifier.Models[c].States, c, classifier.NumberOfSymbols,
                     classIndex: classOffset[c], classCount: classCount[c],  // 1. classes
                     edgeIndex: edgeOffset[c], edgeCount: edgeCount[c],      // 2. edges
                     stateIndex: stateOffset[c], stateCount: stateCount[c]); // 3. states

@@ -140,21 +140,6 @@ namespace Accord.Math
         }
 
         /// <summary>
-        ///   Compares two values for equality, considering a relative acceptance threshold.
-        /// </summary>
-        /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
-        [Obsolete("Use IsEqual(a, b, rtol) with the named parameter rtol instead.")]
-        public static bool IsRelativelyEqual(this double a, double b, double threshold)
-        {
-            return a.IsEqual(b, rtol: threshold);
-        }
-
-
-
-        /// <summary>
         ///     Compares two objects for equality, performing an elementwise 
         ///     comparison if the elements are vectors or matrices.
         /// </summary>
@@ -163,13 +148,13 @@ namespace Accord.Math
         {
             if (Object.Equals(objA, objB))
                 return true;
-#if !NETSTANDARD1_4
+
             if (objA is DBNull)
                 objA = null;
 
             if (objB is DBNull)
                 objB = null;
-#endif
+
             if (objA == null ^ objB == null)
                 return false;
 
@@ -210,7 +195,6 @@ namespace Accord.Math
             // TODO: Implement this cache mechanism here
             // http://blog.slaks.net/2015-06-26/code-snippets-fast-property-access-reflection/
 
-#if !NETSTANDARD1_4
             // Check if there is already an optimized method to perform this comparison
             Type typeA = objA.GetType();
             Type typeB = objB.GetType();
@@ -225,7 +209,6 @@ namespace Accord.Math
 
             if (equals != _this)
                 return (bool)equals.Invoke(null, new object[] { objA, objB, atol, rtol });
-#endif
 
             // Base case: arrays contain elements of same nature (both arrays, or both values)
             if (typeA.GetElementType().IsArray == typeB.GetElementType().IsArray)
@@ -696,11 +679,7 @@ namespace Accord.Math
         /// 
         public static int GetSizeInBytes<T>(this T[] elements)
         {
-#if NETSTANDARD1_4
             return elements.GetNumberOfElements() * Marshal.SizeOf<T>();
-#else
-            return elements.GetNumberOfElements() * Marshal.SizeOf(typeof(T));
-#endif
         }
 
         /// <summary>
@@ -709,11 +688,7 @@ namespace Accord.Math
         /// 
         public static int GetSizeInBytes<T>(this T[][] elements)
         {
-#if NETSTANDARD1_4
             return elements.GetNumberOfElements() * Marshal.SizeOf<T>();
-#else
-            return elements.GetNumberOfElements() * Marshal.SizeOf(typeof(T));
-#endif
         }
 
         /// <summary>
@@ -722,11 +697,7 @@ namespace Accord.Math
         /// 
         public static int GetSizeInBytes<T>(this T[,] elements)
         {
-#if NETSTANDARD1_4
             return elements.GetNumberOfElements() * Marshal.SizeOf<T>();
-#else
-            return elements.GetNumberOfElements() * Marshal.SizeOf(typeof(T));
-#endif
         }
 
         /// <summary>
@@ -1480,68 +1451,6 @@ namespace Accord.Math
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     result[i, j] = func(matrix[i, j], i, j);
             return result;
-        }
-
-
-
-
-
-        /// <summary>
-        ///   Applies a function to every element of the array.
-        /// </summary>
-        [Obsolete("Please use Apply passing a result parameter instead.")]
-        public static void ApplyInPlace<T>(this T[] vector, Func<T, T> func)
-        {
-            Apply(vector, func, result: vector);
-        }
-
-        /// <summary>
-        ///   Applies a function to every element of a matrix.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Apply passing a result parameter instead.")]
-        public static void ApplyInPlace<T>(this T[,] matrix, Func<T, T> func)
-        {
-            Apply(matrix, func, result: matrix);
-        }
-
-        /// <summary>
-        ///   Applies a function to every element of a matrix.
-        /// </summary>
-        [Obsolete("Please use Apply passing a result parameter instead.")]
-        public static void ApplyInPlace<T>(this T[,] matrix, Func<T, int, int, T> func)
-        {
-            Apply(matrix, func, result: matrix);
-        }
-
-        /// <summary>
-        ///   Applies a function to every element of the array.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Apply passing a result parameter instead.")]
-        public static T[] ApplyInPlace<T>(this T[] vector, Func<T, int, T> func)
-        {
-            return Apply(vector, func, result: vector);
-        }
-
-        /// <summary>
-        ///   Applies a function to every element of the array.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Apply passing a result parameter instead.")]
-        public static TResult[] ApplyWithIndex<TData, TResult>(this TData[] vector, Func<TData, int, TResult> func)
-        {
-            return Apply(vector, func);
-        }
-
-        /// <summary>
-        ///   Applies a function to every element of a matrix.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Apply passing a result parameter instead.")]
-        public static TResult[,] ApplyWithIndex<TData, TResult>(this TData[,] matrix, Func<TData, int, int, TResult> func)
-        {
-            return Apply(matrix, func);
         }
 
         /// <summary>

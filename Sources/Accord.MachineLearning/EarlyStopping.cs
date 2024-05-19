@@ -24,7 +24,7 @@ namespace Accord.MachineLearning
 {
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Modes for storing models.

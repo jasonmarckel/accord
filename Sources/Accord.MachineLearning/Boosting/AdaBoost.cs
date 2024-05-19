@@ -33,7 +33,7 @@ namespace Accord.MachineLearning.Boosting
     using Accord.Statistics.Analysis;
     using Accord.Statistics;
     using Accord.Math.Optimization.Losses;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Extra parameters that can be passed to AdaBoost's model learning function.

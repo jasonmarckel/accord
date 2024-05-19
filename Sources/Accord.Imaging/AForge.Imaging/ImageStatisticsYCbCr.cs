@@ -15,6 +15,7 @@ namespace Accord.Imaging
     using AForge.Math;
     using Accord;
     using Accord.Math;
+    using Range = Accord.Range;
 
     /// <summary>
     /// Gather statistics about image in YCbCr color space.

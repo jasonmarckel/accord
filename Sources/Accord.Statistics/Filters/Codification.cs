@@ -27,7 +27,7 @@ namespace Accord.Statistics.Filters
     using System.ComponentModel;
     using Accord.Math;
     using MachineLearning;
-    using Accord.Compat;
+
     using System.Runtime.Serialization;
     using System.Reflection;
 
@@ -183,9 +183,6 @@ namespace Accord.Statistics.Filters
     /// <seealso cref="Discretization{TInput, TOutput}"/>
     /// 
     [Serializable]
-#if NETSTANDARD2_0
-    [SurrogateSelector(typeof(Codification.Selector))]
-#endif
     public class Codification : Codification<string>, IAutoConfigurableFilter, ITransform<string[], double[]>
     {
         // TODO: Mark redundant methods as obsolete
@@ -198,7 +195,6 @@ namespace Accord.Statistics.Filters
         {
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Creates a new Codification Filter.
         /// </summary>
@@ -216,7 +212,6 @@ namespace Accord.Statistics.Filters
             : base(data, columns)
         {
         }
-#endif
 
         /// <summary>
         ///   Creates a new Codification Filter.
@@ -270,169 +265,6 @@ namespace Accord.Statistics.Filters
         }
 
         /// <summary>
-        ///   Translates a value of a given variable
-        ///   into its integer (codeword) representation.
-        /// </summary>
-        /// 
-        /// <param name="columnName">The name of the variable's data column.</param>
-        /// <param name="value">The value to be translated.</param>
-        /// 
-        /// <returns>An integer which uniquely identifies the given value
-        /// for the given variable.</returns>
-        /// 
-        [Obsolete("Please use Transform(columnName, value) instead.")]
-        public int Translate(string columnName, string value)
-        {
-            return Transform(columnName, value);
-        }
-
-        /// <summary>
-        ///   Translates an array of values into their
-        ///   integer representation, assuming values
-        ///   are given in original order of columns.
-        /// </summary>
-        /// 
-        /// <param name="data">The values to be translated.</param>
-        /// 
-        /// <returns>An array of integers in which each value
-        /// uniquely identifies the given value for each of
-        /// the variables.</returns>
-        /// 
-        [Obsolete("Please use Transform(data) instead.")]
-        public int[] Translate(params string[] data)
-        {
-            return Transform(data);
-        }
-
-#if !NETSTANDARD1_4
-        /// <summary>
-        ///   Translates an array of values into their
-        ///   integer representation, assuming values
-        ///   are given in original order of columns.
-        /// </summary>
-        /// 
-        /// <param name="row">A <see cref="DataRow"/> containing the values to be translated.</param>
-        /// <param name="columnNames">The columns of the <paramref name="row"/> containing the
-        /// values to be translated.</param>
-        /// 
-        /// <returns>An array of integers in which each value
-        /// uniquely identifies the given value for each of
-        /// the variables.</returns>
-        /// 
-        [Obsolete("Please use Transform(row, columnNames) instead.")]
-        public int[] Translate(DataRow row, params string[] columnNames)
-        {
-            return Transform(row, columnNames);
-        }
-#endif
-
-        /// <summary>
-        ///   Translates a value of the given variables
-        ///   into their integer (codeword) representation.
-        /// </summary>
-        /// 
-        /// <param name="columnNames">The names of the variable's data column.</param>
-        /// <param name="values">The values to be translated.</param>
-        /// 
-        /// <returns>An array of integers in which each integer
-        /// uniquely identifies the given value for the given 
-        /// variables.</returns>
-        /// 
-        [Obsolete("Please use Transform(columnNames, values) instead.")]
-        public int[] Translate(string[] columnNames, string[] values)
-        {
-            return Transform(columnNames, values);
-        }
-
-        /// <summary>
-        ///   Translates a value of the given variables
-        ///   into their integer (codeword) representation.
-        /// </summary>
-        /// 
-        /// <param name="columnName">The variable name.</param>
-        /// <param name="values">The values to be translated.</param>
-        /// 
-        /// <returns>An array of integers in which each integer
-        /// uniquely identifies the given value for the given 
-        /// variables.</returns>
-        /// 
-        [Obsolete("Please use Transform(columnName, value) instead.")]
-        public int[] Translate(string columnName, string[] values)
-        {
-            return Transform(columnName, values);
-        }
-
-        /// <summary>
-        ///   Translates a value of the given variables
-        ///   into their integer (codeword) representation.
-        /// </summary>
-        /// 
-        /// <param name="columnName">The variable name.</param>
-        /// <param name="values">The values to be translated.</param>
-        /// 
-        /// <returns>An array of integers in which each integer
-        /// uniquely identifies the given value for the given 
-        /// variables.</returns>
-        /// 
-        [Obsolete("Please use Transform(columnName, values) instead.")]
-        public int[][] Translate(string columnName, string[][] values)
-        {
-            return Transform(columnName, values);
-        }
-
-        /// <summary>
-        ///   Translates an integer (codeword) representation of
-        ///   the value of a given variable into its original
-        ///   value.
-        /// </summary>
-        /// 
-        /// <param name="columnName">The variable name.</param>
-        /// <param name="codeword">The codeword to be translated.</param>
-        /// 
-        /// <returns>The original meaning of the given codeword.</returns>
-        /// 
-        [Obsolete("Please use Revert(columnName, codeword) instead.")]
-        public string Translate(string columnName, int codeword)
-        {
-            return Revert(columnName, codeword);
-        }
-
-        /// <summary>
-        ///   Translates an integer (codeword) representation of
-        ///   the value of a given variable into its original
-        ///   value.
-        /// </summary>
-        /// 
-        /// <param name="columnName">The name of the variable's data column.</param>
-        /// <param name="codewords">The codewords to be translated.</param>
-        /// 
-        /// <returns>The original meaning of the given codeword.</returns>
-        /// 
-        [Obsolete("Please use Revert(columnName, codewords) instead.")]
-        public string[] Translate(string columnName, int[] codewords)
-        {
-            return Revert(columnName, codewords);
-        }
-
-        /// <summary>
-        ///   Translates the integer (codeword) representations of
-        ///   the values of the given variables into their original
-        ///   values.
-        /// </summary>
-        /// 
-        /// <param name="columnNames">The name of the variables' columns.</param>
-        /// <param name="codewords">The codewords to be translated.</param>
-        /// 
-        /// <returns>The original meaning of the given codewords.</returns>
-        /// 
-        [Obsolete("Please use Revert(columnNames, codewords) instead.")]
-        public string[] Translate(string[] columnNames, int[] codewords)
-        {
-            return Revert(columnNames, codewords);
-        }
-
-#if !NETSTANDARD1_4
-        /// <summary>
         ///   Auto detects the filter options by analyzing a given <see cref="System.Data.DataTable"/>.
         /// </summary> 
         ///  
@@ -450,7 +282,6 @@ namespace Accord.Statistics.Filters
         {
             Learn(data);
         }
-#endif
 
         /// <summary>
         ///   Auto detects the filter options by analyzing a set of string labels.
@@ -490,39 +321,6 @@ namespace Accord.Statistics.Filters
             for (int i = 0; i < columnNames.Length; i++)
                 this.Add(new Options(columnNames[i]).Learn(values.GetColumn(i)));
         }
-
-
-
-
-        #region Serialization backwards compatibility
-#if NETSTANDARD2_0
-        internal class Selector : SurrogateSelector
-        {
-            sealed class DBNullSerializationSurrogate : ISerializationSurrogate
-            {
-                const string representation = "__System.DBNull__";
-
-                public void GetObjectData(Object obj, SerializationInfo info, StreamingContext context)
-                {
-                    if (obj as System.DBNull != null)
-                        info.AddValue("value", representation);
-                }
-
-                public Object SetObjectData(Object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
-                {
-                    if (info.GetString("value") == representation)
-                        return System.DBNull.Value;
-                    return null;
-                }
-            }
-
-            public Selector()
-            {
-                AddSurrogate(typeof(System.DBNull), new StreamingContext(StreamingContextStates.All), new DBNullSerializationSurrogate());
-            }
-        }
-#endif
-        #endregion
 
     }
 }

@@ -13,7 +13,7 @@ namespace Accord.Neuro
     using Accord;
     using Accord.Math.Random;
     using Accord.Statistics.Distributions.Univariate;
-    using Accord.Compat;
+    
 
     /// <summary>
     /// Base neuron class.

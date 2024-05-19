@@ -32,7 +32,7 @@ namespace Accord.MachineLearning
     using System.Collections.Generic;
     using System.Reflection;
     using Accord.Statistics;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -156,9 +156,7 @@ namespace Accord.MachineLearning
     /// <seealso cref="GaussianMixtureModel"/>
     ///
     [Serializable]
-#if !NETSTANDARD1_4
     [SerializationBinder(typeof(KMeans.KMeansBinder))]
-#endif
     public class KMeans : ParallelLearningBase,
         IUnsupervisedLearning<KMeansClusterCollection, double[], int>
     {
@@ -267,20 +265,6 @@ namespace Accord.MachineLearning
         public Seeding UseSeeding { get; set; }
 
         /// <summary>
-        ///   Initializes a new instance of KMeans algorithm
-        /// </summary>
-        /// 
-        /// <param name="k">The number of clusters to divide input data.</param>       
-        /// <param name="distance">The distance function to use. Default is to
-        /// use the <see cref="Accord.Math.Distance.SquareEuclidean(double[], double[])"/> distance.</param>
-        /// 
-        [Obsolete("Please specify the distance function using classes instead of lambda functions.")]
-        public KMeans(int k, Func<double[], double[], double> distance)
-            : this(k, Accord.Math.Distance.GetDistance(distance))
-        {
-        }
-
-        /// <summary>
         ///   Initializes a new instance of the K-Means algorithm
         /// </summary>
         /// 
@@ -369,31 +353,6 @@ namespace Accord.MachineLearning
             Accord.Diagnostics.Debug.Assert(clusters.NumberOfInputs == x[0].Length);
 
             return clusters;
-        }
-
-        /// <summary>
-        ///   Divides the input data into K clusters. 
-        /// </summary>
-        /// 
-        /// <param name="data">The data where to compute the algorithm.</param>
-        ///   
-        [Obsolete("Please use Learn(x) instead.")]
-        public int[] Compute(double[][] data)
-        {
-            return Compute(data, Vector.Ones(data.Length));
-        }
-
-        /// <summary>
-        ///   Divides the input data into K clusters. 
-        /// </summary>
-        /// 
-        /// <param name="data">The data where to compute the algorithm.</param>
-        /// <param name="weights">The weight associated with each data point.</param>
-        ///   
-        [Obsolete("Please use Learn(x) instead.")]
-        public virtual int[] Compute(double[][] data, double[] weights)
-        {
-            return Learn(data, weights).Decide(data);
         }
 
         /// <summary>
@@ -626,28 +585,7 @@ namespace Accord.MachineLearning
             }
         }
 
-
-        /// <summary>
-        ///   Divides the input data into K clusters. 
-        /// </summary>  
-        /// 
-        /// <param name="data">The data where to compute the algorithm.</param>
-        /// <param name="error">
-        ///   The average square distance from the
-        ///   data points to the clusters' centroids.
-        /// </param>
-        /// 
-        [Obsolete("Please get the error value through this class' Error property.")]
-        public int[] Compute(double[][] data, out double error)
-        {
-            int[] labels = Learn(data).Decide(data);
-            error = Error;
-            return labels;
-        }
-
-
 #region Serialization backwards compatibility
-#if !NETSTANDARD1_4
         internal class KMeansBinder : SerializationBinder
         {
             public override Type BindToType(string assemblyName, string typeName)
@@ -736,10 +674,8 @@ namespace Accord.MachineLearning
 
 #pragma warning restore 0169
 #pragma warning restore 0649
-#endif
+
 #endregion
-
-
 
     }
 }

@@ -24,9 +24,7 @@ namespace Accord.Statistics.Filters
 {
     using System;
     using System.Collections.ObjectModel;
-#if !NETSTANDARD1_4
     using System.Data;
-#endif
 
     /// <summary>
     ///   Data processing interface for in-place filters.
@@ -34,7 +32,6 @@ namespace Accord.Statistics.Filters
     /// 
     public interface IInPlaceFilter
     {
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Applies the filter to a <see cref="System.Data.DataTable"/>,
         ///   modifying the table in place.
@@ -45,7 +42,6 @@ namespace Accord.Statistics.Filters
         /// <remarks>The method modifies the source table in place.</remarks> 
         ///
         void ApplyInPlace(DataTable data);
-#endif
     }
 
 }

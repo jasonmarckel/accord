@@ -22,11 +22,10 @@
 
 namespace Accord.MachineLearning
 {
-    using System;
     using Accord.Math;
     using Accord.Math.Distances;
+    using System;
     using System.Collections;
-    using Accord.Compat;
     using System.Threading;
 
     /// <summary>

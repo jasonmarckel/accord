@@ -27,7 +27,6 @@ namespace Accord
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
     using System.Reflection;
-    using Accord.Compat;
     using System.IO;
 
     /// <summary>
@@ -118,21 +117,6 @@ namespace Accord
                 Type attrType = typeof(TAttribute);
                 Type baseType = typeof(TInterface);
 
-#if NETSTANDARD1_4
-                TypeInfo baseTypeInfo = typeof(TInterface).GetTypeInfo();
-
-                foreach (Type t in baseTypeInfo.Assembly.ExportedTypes)
-                {
-                    TypeInfo ti = t.GetTypeInfo();
-                    object[] attributes = ti.GetCustomAttributes(baseType, true).ToArray();
-
-                    if (attributes != null && attributes.Length > 0 && baseTypeInfo.IsAssignableFrom(ti))
-                    {
-                        TAttribute[] at = attributes.Cast<TAttribute>().ToArray();
-                        handlerTypes.Add(Tuple.Create(t, at));
-                    }
-                }
-#else
                 foreach (Assembly parent in AppDomain.CurrentDomain.GetAssemblies())
                 {
                     try
@@ -159,7 +143,7 @@ namespace Accord
                         }
                     }
                 }
-#endif
+
                 Console.WriteLine("FormatHandlerAttribute: Found {0} {1} decoders.", handlerTypes.Count, typeof(TInterface));
 
                 foreach (Tuple<Type, TAttribute[]> pair in handlerTypes)

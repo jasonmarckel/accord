@@ -24,7 +24,7 @@ namespace Accord.MachineLearning.Performance
 {
     using System;
     using Accord.Math;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>

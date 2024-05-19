@@ -28,7 +28,7 @@ namespace Accord.Math.Optimization
     using Accord.MachineLearning;
     using System;
     using System.ComponentModel;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Status codes for the <see cref="BoundedBroydenFletcherGoldfarbShanno"/>

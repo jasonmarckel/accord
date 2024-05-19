@@ -27,7 +27,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using System;
     using Accord.Math.Optimization;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -54,9 +54,9 @@ namespace Accord.Statistics.Models.Fields.Learning
     /// 
     public class HiddenQuasiNewtonLearning<T> : BaseHiddenGradientOptimizationLearning<T, BoundedBroydenFletcherGoldfarbShanno>,
         ISupervisedLearning<HiddenConditionalRandomField<T>, T[], int>, IParallel,
-        IHiddenConditionalRandomFieldLearning<T>, IConvergenceLearning, IDisposable
+        IConvergenceLearning
     {
-        int IConvergenceLearning.Iterations
+        int IConvergenceLearning.MaxIterations
         {
             get
             {

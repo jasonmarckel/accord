@@ -188,7 +188,6 @@ namespace Accord.Vision.Detection
             return r;
         }
 
-
         /// <summary>
         ///   Loads a HaarCascade from a OpenCV-compatible XML file.
         /// </summary>

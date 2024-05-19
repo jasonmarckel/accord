@@ -28,7 +28,7 @@ namespace Accord.MachineLearning
     using System.Collections.Generic;
     using Accord.Math.Distances;
     using System.Collections;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>

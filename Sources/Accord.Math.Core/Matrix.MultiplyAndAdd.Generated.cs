@@ -1,4 +1,4 @@
-﻿// Accord Math Library
+// Accord Math Library
 // The Accord.NET Framework
 // http://accord-framework.net
 //
@@ -49,9 +49,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] MultiplyAndAdd(this int[][] a, int b, int[][] c, int[][] result)
         {
             check<int, int, int, int>(a: a, b: b, c: c, result: result);
@@ -72,9 +70,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[,] MultiplyAndAdd(this int[,] a, int b, int[,] c, int[,] result)
         {
             check<int, int, int, int>(a: a, b: b, c: c, result: result);
@@ -101,9 +97,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] MultiplyAndAdd(this float[][] a, float b, float[][] c, float[][] result)
         {
             check<float, float, float, float>(a: a, b: b, c: c, result: result);
@@ -124,9 +118,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[,] MultiplyAndAdd(this float[,] a, float b, float[,] c, float[,] result)
         {
             check<float, float, float, float>(a: a, b: b, c: c, result: result);
@@ -153,9 +145,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] MultiplyAndAdd(this double[][] a, double b, double[][] c, double[][] result)
         {
             check<double, double, double, double>(a: a, b: b, c: c, result: result);
@@ -176,9 +166,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[,] MultiplyAndAdd(this double[,] a, double b, double[,] c, double[,] result)
         {
             check<double, double, double, double>(a: a, b: b, c: c, result: result);
@@ -205,9 +193,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] MultiplyAndAdd(this byte[][] a, byte b, byte[][] c, byte[][] result)
         {
             check<byte, byte, byte, byte>(a: a, b: b, c: c, result: result);
@@ -228,9 +214,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[,] MultiplyAndAdd(this byte[,] a, byte b, byte[,] c, byte[,] result)
         {
             check<byte, byte, byte, byte>(a: a, b: b, c: c, result: result);
@@ -257,9 +241,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] MultiplyAndAdd(this decimal[][] a, decimal b, decimal[][] c, decimal[][] result)
         {
             check<decimal, decimal, decimal, decimal>(a: a, b: b, c: c, result: result);
@@ -280,9 +262,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[,] MultiplyAndAdd(this decimal[,] a, decimal b, decimal[,] c, decimal[,] result)
         {
             check<decimal, decimal, decimal, decimal>(a: a, b: b, c: c, result: result);

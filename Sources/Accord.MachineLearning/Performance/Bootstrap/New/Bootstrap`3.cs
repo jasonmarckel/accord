@@ -26,7 +26,7 @@ namespace Accord.MachineLearning.Performance
     using System.Linq;
     using Accord.Math;
     using Accord.MachineLearning.Performance;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -81,7 +81,7 @@ namespace Accord.MachineLearning.Performance
 
 
         /// <summary>
-        ///   Initializes a new instance of the <see cref="Bootstrap" /> class.
+        ///   Initializes a new instance of the Bootstrap class.
         /// </summary>
         /// 
         public Bootstrap()

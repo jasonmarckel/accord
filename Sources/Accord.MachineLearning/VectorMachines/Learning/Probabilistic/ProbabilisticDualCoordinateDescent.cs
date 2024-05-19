@@ -61,7 +61,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Accord.Math;
     using Statistics.Models.Regression;
     using Statistics.Models.Regression.Fitting;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   L2-regularized logistic regression (probabilistic support 
@@ -133,15 +133,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         /// </summary>
         /// 
         public ProbabilisticDualCoordinateDescent()
-        {
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public ProbabilisticDualCoordinateDescent(SupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
         {
         }
 
@@ -480,15 +471,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             Model.SupportVectors = new[] { Kernel.CreateVector(w.First(w.Length - 1)) };
             Model.Threshold = weights[biasIndex];
             Model.IsProbabilistic = true;
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public BaseProbabilisticDualCoordinateDescent(SupportVectorMachine<TKernel, TInput> model, TInput[] input, int[] output)
-            : base(model, input, output)
-        {
         }
     }
 }

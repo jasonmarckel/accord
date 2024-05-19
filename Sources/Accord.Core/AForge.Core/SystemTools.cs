@@ -93,7 +93,6 @@ namespace Accord
         /// 
         public static unsafe byte* CopyUnmanagedMemory(byte* dst, byte* src, int count)
         {
-#if NETSTANDARD
             if (System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 return memcpy(dst, src, count);
@@ -109,9 +108,6 @@ namespace Accord
                 }
                 return dst;
             }
-#else
-            return memcpy(dst, src, count);
-#endif
         }
 
         /// <summary>
@@ -145,7 +141,6 @@ namespace Accord
         /// 
         public static unsafe byte* SetUnmanagedMemory(byte* dst, int filler, int count)
         {
-#if NETSTANDARD
             if (System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 return memset(dst, filler, count);
@@ -160,11 +155,7 @@ namespace Accord
                 }
                 return dst;
             }
-#else
-            return memset(dst, filler, count);
-#endif
         }
-
 
         // Win32 memory copy function
         [DllImport("ntdll.dll", CallingConvention = CallingConvention.Cdecl)]

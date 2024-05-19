@@ -27,7 +27,7 @@ namespace Accord.Math.Optimization
     using System.Globalization;
     using System.Linq.Expressions;
     using System.Text;
-    using Accord.Compat;
+
     using System.Linq;
 
     /// <summary>

@@ -24,7 +24,7 @@ namespace Accord.Statistics.Testing
 {
     using System;
     using Accord.Statistics.Distributions.Univariate;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   T-Test for two paired samples.

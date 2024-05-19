@@ -349,9 +349,7 @@ namespace Accord.IO
                 // free managed resources
                 if (reader != null)
                 {
-#if !NETSTANDARD1_4
                     reader.Close();
-#endif
                     reader = null;
                 }
             }

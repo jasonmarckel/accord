@@ -32,7 +32,7 @@ namespace Accord.Statistics.Analysis
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Text;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -142,10 +142,8 @@ namespace Accord.Statistics.Analysis
     /// <seealso cref="LogisticRegressionAnalysis"/>
     /// 
     [Serializable]
-    public class StepwiseLogisticRegressionAnalysis : IRegressionAnalysis,
-        ISupervisedLearning<LogisticRegression, double[], double>
+    public class StepwiseLogisticRegressionAnalysis : ISupervisedLearning<LogisticRegression, double[], double>
     {
-
         /// <summary>
         /// Gets or sets a cancellation token that can be used to
         /// stop the learning algorithm while it is running.
@@ -397,36 +395,12 @@ namespace Accord.Statistics.Analysis
             // Get the final variable selection
             resultVariables = currentModel.Variables;
 
-            double[][] resultInput = inputData.Submatrix(null, resultVariables);
+            double[][] resultInput = inputData.Get(null, resultVariables);
 
             // Compute the final model output probabilities
             result = currentModel.Regression.Probability(resultInput);
 
             return currentModel.Regression;
-        }
-
-        /// <summary>
-        ///   Computes the Stepwise Logistic Regression.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public void Compute()
-        {
-            int changed;
-            do
-            {
-                changed = DoStep();
-            } while (changed != -1);
-
-
-            // Get the final variable selection
-            resultVariables = currentModel.Variables;
-
-            double[][] resultInput = inputData
-                .Submatrix(null, resultVariables);
-
-            // Compute the final model output probabilities
-            result = currentModel.Regression.Probability(resultInput);
         }
 
         /// <summary>

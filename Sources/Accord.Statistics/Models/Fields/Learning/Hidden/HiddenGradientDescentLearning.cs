@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using System.Threading;
     using Accord.Math;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -48,7 +48,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     /// 
     public class HiddenGradientDescentLearning<T> : BaseHiddenConditionalRandomFieldLearning<T>,
         ISupervisedLearning<HiddenConditionalRandomField<T>, T[], int>, IParallel,
-        IHiddenConditionalRandomFieldLearning<T>, IConvergenceLearning, IDisposable
+        IConvergenceLearning, IDisposable
     {
 
         private double learningRate = 100;
@@ -99,17 +99,6 @@ namespace Accord.Statistics.Models.Fields.Learning
         {
             get { return convergence.MaxIterations; }
             set { convergence.MaxIterations = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
         }
 
         /// <summary>
@@ -301,23 +290,6 @@ namespace Accord.Statistics.Models.Fields.Learning
             OnProgressChanged(new ProgressChangedEventArgs((int)percent, i));
 
             Accord.Diagnostics.Debug.Assert(!gradient.HasNaN());
-        }
-
-
-        /// <summary>
-        ///   Runs the learning algorithm with the specified input
-        ///   training observations and corresponding output labels.
-        /// </summary>
-        /// 
-        /// <param name="observations">The training observations.</param>
-        /// <param name="outputs">The observation's labels.</param>
-        /// 
-        /// <returns>The error in the last iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(T[][] observations, int[] outputs)
-        {
-            return InnerRun(observations, outputs);
         }
 
         /// <summary>

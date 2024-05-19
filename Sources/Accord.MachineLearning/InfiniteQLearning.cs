@@ -29,7 +29,7 @@
 namespace Accord.MachineLearning
 {
     using System;
-    using Accord.Compat;
+    
     using System.Collections.Generic;
     using System.Numerics;
 

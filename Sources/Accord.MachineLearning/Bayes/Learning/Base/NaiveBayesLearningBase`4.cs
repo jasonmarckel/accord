@@ -29,7 +29,6 @@ namespace Accord.MachineLearning.Bayes
     using Accord.Math;
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Distributions.Fitting;
-    using Accord.Compat;
     using System.Threading;
     using System.Threading.Tasks;
 

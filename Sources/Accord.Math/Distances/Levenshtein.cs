@@ -24,7 +24,7 @@ namespace Accord.Math.Distances
 {
     using System;
     using System.Runtime.CompilerServices;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Levenshtein distance.
@@ -71,9 +71,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(string x, string y)
         {
             if (x == null || x.Length == 0)

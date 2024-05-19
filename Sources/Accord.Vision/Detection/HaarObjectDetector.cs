@@ -40,7 +40,7 @@ namespace Accord.Vision.Detection
     using Accord.Imaging;
     using System.Drawing.Imaging;
     using Cascades;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -154,7 +154,6 @@ namespace Accord.Vision.Detection
     /// 
     public class HaarObjectDetector : IObjectDetector
     {
-
         private List<Rectangle> detectedObjects;
         private HaarClassifier classifier;
 
@@ -184,7 +183,6 @@ namespace Accord.Vision.Detection
 
         [NonSerialized]
         private IntegralImage2 integralImage;
-
 
         #region Constructors
 
@@ -292,11 +290,7 @@ namespace Accord.Vision.Detection
 
             this.match = new GroupMatching(0, 0.2);
 
-#if NET35
-            this.parallel = false;
-#else
             this.parallel = true;
-#endif
         }
         #endregion
 
@@ -316,9 +310,7 @@ namespace Accord.Vision.Detection
             get { return parallel; }
             set
             {
-#if !NET35
                 parallel = value;
-#endif
             }
         }
 
@@ -533,7 +525,6 @@ namespace Accord.Vision.Detection
                 int xEnd = width - window.Width;
                 int yEnd = height - window.Height;
 
-
                 if (!parallel)  // Check if we should run in parallel
                 {
                     // Sequential mode. Scan the integral image searching
@@ -564,8 +555,6 @@ namespace Accord.Vision.Detection
                         }
                     }
                 }
-
-#if !NET35
                 else // use parallel processing
                 {
                     // Parallel mode. Scan the integral image searching
@@ -627,7 +616,6 @@ namespace Accord.Vision.Detection
                             detectedObjects.Add(obj);
                     }
                 }
-#endif
             }
 
 

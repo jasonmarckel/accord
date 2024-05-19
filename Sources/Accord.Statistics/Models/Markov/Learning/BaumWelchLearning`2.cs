@@ -39,7 +39,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// 
     /// <remarks>
     ///   <para>
-    ///   The Baum-Welch algorithm is an <see cref="IUnsupervisedLearning">unsupervised algorithm</see>
+    ///   The Baum-Welch algorithm is an unsupervised algorithm
     ///   used to learn a single hidden Markov model object from a set of observation sequences. It works
     ///   by using a variant of the <see cref="Mixture{T}.Fit(double[], double[], MixtureOptions)">
     ///   Expectation-Maximization</see> algorithm to search a set of model parameters (i.e. the matrix

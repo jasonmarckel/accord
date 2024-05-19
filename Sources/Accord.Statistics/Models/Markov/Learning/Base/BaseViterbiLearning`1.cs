@@ -24,7 +24,7 @@ namespace Accord.Statistics.Models.Markov.Learning
 {
     using Accord.Math;
     using System;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -40,13 +40,13 @@ namespace Accord.Statistics.Models.Markov.Learning
     ///   
     /// <para>
     ///   For the actual Viterbi classes, please refer to <see cref="ViterbiLearning"/>
-    ///   or <see cref="ViterbiLearning{T}"/>. For other kinds of algorithms, please
+    ///   or <see cref="ViterbiLearning{T,TObservation}"/>. For other kinds of algorithms, please
     ///   see <see cref="BaumWelchLearning"/> and <see cref="MaximumLikelihoodLearning"/>
     ///   and their generic counter-parts.</para>
     /// </remarks>
     /// 
     /// <seealso cref="ViterbiLearning"/>
-    /// <seealso cref="ViterbiLearning{T}"/>
+    /// <seealso cref="ViterbiLearning{T,TObservation}"/>
     /// 
     public abstract class BaseViterbiLearning<T>
     {
@@ -78,17 +78,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         {
             get { return convergence.Tolerance; }
             set { convergence.Tolerance = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return convergence.MaxIterations; }
-            set { convergence.MaxIterations = value; }
         }
 
         /// <summary>

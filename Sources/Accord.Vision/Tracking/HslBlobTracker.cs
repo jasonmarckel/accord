@@ -24,9 +24,6 @@ namespace Accord.Vision.Tracking
 {
     using Accord.Imaging;
     using Accord.Imaging.Filters;
-    using System;
-    using System.Drawing;
-    using AForge;
     using Accord.Imaging.Moments;
 
     /// <summary>
@@ -44,7 +41,6 @@ namespace Accord.Vision.Tracking
         private BlobCounter blobCounter;
         private bool extract;
         private bool rotation;
-
 
         /// <summary>
         /// Gets or sets the maximum width of tracked objects.
@@ -137,7 +133,6 @@ namespace Accord.Vision.Tracking
             get { return trackingObject; }
         }
 
-
         /// <summary>
         ///   Initializes a new instance of the <see cref="HslBlobTracker"/> class.
         /// </summary>
@@ -168,8 +163,6 @@ namespace Accord.Vision.Tracking
             blobCounter.FilterBlobs = true;
         }
 
-
-
         /// <summary>
         /// Process a new video frame.
         /// </summary>
@@ -186,7 +179,6 @@ namespace Accord.Vision.Tracking
                 return;
             }
 
-
             trackingObject.Rectangle = blob.Rectangle;
             trackingObject.Center = (IntPoint)blob.CenterOfGravity;
 
@@ -197,7 +189,6 @@ namespace Accord.Vision.Tracking
                 moments.Compute(filterImage, blob.Rectangle);
                 trackingObject.Angle = moments.GetOrientation();
             }
-
 
             if (extract)
             {
@@ -229,7 +220,6 @@ namespace Accord.Vision.Tracking
             }
             return biggestBlob;
         }
-
 
         /// <summary>
         /// Resets this instance.

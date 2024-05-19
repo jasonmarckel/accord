@@ -28,7 +28,7 @@ namespace Accord.MachineLearning.DecisionTrees
     using System.Collections.ObjectModel;
     using Accord.Math;
     using System.Linq;
-    using Accord.Compat;
+    
     using Accord.Collections;
 
     /// <summary>

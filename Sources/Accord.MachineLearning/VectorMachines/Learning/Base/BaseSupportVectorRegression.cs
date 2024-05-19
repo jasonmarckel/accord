@@ -25,7 +25,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using System;
     using Accord.Statistics.Kernels;
     using Accord.Math.Optimization.Losses;
-    using Accord.Compat;
+    
     using System.Threading;
     using System.Diagnostics;
 
@@ -37,9 +37,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupervisedLearning<TModel, TInput, double>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>, ISupportVectorMachine<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         [NonSerialized]
         CancellationToken token = new CancellationToken();
@@ -344,34 +342,10 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             }
         }
 
-
-
         /// <summary>
         ///   Runs the learning algorithm.
         /// </summary>
         /// 
         protected abstract void InnerRun();
-
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.Math.Optimization.SquareLoss or any other losses of your choice from the Accord.Math.Optimization namespace.")]
-        public double ComputeError(TInput[] inputs, double[] expectedOutputs)
-        {
-            return new SquareLoss(expectedOutputs).Loss(machine.Score(inputs));
-        }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Learn() instead.")]
-        public double Run()
-        {
-            Learn(Inputs, Outputs);
-            return new SquareLoss(Outputs).Loss(machine.Score(Inputs));
-        }
     }
 }

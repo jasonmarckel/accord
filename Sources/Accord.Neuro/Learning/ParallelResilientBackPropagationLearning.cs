@@ -30,11 +30,9 @@
 namespace Accord.Neuro.Learning
 {
     using System;
-    using System.Threading;
-    using Accord.Compat;
+    using System.Threading;    
     using System.Threading.Tasks;
 
-#if !NET35
     /// <summary>
     ///   Resilient Backpropagation learning algorithm.
     /// </summary>
@@ -731,35 +729,5 @@ namespace Accord.Neuro.Learning
     #endregion
 
     }
-
-#else
-
-    /// <summary>
-    ///   Compatibility shim to make Accord.NET work on previous
-    ///   version of the framework. This is just a wrapper around
-    ///   AForge.Neuro.Learning.ResilientBackpropagationLearning.
-    /// </summary>
-    /// 
-    public class ParallelResilientBackpropagationLearning : ResilientBackpropagationLearning
-    {
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="ParallelResilientBackpropagationLearning"/> class.
-        /// </summary>
-        /// 
-        public ParallelResilientBackpropagationLearning(ActivationNetwork network)
-            : base(network) { }
-
-        /// <summary>
-        ///   Does nothing.
-        /// </summary>
-        /// 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "rate")]
-        public void Reset(double rate)
-        {
-            throw new NotSupportedException();
-        }
-    }
-
-#endif
 
 }

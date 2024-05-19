@@ -29,7 +29,7 @@ namespace Accord.MachineLearning
     using Accord.MachineLearning.VectorMachines.Learning;
     using Accord.Statistics.Kernels;
     using Accord.Statistics;
-    using Accord.Compat;
+    
     using System.Collections.Concurrent;
     using System.Threading.Tasks;
 

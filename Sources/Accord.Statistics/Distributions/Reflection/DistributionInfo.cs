@@ -32,7 +32,7 @@ namespace Accord.Statistics.Distributions.Reflection
     using System.Linq;
     using System.Reflection;
     using System.Text;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -85,14 +85,8 @@ namespace Accord.Statistics.Distributions.Reflection
         {
             get
             {
-#if NETSTANDARD
-                var distributionTypeInfo = DistributionType.GetTypeInfo();
-                return typeof(UnivariateDiscreteDistribution).GetTypeInfo().IsAssignableFrom(distributionTypeInfo)
-                  || typeof(MultivariateDiscreteDistribution).GetTypeInfo().IsAssignableFrom(distributionTypeInfo);
-#else
                 return typeof(UnivariateDiscreteDistribution).IsAssignableFrom(DistributionType)
                   || typeof(MultivariateDiscreteDistribution).IsAssignableFrom(DistributionType);
-#endif
             }
         }
 
@@ -106,14 +100,8 @@ namespace Accord.Statistics.Distributions.Reflection
         {
             get
             {
-#if NETSTANDARD
-                var distributionTypeInfo = DistributionType.GetTypeInfo();
-                return typeof(UnivariateContinuousDistribution).GetTypeInfo().IsAssignableFrom(distributionTypeInfo)
-                  || typeof(MultivariateContinuousDistribution).GetTypeInfo().IsAssignableFrom(distributionTypeInfo);
-#else
                 return typeof(UnivariateContinuousDistribution).IsAssignableFrom(DistributionType)
                   || typeof(MultivariateContinuousDistribution).IsAssignableFrom(DistributionType);
-#endif
             }
         }
 
@@ -124,11 +112,7 @@ namespace Accord.Statistics.Distributions.Reflection
         /// 
         public bool IsUnivariate
         {
-#if NETSTANDARD
-            get { return typeof(IUnivariateDistribution).GetTypeInfo().IsAssignableFrom(DistributionType.GetTypeInfo()); }
-#else
             get { return typeof(IUnivariateDistribution).IsAssignableFrom(DistributionType); }
-#endif
         }
 
         /// <summary>
@@ -138,11 +122,7 @@ namespace Accord.Statistics.Distributions.Reflection
         /// 
         public bool IsMultivariate
         {
-#if NETSTANDARD
-            get { return typeof(IMultivariateDistribution).GetTypeInfo().IsAssignableFrom(DistributionType.GetTypeInfo()); }
-#else
             get { return typeof(IMultivariateDistribution).IsAssignableFrom(DistributionType); }
-#endif
         }
 
         /// <summary>
@@ -154,14 +134,8 @@ namespace Accord.Statistics.Distributions.Reflection
         public DistributionInfo(Type type)
         {
             Type baseType = typeof(IDistribution);
-#if NETSTANDARD
-            var typeDesc = type.GetTypeInfo();
-            if (!baseType.GetTypeInfo().IsAssignableFrom(typeDesc) || typeDesc.IsAbstract || typeDesc.IsInterface)
-                throw new ArgumentException("type");
-#else
             if (!baseType.IsAssignableFrom(type) || type.IsAbstract || type.IsInterface)
                 throw new ArgumentException("type");
-#endif
             this.DistributionType = type;
             this.Name = GetDistributionName(type);
         }
@@ -172,18 +146,9 @@ namespace Accord.Statistics.Distributions.Reflection
         /// 
         public DistributionConstructorInfo[] GetConstructors()
         {
-#if NETSTANDARD
-            var constructors = new List<DistributionConstructorInfo>();
-            var typeInfo = DistributionType.GetTypeInfo();
-            var declaredConstructors = typeInfo.DeclaredConstructors;
-            foreach (ConstructorInfo ctor in declaredConstructors)
-                if (ctor.IsPublic)
-                    constructors.Add(new DistributionConstructorInfo(ctor));
-#else
             var constructors = new List<DistributionConstructorInfo>();
             foreach (ConstructorInfo ctor in DistributionType.GetConstructors())
                 constructors.Add(new DistributionConstructorInfo(ctor));
-#endif
 
             return constructors.ToArray();
         }
@@ -234,16 +199,6 @@ namespace Accord.Statistics.Distributions.Reflection
         {
             // Try to create a fitting options object
             var fittingOptions = typeof(IFittingOptions);
-#if NETSTANDARD
-            var interfaces = type.GetTypeInfo().ImplementedInterfaces.Select(t => t.GetTypeInfo())
-                .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IFittableDistribution<,>));
-
-            var fittingOptionsInfo = fittingOptions.GetTypeInfo();
-            foreach (TypeInfo i in interfaces)
-                foreach (Type arg in i.GenericTypeArguments)
-                    if (fittingOptionsInfo.IsAssignableFrom(arg.GetTypeInfo()) && arg != fittingOptions)
-                        return (IFittingOptions)Activator.CreateInstance(arg);
-#else
             var interfaces = type.GetInterfaces()
                 .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IFittableDistribution<,>));
 
@@ -251,7 +206,7 @@ namespace Accord.Statistics.Distributions.Reflection
                 foreach (Type arg in i.GetGenericArguments())
                     if (fittingOptions.IsAssignableFrom(arg) && arg != fittingOptions)
                         return (IFittingOptions)Activator.CreateInstance(arg);
-#endif
+
             return null;
         }
 
@@ -275,15 +230,8 @@ namespace Accord.Statistics.Distributions.Reflection
             // given interface. 
 
             // Get all univariate distributions in Accord.NET:
-#if NETSTANDARD1_4
-            var baseInfo = baseType.GetTypeInfo();
-            var distributions = baseInfo.Assembly.DefinedTypes
-                .Where(p => baseInfo.IsAssignableFrom(p) && !p.IsAbstract && !p.IsInterface)
-                .Select(p => p.AsType());
-#else
             var distributions = Assembly.GetAssembly(baseType).GetTypes().Where(p =>
                 baseType.IsAssignableFrom(p) && !p.IsAbstract && !p.IsInterface);
-#endif
 
             return distributions.ToArray();
         }

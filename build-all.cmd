@@ -32,17 +32,6 @@ del /q "Setup\bin\*.log"
 echo.
 call:MSBUILD "Sources\Accord.NET.sln", "Debug",   "x64",     "Rebuild"
 call:MSBUILD "Sources\Accord.NET.sln", "Debug",   "Any CPU", "Build"
-call:MSBUILD "Sources\Accord.NET.sln", "mono",    "Any CPU", "Rebuild"
-call:MSBUILD "Sources\Accord.NET.sln", "net35",   "x64",     "Rebuild"
-call:MSBUILD "Sources\Accord.NET.sln", "net35",   "Any CPU", "Build"
-call:MSBUILD "Sources\Accord.NET.sln", "net40",   "x64",     "Rebuild"
-call:MSBUILD "Sources\Accord.NET.sln", "net40",   "Any CPU", "Build"
-call:MSBUILD "Sources\Accord.NET.sln", "net45",   "x64",     "Rebuild"
-call:MSBUILD "Sources\Accord.NET.sln", "net45",   "Any CPU", "Build"
-call:MSBUILD "Sources\Accord.NET.sln", "net46",   "x64",     "Rebuild"
-call:MSBUILD "Sources\Accord.NET.sln", "net46",   "Any CPU", "Build"
-call:MSBUILD "Sources\Accord.NET.sln", "net462",  "x64",     "Rebuild"
-call:MSBUILD "Sources\Accord.NET.sln", "net462",  "Any CPU", "Build"
 
 echo.
 call:MSBUILD "Samples\Samples.sln",    "Release", "x86",     "Rebuild"

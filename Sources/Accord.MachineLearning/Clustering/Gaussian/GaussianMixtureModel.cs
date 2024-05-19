@@ -27,7 +27,7 @@ namespace Accord.MachineLearning
     using Accord.Statistics.Distributions.Multivariate;
     using Accord.Statistics.Distributions.Univariate;
     using System;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>
@@ -104,7 +104,7 @@ namespace Accord.MachineLearning
 
         /// <summary>
         ///   Gets how many iterations have been performed in the last call
-        ///   to <see cref="Compute(double[][])"/>.
+        ///   to Learn(double[][]).
         /// </summary>
         /// 
         public int Iterations { get; private set; }
@@ -222,28 +222,6 @@ namespace Accord.MachineLearning
         }
 
         /// <summary>
-        ///   Divides the input data into K clusters modeling each
-        ///   cluster as a multivariate Gaussian distribution. 
-        /// </summary>     
-        /// 
-        [Obsolete("Please use Learn(x) instead.")]
-        public int[] Compute(double[][] data)
-        {
-            return Learn(data).Decide(data);
-        }
-
-        /// <summary>
-        ///   Divides the input data into K clusters modeling each
-        ///   cluster as a multivariate Gaussian distribution. 
-        /// </summary>     
-        /// 
-        [Obsolete("Please use Learn(x) instead.")]
-        public int[] Compute(double[][] data, double[] weights)
-        {
-            return Learn(data, weights).Decide(data);
-        }
-
-        /// <summary>
         /// Learns a model that can map the given inputs to the desired outputs.
         /// </summary>
         /// <param name="x">The model inputs.</param>
@@ -269,9 +247,7 @@ namespace Accord.MachineLearning
 
             // Fit a multivariate Gaussian distribution
             model.Fit(x, weights, mixtureOptions);
-#pragma warning disable 612, 618
-            this.Iterations = mixtureOptions.Iterations;
-#pragma warning restore 612, 618
+            this.Iterations = mixtureOptions.MaxIterations;
 
             for (int i = 0; i < clusters.Model.Components.Length; i++)
                 clusters.Centroids[i] = new MixtureComponent<MultivariateNormalDistribution>(model, i);
@@ -383,9 +359,6 @@ namespace Accord.MachineLearning
             clusters.Initialize(mixture);
         }
 
-
-
-
         /// <summary>
         ///   Gets a copy of the mixture distribution modeled by this Gaussian Mixture Model.
         /// </summary>
@@ -395,116 +368,6 @@ namespace Accord.MachineLearning
             return clusters.ToMixtureDistribution();
         }
 
-
-
-        # region Deprecated
-        /// <summary>
-        ///   Divides the input data into K clusters modeling each
-        ///   cluster as a multivariate Gaussian distribution. 
-        /// </summary>     
-        /// 
-        [Obsolete("Please set the properties of this class directly and use Learn(double[]) instead.")]
-        public double Compute(double[][] data, GaussianMixtureModelOptions options)
-        {
-            this.Options = options.NormalOptions;
-            this.MaxIterations = options.Iterations;
-            this.UseLogarithm = options.Logarithm;
-            this.Tolerance = options.Threshold;
-            this.ParallelOptions = options.ParallelOptions;
-
-            Compute(data, options.Weights);
-
-            return LogLikelihood;
-        }
-
-        /// <summary>
-        ///   Divides the input data into K clusters modeling each
-        ///   cluster as a multivariate Gaussian distribution. 
-        /// </summary>     
-        /// 
-        [Obsolete("Please set the tolerance threshold using the Tolerance property and use Compute(double[]) instead.")]
-        public double Compute(double[][] data, double threshold)
-        {
-            this.Tolerance = threshold;
-            Learn(data);
-            return LogLikelihood;
-        }
-        #endregion
     }
 
-    /// <summary>
-    ///   Options for Gaussian Mixture Model fitting.
-    /// </summary>
-    /// 
-    /// <remarks>
-    ///   This class provides different options that can be passed to a 
-    ///   <see cref="GaussianMixtureModel"/> object when calling its
-    ///   <see cref="GaussianMixtureModel.Compute(double[][], GaussianMixtureModelOptions)"/>
-    ///   method.
-    /// </remarks>
-    /// 
-    /// <seealso cref="GaussianMixtureModel"/>
-    /// 
-    [Obsolete("This class will be removed.")]
-    public class GaussianMixtureModelOptions
-    {
-
-        /// <summary>
-        ///   Gets or sets the convergence criterion for the
-        ///   Expectation-Maximization algorithm. Default is 1e-3.
-        /// </summary>
-        /// 
-        /// <value>The convergence threshold.</value>
-        /// 
-        public double Threshold { get; set; }
-
-        /// <summary>
-        ///   Gets or sets the maximum number of iterations
-        ///   to be performed by the Expectation-Maximization
-        ///   algorithm. Default is zero (iterate until convergence).
-        /// </summary>
-        /// 
-        public int Iterations { get; set; }
-
-        /// <summary>
-        ///   Gets or sets whether to make computations using the log
-        ///   -domain. This might improve accuracy on large datasets.
-        /// </summary>
-        /// 
-        public bool Logarithm { get; set; }
-
-        /// <summary>
-        ///   Gets or sets the sample weights. If set to null,
-        ///   the data will be assumed equal weights. Default
-        ///   is null.
-        /// </summary>
-        /// 
-        public double[] Weights { get; set; }
-
-        /// <summary>
-        ///   Gets or sets the fitting options for the component
-        ///   Gaussian distributions of the mixture model.
-        /// </summary>
-        /// 
-        /// <value>The fitting options for inner Gaussian distributions.</value>
-        /// 
-        public NormalOptions NormalOptions { get; set; }
-
-        /// <summary>
-        ///   Gets or sets parallelization options.
-        /// </summary>
-        /// 
-        public ParallelOptions ParallelOptions { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GaussianMixtureModelOptions"/> class.
-        /// </summary>
-        /// 
-        public GaussianMixtureModelOptions()
-        {
-            Threshold = 1e-3;
-            ParallelOptions = new ParallelOptions();
-        }
-
-    }
 }

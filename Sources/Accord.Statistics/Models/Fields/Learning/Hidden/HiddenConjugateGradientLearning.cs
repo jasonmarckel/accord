@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Fields.Learning
     using Accord.Math.Optimization;
     using Accord.MachineLearning;
     using System.Threading;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Conjugate Gradient learning algorithm for <see cref="HiddenConditionalRandomField{T}">
@@ -45,17 +45,9 @@ namespace Accord.Statistics.Models.Fields.Learning
     /// 
     public class HiddenConjugateGradientLearning<T> : BaseHiddenGradientOptimizationLearning<T, ConjugateGradient>,
         ISupervisedLearning<HiddenConditionalRandomField<T>, T[], int>, IParallel,
-        IHiddenConditionalRandomFieldLearning<T>, IConvergenceLearning, IDisposable
+        IConvergenceLearning
     {
-
-        /// <summary>
-        ///   Please use HasConverged instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use HasConverged instead.")]
-        public bool Converged { get { return HasConverged; } }
-
-        int IConvergenceLearning.Iterations
+        int IConvergenceLearning.MaxIterations
         {
             get
             {
@@ -81,23 +73,10 @@ namespace Accord.Statistics.Models.Fields.Learning
         }
 
         /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return MaxIterations; }
-            set { MaxIterations = value; }
-        }
-
-        /// <summary>
         ///   Occurs when the current learning progress has changed.
         /// </summary>
         /// 
         public event EventHandler<ProgressChangedEventArgs> ProgressChanged;
-
-
 
         /// <summary>
         ///   Constructs a new Conjugate Gradient learning algorithm.

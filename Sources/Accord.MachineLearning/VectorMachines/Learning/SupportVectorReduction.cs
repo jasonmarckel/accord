@@ -28,35 +28,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using Math.Optimization.Losses;
     using System;
     using System.Threading;
-    using Accord.Compat;
-
-    /// <summary>
-    ///   Exact support vector reduction through linear dependency elimination.
-    /// </summary>
-    /// 
-    /// <example>
-    ///   <para>
-    ///   The following example shows how to reduce the number of support vectors in
-    ///   a SVM by removing vectors which are linearly dependent between themselves.</para>
-    ///   <code source="Unit Tests\Accord.Tests.MachineLearning\VectorMachines\SupportVectorReductionTest.cs" region="doc_learn" />
-    /// </example>
-    /// 
-    //[Obsolete("Please use SupportVectorReduction<TKernel> instead.")]
-    public class SupportVectorReduction
-        : SupportVectorReductionBase<SupportVectorMachine<IKernel<double[]>, double[]>,
-            IKernel<double[]>, double[]>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportVectorReduction"/> class.
-        /// </summary>
-        /// <param name="machine">The machine to be reduced.</param>
-        ///
-        public SupportVectorReduction(ISupportVectorMachine<double[]> machine)
-            : base(machine)
-        {
-        }
-    }
-
+    
     /// <summary>
     ///   Exact support vector reduction through linear dependency elimination.
     /// </summary>
@@ -73,7 +45,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TKernel : IKernel<double[]>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SupportVectorReduction"/> class.
+        /// Initializes a new instance of the <see cref="SupportVectorReduction{TKernel}"/> class.
         /// </summary>
         /// <param name="machine">The machine to be reduced.</param>
         ///
@@ -100,7 +72,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TInput : ICloneable
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SupportVectorReduction"/> class.
+        /// Initializes a new instance of the <see cref="SupportVectorReduction{TKernel}"/> class.
         /// </summary>
         /// <param name="machine">The machine to be reduced.</param>
         ///
@@ -125,9 +97,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         : BaseSupportVectorCalibration<TModel, TKernel, TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         private double threshold = 1e-12;
 
@@ -144,7 +114,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         }
 
         /// <summary>
-        ///   Creates a new <see cref="SupportVectorReduction"/> algorithm.
+        ///   Creates a new <see cref="SupportVectorReduction{TKernel}"/> algorithm.
         /// </summary>
         /// 
         /// <param name="machine">The machine to be reduced.</param>
@@ -213,17 +183,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         }
 
         /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please use Learn() instead.")]
-        public override double Run()
-        {
-            var classifier = Learn();
-            return new ZeroOneLoss(Output).Loss(classifier.Decide(Input));
-        }
-
-        /// <summary>
-        ///   Creates a new <see cref="SupportVectorReduction"/> algorithm.
+        ///   Creates a new <see cref="SupportVectorReduction{TKernel}"/> algorithm.
         /// </summary>
         /// 
         /// <param name="machine">The machine to be reduced.</param>

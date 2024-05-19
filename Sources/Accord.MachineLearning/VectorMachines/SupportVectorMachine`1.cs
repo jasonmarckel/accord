@@ -32,7 +32,7 @@ namespace Accord.MachineLearning.VectorMachines
     using System;
     using System.Linq;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///  Sparse Kernel Support Vector Machine (kSVM)

@@ -29,7 +29,7 @@ namespace Accord.MachineLearning
     using Accord.Statistics.Distributions.DensityKernels;
     using System;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using System.Collections.Concurrent;
 
@@ -168,20 +168,6 @@ namespace Accord.MachineLearning
         }
 
         /// <summary>
-        ///   Gets or sets whether the algorithm can use parallel
-        ///   processing to speedup computations. Enabling parallel
-        ///   processing can, however, result in different results 
-        ///   at each run.
-        /// </summary>
-        /// 
-        [Obsolete("Please set ParallelOptions.MaxDegreeOfParallelism to 1 instead.")]
-        public bool UseParallelProcessing
-        {
-            get { return ParallelOptions.MaxDegreeOfParallelism == 1; }
-            set { ParallelOptions.MaxDegreeOfParallelism = 1; }
-        }
-
-        /// <summary>
         ///   Gets or sets whether to use the agglomeration shortcut,
         ///   meaning the algorithm will stop early when it detects that
         ///   a sample is going to follow the same path as another sample
@@ -290,45 +276,6 @@ namespace Accord.MachineLearning
             this.Tolerance = 1e-3;
             this.ComputeLabels = true;
             this.ComputeProportions = true;
-        }
-
-        /// <summary>
-        ///   Creates a new <see cref="MeanShift"/> algorithm.
-        /// </summary>
-        /// 
-        /// <param name="dimension">The dimension of the samples to be clustered.</param>
-        /// <param name="bandwidth">The bandwidth (also known as radius) to consider around samples.</param>
-        /// <param name="kernel">The density kernel function to use.</param>
-        /// 
-        [Obsolete("It is not necessary to specify a value for the dimension parameter anymore.")]
-        public MeanShift(int dimension, IRadiallySymmetricKernel kernel, double bandwidth)
-            : this(kernel, bandwidth)
-        {
-        }
-
-        /// <summary>
-        ///   Divides the input data into clusters. 
-        /// </summary>     
-        /// 
-        /// <param name="points">The data where to compute the algorithm.</param>
-        /// 
-        [Obsolete("Please use Learn(x) instead.")]
-        public int[] Compute(double[][] points)
-        {
-            return Compute(points, Vector.Ones<int>(points.Length));
-        }
-
-        /// <summary>
-        ///   Divides the input data into clusters. 
-        /// </summary>     
-        /// 
-        /// <param name="points">The data where to compute the algorithm.</param>
-        /// <param name="weights">The weight associated with each data point.</param>
-        /// 
-        [Obsolete("Please use Learn(x) instead.")]
-        public int[] Compute(double[][] points, int[] weights)
-        {
-            return Learn(points, weights).Decide(points);
         }
 
         /// <summary>

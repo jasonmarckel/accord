@@ -52,17 +52,6 @@ namespace Accord.Imaging.Textures
         public abstract float[,] Generate(int width, int height);
 
         /// <summary>
-        /// Reset generator.
-        /// </summary>
-        /// <remarks>Resets the generator - resets all internal variables, regenerates
-        /// internal random numbers, etc.</remarks>
-        [Obsolete("The texture generators now use a different seed at each call to Generate.")]
-        public void Reset()
-        {
-
-        }
-
-        /// <summary>
         /// Generate texture.
         /// </summary>
         /// 

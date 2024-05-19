@@ -28,7 +28,7 @@ namespace Accord.Statistics.Models.Regression
     using Accord.Statistics.Testing;
     using Accord.Math;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Cox's Proportional Hazards Model.
@@ -80,16 +80,6 @@ namespace Accord.Statistics.Models.Regression
         public IUnivariateDistribution BaselineHazard { get; private set; }
 
         /// <summary>
-        ///   Gets the number of inputs handled by this model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Inputs
-        {
-            get { return Coefficients.Length; }
-        }
-
-        /// <summary>
         ///   Creates a new Cox Proportional-Hazards Model.
         /// </summary>
         /// 
@@ -125,46 +115,6 @@ namespace Accord.Statistics.Models.Regression
         }
 
         /// <summary>
-        ///   Obsolete. Please use the Probability(input) method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Probability(input) method instead.")]
-        public double Compute(double[] input)
-        {
-            return Probability(input);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the Probability(input) method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Probability(input) method instead.")]
-        public double[] Compute(double[][] input)
-        {
-            return Probability(input);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the Probability(input, time) method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Probability(input) method instead.")]
-        public double Compute(double[] input, double time)
-        {
-            return Probability(input, time);
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the Probability(input) method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Probability(input) method instead.")]
-        public double Compute(double time)
-        {
-            return Probability(time);
-        }
-
-        /// <summary>
         ///   Computes the model's baseline survival function. This method
         ///   simply calls the <see cref="UnivariateContinuousDistribution.ComplementaryDistributionFunction"/>
         ///   of the <see cref="BaselineHazard"/> function.
@@ -180,22 +130,6 @@ namespace Accord.Statistics.Models.Regression
                 throw new InvalidOperationException();
 
             return BaselineHazard.ComplementaryDistributionFunction(time);
-        }
-
-        /// <summary>
-        ///   Computes the model output for the given input vector.
-        /// </summary>
-        /// 
-        /// <param name="input">The input vector.</param>
-        /// <param name="time">The event times.</param>
-        /// 
-        /// <returns>The probabilities of the event occurring at 
-        /// the given times for the given observations.</returns>
-        /// 
-        [Obsolete("Please use Probability() instead.")]
-        public double[] Compute(double[][] input, double[] time)
-        {
-            return Probability(input, time);
         }
 
         /// <summary>

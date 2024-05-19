@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Markov
     using System.Collections.Generic;
     using System.Runtime.Serialization;
     using System.Threading;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Base class for (HMM) Sequence Classifiers. 

@@ -33,7 +33,7 @@ namespace Accord.MachineLearning
     using Accord.Math.Distances;
     using Math.Optimization;
     using Statistics;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
 
     /// <summary>

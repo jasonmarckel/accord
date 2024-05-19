@@ -63,7 +63,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using System;
     using System.Diagnostics;
     using System.Threading;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Coordinate descent algorithm for the L1 or L2-loss linear Support 
@@ -121,15 +121,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     public class LinearRegressionCoordinateDescent :
         BaseLinearRegressionCoordinateDescent<SupportVectorMachine, Linear, double[]>
     {
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearRegressionCoordinateDescent(SupportVectorMachine model, double[][] input, double[] output)
-            : base(model, input, output)
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="LinearRegressionCoordinateDescent"/> class.
         /// </summary>
@@ -233,9 +224,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseSupportVectorRegression<TModel, TKernel, TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         int max_iter = 1000;

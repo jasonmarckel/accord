@@ -32,7 +32,7 @@ namespace Accord.MachineLearning.VectorMachines
     using Accord.MachineLearning;
     using Accord.Statistics;
     using Statistics.Models.Regression.Linear;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///  Sparse Kernel Support Vector Machine (kSVM)
@@ -243,62 +243,6 @@ namespace Accord.MachineLearning.VectorMachines
             // TODO: call support vector reduction here
         }
 
-
-        /// <summary>
-        ///   Computes the given input to produce the corresponding output.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   For a binary decision problem, the decision for the negative
-        ///   or positive class is typically computed by taking the sign of
-        ///   the machine's output.
-        /// </remarks>
-        /// 
-        /// <param name="inputs">An input vector.</param>
-        /// <param name="output">The output of the machine. If this is a 
-        ///   <see cref="IsProbabilistic">probabilistic</see> machine, the
-        ///   output is the probability of the positive class. If this is
-        ///   a standard machine, the output is the distance to the decision
-        ///   hyperplane in feature space.</param>
-        /// 
-        /// <returns>The decision label for the given input.</returns>
-        /// 
-        [Obsolete("Please use the Decide or Transform methods instead.")]
-        public virtual int Compute(TInput inputs, out double output)
-        {
-            bool decision;
-            if (IsProbabilistic)
-                output = Probability(inputs, out decision);
-            else
-                output = Score(inputs, out decision);
-            return Classes.ToMinusOnePlusOne(decision);
-        }
-
-
-
-        /// <summary>
-        ///   Computes the given input to produce the corresponding output.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   For a binary decision problem, the decision for the negative
-        ///   or positive class is typically computed by taking the sign of
-        ///   the machine's output.
-        /// </remarks>
-        /// 
-        /// <param name="inputs">An input vector.</param>
-        /// 
-        /// <returns>The output for the given input. In a typical classification
-        /// problem, the sign of this value should be considered as the class label.</returns>
-        ///  
-        [Obsolete("Please use the Decide or Transform methods instead.")]
-        public double Compute(TInput inputs)
-        {
-            if (IsProbabilistic)
-                return Probability(inputs);
-            return Score(inputs);
-        }
-
         /// <summary>
         ///   Converts a <see cref="Accord.Statistics.Kernels.Linear"/>-kernel
         ///   machine into an array of linear coefficients. The first position
@@ -327,22 +271,6 @@ namespace Accord.MachineLearning.VectorMachines
                 w[i + 1] = weights[i];
             w[0] = Threshold + bias;
             return w;
-        }
-
-        /// <summary>
-        ///   Gets the number of inputs accepted by this machine.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   If the number of inputs is zero, this means the machine
-        ///   accepts a indefinite number of inputs. This is often the
-        ///   case for kernel vector machines using a sequence kernel.
-        /// </remarks>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Inputs
-        {
-            get { return NumberOfInputs; }
         }
 
         /// <summary>

@@ -142,16 +142,6 @@ namespace Accord.Imaging
         }
 
         /// <summary>
-        /// Obsolete. Please use <see cref="NumberOfBytes"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfBytes instead.")]
-        public int Bytes
-        {
-            get { return NumberOfBytes; }
-        }
-
-        /// <summary>
         /// Gets the image size, in bytes.
         /// </summary>
         /// 

@@ -49,9 +49,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(int[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<int>(a.Length, b.Length));
@@ -70,9 +68,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(int[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -91,9 +87,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(int[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -112,9 +106,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(double[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -133,9 +125,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(double[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -154,9 +144,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(double[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -175,9 +163,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(float[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -196,9 +182,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(float[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -217,9 +201,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(float[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -238,9 +220,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] Outer(long[] a, long[] b)
         {
             return Outer(a, b, Jagged.Zeros<long>(a.Length, b.Length));
@@ -259,9 +239,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(long[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -280,9 +258,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(long[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<int>(a.Length, b.Length));
@@ -301,9 +277,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(long[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -322,9 +296,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] Outer(decimal[] a, decimal[] b)
         {
             return Outer(a, b, Jagged.Zeros<decimal>(a.Length, b.Length));
@@ -343,9 +315,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(decimal[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -364,9 +334,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(decimal[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<int>(a.Length, b.Length));
@@ -385,9 +353,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(decimal[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -406,9 +372,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] Outer(byte[] a, byte[] b)
         {
             return Outer(a, b, Jagged.Zeros<byte>(a.Length, b.Length));
@@ -427,9 +391,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(byte[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -448,9 +410,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(byte[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<int>(a.Length, b.Length));
@@ -469,9 +429,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(byte[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -490,9 +448,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] Outer(short[] a, short[] b)
         {
             return Outer(a, b, Jagged.Zeros<short>(a.Length, b.Length));
@@ -511,9 +467,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(short[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -532,9 +486,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(short[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<int>(a.Length, b.Length));
@@ -553,9 +505,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(short[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -574,9 +524,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] Outer(sbyte[] a, sbyte[] b)
         {
             return Outer(a, b, Jagged.Zeros<sbyte>(a.Length, b.Length));
@@ -595,9 +543,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(sbyte[] a, double[] b)
         {
             return Outer(a, b, Jagged.Zeros<double>(a.Length, b.Length));
@@ -616,9 +562,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(sbyte[] a, int[] b)
         {
             return Outer(a, b, Jagged.Zeros<int>(a.Length, b.Length));
@@ -637,9 +581,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(sbyte[] a, float[] b)
         {
             return Outer(a, b, Jagged.Zeros<float>(a.Length, b.Length));
@@ -658,9 +600,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(int[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -681,9 +621,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(int[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -704,9 +642,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(int[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -727,9 +663,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(int[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -750,9 +684,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(int[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -773,9 +705,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(int[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -796,9 +726,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(int[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -819,9 +747,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(double[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -842,9 +768,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(double[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -865,9 +789,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(double[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -888,9 +810,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(double[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -911,9 +831,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(double[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -934,9 +852,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(double[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -957,9 +873,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(double[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -980,9 +894,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(float[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1003,9 +915,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(float[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1026,9 +936,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(float[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1049,9 +957,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(float[] a, double[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1072,9 +978,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(float[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1095,9 +999,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(float[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1118,9 +1020,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(float[] a, int[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1141,9 +1041,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(float[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1164,9 +1062,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(float[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1187,9 +1083,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] Outer(long[] a, long[] b, long[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1210,9 +1104,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(long[] a, long[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1233,9 +1125,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(long[] a, long[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1256,9 +1146,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] Outer(long[] a, double[] b, long[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1279,9 +1167,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(long[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1302,9 +1188,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(long[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1325,9 +1209,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] Outer(long[] a, int[] b, long[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1348,9 +1230,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(long[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1371,9 +1251,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(long[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1394,9 +1272,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static long[][] Outer(long[] a, float[] b, long[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1417,9 +1293,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(long[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1440,9 +1314,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(long[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1463,9 +1335,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(long[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1486,9 +1356,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] Outer(decimal[] a, decimal[] b, decimal[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1509,9 +1377,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(decimal[] a, decimal[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1532,9 +1398,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(decimal[] a, decimal[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1555,9 +1419,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] Outer(decimal[] a, double[] b, decimal[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1578,9 +1440,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(decimal[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1601,9 +1461,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(decimal[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1624,9 +1482,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] Outer(decimal[] a, int[] b, decimal[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1647,9 +1503,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(decimal[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1670,9 +1524,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(decimal[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1693,9 +1545,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static decimal[][] Outer(decimal[] a, float[] b, decimal[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1716,9 +1566,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(decimal[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1739,9 +1587,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(decimal[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1762,9 +1608,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(decimal[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1785,9 +1629,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] Outer(byte[] a, byte[] b, byte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1808,9 +1650,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(byte[] a, byte[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1831,9 +1671,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(byte[] a, byte[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1854,9 +1692,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] Outer(byte[] a, double[] b, byte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1877,9 +1713,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(byte[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1900,9 +1734,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(byte[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1923,9 +1755,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] Outer(byte[] a, int[] b, byte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1946,9 +1776,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(byte[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1969,9 +1797,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(byte[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -1992,9 +1818,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static byte[][] Outer(byte[] a, float[] b, byte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2015,9 +1839,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(byte[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2038,9 +1860,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(byte[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2061,9 +1881,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(byte[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2084,9 +1902,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] Outer(short[] a, short[] b, short[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2107,9 +1923,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(short[] a, short[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2130,9 +1944,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(short[] a, short[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2153,9 +1965,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] Outer(short[] a, double[] b, short[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2176,9 +1986,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(short[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2199,9 +2007,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(short[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2222,9 +2028,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] Outer(short[] a, int[] b, short[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2245,9 +2049,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(short[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2268,9 +2070,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(short[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2291,9 +2091,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static short[][] Outer(short[] a, float[] b, short[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2314,9 +2112,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(short[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2337,9 +2133,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(short[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2360,9 +2154,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(short[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2383,9 +2175,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] Outer(sbyte[] a, sbyte[] b, sbyte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2406,9 +2196,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(sbyte[] a, sbyte[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2429,9 +2217,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(sbyte[] a, sbyte[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2452,9 +2238,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] Outer(sbyte[] a, double[] b, sbyte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2475,9 +2259,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(sbyte[] a, double[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2498,9 +2280,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(sbyte[] a, double[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2521,9 +2301,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] Outer(sbyte[] a, int[] b, sbyte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2544,9 +2322,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(sbyte[] a, int[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2567,9 +2343,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(sbyte[] a, int[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2590,9 +2364,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static sbyte[][] Outer(sbyte[] a, float[] b, sbyte[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2613,9 +2385,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static float[][] Outer(sbyte[] a, float[] b, float[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2636,9 +2406,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double[][] Outer(sbyte[] a, float[] b, double[][] result)
         {
             for (int i = 0; i < a.Length; i++)
@@ -2659,9 +2427,7 @@ namespace Accord.Math
         ///   which takes as input a pair of vectors and produces a scalar.
         /// </remarks>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int[][] Outer(sbyte[] a, float[] b, int[][] result)
         {
             for (int i = 0; i < a.Length; i++)

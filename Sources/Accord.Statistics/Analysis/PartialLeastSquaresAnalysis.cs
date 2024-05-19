@@ -28,7 +28,7 @@ namespace Accord.Statistics.Analysis
     using Accord.Math.Decompositions;
     using Accord.Statistics.Models.Regression.Linear;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -112,7 +112,7 @@ namespace Accord.Statistics.Analysis
     ///
     [Serializable]
 #pragma warning disable 612, 618
-    public class PartialLeastSquaresAnalysis : MultipleTransformBase<double[], double>, IMultivariateRegressionAnalysis, IProjectionAnalysis,
+    public class PartialLeastSquaresAnalysis : MultipleTransformBase<double[], double>,
         ISupervisedLearning<MultivariateLinearRegression, double[], double[]>
 #pragma warning restore 612, 618
     {
@@ -163,73 +163,6 @@ namespace Accord.Statistics.Analysis
         private bool overwriteSourceMatrix;
         private int numberOfFactors;
 
-
-        /// <summary>
-        ///   Constructs a new Partial Least Squares Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input source data to perform analysis.</param>
-        /// <param name="outputs">The output source data to perform analysis.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' matrices to the Learn method instead.")]
-        public PartialLeastSquaresAnalysis(double[,] inputs, double[,] outputs)
-            : this(inputs, outputs, AnalysisMethod.Center, PartialLeastSquaresAlgorithm.NIPALS) { }
-
-        /// <summary>
-        ///   Constructs a new Partial Least Squares Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input source data to perform analysis.</param>
-        /// <param name="outputs">The output source data to perform analysis.</param>
-        /// <param name="algorithm">The PLS algorithm to use in the analysis. Default is <see cref="PartialLeastSquaresAlgorithm.NIPALS"/>.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' matrices to the Learn method instead.")]
-        public PartialLeastSquaresAnalysis(double[,] inputs, double[,] outputs, PartialLeastSquaresAlgorithm algorithm)
-            : this(inputs, outputs, AnalysisMethod.Center, algorithm) { }
-
-        /// <summary>
-        ///   Constructs a new Partial Least Squares Analysis.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input source data to perform analysis.</param>
-        /// <param name="outputs">The output source data to perform analysis.</param>
-        /// <param name="method">The analysis method to perform. Default is <see cref="AnalysisMethod.Center"/>.</param>
-        /// <param name="algorithm">The PLS algorithm to use in the analysis. Default is <see cref="PartialLeastSquaresAlgorithm.NIPALS"/>.</param>
-        /// 
-        [Obsolete("Please pass the 'inputs' and 'outputs' matrices to the Learn method instead.")]
-        public PartialLeastSquaresAnalysis(double[,] inputs, double[,] outputs, AnalysisMethod method, PartialLeastSquaresAlgorithm algorithm)
-        {
-            // Initial argument checking
-            if (inputs == null)
-                throw new ArgumentNullException("inputs");
-            if (outputs == null)
-                throw new ArgumentNullException("outputs");
-
-            if (inputs.GetLength(0) != outputs.GetLength(0))
-                throw new ArgumentException("The number of rows in the inputs array must match the number of rows in the outputs array.");
-
-
-            this.analysisMethod = method;
-            this.algorithm = algorithm;
-
-#pragma warning disable 612, 618
-            this.sourceX = inputs;
-            this.sourceY = outputs;
-#pragma warning restore 612, 618
-
-            // Calculate common measures to speedup other calculations
-            this.meanX = Measures.Mean(inputs, dimension: 0);
-            this.meanY = Measures.Mean(outputs, dimension: 0);
-            this.stdDevX = Measures.StandardDeviation(inputs, meanX);
-            this.stdDevY = Measures.StandardDeviation(outputs, meanY);
-
-            base.NumberOfInputs = sourceX.Columns();
-            base.NumberOfOutputs = NumberOfInputs;
-
-            this.inputVariables = new PartialLeastSquaresVariables(this, true);
-            this.outputVariables = new PartialLeastSquaresVariables(this, false);
-        }
-
         /// <summary>
         ///   Constructs a new Partial Least Squares Analysis.
         /// </summary>
@@ -243,31 +176,6 @@ namespace Accord.Statistics.Analysis
             this.analysisMethod = method;
             this.algorithm = algorithm;
         }
-
-
-
-#pragma warning disable 612, 618
-        /// <summary>
-        ///   Source data used in the analysis.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source
-        {
-            get { return sourceX; }
-        }
-
-        /// <summary>
-        ///   Gets the dependent variables' values
-        ///   for each of the source input points.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Output
-        {
-            get { return sourceY; }
-        }
-#pragma warning restore 612, 618
 
         /// <summary>
         ///   Gets information about independent (input) variables.
@@ -468,121 +376,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Computes the Partial Least Squares Analysis.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn method instead.")]
-        public void Compute()
-        {
-            // maxFactors = min(rows-1,cols)
-            MaximumNumberOfFactors = System.Math.Min(sourceX.GetLength(0) - 1, sourceX.GetLength(1));
-
-            Compute(MaximumNumberOfFactors);
-        }
-
-        /// <summary>
-        ///   Computes the Partial Least Squares Analysis.
-        /// </summary>
-        /// <param name="factors">
-        ///   The number of factors to compute. The number of factors
-        ///   should be a value between 1 and min(rows-1,cols) where
-        ///   rows and columns are the number of observations and
-        ///   variables in the input source data matrix. </param>
-        ///   
-        [Obsolete("Please set the NumberOfOutputs property and use the Learn method instead.")]
-        public void Compute(int factors)
-        {
-#pragma warning disable 612, 618
-            // maxFactors = min(rows-1,cols)
-            MaximumNumberOfFactors = System.Math.Min(sourceX.GetLength(0) - 1, sourceX.GetLength(1));
-
-            if (factors > MaximumNumberOfFactors)
-                throw new ArgumentOutOfRangeException("factors");
-
-            // Initialize and prepare the data
-            double[,] inputs = Adjust(sourceX, meanX, stdDevX, Overwrite);
-            double[,] outputs = Adjust(sourceY, meanY, null, Overwrite);
-
-            this.NumberOfLatentFactors = factors;
-            base.NumberOfInputs = sourceX.Columns();
-            base.NumberOfOutputs = sourceY.Columns();
-
-            // Run selected algorithm
-            if (algorithm == PartialLeastSquaresAlgorithm.SIMPLS)
-            {
-                simpls(inputs.ToJagged(), outputs.ToJagged(), factors);
-            }
-            else
-            {
-                nipals(inputs.ToJagged(), outputs.ToJagged(), factors, 0);
-            }
-
-
-            // Calculate cumulative proportions
-            this.cumulativeProportionX = new double[factors];
-            this.cumulativeProportionY = new double[factors];
-            this.cumulativeProportionX[0] = this.componentProportionX[0];
-            this.cumulativeProportionY[0] = this.componentProportionY[0];
-            for (int i = 1; i < factors; i++)
-            {
-                this.cumulativeProportionX[i] = this.cumulativeProportionX[i - 1] + this.componentProportionX[i];
-                this.cumulativeProportionY[i] = this.cumulativeProportionY[i - 1] + this.componentProportionY[i];
-            }
-
-
-            // Compute Variable Importance in Projection (VIP)
-            this.vip = ComputeVariableImportanceInProjection(factors);
-
-            // Create the object-oriented structure to hold the partial least squares factors
-            var array = new PartialLeastSquaresFactor[factors];
-            for (int i = 0; i < array.Length; i++)
-                array[i] = new PartialLeastSquaresFactor(this, i);
-            this.factorCollection = new PartialLeastSquaresFactorCollection(array);
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
-        ///   Projects a given set of inputs into latent space.
-        /// </summary>
-        /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public double[,] Transform(double[,] data)
-        {
-            return Transform(data, loadingsX.GetLength(1));
-        }
-
-        /// <summary>
-        ///   Projects a given set of inputs into latent space.
-        /// </summary>
-        /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public double[,] Transform(double[,] data, int dimensions)
-        {
-            if (data == null) throw new ArgumentNullException("data");
-
-            int rows = data.GetLength(0);
-            int cols = data.GetLength(1);
-
-            if (cols > loadingsX.GetLength(0))
-            {
-                throw new DimensionMismatchException("data",
-                    "The data matrix should have a number of columns less than or equal to"
-                    + " the number of rows in the loadings matrix for the input variables.");
-            }
-
-            double[,] result = new double[rows, dimensions];
-            double[,] source = Adjust(data, meanX, stdDevX, false);
-
-            // multiply the data matrix by the selected factors
-            for (int i = 0; i < rows; i++)
-                for (int j = 0; j < dimensions; j++)
-                    for (int k = 0; k < cols; k++)
-                        result[i, j] += source[i, k] * loadingsX[k][j];
-
-            return result;
-        }
-
-        /// <summary>
         /// Applies the transformation to an input, producing an associated output.
         /// </summary>
         /// <param name="input">The input data to which the transformation should be applied.</param>
@@ -612,26 +405,6 @@ namespace Accord.Statistics.Analysis
         public double[][] TransformOutput(double[][] outputs)
         {
             return TransformOutput(outputs, loadingsY.Columns());
-        }
-
-        /// <summary>
-        ///   Projects a given set of outputs into latent space.
-        /// </summary>
-        /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public double[,] TransformOutput(double[,] outputs)
-        {
-            return TransformOutput(outputs.ToJagged(), loadingsY.Columns()).ToMatrix();
-        }
-
-        /// <summary>
-        ///   Projects a given set of outputs into latent space.
-        /// </summary>
-        /// 
-        [Obsolete("Please use jagged matrices instead.")]
-        public double[,] TransformOutput(double[,] outputs, int dimensions)
-        {
-            return TransformOutput(outputs.ToJagged(), dimensions).ToMatrix();
         }
 
         /// <summary>
@@ -1463,33 +1236,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Source data used in the analysis. Can be either input data
-        ///   or output data depending if the variables chosen are predictor
-        ///   variables or dependent variables, respectively.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Source
-        {
-#pragma warning disable 612, 618
-            get { return inputs ? analysis.sourceX : analysis.sourceY; }
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
-        ///   Gets the resulting projection (scores) of the source data
-        ///   into latent space. Can be either from input data or output
-        ///   data depending if the variables chosen are predictor variables
-        ///   or dependent variables, respectively.
-        /// </summary>
-        /// 
-        [Obsolete("This property will be removed.")]
-        public double[,] Result
-        {
-            get { return inputs ? analysis.scoresX.ToMatrix() : analysis.scoresY.ToMatrix(); }
-        }
-
-        /// <summary>
         ///   Gets the column means of the source data. Can be either from
         ///   input data or output data, depending if the variables chosen
         ///   are predictor variables or dependent variables, respectively.
@@ -1558,21 +1304,6 @@ namespace Accord.Statistics.Analysis
             return inputs ? analysis.Transform(data) : analysis.TransformOutput(data);
         }
 
-        /// <summary>
-        ///   Projects a given dataset into latent space. Can be either input variable's
-        ///   latent space or output variable's latent space, depending if the variables
-        ///   chosen are predictor variables or dependent variables, respectively.
-        /// </summary>
-        /// 
-        [Obsolete("Please set the analysis NumberOfOutputs to the desired number of factors.")]
-        public double[][] Transform(double[][] data, int factors)
-        {
-            int previous = analysis.NumberOfOutputs;
-            analysis.NumberOfOutputs = factors;
-            double[][] result = inputs ? analysis.Transform(data) : analysis.TransformOutput(data);
-            analysis.NumberOfOutputs = previous;
-            return result;
-        }
     }
 
     #endregion

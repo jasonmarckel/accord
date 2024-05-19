@@ -102,7 +102,7 @@ namespace Accord.Imaging
         /// Integral image's array.
         /// </summary>
         /// 
-        /// <remarks>See remarks to <see cref="InternalData"/> property.</remarks>
+        /// <remarks>See remarks to <see cref="Matrix"/> property.</remarks>
         /// 
         protected uint[,] integralImage = null;
 
@@ -141,39 +141,6 @@ namespace Accord.Imaging
         public uint[][] Matrix
         {
             get { return matrix; }
-        }
-
-        /// <summary>
-        /// Provides access to internal array keeping integral image data.
-        /// </summary>
-        /// 
-        /// <remarks>
-        /// <para><note>The array should be accessed by [y, x] indexing.</note></para>
-        /// 
-        /// <para><note>The array's size is [<see cref="Height"/>+1, <see cref="Width"/>+1]. The first
-        /// row and column are filled with zeros, what is done for more efficient calculation of
-        /// rectangles' sums.</note></para>
-        /// </remarks>
-        /// 
-        [Obsolete("Please use Matrix property instead.")]
-        public uint[,] InternalData
-        {
-            get
-            {
-                if (integralImage == null)
-                {
-                    integralImage = new uint[height + 1, width + 1];
-                    for (int y = 0; y <= height; y++)
-                    {
-                        for (int x = 0; x <= width; x++)
-                        {
-                            integralImage[y, x] = matrix[y][x];
-                        }
-                    }
-                }
-
-                return integralImage;
-            }
         }
 
         /// <summary>

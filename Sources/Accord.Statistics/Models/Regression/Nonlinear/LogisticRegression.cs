@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Regression
     using Accord.MachineLearning;
     using Analysis;
     using Fitting;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Binary Logistic Regression.
@@ -105,27 +105,6 @@ namespace Accord.Statistics.Models.Regression
         }
 
         /// <summary>
-        ///   Creates a new Logistic Regression Model.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of input variables for the model.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set NumberOfInputs instead.")]
-        public LogisticRegression(int inputs)
-            : base(new LogitLinkFunction(), inputs) { }
-
-        /// <summary>
-        ///   Creates a new Logistic Regression Model.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The number of input variables for the model.</param>
-        /// <param name="intercept">The starting intercept value. Default is 0.</param>
-        /// 
-        [Obsolete("Please use the default constructor and set NumberOfInputs instead.")]
-        public LogisticRegression(int inputs, double intercept)
-            : base(new LogitLinkFunction(), inputs, intercept) { }
-
-        /// <summary>
         ///   Gets the 95% confidence interval for the Odds Ratio for a given coefficient.
         /// </summary>
         /// 
@@ -181,7 +160,7 @@ namespace Accord.Statistics.Models.Regression
         /// 
         /// <returns>
         ///   A <see cref="LogisticRegression"/> whose 
-        ///   <see cref="GeneralizedLinearRegression.Coefficients"/> are
+        ///   <see cref="GeneralizedLinearRegression.Weights"/> are
         ///   the same as in the given <paramref name="weights"/> array.
         /// </returns>
         /// 
@@ -205,7 +184,7 @@ namespace Accord.Statistics.Models.Regression
         /// 
         /// <returns>
         ///   A <see cref="LogisticRegression"/> whose 
-        ///   <see cref="GeneralizedLinearRegression.Coefficients"/> are
+        ///   <see cref="GeneralizedLinearRegression.Weights"/> are
         ///   the same as in the given <paramref name="weights"/> array.
         /// </returns>
         /// 

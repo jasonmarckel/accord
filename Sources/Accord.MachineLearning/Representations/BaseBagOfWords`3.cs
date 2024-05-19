@@ -26,7 +26,7 @@ namespace Accord.MachineLearning
     using System;
     using System.Linq;
     using System.Threading;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using System.Data;
     using Accord.Diagnostics;
@@ -225,11 +225,6 @@ namespace Accord.MachineLearning
             Debug.Assert(classifier.NumberOfClasses == NumberOfWords);
 
             return (TModel)this;
-        }
-
-        double[] IBagOfWords<TInput[]>.GetFeatureVector(TInput[] value)
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>

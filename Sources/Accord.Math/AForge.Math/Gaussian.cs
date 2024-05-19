@@ -71,49 +71,6 @@ namespace AForge.Math
         }
 
         /// <summary>
-        /// 1-D Gaussian function.
-        /// </summary>
-        /// 
-        /// <param name="x">x value.</param>
-        /// 
-        /// <returns>Returns function's value at point <paramref name="x"/>.</returns>
-        /// 
-        /// <remarks><para>The function calculates 1-D Gaussian function:</para>
-        /// 
-        /// <code lang="none">
-        /// f(x) = exp( x * x / ( -2 * s * s ) ) / ( s * sqrt( 2 * PI ) )
-        /// </code>
-        /// </remarks>
-        /// 
-        [Obsolete("Please use Normal.Gaussian instead.")]
-        public double Function(double x)
-        {
-            return Normal.Gaussian(sqrSigma, x);
-        }
-
-        /// <summary>
-        /// 2-D Gaussian function.
-        /// </summary>
-        /// 
-        /// <param name="x">x value.</param>
-        /// <param name="y">y value.</param>
-        /// 
-        /// <returns>Returns function's value at point (<paramref name="x"/>, <paramref name="y"/>).</returns>
-        /// 
-        /// <remarks><para>The function calculates 2-D Gaussian function:</para>
-        /// 
-        /// <code lang="none">
-        /// f(x, y) = exp( x * x + y * y / ( -2 * s * s ) ) / ( s * s * 2 * PI )
-        /// </code>
-        /// </remarks>
-        /// 
-        [Obsolete("Please use Normal.Gaussian2D instead.")]
-        public double Function2D(double x, double y)
-        {
-            return Normal.Gaussian2D(sqrSigma, x, y);
-        }
-
-        /// <summary>
         /// 1-D Gaussian kernel.
         /// </summary>
         /// 

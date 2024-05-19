@@ -31,7 +31,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     using Accord.Statistics.Models.Regression.Linear;
     using Accord.MachineLearning;
     using Accord.Math.Optimization.Losses;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -62,8 +62,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     /// <seealso cref="MultipleLinearRegression"/>
     /// 
 #pragma warning disable 612, 618
-    public class NonNegativeLeastSquares : IRegressionFitting,
-        ISupervisedLearning<MultipleLinearRegression, double[], double>
+    public class NonNegativeLeastSquares : ISupervisedLearning<MultipleLinearRegression, double[], double>
 #pragma warning restore 612, 618
     {
         [NonSerialized]
@@ -144,25 +143,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
             this.cols = regression.Weights.Length;
             this.s = new double[cols];
             this.W = new double[cols];
-        }
-
-
-        /// <summary>
-        ///   Runs the fitting algorithm.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input training data.</param>
-        /// <param name="outputs">The output associated with each of the outputs.</param>
-        /// 
-        /// <returns>
-        ///   The sum of squared errors after the learning.
-        /// </returns>
-        /// 
-        [Obsolete("Please use the Learn() method instead.")]
-        public double Run(double[][] inputs, double[] outputs)
-        {
-            this.regression = Learn(inputs, outputs);
-            return new SquareLoss(inputs).Loss(regression.Transform(inputs));
         }
 
         /// <summary>

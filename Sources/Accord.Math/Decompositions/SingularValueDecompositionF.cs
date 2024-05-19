@@ -30,7 +30,6 @@ namespace Accord.Math.Decompositions
     using System;
     using Accord.Math;
 	using System.Diagnostics;
-	using Accord.Compat;
 
     /// <summary>
     ///   Singular Value Decomposition for a rectangular matrix.

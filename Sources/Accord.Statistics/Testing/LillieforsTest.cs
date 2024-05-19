@@ -26,7 +26,7 @@ namespace Accord.Statistics.Testing
     using Accord.Math;
     using Accord.Statistics.Distributions.Univariate;
     using Accord.Statistics.Distributions;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>

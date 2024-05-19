@@ -26,16 +26,7 @@ namespace Accord.MachineLearning
     using System;
     using System.Collections.Generic;
     using System.Threading;
-    using Accord.Compat;
     using System.Threading.Tasks;
-
-#if !NET35 && !NET40
-    using System.Text.RegularExpressions;
-    using System.Collections.ObjectModel;
-    using System.Collections.Concurrent;
-#else
-    using Accord.Collections;
-#endif
 
     /// <summary>
     ///   Weighting schemes for term-frequency (TF).

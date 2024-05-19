@@ -27,7 +27,7 @@ namespace Accord.Audio
 {
     using System;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Audio related exception.
@@ -63,16 +63,6 @@ namespace Accord.Audio
         /// 
         public AudioException(string message, Exception innerException)
             : base(message, innerException) { }
-
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="AudioException"/> class.
-        /// </summary>
-        /// 
-        /// <param name="info">The object that holds the serialized object data.</param>
-        /// <param name="context">The contextual information about the source or destination.</param>
-        /// 
-        protected AudioException(SerializationInfo info, StreamingContext context)
-            : base(info, context) { }
 
     }
 }

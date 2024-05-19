@@ -37,7 +37,6 @@ namespace Accord.IO
     using System.Globalization;
     using System.Runtime.Serialization;
     using Accord.IO.Resources;
-    using Accord.Compat;
     using System.Security.Permissions;
 
     /// <summary>
@@ -123,24 +122,6 @@ namespace Accord.IO
                 CurrentRecordIndex, CurrentFieldIndex, CurrentPosition, RawData);
         }
 
-#if !NETSTANDARD1_4
-        /// <summary>
-        /// Initializes a new instance of the MalformedCsvException class with serialized data.
-        /// </summary>
-        /// <param name="info">The <see cref="T:SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
-        /// <param name="context">The <see cref="T:StreamingContext"/> that contains contextual information about the source or destination.</param>
-        protected MalformedCsvException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-            message = info.GetString("MyMessage");
-
-            RawData = info.GetString("RawData");
-            CurrentPosition = info.GetInt32("CurrentPosition");
-            CurrentRecordIndex = info.GetInt64("CurrentRecordIndex");
-            CurrentFieldIndex = info.GetInt32("CurrentFieldIndex");
-        }
-#endif
-
         /// <summary>
         ///   Gets the raw data when the error occurred.
         /// </summary>
@@ -181,28 +162,5 @@ namespace Accord.IO
         /// 
         public override string Message { get { return message; } }
 
-#if !NETSTANDARD1_4
-        /// <summary>
-        ///   When overridden in a derived class, sets the <see cref="T:SerializationInfo"/> with information about the exception.
-        /// </summary>
-        /// 
-        /// <param name="info">The <see cref="T:SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
-        /// <param name="context">The <see cref="T:StreamingContext"/> that contains contextual information about the source or destination.</param>
-        /// 
-#if NET35
-        [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
-#endif
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            base.GetObjectData(info, context);
-
-            info.AddValue("MyMessage", Message);
-
-            info.AddValue("RawData", RawData);
-            info.AddValue("CurrentPosition", CurrentPosition);
-            info.AddValue("CurrentRecordIndex", CurrentRecordIndex);
-            info.AddValue("CurrentFieldIndex", CurrentFieldIndex);
-        }
-#endif
     }
 }

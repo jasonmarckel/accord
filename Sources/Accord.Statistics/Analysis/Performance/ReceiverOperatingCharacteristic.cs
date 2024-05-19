@@ -31,7 +31,8 @@ namespace Accord.Statistics.Analysis
     using Accord.Math;
     using Accord.Statistics.Visualizations;
     using Accord.Statistics.Testing;
-    using Accord.Compat;
+
+    using System.Text.Json;
 
     /// <summary>
     ///   Methods for computing the area under <see cref="ReceiverOperatingCharacteristic">
@@ -717,8 +718,8 @@ namespace Accord.Statistics.Analysis
         /// 
         public void Save(Stream stream)
         {
-            BinaryFormatter b = new BinaryFormatter();
-            b.Serialize(stream, this);
+            //BinaryFormatter b = new BinaryFormatter();
+            JsonSerializer.Serialize(stream, this);
         }
 
         /// <summary>
@@ -731,8 +732,8 @@ namespace Accord.Statistics.Analysis
         /// 
         public static ReceiverOperatingCharacteristic Load(Stream stream)
         {
-            BinaryFormatter b = new BinaryFormatter();
-            return (ReceiverOperatingCharacteristic)b.Deserialize(stream);
+            //BinaryFormatter b = new BinaryFormatter();
+            return JsonSerializer.Deserialize<ReceiverOperatingCharacteristic>(stream);
         }
 
         /// <summary>

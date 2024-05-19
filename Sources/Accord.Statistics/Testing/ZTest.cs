@@ -26,7 +26,7 @@ namespace Accord.Statistics.Testing
     using Accord.Statistics.Distributions.Univariate;
     using Accord.Statistics.Testing.Power;
     using System.Diagnostics;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   One-sample Z-Test (location test).

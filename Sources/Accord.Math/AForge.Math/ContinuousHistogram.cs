@@ -10,7 +10,8 @@ namespace Accord.Math
 {
     using System;
     using Accord;
-    using Accord.Compat;
+
+    using Range = Range;
 
     /// <summary>
     /// Histogram for continuous random values.

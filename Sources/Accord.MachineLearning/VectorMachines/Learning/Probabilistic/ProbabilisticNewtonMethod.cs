@@ -106,15 +106,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ILinearSupportVectorMachineLearning
     {
         /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public ProbabilisticNewtonMethod(SupportVectorMachine model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
         /// of this abstract class must define this method so new models
         /// can be created from the training data.

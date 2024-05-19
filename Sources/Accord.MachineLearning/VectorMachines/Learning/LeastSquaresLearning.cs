@@ -25,7 +25,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     using System;
     using Accord.Math;
     using Accord.Statistics.Kernels;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   Least Squares SVM (LS-SVM) learning algorithm.
@@ -52,15 +52,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     public class LeastSquaresLearning : 
         LeastSquaresLearningBase<SupportVectorMachine<IKernel<double[]>, double[]>, IKernel<double[]>, double[]>
     {
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LeastSquaresLearning(ISupportVectorMachine<double[]> model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="LeastSquaresLearning"/> class.
         /// </summary>
@@ -127,9 +118,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseSupportVectorClassification<TModel, TKernel, TInput>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         private double[] diagonal;

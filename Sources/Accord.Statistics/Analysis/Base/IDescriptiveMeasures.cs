@@ -159,11 +159,11 @@ namespace Accord.Statistics.Analysis
         /// 
         DoubleRange Deviance { get; }
 
-        /// <summary>
-        ///   Gets the variable's observations.
-        /// </summary>
-        /// 
-        double[] Samples { get; }
+        ///// <summary>
+        /////   Gets the variable's observations.
+        ///// </summary>
+        ///// 
+        //double[] Samples { get; }
 
         /// <summary>
         ///   Gets a confidence interval for the <see cref="Mean"/>

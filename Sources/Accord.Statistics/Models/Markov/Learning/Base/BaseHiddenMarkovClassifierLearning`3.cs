@@ -28,7 +28,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     using System.Diagnostics;
     using Accord.Statistics.Distributions;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -68,13 +68,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         /// <value>The classifier being trained by this instance.</value>
         /// 
         public TClassifier Classifier { get; private set; }
-
-        /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learner property instead.")]
-        public ClassifierLearningAlgorithmConfiguration Algorithm { get; set; }
 
         /// <summary>
         ///   Gets or sets the configuration function specifying which
@@ -124,20 +117,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         ///   function.
         /// </summary>
         /// 
-        [Obsolete("Please set the learning algorithm using the Learner property.")]
-        protected BaseHiddenMarkovClassifierLearning(TClassifier classifier,
-            ClassifierLearningAlgorithmConfiguration algorithm)
-            : this(classifier)
-        {
-            this.Algorithm = algorithm;
-        }
-
-        /// <summary>
-        ///   Creates a new instance of the learning algorithm for a given 
-        ///   Markov sequence classifier using the specified configuration
-        ///   function.
-        /// </summary>
-        /// 
         protected BaseHiddenMarkovClassifierLearning(TClassifier classifier,
             Func<int, IUnsupervisedLearning<TModel, TObservation[], int[]>> learner)
             : this(classifier)
@@ -167,78 +146,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         {
             this.Classifier = classifier;
         }
-
-        /// <summary>
-        ///   Trains each model to recognize each of the output labels.
-        /// </summary>
-        /// <returns>The sum log-likelihood for all models after training.</returns>
-        /// 
-        [Obsolete("Please use the Learn(x, y) method instead.")]
-        protected double Run<T>(T[] inputs, int[] outputs)
-        {
-            if (inputs == null)
-                throw new ArgumentNullException("inputs");
-
-            if (outputs == null)
-                throw new ArgumentNullException("outputs");
-
-            if (inputs.Length != outputs.Length)
-                throw new DimensionMismatchException("outputs",
-                    "The number of inputs and outputs does not match.");
-
-            for (int i = 0; i < outputs.Length; i++)
-                if (outputs[i] < 0 || outputs[i] >= Classifier.Classes)
-                    throw new ArgumentOutOfRangeException("outputs");
-
-
-            int classes = Classifier.Classes;
-            double[] logLikelihood = new double[classes];
-            int[] classCounts = new int[classes];
-
-
-            // For each model,
-            Parallel.For(0, classes, i =>
-            {
-                // We will start the class model learning problem
-                var args = new GenerativeLearningEventArgs(i, classes);
-                OnGenerativeClassModelLearningStarted(args);
-
-                // Select the input/output set corresponding
-                //  to the model's specialization class
-                int[] inx = outputs.Find(y => y == i);
-                T[] observations = inputs.Get(inx);
-
-                classCounts[i] = observations.Length;
-
-                if (observations.Length > 0)
-                {
-                    // Create and configure the learning algorithm
-                    // Backward compatibility case
-                    var teacher = Algorithm(i);
-
-                    // Train the current model in the input/output subset
-                    logLikelihood[i] = teacher.Run(observations as Array[]);
-                }
-
-                // Update and report progress
-                OnGenerativeClassModelLearningFinished(args);
-            });
-
-            if (Empirical)
-            {
-                for (int i = 0; i < classes; i++)
-                    Classifier.Priors[i] = (double)classCounts[i] / inputs.Length;
-            }
-
-            if (Rejection)
-            {
-                Classifier.Threshold = Threshold();
-            }
-
-            // Returns the sum log-likelihood for all models.
-            return logLikelihood.Sum();
-        }
-
 
         /// <summary>
         ///   Creates a new <see cref="Threshold">threshold model</see>

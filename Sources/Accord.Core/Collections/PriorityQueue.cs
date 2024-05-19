@@ -58,7 +58,6 @@ namespace Accord.Collections
     using System.Diagnostics;
     using System.Runtime.CompilerServices;
     using System.Text;
-    using Accord.Compat;
 
     /// <summary>
     ///   Priority order for <see cref="PriorityQueue{T}"/>.
@@ -183,9 +182,7 @@ namespace Accord.Collections
         /// <summary>
         ///   Removes every node from the queue. This is an O(1) operation.
         /// </summary>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public void Clear()
         {
             numberOfNodes = 0;
@@ -195,9 +192,7 @@ namespace Accord.Collections
         ///     Returns whether the given node is in the queue. This is an O(1) operation.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public bool Contains(PriorityQueueNode<T> node)
         {
 #if DEBUG
@@ -212,9 +207,7 @@ namespace Accord.Collections
         ///   Ties are broken by first-in-first-out. This is an O(log n) operation.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public PriorityQueueNode<T> Enqueue(T value, double priority)
         {
             CheckQueue();
@@ -241,9 +234,7 @@ namespace Accord.Collections
             }
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private void swap(int i, int j)
         {
             // Swap the nodes
@@ -273,9 +264,7 @@ namespace Accord.Collections
             }
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private void cascadeDown(ref PriorityQueueNode<T> node)
         {
             // aka Heapify-down
@@ -319,9 +308,7 @@ namespace Accord.Collections
         ///   Returns true if 'higher' has higher priority than 'lower', false otherwise. Note that
         ///   calling HasHigherPriority(node, node) (ie. both arguments the same node) will return false.
         /// </summary>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private bool HasHigherPriority(int i, int j)
         {
             var a = nodes[i];
@@ -411,9 +398,7 @@ namespace Accord.Collections
         ///   This method must be called on a node every time its priority changes while it is in the queue.  
         ///   <b>Forgetting to call this method will result in a corrupted queue!</b>. This is an O(log n) operation.
         /// </summary>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public void UpdatePriority(ref PriorityQueueNode<T> node, double priority)
         {
 #if DEBUG

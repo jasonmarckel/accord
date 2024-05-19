@@ -26,7 +26,7 @@ namespace Accord.Statistics.Analysis
     using System.ComponentModel;
     using Accord.Statistics.Testing;
     using Accord.Math;
-    using Accord.Compat;
+
     using Accord.MachineLearning;
 
     /// <summary>
@@ -404,17 +404,6 @@ namespace Accord.Statistics.Analysis
         public int NumberOfClasses
         {
             get { return 2; }
-        }
-
-        /// <summary>
-        ///   Gets the number of observations for this matrix
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfSamples instead.")]
-        [DisplayName("Number of samples")]
-        public int Samples
-        {
-            get { return NumberOfSamples; }
         }
 
         /// <summary>

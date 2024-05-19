@@ -66,7 +66,7 @@ namespace Accord.Audio
     using Accord.Audio;
     using Accord.Audio.Windows;
     using Accord.Math;
-    using Accord.Compat;
+    
     using Accord.Audio.Filters;
 
     /// <summary>

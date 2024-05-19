@@ -27,7 +27,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Distributions.Fitting;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -52,7 +52,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// </example>
     /// 
     /// <seealso cref="ViterbiLearning"/>
-    /// <seealso cref="BaumWelchLearning{TDistribution}"/>
+    /// <seealso cref="BaumWelchLearning{TDistribution,TObservation}"/>
     /// 
     /// 
     public class ViterbiLearning<TDistribution, TObservation> : BaseViterbiLearning<TObservation[]>,

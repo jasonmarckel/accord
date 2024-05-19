@@ -12,7 +12,7 @@ namespace Accord.Neuro
     using System.IO;
     using System.Runtime.Serialization;
     using System.Runtime.Serialization.Formatters.Binary;
-    using Accord.Compat;
+    
 
     /// <summary>
     /// Base neural network class.
@@ -149,46 +149,5 @@ namespace Accord.Neuro
             }
         }
 
-#if !NO_BINARY_SERIALIZATION
-        /// <summary>
-        /// Obsolete. Please use <see cref="Accord.IO.Serializer.Save{T}(T, string)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save(network, fileName) instead.")]
-        public void Save(string fileName)
-        {
-            Accord.IO.Serializer.Save(this, fileName);
-        }
-
-        /// <summary>
-        /// Obsolete. Please use <see cref="Accord.IO.Serializer.Save{T}(T, Stream, IO.SerializerCompression)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save(network, stream) instead.")]
-        public void Save(Stream stream)
-        {
-            Accord.IO.Serializer.Save(this, stream);
-        }
-
-        /// <summary>
-        /// Obsolete. Please use <see cref="Accord.IO.Serializer.Load{T}(string)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<Network>(fileName) instead.")]
-        public static Network Load(string fileName)
-        {
-            return Accord.IO.Serializer.Load<Network>(fileName);
-        }
-
-        /// <summary>
-        /// Obsolete. Please use <see cref="Accord.IO.Serializer.Load{T}(Stream, IO.SerializerCompression)"/> instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<Network>(stream) instead.")]
-        public static Network Load(Stream stream)
-        {
-            return Accord.IO.Serializer.Load<Network>(stream);
-        }
-#endif
     }
 }

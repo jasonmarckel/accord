@@ -24,7 +24,7 @@ namespace Accord.Collections
 {
     using System;
     using System.Text;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   K-dimensional tree node (for <see cref="KDTree"/>).

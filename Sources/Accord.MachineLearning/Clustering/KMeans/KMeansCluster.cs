@@ -28,7 +28,7 @@ namespace Accord.MachineLearning
     using System;
     using System.Collections;
     using System.Collections.Generic;
-    using Accord.Compat;
+    
 
     /// <summary>
     ///   k-Means cluster collection.
@@ -75,16 +75,6 @@ namespace Accord.MachineLearning
         }
 
         /// <summary>
-        ///   Gets the dimensionality of the data space.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Dimension
-        {
-            get { return this.NumberOfInputs; }
-        }
-
-        /// <summary>
         ///   Gets the clusters' variance-covariance matrices.
         /// </summary>
         /// 
@@ -94,11 +84,6 @@ namespace Accord.MachineLearning
         {
             get { return covariances; }
         }
-
-
-
-
-
 
         // Using composition over inheritance to achieve the closest as possible effect to a Mixin
         // in C# - unfortunately needs a lot a boilerplate code to rewrire the interface methods to

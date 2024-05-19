@@ -27,7 +27,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Distributions.Fitting;
     using System.ComponentModel;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Triangular distribution.

@@ -25,7 +25,7 @@ namespace Accord.MachineLearning
     using System;
     using Accord.Math;
     using Accord.Math.Distances;
-    using Accord.Compat;
+    
     using System.Threading.Tasks;
     using System.Runtime.CompilerServices;
     using System.Threading;
@@ -158,9 +158,7 @@ namespace Accord.MachineLearning
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int[] getNearestIndices(TInput input, out double[] distances)
         {
             double[] d = this.distanceCache.Value;
@@ -246,108 +244,6 @@ namespace Accord.MachineLearning
             if (this.Weights == null && this.Inputs != null)
                 this.Weights = Vector.Ones(this.Inputs.Length);
         }
-
-
-
-        #region Obsolete
-        /// <summary>
-        ///   Creates a new <see cref="KNearestNeighbors"/>.
-        /// </summary>
-        /// 
-        /// <param name="k">The number of nearest neighbors to be used in the decision.</param>
-        /// 
-        /// <param name="inputs">The input data points.</param>
-        /// <param name="outputs">The associated labels for the input points.</param>
-        /// <param name="distance">The distance measure to use in the decision.</param>
-        /// 
-        [Obsolete("Please use KNearestNeighbors(int k, IDistance<T> distance) constructor instead.")]
-        public KNearestNeighbors(int k, TInput[] inputs, int[] outputs, IDistance<TInput> distance)
-        {
-            this.K = k;
-            this.Distance = distance;
-            Learn(inputs, outputs);
-        }
-
-        /// <summary>
-        ///   Creates a new <see cref="KNearestNeighbors"/>.
-        /// </summary>
-        /// 
-        /// <param name="k">The number of nearest neighbors to be used in the decision.</param>
-        /// <param name="classes">The number of classes in the classification problem.</param>
-        /// 
-        /// <param name="inputs">The input data points.</param>
-        /// <param name="outputs">The associated labels for the input points.</param>
-        /// <param name="distance">The distance measure to use in the decision.</param>
-        /// 
-        [Obsolete("Please use KNearestNeighbors(int k, IDistance<T> distance) constructor instead.")]
-        public KNearestNeighbors(int k, int classes, TInput[] inputs, int[] outputs, IDistance<TInput> distance)
-            : this(k, inputs, outputs, distance)
-        {
-            if (classes != NumberOfOutputs)
-                throw new ArgumentException("classes");
-        }
-
-        /// <summary>
-        ///   Gets the number of class labels
-        ///   handled by this classifier.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfOutputs instead.")]
-        public int ClassCount
-        {
-            get { return NumberOfOutputs; }
-        }
-
-        /// <summary>
-        ///   Computes the most likely label of a new given point.
-        /// </summary>
-        /// 
-        /// <param name="input">A point to be classified.</param>
-        /// 
-        /// <returns>The most likely label for the given point.</returns>
-        /// 
-        [Obsolete("Please use the Decide(input) method instead.")]
-        public int Compute(TInput input)
-        {
-            return Decide(input);
-        }
-
-        /// <summary>
-        ///   Computes the most likely label of a new given point.
-        /// </summary>
-        /// 
-        /// <param name="input">A point to be classified.</param>
-        /// <param name="response">A value between 0 and 1 giving 
-        /// the strength of the classification in relation to the
-        /// other classes.</param>
-        /// 
-        /// <returns>The most likely label for the given point.</returns>
-        /// 
-        [Obsolete("Please use the Score(input, out decision) method instead.")]
-        public int Compute(TInput input, out double response)
-        {
-            int decision;
-            response = Score(input, out decision);
-            return decision;
-        }
-
-        /// <summary>
-        ///   Computes the most likely label of a new given point.
-        /// </summary>
-        /// 
-        /// <param name="input">A point to be classified.</param>
-        /// <param name="scores">The distance score for each possible class.</param>
-        /// 
-        /// <returns>The most likely label for the given point.</returns>
-        /// 
-        [Obsolete("Please use the Scores(input, out decision) method instead.")]
-        public virtual int Compute(TInput input, out double[] scores)
-        {
-            int decision;
-            scores = Scores(input, out decision);
-            return decision;
-        }
-        #endregion
 
     }
 }

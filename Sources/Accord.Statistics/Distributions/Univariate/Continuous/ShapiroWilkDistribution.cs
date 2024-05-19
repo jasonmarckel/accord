@@ -25,7 +25,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using System;
     using Accord.Statistics.Testing;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Shapiro-Wilk distribution.

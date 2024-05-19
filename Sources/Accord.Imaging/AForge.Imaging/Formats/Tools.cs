@@ -17,35 +17,35 @@ namespace Accord.Imaging.Formats
     /// </summary>
     internal class Tools
     {
-        /// <summary>
-        /// Create and initialize new grayscale image.
-        /// </summary>
-        /// 
-        /// <param name="width">Image width.</param>
-        /// <param name="height">Image height.</param>
-        /// 
-        /// <returns>Returns new created grayscale image.</returns>
-        /// 
-        /// <remarks><para>Accord.Imaging.Image.CreateGrayscaleImage() function
-        /// could be used instead, which does the some. But it was not used to get
-        /// rid of dependency on AForge.Imaing library.</para></remarks>
-        /// 
-        public static Bitmap CreateGrayscaleImage( int width, int height )
-        {
-            // create new image
-            Bitmap image = new Bitmap( width, height, PixelFormat.Format8bppIndexed );
-            // get palette
-            ColorPalette cp = image.Palette;
-            // init palette with grayscale colors
-            for ( int i = 0; i < 256; i++ )
-            {
-                cp.Entries[i] = Color.FromArgb( i, i, i );
-            }
-            // set palette back
-            image.Palette = cp;
-            // return new image
-            return image;
-        }
+        ///// <summary>
+        ///// Create and initialize new grayscale image.
+        ///// </summary>
+        ///// 
+        ///// <param name="width">Image width.</param>
+        ///// <param name="height">Image height.</param>
+        ///// 
+        ///// <returns>Returns new created grayscale image.</returns>
+        ///// 
+        ///// <remarks><para>Accord.Imaging.Image.CreateGrayscaleImage() function
+        ///// could be used instead, which does the some. But it was not used to get
+        ///// rid of dependency on AForge.Imaing library.</para></remarks>
+        ///// 
+        //public static Bitmap CreateGrayscaleImage( int width, int height )
+        //{
+        //    // create new image
+        //    Bitmap image = new Bitmap( width, height, PixelFormat.Format8bppIndexed );
+        //    // get palette
+        //    ColorPalette cp = image.Palette;
+        //    // init palette with grayscale colors
+        //    for ( int i = 0; i < 256; i++ )
+        //    {
+        //        cp.Entries[i] = Color.FromArgb( i, i, i );
+        //    }
+        //    // set palette back
+        //    image.Palette = cp;
+        //    // return new image
+        //    return image;
+        //}
 
         /// <summary>
         /// Read specified amount of bytes from the specified stream.

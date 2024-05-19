@@ -119,34 +119,6 @@ namespace Accord.Imaging
         }
 
         /// <summary>
-        /// Minimum angle to detect skew in degrees.
-        /// </summary>
-        ///
-        /// <remarks><para><note>The property is deprecated and setting it has not any effect.
-        /// Use <see cref="MaxSkewToDetect"/> property instead.</note></para></remarks>
-        ///
-        [Obsolete( "The property is deprecated and setting it has not any effect. Use MaxSkewToDetect property instead." )]
-        public double MinBeta
-        {
-            get { return ( -maxSkewToDetect ); }
-            set { }
-        }
-
-        /// <summary>
-        /// Maximum angle to detect skew in degrees.
-        /// </summary>
-        ///
-        /// <remarks><para><note>The property is deprecated and setting it has not any effect.
-        /// Use <see cref="MaxSkewToDetect"/> property instead.</note></para></remarks>
-        ///
-        [Obsolete( "The property is deprecated and setting it has not any effect. Use MaxSkewToDetect property instead." )]
-        public double MaxBeta
-        {
-            get { return ( maxSkewToDetect ); }
-            set { }
-        }
-
-        /// <summary>
         /// Radius for searching local peak value, [1, 10].
         /// </summary>
         /// 

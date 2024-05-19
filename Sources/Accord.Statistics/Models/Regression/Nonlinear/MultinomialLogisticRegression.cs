@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Regression
     using System.Runtime.Serialization;
     using Accord.Statistics.Models.Regression.Fitting;
     using Accord.Math.Optimization;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Nominal Multinomial Logistic Regression.
@@ -144,63 +144,6 @@ namespace Accord.Statistics.Models.Regression
         public double[][] StandardErrors
         {
             get { return standardErrors; }
-        }
-
-        /// <summary>
-        ///   Gets the number of categories of the model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfOutputs instead.")]
-        public int Categories
-        {
-            get { return NumberOfOutputs; }
-        }
-
-        /// <summary>
-        ///   Gets the number of inputs of the model.
-        /// </summary>
-        [Obsolete("Please use NumberOfInputs instead.")]
-        public int Inputs
-        {
-            get { return NumberOfInputs; }
-        }
-
-
-
-        /// <summary>
-        ///   Computes the model output for the given input vector.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   The first category is always considered the baseline category.
-        /// </remarks>
-        /// 
-        /// <param name="input">The input vector.</param>
-        /// 
-        /// <returns>The output value.</returns>
-        /// 
-        [Obsolete("Please use Probabilities() instead.")]
-        public double[] Compute(double[] input)
-        {
-            return Probabilities(input);
-        }
-
-        /// <summary>
-        ///   Computes the model outputs for the given input vectors.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   The first category is always considered the baseline category.
-        /// </remarks>
-        /// 
-        /// <param name="input">The input vector.</param>
-        /// 
-        /// <returns>The output value.</returns>
-        /// 
-        [Obsolete("Please use Probabilities() instead.")]
-        public double[][] Compute(double[][] input)
-        {
-            return Probabilities(input);
         }
 
         /// <summary>

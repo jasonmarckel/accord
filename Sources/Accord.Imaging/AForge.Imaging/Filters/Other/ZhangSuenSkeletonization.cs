@@ -155,7 +155,7 @@ namespace Accord.Imaging.Filters
             var dst0 = (byte*)destination.ImageData.ToPointer();
 
             IntPtr delPtr = IntPtr.Zero;
-            RuntimeHelpers.PrepareConstrainedRegions();
+            //RuntimeHelpers.PrepareConstrainedRegions();
             try
             {
                 delPtr = Marshal.AllocHGlobal(delSize);

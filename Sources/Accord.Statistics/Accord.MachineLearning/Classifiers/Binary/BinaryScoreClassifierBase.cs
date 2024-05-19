@@ -26,7 +26,7 @@ namespace Accord.MachineLearning
     using Accord.Statistics;
     using Accord.MachineLearning;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     /// Base class for <see cref="IBinaryScoreClassifier{TInput}">

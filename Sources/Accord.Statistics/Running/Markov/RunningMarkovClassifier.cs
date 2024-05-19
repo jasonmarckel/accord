@@ -26,14 +26,13 @@ namespace Accord.Statistics.Running
     using Accord.Math;
     using Accord.Statistics.Distributions;
     using Accord.Statistics.Models.Markov;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Hidden Markov Classifier filter.
     /// </summary>
     /// 
     /// <seealso cref="HiddenMarkovClassifier"/>
-    /// <seealso cref="RunningMarkovClassifier{TDistribution}"/>
     /// 
     [Serializable]
     public class RunningMarkovClassifier : IRunning<int>

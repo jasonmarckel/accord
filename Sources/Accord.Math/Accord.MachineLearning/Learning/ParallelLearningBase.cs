@@ -24,7 +24,7 @@ namespace Accord.MachineLearning
 {
     using System;
     using System.Runtime.Serialization;
-    using Accord.Compat;
+
     using System.Threading;
     using System.Threading.Tasks;
 

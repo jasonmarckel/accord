@@ -29,7 +29,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Math.Random;
     using System.Diagnostics;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Univariate general discrete distribution, also referred as the

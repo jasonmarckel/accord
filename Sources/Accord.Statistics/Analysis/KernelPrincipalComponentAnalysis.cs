@@ -29,7 +29,7 @@ namespace Accord.Statistics.Analysis
     using Accord.MachineLearning;
     using Accord.Statistics.Analysis.Base;
     using Accord.Statistics.Models.Regression;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Kernel Principal Component Analysis.
@@ -80,19 +80,15 @@ namespace Accord.Statistics.Analysis
     [Serializable]
 #pragma warning disable 612, 618
     public class KernelPrincipalComponentAnalysis : BasePrincipalComponentAnalysis, ITransform<double[], double[]>,
-        IUnsupervisedLearning<MultivariateKernelRegression, double[], double[]>,
-        IMultivariateAnalysis, IProjectionAnalysis
+        IUnsupervisedLearning<MultivariateKernelRegression, double[], double[]>
 #pragma warning restore 612, 618
     {
-
         private IKernel kernel;
         private double[][] sourceCentered;
         private double[] featureMean;
         private double featureGrandMean;
         private bool centerFeatureSpace;
-        private double threshold = 0.001;
         private bool allowReversion = true;
-
 
         /// <summary>
         ///   Constructs the Kernel Principal Component Analysis.
@@ -133,99 +129,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Constructs the Kernel Principal Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="kernel">The kernel to be used in the analysis.</param>
-        /// <param name="method">The analysis method to perform.</param>
-        /// <param name="centerInFeatureSpace">True to center the data in feature space,
-        ///   false otherwise. Default is true.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public KernelPrincipalComponentAnalysis(double[,] data, IKernel kernel,
-            AnalysisMethod method, bool centerInFeatureSpace)
-        {
-            if (kernel == null)
-                throw new ArgumentNullException("kernel");
-
-            this.source = data;
-            this.array = data.ToJagged();
-            this.Method = (PrincipalComponentMethod)method;
-            this.kernel = kernel;
-            this.centerFeatureSpace = centerInFeatureSpace;
-        }
-
-        /// <summary>
-        ///   Constructs the Kernel Principal Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="kernel">The kernel to be used in the analysis.</param>
-        /// <param name="method">The analysis method to perform.</param>
-        /// <param name="centerInFeatureSpace">True to center the data in feature space,
-        ///   false otherwise. Default is true.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public KernelPrincipalComponentAnalysis(double[][] data, IKernel kernel,
-            AnalysisMethod method, bool centerInFeatureSpace)
-        {
-            if (kernel == null)
-                throw new ArgumentNullException("kernel");
-
-            this.kernel = kernel;
-            this.centerFeatureSpace = centerInFeatureSpace;
-            this.array = data;
-        }
-
-        /// <summary>
-        ///   Constructs the Kernel Principal Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        /// variables as columns and observations of each variable as rows.</param>
-        /// <param name="kernel">The kernel to be used in the analysis.</param>
-        /// <param name="method">The analysis method to perform.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public KernelPrincipalComponentAnalysis(double[,] data, IKernel kernel, AnalysisMethod method)
-            : this(data, kernel, method, true) { }
-
-        /// <summary>
-        ///   Constructs the Kernel Principal Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        /// variables as columns and observations of each variable as rows.</param>
-        /// <param name="kernel">The kernel to be used in the analysis.</param>
-        /// <param name="method">The analysis method to perform.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public KernelPrincipalComponentAnalysis(double[][] data, IKernel kernel, AnalysisMethod method)
-            : this(data, kernel, method, true) { }
-
-        /// <summary>Constructs the Kernel Principal Component Analysis.</summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="kernel">The kernel to be used in the analysis.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public KernelPrincipalComponentAnalysis(double[,] data, IKernel kernel)
-            : this(data, kernel, AnalysisMethod.Center, true) { }
-
-        /// <summary>Constructs the Kernel Principal Component Analysis.</summary>
-        /// 
-        /// <param name="data">The source data to perform analysis.</param>
-        /// <param name="kernel">The kernel to be used in the analysis.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public KernelPrincipalComponentAnalysis(double[][] data, IKernel kernel)
-            : this(data, kernel, AnalysisMethod.Center, true) { }
-
-
-        /// <summary>
         ///   Gets or sets the Kernel used in the analysis.
         /// </summary>
         /// 
@@ -246,20 +149,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Gets or sets the minimum variance proportion needed to keep a
-        ///   principal component. If set to zero, all components will be
-        ///   kept. Default is 0.001 (all components which contribute less
-        ///   than 0.001 to the variance in the data will be discarded).
-        /// </summary>
-        /// 
-        [Obsolete("Please set ExplainedVariance instead.")]
-        public double Threshold
-        {
-            get { return threshold; }
-            set { threshold = value; }
-        }
-
-        /// <summary>
         ///   Gets or sets a boolean value indicating whether this analysis
         ///   should store enough information to allow the reversion of the
         ///   transformation to be computed. Set this to no in case you would
@@ -271,30 +160,6 @@ namespace Accord.Statistics.Analysis
         {
             get { return allowReversion; }
             set { allowReversion = value; }
-        }
-
-        /// <summary>
-        ///   Computes the Kernel Principal Component Analysis algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn method instead.")]
-        public void Compute()
-        {
-            Compute(NumberOfOutputs);
-        }
-
-        /// <summary>
-        /// Learns a model that can map the given inputs to the desired outputs.
-        /// </summary>
-        /// <param name="x">The model inputs.</param>
-        /// <returns>
-        /// A model that has learned how to produce suitable outputs
-        /// given the input data <paramref name="x" />.
-        /// </returns>
-        [Obsolete("Please use jagged matrices instead.")]
-        public MultivariateKernelRegression Learn(double[,] x)
-        {
-            return Learn(x.ToJagged());
         }
 
         /// <summary>
@@ -402,22 +267,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///    Obsolete.
-        /// </summary>
-        /// 
-        [Obsolete("Please set the desired number of components in the NumberOfOutputs property and call Learn.")]
-        public void Compute(int components)
-        {
-            NumberOfOutputs = components;
-            if (array != null)
-                Learn(array);
-            else
-#pragma warning disable 612, 618
-                Learn(source);
-#pragma warning restore 612, 618
-        }
-
-        /// <summary>
         ///   Projects a given matrix into principal component space.
         /// </summary>
         /// 
@@ -465,55 +314,6 @@ namespace Accord.Statistics.Analysis
             }
 
             throw new DimensionMismatchException("Number of outputs cannot exceed the number of principal components.");
-        }
-
-        
-        /// <summary>
-        ///   Reverts a set of projected data into it's original form. Complete reverse
-        ///   transformation is not always possible and is not even guaranteed to exist.
-        /// </summary>
-        /// 
-        /// <remarks>
-        ///   This method works using a closed-form MDS approach as suggested by
-        ///   Kwok and Tsang. It is currently a direct implementation of the algorithm
-        ///   without any kind of optimization.
-        ///   
-        ///   Reference:
-        ///   - http://cmp.felk.cvut.cz/cmp/software/stprtool/manual/kernels/preimage/list/rbfpreimg3.html
-        /// </remarks>
-        /// 
-        /// <param name="data">The kpca-transformed data.</param>
-        /// 
-        [Obsolete("Please use Jagged matrices instead.")]
-        public double[,] Revert(double[,] data)
-        {
-            return Revert(data.ToJagged()).ToMatrix();
-        }
-
-        /// <summary>
-        ///   Reverts a set of projected data into it's original form. Complete reverse
-        ///   transformation is not always possible and is not even guaranteed to exist.
-        /// </summary>
-        /// 
-        /// <remarks>
-        /// <para>
-        ///   This method works using a closed-form MDS approach as suggested by
-        ///   Kwok and Tsang. It is currently a direct implementation of the algorithm
-        ///   without any kind of optimization.
-        /// </para>
-        /// <para>
-        ///   Reference:
-        ///   - http://cmp.felk.cvut.cz/cmp/software/stprtool/manual/kernels/preimage/list/rbfpreimg3.html
-        /// </para>
-        /// </remarks>
-        /// 
-        /// <param name="data">The kpca-transformed data.</param>
-        /// <param name="neighbors">The number of nearest neighbors to use while constructing the pre-image.</param>
-        /// 
-        [Obsolete("Please use Jagged matrices instead.")]
-        public double[,] Revert(double[,] data, int neighbors)
-        {
-            return Revert(data.ToJagged(), neighbors).ToMatrix();
         }
 
         /// <summary>

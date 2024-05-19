@@ -28,7 +28,7 @@ namespace Accord.Statistics.Models.Fields
     using System;
     using System.IO;
     using System.Runtime.Serialization.Formatters.Binary;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Linear-Chain Conditional Random Field (CRF).
@@ -227,66 +227,6 @@ namespace Accord.Statistics.Models.Fields
             return logLikelihood;
         }
 
-
-
-#pragma warning disable 612, 618
-
-        /// <summary>
-        ///   Saves the random field to a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream to which the random field is to be serialized.</param>
-        /// 
-        [Obsolete("Please use Accord.Serializer instead.")]
-        public void Save(Stream stream)
-        {
-            BinaryFormatter b = new BinaryFormatter();
-            b.Serialize(stream, this);
-        }
-
-        /// <summary>
-        ///   Saves the random field to a stream.
-        /// </summary>
-        /// 
-        /// <param name="path">The stream to which the random field is to be serialized.</param>
-        /// 
-        [Obsolete("Please use Accord.Serializer instead.")]
-        public void Save(string path)
-        {
-            Save(new FileStream(path, FileMode.Create));
-        }
-
-        /// <summary>
-        ///   Loads a random field from a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream from which the random field is to be deserialized.</param>
-        /// 
-        /// <returns>The deserialized random field.</returns>
-        /// 
-        [Obsolete("Please use Accord.Serializer instead.")]
-        public static ConditionalRandomField<T> Load(Stream stream)
-        {
-            BinaryFormatter b = new BinaryFormatter();
-            return (ConditionalRandomField<T>)b.Deserialize(stream);
-        }
-
-        /// <summary>
-        ///   Loads a random field from a file.
-        /// </summary>
-        /// 
-        /// <param name="path">The path to the file from which the random field is to be deserialized.</param>
-        /// 
-        /// <returns>The deserialized random field.</returns>
-        /// 
-        [Obsolete("Please use Accord.Serializer instead.")]
-        public static ConditionalRandomField<T> Load(string path)
-        {
-            return Load(new FileStream(path, FileMode.Open));
-        }
-#pragma warning restore 612, 618
-
-
         #region ICloneable Members
 
         /// <summary>
@@ -303,7 +243,6 @@ namespace Accord.Statistics.Models.Fields
         }
 
         #endregion
-
 
         /// <summary>
         /// Computes class-label decisions for the given <paramref name="input" />.

@@ -222,23 +222,6 @@ namespace Accord.Imaging.Moments
         public RawMoments(float[,] image, int order = DefaultOrder)
             : base(image, order) { }
 
-
-
-        /// <summary>
-        ///   Computes the raw moments for the specified image.
-        /// </summary>
-        /// 
-        /// <param name="image">The image whose moments should be computed.</param>
-        /// <param name="area">The region of interest in the image to compute moments for.</param>
-        /// <param name="secondOrder"><c>True</c> to compute second order moments, <c>false</c> otherwise.</param>
-        /// 
-        [Obsolete("Use the Order property to determine the maximum order to be computed.")]
-        public void Compute(float[,] image, Rectangle area, bool secondOrder)
-        {
-            Order = secondOrder ? 2 : 1;
-            Compute(image, area);
-        }
-
         /// <summary>
         ///   Computes the raw moments for the specified image.
         /// </summary>

@@ -34,13 +34,13 @@
 
 namespace Accord.Vision.Detection
 {
-    using System;
-    using System.Drawing;
     using Accord.Imaging;
-    using System.Runtime.CompilerServices;
+    using System;
     using System.Collections.Generic;
+    using System.Drawing;
+    using System.Runtime.CompilerServices;
     using System.Threading.Tasks;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Strong classifier based on a weaker cascade of
@@ -124,7 +124,6 @@ namespace Accord.Vision.Detection
         {
         }
 
-
         /// <summary>
         ///   Gets the cascade of weak-classifiers
         ///   used by this strong classifier.
@@ -163,9 +162,7 @@ namespace Accord.Vision.Detection
         ///   Detects the presence of an object in a given window.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public bool Compute(IntegralImage2 image, Rectangle rectangle)
         {
             int x = rectangle.X;
@@ -192,7 +189,6 @@ namespace Accord.Vision.Detection
 
             return true; // The image has been detected.
         }
-
 
     }
 }

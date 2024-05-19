@@ -41,38 +41,6 @@ namespace Accord.Imaging
     public abstract class BaseSparseFeatureExtractor<TPoint> : BaseFeatureExtractor<TPoint>, ICornersDetector
         where TPoint : IFeaturePoint<double[]>
     {
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="BaseFeatureExtractor{T}.Transform(Bitmap)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(input) method instead.")]
-        public new List<TPoint> ProcessImage(Bitmap image)
-        {
-            return new List<TPoint>(Transform(image));
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="BaseFeatureExtractor{T}.Transform(Bitmap)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(input) method instead.")]
-        public new List<TPoint> ProcessImage(BitmapData imageData)
-        {
-            return new List<TPoint>(Transform(new UnmanagedImage(imageData)));
-        }
-
-        /// <summary>
-        ///   Obsolete. Please use the <see cref="BaseFeatureExtractor{T}.Transform(Bitmap)"/> method instead.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Transform(input) method instead.")]
-        public new List<TPoint> ProcessImage(UnmanagedImage image)
-        {
-            return new List<TPoint>(Transform(image));
-        }
-
-
         List<IntPoint> ICornersDetector.ProcessImage(Bitmap image)
         {
             return Transform(image).Select(x => new IntPoint((int)x.X, (int)x.Y)).ToList();

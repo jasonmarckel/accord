@@ -27,7 +27,7 @@ namespace Accord.MachineLearning
     using System.Linq;
     using System.Text;
     using Accord.Math;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>

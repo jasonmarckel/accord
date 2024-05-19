@@ -26,7 +26,7 @@ namespace Accord.Statistics
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Accord.Compat;
+
     using System.Runtime.CompilerServices;
 
     /// <summary>
@@ -505,9 +505,7 @@ namespace Accord.Statistics
         ///   Converts a boolean variable into a 0-or-1 representation (0 is false, 1 is true).
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ToZeroOne(this bool p)
         {
             return p ? 1 : 0;
@@ -517,9 +515,7 @@ namespace Accord.Statistics
         ///   Converts a boolean variable into a 0-or-1 representation (0 is false, 1 is true).
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ToZeroOne(this int p)
         {
             return Decide(p) ? 1 : 0;
@@ -529,9 +525,7 @@ namespace Accord.Statistics
         ///   Converts a boolean variable into a 0-or-1 representation (0 is false, 1 is true).
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ToZeroOne(this double p)
         {
             return Decide(p) ? 1 : 0;
@@ -577,9 +571,7 @@ namespace Accord.Statistics
         ///   Converts a boolean variable into a -1 or +1 representation (-1 is false, +1 is true).
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ToMinusOnePlusOne(this bool p)
         {
             return p ? 1 : -1;
@@ -589,9 +581,7 @@ namespace Accord.Statistics
         ///   Converts a boolean variable into a -1 or +1 representation (-1 is false, +1 is true).
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ToMinusOnePlusOne(this int p)
         {
             return Decide(p) ? 1 : -1;
@@ -601,9 +591,7 @@ namespace Accord.Statistics
         ///   Converts a boolean variable into a -1 or +1 representation (-1 is false, +1 is true).
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static int ToMinusOnePlusOne(this double p)
         {
             return Decide(p) ? 1 : -1;
@@ -775,9 +763,7 @@ namespace Accord.Statistics
         ///   is higher than zero, and false otherwise.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool Decide(double distance)
         {
             return distance > 0;
@@ -788,9 +774,7 @@ namespace Accord.Statistics
         ///   is higher than zero, and false otherwise.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool Decide(int label)
         {
             if (label == 1)

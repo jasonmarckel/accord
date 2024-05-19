@@ -31,13 +31,13 @@ namespace Accord.Statistics.Models.Markov.Learning
     using Accord.Statistics.Models.Markov.Topology;
 
     /// <summary>
-    ///   Learning algorithm for <see cref="HiddenMarkovClassifier{TDistribution}">
+    ///   Learning algorithm for <see cref="HiddenMarkovClassifier{TDistribution,TObservation}">
     ///   arbitrary-density generative hidden Markov sequence classifiers</see>.
     /// </summary>
     /// 
     /// <remarks>
     /// <para>
-    ///   This class acts as a teacher for <see cref="HiddenMarkovClassifier{TDistribution}">
+    ///   This class acts as a teacher for <see cref="HiddenMarkovClassifier{TDistribution,TObservation}">
     ///   classifiers based on arbitrary-density hidden Markov models</see>. The learning
     ///   algorithm uses a generative approach. It works by training each model in the
     ///   generative classifier separately.</para>
@@ -52,7 +52,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     ///   by discrete symbols, such as class labels, integers, and so on. If you need
     ///   to classify sequences of other entities, such as real numbers, vectors (i.e.
     ///   multivariate observations), then you can use 
-    ///   <see cref="HiddenMarkovClassifierLearning{TDistribution}">generic-density
+    ///   <see cref="HiddenMarkovClassifierLearning{TDistribution,TObservation}">generic-density
     ///   hidden Markov models</see>. Those models can be modeled after any kind of
     ///   <see cref="IDistribution">probability distribution</see> implementing
     ///   the <see cref="IDistribution"/> interface.</para>
@@ -103,20 +103,6 @@ namespace Accord.Statistics.Models.Markov.Learning
         HiddenMarkovModel<TDistribution, TObservation>, TDistribution, TObservation>
         where TDistribution : IDistribution<TObservation>
     {
-
-        /// <summary>
-        ///   Creates a new instance of the learning algorithm for a given 
-        ///   Markov sequence classifier using the specified configuration
-        ///   function.
-        /// </summary>
-        /// 
-        [Obsolete("Please set the learning algorithm using the Learner property.")]
-        public HiddenMarkovClassifierLearning(HiddenMarkovClassifier<TDistribution, TObservation> classifier,
-            ClassifierLearningAlgorithmConfiguration algorithm)
-            : base(classifier, algorithm)
-        {
-        }
-
         /// <summary>
         ///   Creates a new instance of the learning algorithm for a given 
         ///   Markov sequence classifier.

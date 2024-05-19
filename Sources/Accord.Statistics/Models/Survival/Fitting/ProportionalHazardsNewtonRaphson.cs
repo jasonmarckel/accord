@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     using Accord.Statistics.Distributions.Fitting;
     using Accord.Statistics.Distributions;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
     using System.Threading;
 
     /// <summary>
@@ -47,7 +47,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
     public class ProportionalHazardsNewtonRaphson :
         ISupervisedLearning<ProportionalHazards, Tuple<double[], double>, int>,
         ISupervisedLearning<ProportionalHazards, Tuple<double[], double>, bool>,
-        ISurvivalFitting, IConvergenceLearning
+        IConvergenceLearning
 #pragma warning disable 612, 618
     {
         [NonSerialized]
@@ -80,16 +80,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
         {
             get { return convergence.Tolerance; }
             set { convergence.Tolerance = value; }
-        }
-
-        /// <summary>
-        ///   Please use MaxIterations instead.
-        /// </summary>
-        [Obsolete("Please use MaxIterations instead.")]
-        public int Iterations
-        {
-            get { return convergence.MaxIterations; }
-            set { convergence.MaxIterations = value; }
         }
 
         /// <summary>
@@ -257,7 +247,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
         {
             this.convergence = new RelativeParameterConvergence()
             {
-                Iterations = 0,
+                MaxIterations = 0,
                 Tolerance = 1e-5
             };
 
@@ -290,101 +280,6 @@ namespace Accord.Statistics.Models.Regression.Fitting
 
             this.partialHessian = new double[parameterCount, parameterCount];
             this.partialGradient = new double[parameterCount];
-        }
-
-
-
-        /// <summary>
-        ///   Runs the Newton-Raphson update for Cox's hazards learning until convergence.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="time">The time-to-event for the training samples.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, double[] time)
-        {
-            var censor = new SurvivalOutcome[time.Length];
-
-            Accord.Diagnostics.Debug.Assert(censor[0] == SurvivalOutcome.Failed);
-
-            return Run(inputs, time, censor);
-        }
-
-        /// <summary>
-        ///   Runs the Newton-Raphson update for Cox's hazards learning until convergence.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="censor">The output (event) associated with each input vector.</param>
-        /// <param name="time">The time-to-event for the non-censored training samples.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, double[] time, int[] censor)
-        {
-            return Run(inputs, time, censor.To<SurvivalOutcome[]>());
-        }
-
-        /// <summary>
-        ///   Runs the Newton-Raphson update for Cox's hazards learning until convergence.
-        /// </summary>
-        /// 
-        /// <param name="inputs">The input data.</param>
-        /// <param name="censor">The output (event) associated with each input vector.</param>
-        /// <param name="time">The time-to-event for the non-censored training samples.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[][] inputs, double[] time, SurvivalOutcome[] censor)
-        {
-            innerLearn(inputs, time, censor, null);
-            return regression.GetPartialLogLikelihood(inputs, time, censor);
-        }
-
-        /// <summary>
-        ///   Runs the Newton-Raphson update for Cox's hazards learning until convergence.
-        /// </summary>
-        /// 
-        /// <param name="censor">The output (event) associated with each input vector.</param>
-        /// <param name="time">The time-to-event for the non-censored training samples.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[] time, int[] censor)
-        {
-            return Run(time, censor.To<SurvivalOutcome[]>());
-        }
-
-        /// <summary>
-        ///   Runs the Newton-Raphson update for Cox's hazards learning until convergence.
-        /// </summary>
-        /// 
-        /// <param name="censor">The output (event) associated with each input vector.</param>
-        /// <param name="time">The time-to-event for the non-censored training samples.</param>
-        /// 
-        /// <returns>The maximum relative change in the parameters after the iteration.</returns>
-        /// 
-        [Obsolete("Please use Learn(x, y) instead.")]
-        public double Run(double[] time, SurvivalOutcome[] censor)
-        {
-            if (time.Length != censor.Length)
-            {
-                throw new DimensionMismatchException("time",
-                    "The time and output vector must have the same length.");
-            }
-
-            // Sort data by time to accelerate performance
-            EmpiricalHazardDistribution.Sort(ref time, ref censor);
-
-            createBaseline(time, censor);
-
-            return regression.GetPartialLogLikelihood(time, censor);
         }
 
         private void createBaseline(double[] time, SurvivalOutcome[] censor, double[] output = null)
@@ -641,7 +536,7 @@ namespace Accord.Statistics.Models.Regression.Fitting
                 decomposition = new SingularValueDecomposition(hessian);
                 double[] deltas = decomposition.Solve(gradient);
 
-                if (convergence.Iterations > 0 || convergence.Tolerance > 0)
+                if (convergence.MaxIterations > 0 || convergence.Tolerance > 0)
                 {
                     // Update coefficients using the calculated deltas
                     for (int i = 0; i < regression.Coefficients.Length; i++)

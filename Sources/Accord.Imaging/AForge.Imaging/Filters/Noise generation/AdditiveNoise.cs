@@ -14,6 +14,7 @@ namespace Accord.Imaging.Filters
     using Accord;
     using Accord.Math.Random;
     using Accord.Statistics.Distributions.Univariate;
+    using Range = Range;
 
     /// <summary>
     /// Additive noise filter.

@@ -20,10 +20,6 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-#if NET35
-    #define DISABLE_DYNAMIC
-#endif
-
 namespace Accord.MachineLearning.Performance
 {
     using Accord.Math;
@@ -88,7 +84,6 @@ namespace Accord.MachineLearning.Performance
             return new GridSearchRange<T>() { Values = values };
         }
 
-#if !DISABLE_DYNAMIC
         /// <summary>
         ///   Creates a range of parameter values that should be searched during <see cref="GridSearch"/>.
         /// </summary>
@@ -121,8 +116,6 @@ namespace Accord.MachineLearning.Performance
         {
             return new GridSearchRange<T>() { Values = Vector.Range(a: (dynamic)fromInclusive, b: (dynamic)toExclusive, stepSize: (dynamic)stepSize) };
         }
-#endif
-
 
         /// <summary>
         ///   Creates a new <see cref="GridSearch{TModel, TRange, TLearner, TInput, TOutput}"/> algorithm.

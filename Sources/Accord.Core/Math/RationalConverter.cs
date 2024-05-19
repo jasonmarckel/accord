@@ -46,7 +46,6 @@
 //    SOFTWARE.
 //
 
-#if !NETSTANDARD1_4
 namespace Accord.Math.Converters
 {
     using System;
@@ -220,4 +219,3 @@ namespace Accord.Math.Converters
         }
     }
 }
-#endif

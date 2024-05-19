@@ -29,7 +29,7 @@ namespace Accord.Statistics.Models.Fields
     using System;
     using System.IO;
     using System.Runtime.Serialization.Formatters.Binary;
-    using Accord.Compat;
+
     using System.Threading.Tasks;
 
     /// <summary>
@@ -91,13 +91,6 @@ namespace Accord.Statistics.Models.Fields
         private IPotentialFunction<T> function;
 
         /// <summary>
-        ///   Gets the number of outputs assumed by the model.
-        /// </summary>
-        /// 
-        [Obsolete("Please use NumberOfOutputs instead.")]
-        public int Outputs { get { return Function.Outputs; } }
-
-        /// <summary>
         ///   Gets the potential function encompassing
         ///   all feature functions for this model.
         /// </summary>
@@ -132,27 +125,6 @@ namespace Accord.Statistics.Models.Fields
             this.Function = function;
         }
 
-        /// <summary>
-        ///   Computes the most likely output for the given observations.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(T[] observations)
-        {
-            double[] logLikelihoods;
-            return compute(observations, out logLikelihoods);
-        }
-
-        /// <summary>
-        ///   Computes the most likely output for the given observations.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(T[] observations, out double[] logLikelihoods)
-        {
-            return compute(observations, out logLikelihoods);
-        }
-
         private int compute(T[] observations, out double[] logLikelihoods)
         {
             // Compute log-likelihoods for all possible outputs
@@ -176,19 +148,6 @@ namespace Accord.Statistics.Models.Fields
             int imax; logLikelihoods.Max(out imax);
 
             return imax;
-        }
-
-        /// <summary>
-        ///   Computes the most likely output for the given observations.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Decide() method instead.")]
-        public int Compute(T[] observations, out double logLikelihood)
-        {
-            double[] logLikelihoods;
-            int i = compute(observations, out logLikelihoods);
-            logLikelihood = logLikelihoods[i];
-            return i;
         }
 
         /// <summary>
@@ -481,59 +440,6 @@ namespace Accord.Statistics.Models.Fields
             return logLikelihoods;
         }
 
-#if !NETSTANDARD1_4
-        /// <summary>
-        ///   Saves the random field to a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream to which the random field is to be serialized.</param>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save() instead.")]
-        public void Save(Stream stream)
-        {
-            Accord.IO.Serializer.Save(this, stream);
-        }
-
-        /// <summary>
-        ///   Saves the random field to a stream.
-        /// </summary>
-        /// 
-        /// <param name="path">The stream to which the random field is to be serialized.</param>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Save() instead.")]
-        public void Save(string path)
-        {
-            Accord.IO.Serializer.Save(this, path);
-        }
-
-        /// <summary>
-        ///   Loads a random field from a stream.
-        /// </summary>
-        /// 
-        /// <param name="stream">The stream from which the random field is to be deserialized.</param>
-        /// 
-        /// <returns>The deserialized random field.</returns>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<HiddenConditionalRandomField<T>>() instead.")]
-        public static HiddenConditionalRandomField<T> Load(Stream stream)
-        {
-            return Accord.IO.Serializer.Load<HiddenConditionalRandomField<T>>(stream);
-        }
-
-        /// <summary>
-        ///   Loads a random field from a file.
-        /// </summary>
-        /// 
-        /// <param name="path">The path to the file from which the random field is to be deserialized.</param>
-        /// 
-        /// <returns>The deserialized random field.</returns>
-        /// 
-        [Obsolete("Please use Accord.IO.Serializer.Load<HiddenConditionalRandomField<T>>() instead.")]
-        public static HiddenConditionalRandomField<T> Load(string path)
-        {
-            return Accord.IO.Serializer.Load<HiddenConditionalRandomField<T>>(path);
-        }
-#endif
 
 #region ICloneable Members
 

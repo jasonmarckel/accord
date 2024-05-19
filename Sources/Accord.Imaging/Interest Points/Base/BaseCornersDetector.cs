@@ -51,7 +51,7 @@ namespace Accord.Imaging
         /// 
         /// <exception cref="UnsupportedImageFormatException">The source image has incorrect pixel format.</exception>
         /// 
-        public new List<IntPoint> ProcessImage(Bitmap image)
+        public List<IntPoint> ProcessImage(Bitmap image)
         {
             // check image format
             if (!SupportedFormats.Contains(image.PixelFormat))
@@ -103,7 +103,7 @@ namespace Accord.Imaging
         /// 
         /// <exception cref="UnsupportedImageFormatException">The source image has incorrect pixel format.</exception>
         /// 
-        public new List<IntPoint> ProcessImage(BitmapData imageData)
+        public List<IntPoint> ProcessImage(BitmapData imageData)
         {
             return ProcessImage(new UnmanagedImage(imageData));
         }
@@ -118,7 +118,7 @@ namespace Accord.Imaging
         /// 
         /// <exception cref="UnsupportedImageFormatException">The source image has incorrect pixel format.</exception>
         /// 
-        public new List<IntPoint> ProcessImage(UnmanagedImage input)
+        public List<IntPoint> ProcessImage(UnmanagedImage input)
         {
             // check image format
             if (!SupportedFormats.Contains(input.PixelFormat))

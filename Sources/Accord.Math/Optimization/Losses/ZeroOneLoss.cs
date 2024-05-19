@@ -24,7 +24,7 @@ namespace Accord.Math.Optimization.Losses
 {
     using Accord.Statistics;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Accuracy loss, also known as zero-one-loss. This class

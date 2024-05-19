@@ -23,7 +23,7 @@
 namespace Accord.Statistics.Analysis.ContrastFunctions
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Kurtosis contrast function.

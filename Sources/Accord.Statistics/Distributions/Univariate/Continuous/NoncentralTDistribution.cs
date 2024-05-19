@@ -25,7 +25,7 @@ namespace Accord.Statistics.Distributions.Univariate
     using Accord.Math;
     using Accord.Math.Optimization;
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Noncentral t-distribution.

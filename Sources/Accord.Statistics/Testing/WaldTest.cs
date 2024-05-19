@@ -23,7 +23,7 @@
 namespace Accord.Statistics.Testing
 {
     using System;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Wald's Test using the Normal distribution.

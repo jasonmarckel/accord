@@ -36,8 +36,8 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// 
     /// <remarks>
     /// <para>
-    ///   The maximum likelihood estimate is a <see cref="ISupervisedLearning">
-    ///   supervised learning algorithm</see>. It considers both the sequence
+    ///   The maximum likelihood estimate is a 
+    ///   supervised learning algorithm. It considers both the sequence
     ///   of observations as well as the sequence of states in the Markov model
     ///   are visible and thus during training. </para>
     ///   
@@ -73,7 +73,7 @@ namespace Accord.Statistics.Models.Markov.Learning
     /// </example>
     /// 
     /// <seealso cref="MaximumLikelihoodLearning"/>
-    /// <seealso cref="ViterbiLearning{TDistribution}"/>
+    /// <seealso cref="ViterbiLearning{TDistribution,TObservation}"/>
     /// <seealso cref="HiddenMarkovModel{TDistribution}"/>
     /// 
     public class MaximumLikelihoodLearning<TDistribution, TObservation> :

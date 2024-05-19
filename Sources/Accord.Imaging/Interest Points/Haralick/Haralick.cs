@@ -29,7 +29,7 @@ namespace Accord.Imaging
     using Accord.Imaging;
     using Accord.Imaging.Filters;
     using Accord.Math;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   <see cref="Haralick"/>'s operation modes.
@@ -201,7 +201,7 @@ namespace Accord.Imaging
 
         /// <summary>
         ///   Gets the set of local binary patterns computed for each
-        ///   cell in the last call to <see cref="BaseFeatureExtractor{TPoint}.ProcessImage(Bitmap)"/>.
+        ///   cell in the last call to <see cref="BaseFeatureExtractor{TPoint}.Transform(Bitmap)"/>.
         /// </summary>
         /// 
         public HaralickDescriptorDictionary[,] Descriptors { get { return features; } }

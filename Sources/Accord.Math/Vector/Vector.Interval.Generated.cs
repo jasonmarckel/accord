@@ -54,36 +54,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static int[] Interval(int a, int b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            int[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new int[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (int)(a - i * stepSize);
-                r[steps - 1] = (int)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new int[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (int)(a + i * stepSize);
-                r[steps - 1] = (int)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -160,36 +130,6 @@ namespace Accord.Math
             return Interval(a, b, steps: (int)Math.Ceiling(Math.Abs(a - b)));
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static float[] Interval(float a, float b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            float[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new float[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (float)(a - i * stepSize);
-                r[steps - 1] = (float)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new float[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (float)(a + i * stepSize);
-                r[steps - 1] = (float)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -266,36 +206,6 @@ namespace Accord.Math
             return Interval(a, b, steps: (int)Math.Ceiling(Math.Abs(a - b)));
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static double[] Interval(double a, double b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            double[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new double[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (double)(a - i * stepSize);
-                r[steps - 1] = (double)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new double[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (double)(a + i * stepSize);
-                r[steps - 1] = (double)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -374,36 +284,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static short[] Interval(short a, short b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            short[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new short[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (short)(a - i * stepSize);
-                r[steps - 1] = (short)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new short[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (short)(a + i * stepSize);
-                r[steps - 1] = (short)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -482,36 +362,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static byte[] Interval(byte a, byte b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            byte[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new byte[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (byte)(a - i * stepSize);
-                r[steps - 1] = (byte)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new byte[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (byte)(a + i * stepSize);
-                r[steps - 1] = (byte)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -590,36 +440,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static sbyte[] Interval(sbyte a, sbyte b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            sbyte[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new sbyte[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (sbyte)(a - i * stepSize);
-                r[steps - 1] = (sbyte)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new sbyte[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (sbyte)(a + i * stepSize);
-                r[steps - 1] = (sbyte)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -698,36 +518,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static long[] Interval(long a, long b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            long[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new long[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (long)(a - i * stepSize);
-                r[steps - 1] = (long)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new long[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (long)(a + i * stepSize);
-                r[steps - 1] = (long)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -804,36 +594,6 @@ namespace Accord.Math
             return Interval(a, b, steps: (int)Math.Ceiling(Math.Abs(a - b)));
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static decimal[] Interval(decimal a, decimal b, decimal stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            decimal[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (decimal)stepSize) + 1;
-                r = new decimal[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (decimal)(a - i * stepSize);
-                r[steps - 1] = (decimal)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (decimal)stepSize) + 1;
-                r = new decimal[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (decimal)(a + i * stepSize);
-                r[steps - 1] = (decimal)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -912,36 +672,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static ulong[] Interval(ulong a, ulong b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            ulong[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new ulong[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (ulong)(a - i * stepSize);
-                r[steps - 1] = (ulong)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new ulong[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (ulong)(a + i * stepSize);
-                r[steps - 1] = (ulong)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -1020,36 +750,6 @@ namespace Accord.Math
 			return Interval(a, b, steps: (int)(a - b) + 1);
         }
 
-        /// <summary>
-        ///   Obsolete. Please use Vector.Range(a, b, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(a, b, stepSize) instead.")]
-        public static ushort[] Interval(ushort a, ushort b, double stepSize)
-        {
-            if (a == b)
-                return new [] { a };
-
-            ushort[] r;
-
-            if (a > b)
-            {
-                int steps = (int)System.Math.Ceiling((a - b) / (double)stepSize) + 1;
-                r = new ushort[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (ushort)(a - i * stepSize);
-                r[steps - 1] = (ushort)(b);
-            }
-            else
-            {
-                int steps = (int)System.Math.Ceiling((b - a) / (double)stepSize) + 1;
-                r = new ushort[steps];
-                for (uint i = 0; i < r.Length; i++)
-                    r[i] = (ushort)(a + i * stepSize);
-                r[steps - 1] = (ushort)(b);
-            }
-
-            return r;
-        }
 
         /// <summary>
         ///   Creates an interval vector (like NumPy's linspace function).
@@ -1125,43 +825,6 @@ namespace Accord.Math
         {
             return Interval(range.Min, range.Max, steps);
         }
-
-		/// <summary>
-        ///   Obsolete. Please use Vector.Range(range, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(range, stepSize) instead.")]
-        public static double[] Interval(this DoubleRange range, double stepSize)
-        {
-            return Interval(range.Min, range.Max, stepSize);
-        }
-     
-
-        /// <summary>
-        ///   Creates an interval vector (like NumPy's linspace function).
-        /// </summary>
-		///
-        /// <remarks>
-        /// <para>
-        ///   The Range methods should be equivalent to NumPy's np.linspace function. For 
-		///   a similar method that accepts a step size instead of a number of steps, see
-		///   <see cref="Vector.Range(int, int)"/>.</para>
-        /// </remarks>
-        ///
-        /// <seealso cref="Vector.Range(int, int)"/>
-        ///
-        public static float[] Interval(this Range range, int steps)
-        {
-            return Interval(range.Min, range.Max, steps);
-        }
-
-		/// <summary>
-        ///   Obsolete. Please use Vector.Range(range, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(range, stepSize) instead.")]
-        public static float[] Interval(this Range range, double stepSize)
-        {
-            return Interval(range.Min, range.Max, stepSize);
-        }
      
 
         /// <summary>
@@ -1180,15 +843,6 @@ namespace Accord.Math
         public static byte[] Interval(this ByteRange range, int steps)
         {
             return Interval(range.Min, range.Max, steps);
-        }
-
-		/// <summary>
-        ///   Obsolete. Please use Vector.Range(range, stepSize) instead.
-        /// </summary>
-		[Obsolete("Please use Vector.Range(range, stepSize) instead.")]
-        public static byte[] Interval(this ByteRange range, double stepSize)
-        {
-            return Interval(range.Min, range.Max, stepSize);
         }
      
 
@@ -1209,14 +863,24 @@ namespace Accord.Math
         {
             return Interval(range.Min, range.Max, steps);
         }
+     
 
-		/// <summary>
-        ///   Obsolete. Please use Vector.Range(range, stepSize) instead.
+        /// <summary>
+        ///   Creates an interval vector (like NumPy's linspace function).
         /// </summary>
-		[Obsolete("Please use Vector.Range(range, stepSize) instead.")]
-        public static int[] Interval(this IntRange range, double stepSize)
+		///
+        /// <remarks>
+        /// <para>
+        ///   The Range methods should be equivalent to NumPy's np.linspace function. For 
+		///   a similar method that accepts a step size instead of a number of steps, see
+		///   <see cref="Vector.Range(int, int)"/>.</para>
+        /// </remarks>
+        ///
+        /// <seealso cref="Vector.Range(int, int)"/>
+        ///
+        public static float[] Interval(this Accord.Range range, int steps)
         {
-            return Interval(range.Min, range.Max, stepSize);
+            return Interval(range.Min, range.Max, steps);
         }
      
     }

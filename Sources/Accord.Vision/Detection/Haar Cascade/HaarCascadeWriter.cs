@@ -25,6 +25,7 @@ namespace Accord.Vision.Detection
     using System;
     using System.Globalization;
     using System.IO;
+    using System.Reflection.PortableExecutable;
 
     /// <summary>
     ///   Automatic transcriber for Haar cascades.
@@ -191,7 +192,27 @@ namespace Accord.Vision.Detection
         /// </summary>
         public void Dispose()
         {
-            ((IDisposable)writer).Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+
         }
+
+        /// <summary>
+        ///   Releases unmanaged and - optionally - managed resources
+        /// </summary>
+        /// 
+        /// <param name="disposing"><c>true</c> to release both managed
+        /// and unmanaged resources; <c>false</c> to release only unmanaged
+        /// resources.</param>
+        ///
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // free managed resources
+                ((IDisposable)writer).Dispose();
+            }
+        }
+
     }
 }

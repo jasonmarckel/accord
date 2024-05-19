@@ -162,15 +162,6 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ILinearSupportVectorMachineLearning
     {
         /// <summary>
-        ///   Obsolete.
-        /// </summary>
-        [Obsolete("Please do not pass parameters in the constructor. Use the default constructor and the Learn method instead.")]
-        public LinearDualCoordinateDescent(ISupportVectorMachine<double[]> model, double[][] input, int[] output)
-            : base(model, input, output)
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="LinearDualCoordinateDescent"/> class.
         /// </summary>
         public LinearDualCoordinateDescent()
@@ -330,9 +321,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseLinearDualCoordinateDescent<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
@@ -353,9 +342,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
     {
 
         int max_iter = 1000;

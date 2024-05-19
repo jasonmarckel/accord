@@ -62,12 +62,8 @@ namespace Accord.Math
             Array res;
             if (array.IsJagged())
             {
-#if NETSTANDARD1_4
-                throw new NotSupportedException("Squeeze with jagged arrays is not supported in .NET Standard 1.4.");
-#else
                 res = Jagged.Zeros(array.GetInnerMostType(), dimensions);
                 Copy(array, res);
-#endif
             }
             else
             {
@@ -309,9 +305,7 @@ namespace Accord.Math
         /// 
         /// <returns>A tensor of the specified shape.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Array Zeros<T>(params int[] shape)
         {
             return Array.CreateInstance(typeof(T), shape);
@@ -326,9 +320,7 @@ namespace Accord.Math
         /// 
         /// <returns>A tensor of the specified shape.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static Array Zeros(Type type, params int[] shape)
         {
             return Array.CreateInstance(type, shape);

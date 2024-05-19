@@ -34,7 +34,7 @@ namespace Accord.Statistics.Models.Markov
     using Accord.Statistics.Models.Markov.Learning;
     using Accord.Statistics.Models.Markov.Topology;
     using Accord.MachineLearning;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Obsolete. Please use <see cref="HiddenMarkovModel{TDistribution, TObservation}"/> instead.

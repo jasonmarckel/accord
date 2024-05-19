@@ -26,7 +26,7 @@ namespace Accord.Statistics.Testing
     using Distributions.Univariate;
     using Accord.Math;
     using Accord.Statistics;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Grubb's Test for Outliers (for approximately Normal distributions).

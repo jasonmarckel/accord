@@ -28,7 +28,7 @@ namespace Accord.MachineLearning.DecisionTrees.Rules
     using System.Text;
     using Accord.Math;
     using Accord.Statistics.Filters;
-    using Accord.Compat;
+    
     using Accord.MachineLearning.DecisionTrees.Learning;
 
     /// <summary>

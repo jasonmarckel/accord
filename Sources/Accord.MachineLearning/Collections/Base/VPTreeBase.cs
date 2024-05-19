@@ -61,7 +61,7 @@ namespace Accord.Collections
     using Accord.Collections;
     using Accord.Math;
     using Accord.Math.Distances;
-    using Accord.Compat;
+    
 
 #if !MONO
     /// <summary>

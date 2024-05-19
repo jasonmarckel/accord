@@ -26,7 +26,7 @@ namespace Accord.Statistics.Models.Regression
     using Accord.Math;
     using Accord.Statistics.Kernels;
     using System;
-    using Accord.Compat;
+
     using Accord.Statistics.Analysis;
 
     /// <summary>
@@ -66,17 +66,10 @@ namespace Accord.Statistics.Models.Regression
         /// <summary>
         ///   Gets or sets the linear weights of the regression model. The
         ///   intercept term is not stored in this vector, but is instead
-        ///   available through the <see cref="Intercept"/> property.
+        ///   available through the Intercept property.
         /// </summary>
         /// 
         public double[][] Weights { get; set; }
-
-        /// <summary>
-        ///   Gets or sets the intercept value for the regression.
-        /// </summary>
-        /// 
-        [Obsolete()]
-        public double[] Intercept { get; set; }
 
         /// <summary>
         ///   Gets or sets the mean values (to be subtracted from samples).

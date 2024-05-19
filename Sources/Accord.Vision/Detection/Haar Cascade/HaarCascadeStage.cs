@@ -106,9 +106,7 @@ namespace Accord.Vision.Detection
         ///   Classifies an image as having the searched object or not.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public bool Classify(IntegralImage2 image, int x, int y, double factor)
         {
             double value = 0;

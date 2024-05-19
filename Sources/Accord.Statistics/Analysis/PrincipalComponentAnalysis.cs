@@ -30,7 +30,7 @@ namespace Accord.Statistics.Analysis
     using Accord.MachineLearning;
     using Accord.Statistics.Analysis.Base;
     using Accord.Statistics.Models.Regression.Linear;
-    using Accord.Compat;
+
 
     /// <summary>
     ///   Principal component analysis (PCA) is a technique used to reduce
@@ -97,63 +97,9 @@ namespace Accord.Statistics.Analysis
     [Serializable]
 #pragma warning disable 612, 618
     public class PrincipalComponentAnalysis : BasePrincipalComponentAnalysis, ITransform<double[], double[]>,
-        IUnsupervisedLearning<MultivariateLinearRegression, double[], double[]>,
-        IMultivariateAnalysis, IProjectionAnalysis
+        IUnsupervisedLearning<MultivariateLinearRegression, double[], double[]>
 #pragma warning restore 612, 618
     {
-
-        /// <summary>
-        ///   Constructs a new Principal Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        /// variables as columns and observations of each variable as rows.</param>
-        /// <param name="method">The analysis method to perform. Default is <see cref="AnalysisMethod.Center"/>.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public PrincipalComponentAnalysis(double[][] data, AnalysisMethod method = AnalysisMethod.Center)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            if (data.Length == 0)
-                throw new ArgumentException("Data matrix cannot be empty.", "data");
-
-            int cols = data[0].Length;
-            for (int i = 0; i < data.Length; i++)
-            {
-                if (data[i].Length != cols)
-                    throw new DimensionMismatchException("data",
-                        "Matrix must be rectangular. The vector at position " + i +
-                        " has a different length than other vectors");
-            }
-
-            this.array = data;
-            this.Method = (PrincipalComponentMethod)method;
-            this.NumberOfInputs = cols;
-            this.NumberOfOutputs = data.Columns();
-        }
-
-        /// <summary>
-        ///   Constructs a new Principal Component Analysis.
-        /// </summary>
-        /// 
-        /// <param name="data">The source data to perform analysis. The matrix should contain
-        ///   variables as columns and observations of each variable as rows.</param>
-        /// <param name="method">The analysis method to perform. Default is <see cref="AnalysisMethod.Center"/>.</param>
-        /// 
-        [Obsolete("Please pass the 'data' matrix to the Learn method instead.")]
-        public PrincipalComponentAnalysis(double[,] data, AnalysisMethod method = AnalysisMethod.Center)
-        {
-            if (data == null)
-                throw new ArgumentNullException("data");
-
-            this.source = data;
-            this.Method = (PrincipalComponentMethod)method;
-            this.NumberOfInputs = data.Rows();
-            this.NumberOfOutputs = data.Columns();
-        }
-
         /// <summary>
         ///   Constructs a new Principal Component Analysis.
         /// </summary>
@@ -170,7 +116,6 @@ namespace Accord.Statistics.Analysis
             this.Whiten = whiten;
             this.NumberOfOutputs = numberOfOutputs;
         }
-
 
         /// <summary>
         ///   Learns a model that can map the given inputs to the desired outputs.
@@ -291,104 +236,6 @@ namespace Accord.Statistics.Analysis
         }
 
         /// <summary>
-        ///   Computes the Principal Component Analysis algorithm.
-        /// </summary>
-        /// 
-        [Obsolete("Please use the Learn method instead.")]
-        public virtual void Compute()
-        {
-            if (!onlyCovarianceMatrixAvailable)
-            {
-                int rows;
-
-                if (this.array != null)
-                {
-                    rows = array.Length;
-
-                    // Center and standardize the source matrix
-                    double[][] matrix = Adjust(array, Overwrite);
-
-                    // Perform the Singular Value Decomposition (SVD) of the matrix
-                    var svd = new JaggedSingularValueDecomposition(matrix,
-                        computeLeftSingularVectors: true,
-                        computeRightSingularVectors: true,
-                        autoTranspose: true,
-                        inPlace: true);
-
-                    SingularValues = svd.Diagonal;
-
-                    //  The principal components of 'Source' are the eigenvectors of Cov(Source). Thus if we
-                    //  calculate the SVD of 'matrix' (which is Source standardized), the columns of matrix V
-                    //  (right side of SVD) will be the principal components of Source.                        
-
-                    // The right singular vectors contains the principal components of the data matrix
-                    ComponentVectors = svd.RightSingularVectors.Transpose();
-                }
-                else
-                {
-                    rows = source.GetLength(0);
-
-                    // Center and standardize the source matrix
-#pragma warning disable 612, 618
-                    double[,] matrix = Adjust(source, Overwrite);
-#pragma warning restore 612, 618
-
-                    // Perform the Singular Value Decomposition (SVD) of the matrix
-                    var svd = new SingularValueDecomposition(matrix,
-                        computeLeftSingularVectors: true,
-                        computeRightSingularVectors: true,
-                        autoTranspose: true,
-                        inPlace: true);
-
-                    SingularValues = svd.Diagonal;
-
-                    //  The principal components of 'Source' are the eigenvectors of Cov(Source). Thus if we
-                    //  calculate the SVD of 'matrix' (which is Source standardized), the columns of matrix V
-                    //  (right side of SVD) will be the principal components of Source.                        
-
-                    // The right singular vectors contains the principal components of the data matrix
-                    ComponentVectors = svd.RightSingularVectors.ToJagged(transpose: true);
-
-                    // The left singular vectors contains the factor scores for the principal components
-                }
-
-                // Eigenvalues are the square of the singular values
-                Eigenvalues = new double[SingularValues.Length];
-                for (int i = 0; i < SingularValues.Length; i++)
-                    Eigenvalues[i] = SingularValues[i] * SingularValues[i] / (rows - 1);
-            }
-            else
-            {
-                // We only have the covariance matrix. Compute the Eigenvalue decomposition
-                var evd = new EigenvalueDecomposition(covarianceMatrix,
-                    assumeSymmetric: true,
-                    sort: true);
-
-                // Gets the Eigenvalues and corresponding Eigenvectors
-                Eigenvalues = evd.RealEigenvalues;
-                var eigenvectors = evd.Eigenvectors.ToJagged();
-                SingularValues = Eigenvalues.Sqrt();
-                ComponentVectors = eigenvectors.Transpose();
-            }
-
-            if (Whiten)
-            {
-                ComponentVectors = ComponentVectors.Transpose().Divide(Eigenvalues, dimension: 0).Transpose();
-            }
-
-            CreateComponents();
-
-            if (!onlyCovarianceMatrixAvailable)
-            {
-                if (array != null)
-                    result = Transform(array).ToMatrix();
-                else if (source != null)
-                    result = Transform(source.ToJagged()).ToMatrix();
-            }
-        }
-
-
-        /// <summary>
         ///   Projects a given matrix into principal component space.
         /// </summary>
         /// 
@@ -427,21 +274,6 @@ namespace Accord.Statistics.Analysis
         /// 
         /// <param name="data">The pca transformed data.</param>
         /// 
-        [Obsolete("Please use Jagged matrices instead.")]
-        public virtual double[,] Revert(double[,] data)
-        {
-            return Revert(data.ToJagged()).ToMatrix();
-        }
-
-        /// <summary>
-        ///   Reverts a set of projected data into it's original form. Complete reverse
-        ///   transformation is only possible if all components are present, and, if the
-        ///   data has been standardized, the original standard deviation and means of
-        ///   the original matrix are known.
-        /// </summary>
-        /// 
-        /// <param name="data">The pca transformed data.</param>
-        /// 
         public virtual double[][] Revert(double[][] data)
         {
             if (data == null)
@@ -466,36 +298,6 @@ namespace Accord.Statistics.Analysis
 
             reversion.Add(Means, dimension: (VectorType)0, result: reversion);
             return reversion;
-        }
-
-
-
-        /// <summary>
-        ///   Adjusts a data matrix, centering and standardizing its values
-        ///   using the already computed column's means and standard deviations.
-        /// </summary>
-        /// 
-        [Obsolete("This method is obsolete.")]
-        protected internal double[,] Adjust(double[,] matrix, bool inPlace)
-        {
-            if (Means == null || Means.Length == 0)
-            {
-                Means = matrix.Mean(dimension: 0);
-                StandardDeviations = matrix.StandardDeviation(Means);
-            }
-
-            // Center the data around the mean. Will have no effect if
-            //  the data is already centered (the mean will be zero).
-            double[,] result = matrix.Center(Means, inPlace);
-
-            // Check if we also have to standardize our data (convert to Z Scores).
-            if (this.Method == PrincipalComponentMethod.Standardize || this.Method == PrincipalComponentMethod.CorrelationMatrix)
-            {
-                // Yes. Divide by standard deviation
-                result.Standardize(StandardDeviations, true);
-            }
-
-            return result;
         }
 
         /// <summary>
