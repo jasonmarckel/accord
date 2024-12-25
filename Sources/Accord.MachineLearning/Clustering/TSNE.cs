@@ -831,42 +831,43 @@ namespace Accord.MachineLearning.Clustering
             return NormalDistribution.Standard.Generate();
         }
 
-        // Function that loads data from a t-SNE file
-        // Note: this function does a malloc that should be freed elsewhere
-        private static bool load_data(ref double[][] data, ref int n, ref int d, ref int no_dims, ref double theta, ref double perplexity, ref int rand_seed)
-        {
-            // Open file, read first 2 integers, allocate memory, and read the data
-            using (BinaryReader h = new BinaryReader(new FileStream("data.dat", FileMode.Open, FileAccess.Read)))
-            {
-                n = h.ReadInt32();             // number of datapoints
-                d = h.ReadInt32();             // original dimensionality
-                theta = h.ReadDouble();        // gradient accuracy
-                perplexity = h.ReadDouble();   // perplexity
-                no_dims = h.ReadInt32();       // output dimensionality
+        //// Function that loads data from a t-SNE file
+        //// Note: this function does a malloc that should be freed elsewhere
+        //private static bool load_data(ref double[][] data, ref int n, ref int d, ref int no_dims, ref double theta, ref double perplexity, ref int rand_seed)
+        //{
+        //    // Open file, read first 2 integers, allocate memory, and read the data
+        //    using (BinaryReader h = new BinaryReader(new FileStream("data.dat", FileMode.Open, FileAccess.Read)))
+        //    {
+        //        n = h.ReadInt32();             // number of datapoints
+        //        d = h.ReadInt32();             // original dimensionality
+        //        theta = h.ReadDouble();        // gradient accuracy
+        //        perplexity = h.ReadDouble();   // perplexity
+        //        no_dims = h.ReadInt32();       // output dimensionality
 
-                data = h.ReadJagged<double>(n, d);
-                if (h.BaseStream.Position != h.BaseStream.Length)
-                    rand_seed = h.ReadInt32();// random seed
-            }
+        //        data = h.ReadJagged<double>(n, d);
+        //        if (h.BaseStream.Position != h.BaseStream.Length)
+        //            rand_seed = h.ReadInt32();// random seed
+        //    }
 
-            Debug.WriteLine(String.Format("Read the {0} x {1} data matrix successfully!", n, d));
-            return true;
-        }
+        //    Debug.WriteLine(String.Format("Read the {0} x {1} data matrix successfully!", n, d));
+        //    return true;
+        //}
 
-        // Function that saves map to a t-SNE file
-        private static void save_data(double[][] data, int[] landmarks, double[] costs, int n, int d)
-        {
-            // Open file, write first 2 integers and then the data
-            using (BinaryWriter h = new BinaryWriter(new FileStream("result.dat", FileMode.Create, FileAccess.Write)))
-            {
-                h.Write(n);
-                h.Write(d);
-                h.Write(data);
-                h.Write(landmarks);
-                h.Write(costs);
-                Debug.WriteLine(String.Format("Wrote the {0} x {1} data matrix successfully!", n, d));
-            }
-        }
+        //// Function that saves map to a t-SNE file
+        //private static void save_data(double[][] data, int[] landmarks, double[] costs, int n, int d)
+        //{
+        //    // Open file, write first 2 integers and then the data
+        //    using (BinaryWriter h = new BinaryWriter(new FileStream("result.dat", FileMode.Create, FileAccess.Write)))
+        //    {
+        //        h.Write(n);
+        //        h.Write(d);
+        //        h.Write(data);
+        //        h.Write(landmarks);
+        //        h.Write(costs);
+        //        Debug.WriteLine(String.Format("Wrote the {0} x {1} data matrix successfully!", n, d));
+        //    }
+        //}
+
     }
 
 #endif

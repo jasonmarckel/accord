@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Accord.IO</AssemblyName>
     <RootNamespace>Accord.IO</RootNamespace>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
 
   <Import Project="$(SolutionDir)Accord.NET (NETStandard).targets" />

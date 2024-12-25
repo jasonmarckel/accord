@@ -72,34 +72,34 @@ namespace Accord
                 collection.Add(columnNames[i]);
         }
 
-        /// <summary>
-        ///   Creates and adds multiple <see cref="System.Data.DataColumn"/>
-        ///   objects with the given names at once.
-        /// </summary>
-        /// 
-        /// <param name="collection">The <see cref="System.Data.DataColumnCollection"/>
-        ///   to add in.</param>
-        /// <param name="columns">The names of the <see cref="System.Data.DataColumn"/>s to
-        ///   be created and added, alongside with their types.</param>
-        /// 
-        /// <example>
-        ///   <code>
-        ///   DataTable table = new DataTable();
-        ///   
-        ///   // Add multiple columns at once:
-        ///   table.Columns.Add(new OrderedDictionary&gt;String, Type&lt;()
-        ///   {
-        ///       { "columnName1", typeof(int)    },
-        ///       { "columnName2", typeof(double) },
-        ///   });
-        ///   </code>
-        /// </example>
-        /// 
-        public static void Add(this DataColumnCollection collection, OrderedDictionary<string, Type> columns)
-        {
-            foreach (var pair in columns)
-                collection.Add(pair.Key, pair.Value);
-        }
+        ///// <summary>
+        /////   Creates and adds multiple <see cref="System.Data.DataColumn"/>
+        /////   objects with the given names at once.
+        ///// </summary>
+        ///// 
+        ///// <param name="collection">The <see cref="System.Data.DataColumnCollection"/>
+        /////   to add in.</param>
+        ///// <param name="columns">The names of the <see cref="System.Data.DataColumn"/>s to
+        /////   be created and added, alongside with their types.</param>
+        ///// 
+        ///// <example>
+        /////   <code>
+        /////   DataTable table = new DataTable();
+        /////   
+        /////   // Add multiple columns at once:
+        /////   table.Columns.Add(new OrderedDictionary&gt;String, Type&lt;()
+        /////   {
+        /////       { "columnName1", typeof(int)    },
+        /////       { "columnName2", typeof(double) },
+        /////   });
+        /////   </code>
+        ///// </example>
+        ///// 
+        //public static void Add(this DataColumnCollection collection, OrderedDictionary<string, Type> columns)
+        //{
+        //    foreach (var pair in columns)
+        //        collection.Add(pair.Key, pair.Value);
+        //}
 
         /// <summary>
         ///   Gets a the value of a <see cref="DescriptionAttribute"/>
@@ -153,65 +153,59 @@ namespace Accord
         }
 
 
-        /// <summary>
-        ///   Reads a <c>struct</c> from a stream.
-        /// </summary>
-        /// 
-        public static bool Write<T>(this BinaryWriter stream, T[] array)
-            where T : struct
-        {
-            var type = typeof(T);
-#pragma warning disable CS0618 // Type or member is obsolete
-            int size = Marshal.SizeOf(type);
-#pragma warning restore CS0618 // Type or member is obsolete
-            byte[] buffer = new byte[size * array.Length];
+//        /// <summary>
+//        ///   Reads a <c>struct</c> from a stream.
+//        /// </summary>
+//        /// 
+//        public static bool Write<T>(this BinaryWriter stream, T[] array)
+//            where T : struct
+//        {
+//            var type = typeof(T);
+//#pragma warning disable CS0618 // Type or member is obsolete
+//            int size = Marshal.SizeOf(type);
+//#pragma warning restore CS0618 // Type or member is obsolete
+//            byte[] buffer = new byte[size * array.Length];
+//            Buffer.BlockCopy(array, 0, buffer, 0, buffer.Length);
+//            stream.Write(buffer, 0, buffer.Length);
+//            return true;
+//        }
 
-            Buffer.BlockCopy(array, 0, buffer, 0, buffer.Length);
-            stream.Write(buffer, 0, buffer.Length);
+//        /// <summary>
+//        ///   Reads a <c>struct</c> from a stream.
+//        /// </summary>
+//        /// 
+//        public static bool Write<T>(this BinaryWriter stream, T[][] array)
+//            where T : struct
+//        {
+//            var type = typeof(T);
+//#pragma warning disable CS0618 // Type or member is obsolete
+//            int size = Marshal.SizeOf(type);
+//#pragma warning restore CS0618 // Type or member is obsolete
+//            byte[] buffer = new byte[size * array[0].Length];
+//            for (int i = 0; i < array.Length; i++)
+//            {
+//                Buffer.BlockCopy(array[i], 0, buffer, 0, buffer.Length);
+//                stream.Write(buffer, 0, buffer.Length);
+//            }
+//            return true;
+//        }
 
-            return true;
-        }
-
-        /// <summary>
-        ///   Reads a <c>struct</c> from a stream.
-        /// </summary>
-        /// 
-        public static bool Write<T>(this BinaryWriter stream, T[][] array)
-            where T : struct
-        {
-            var type = typeof(T);
-#pragma warning disable CS0618 // Type or member is obsolete
-            int size = Marshal.SizeOf(type);
-#pragma warning restore CS0618 // Type or member is obsolete
-            byte[] buffer = new byte[size * array[0].Length];
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                Buffer.BlockCopy(array[i], 0, buffer, 0, buffer.Length);
-                stream.Write(buffer, 0, buffer.Length);
-            }
-
-            return true;
-        }
-
-        /// <summary>
-        ///   Reads a <c>struct</c> from a stream.
-        /// </summary>
-        /// 
-        public static bool Write<T>(this BinaryWriter stream, T[,] array)
-            where T : struct
-        {
-            var type = typeof(T);
-#pragma warning disable CS0618 // Type or member is obsolete
-            int size = Marshal.SizeOf(type);
-#pragma warning restore CS0618 // Type or member is obsolete
-            byte[] buffer = new byte[size * array.Length];
-
-            Buffer.BlockCopy(array, 0, buffer, 0, buffer.Length);
-            stream.Write(buffer, 0, buffer.Length);
-
-            return true;
-        }
+//        /// <summary>
+//        ///   Reads a <c>struct</c> from a stream.
+//        /// </summary>
+//        /// 
+//        public static bool Write<T>(this BinaryWriter stream, T[,] array)
+//            where T : struct
+//        {
+//            var type = typeof(T);
+//#pragma warning disable CS0618 // Type or member is obsolete
+//            int size = Marshal.SizeOf(type);
+//#pragma warning restore CS0618 // Type or member is obsolete
+//            byte[] buffer = new byte[size * array.Length];
+//            Buffer.BlockCopy(array, 0, buffer, 0, buffer.Length);
+//            stream.Write(buffer, 0, buffer.Length);
+//            return true;
+//        }
 
         /// <summary>
         ///   Reads a <c>struct</c> from a stream.

@@ -20,6 +20,7 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
+#if NET8_0
 namespace Accord.Collections
 {
     using System;
@@ -343,3 +344,4 @@ namespace Accord.Collections
         }
     }
 }
+#endif

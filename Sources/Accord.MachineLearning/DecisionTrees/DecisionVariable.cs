@@ -207,7 +207,7 @@ namespace Accord.MachineLearning.DecisionTrees
 
             for (int i = 0; i < variables.Length; i++)
             {
-                string name = columns.GetKeyByIndex(i);
+                string name = columns.Keys.ElementAt(i); //.GetKeyByIndex(i);
                 variables[i] = new DecisionVariable(name, columns[name].Length);
             }
 

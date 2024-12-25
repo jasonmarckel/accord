@@ -3,23 +3,26 @@
 	<PropertyGroup>
 		<AssemblyName>Accord.Vision</AssemblyName>
 		<RootNamespace>Accord.Vision</RootNamespace>
-		<TargetFrameworks>net8.0</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
 	</PropertyGroup>
 
 	<Import Project="$(SolutionDir)Accord.NET (NETStandard).targets" />
 
 	<ItemGroup>
-		<PackageReference Include="System.Drawing.Common" Version="8.0.5" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.0" />
 	</ItemGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
+	<!-- Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'" -->
+	<PropertyGroup>
 		<NoWarn>1701;1702;CA1416</NoWarn>
 	</PropertyGroup>
 
+	<!--
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0|AnyCPU'">
 		<NoWarn>1701;1702;CA1416</NoWarn>
 	</PropertyGroup>
-
+	-->
+	
 	<ItemGroup>
 		<ProjectReference Include="..\Accord.Core\Accord.Core.csproj" />
 		<ProjectReference Include="..\Accord.Imaging\Accord.Imaging.csproj" />

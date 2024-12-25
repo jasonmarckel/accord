@@ -45,14 +45,14 @@ namespace Accord
     /// 
     public static class SystemTools
     {
-        /// <summary>
-        /// Determines whether the code is running under Mono. 
-        /// </summary>
-        /// 
-        public static bool IsRunningOnMono()
-        {
-            return Type.GetType("Mono.Runtime") != null;
-        }
+        ///// <summary>
+        ///// Determines whether the code is running under Mono. 
+        ///// </summary>
+        ///// 
+        //public static bool IsRunningOnMono()
+        //{
+        //    return Type.GetType("Mono.Runtime") != null;
+        //}
 
         /// <summary>
         /// Copy block of unmanaged memory.

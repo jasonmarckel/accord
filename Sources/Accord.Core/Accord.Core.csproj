@@ -3,11 +3,12 @@
   <PropertyGroup>
     <AssemblyName>Accord</AssemblyName>
     <RootNamespace>Accord</RootNamespace>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
 
   <Import Project="$(SolutionDir)Accord.NET (NETStandard).targets" />
 
+  <!--
   <Choose>
     <When Condition="'$(TargetFramework)' == 'net8.0'">
       <ItemGroup>
@@ -20,7 +21,8 @@
       </ItemGroup>
     </Otherwise>
   </Choose>
-
+  -->
+  
   <ItemGroup>
     <Compile Remove="Properties.VSCode\**" />
     <EmbeddedResource Remove="Properties.VSCode\**" />
