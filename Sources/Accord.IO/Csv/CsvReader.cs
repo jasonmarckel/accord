@@ -1935,13 +1935,6 @@ namespace Accord.IO
             return GetEnumerator();
         }
 
-#if DEBUG
-        /// <summary>
-        /// Contains the stack when the object was allocated.
-        /// </summary>
-        private System.Diagnostics.StackTrace _allocStack;
-#endif
-
         /// <summary>
         /// Contains the disposed status flag.
         /// </summary>
@@ -2083,9 +2076,6 @@ namespace Accord.IO
         /// </summary>
         ~CsvReader()
         {
-#if DEBUG
-            Debug.WriteLine("FinalizableObject was not disposed" + _allocStack.ToString());
-#endif
             Dispose(false);
         }
 
